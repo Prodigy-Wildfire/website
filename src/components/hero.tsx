@@ -10,7 +10,7 @@ export function Hero() {
         playsInline
         className="absolute inset-0 h-full w-full object-cover"
       >
-        <source src="/images/wildfire-protection-hero-video.mp4" type="video/quicktime" />
+        <source src="/images/wildfire-hero-canada-australia-usa.mp4" type="video/mp4" />
       </video>
       <div className="absolute inset-0 bg-primary/35" />
 
