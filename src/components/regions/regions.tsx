@@ -1,0 +1,90 @@
+import Image from "next/image"
+
+const regions = [
+  {
+    name: "Canada",
+    image: "/images/Jasper national park.png",
+    description:
+      "Serving some of the world's most wildfire-prone landscapes, our Canadian team delivers advanced exterior wildfire sprinkler systems, ember detection, and remote activation technology for homes, businesses, and communities from British Columbia to Ontario.",
+    detail:
+      "With deep expertise in diverse Canadian terrain  - from coastal forests to the interior  - we provide custom-engineered wildfire protection systems backed by science and built to withstand Canada's most severe fire seasons.",
+  },
+  {
+    name: "U.S.A",
+    image: "/images/USA wildfire home under threat.jpg",
+    description:
+      "From California and Colorado to the Pacific Northwest and beyond, our U.S. team partners with property owners, builders, and communities to deliver custom-engineered exterior wildfire sprinkler systems built for America's evolving wildfire environment.",
+    detail:
+      "We combine world-class wildfire protection engineering with local insight to provide reliable, proactive defense for homes, businesses, and critical infrastructure across the United States.",
+  },
+  {
+    name: "Australia",
+    image: "/images/australia-bushfires-kangaroo.avif",
+    description:
+      "In one of the most bushfire-challenged regions on the planet, our Australian team brings unmatched field expertise and cutting-edge wildfire protection technology to defend homes, rural properties, and entire communities from ember attack and radiant heat.",
+    detail:
+      "Our exterior wildfire sprinkler systems and ember detection sensors are engineered to perform in Australia's extreme conditions  - supporting bushfire resilience, readiness, and long-term property protection across every state and territory.",
+  },
+]
+
+export function Regions() {
+  return (
+    <section id="regions" className="bg-background py-20 md:py-28">
+      <div className="mx-auto max-w-7xl px-6">
+        <div className="text-center mb-16">
+          <p className="text-sm uppercase tracking-[0.3em] text-primary font-semibold mb-2">
+            Getting Protected
+          </p>
+          <h2 className="font-display text-3xl font-bold uppercase tracking-wide text-foreground md:text-5xl text-balance">
+            Our Systems Are Engineered to{" "}
+            <span className="text-primary">Save Lives.</span>
+          </h2>
+          <p className="mt-4 text-muted-foreground max-w-2xl mx-auto leading-relaxed">
+            Our mission is to provide lasting security and confidence in our
+            changing climate. Every system we build is custom engineered to save
+            lives, homes, businesses and communities without compromise.
+          </p>
+        </div>
+
+        <div className="flex flex-col gap-20">
+          {regions.map((region, i) => (
+            <div
+              key={region.name}
+              className={`grid gap-10 lg:grid-cols-2 lg:items-center ${
+                i % 2 === 1 ? "lg:direction-rtl" : ""
+              }`}
+            >
+              <div className={i % 2 === 1 ? "lg:order-2" : ""}>
+                <div className="relative aspect-[16/10] overflow-hidden">
+                  <Image
+                    src={region.image || "/placeholder.svg"}
+                    alt={`${region.name} wildfire-prone landscape`}
+                    fill
+                    className="object-cover"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-background/50 to-transparent" />
+                  <div className="absolute bottom-6 left-6">
+                    <span className="font-display text-2xl font-bold uppercase tracking-wider text-foreground">
+                      {region.name}
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <div className={i % 2 === 1 ? "lg:order-1" : ""}>
+                <h3 className="font-display text-2xl font-bold uppercase tracking-wide text-foreground mb-4 md:text-3xl">
+                  {region.name}
+                </h3>
+                <p className="text-muted-foreground leading-relaxed mb-4">
+                  {region.description}
+                </p>
+                <p className="text-muted-foreground leading-relaxed">
+                  {region.detail}
+                </p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  )
+}
