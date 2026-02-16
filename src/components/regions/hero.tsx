@@ -10,7 +10,7 @@ export function Hero() {
         playsInline
         className="absolute inset-0 h-full w-full object-cover"
       >
-        <source src="/images/hero_wildfire.mov" type="video/quicktime" />
+        <source src="/images/wildfire-protection-hero-video.mp4" type="video/quicktime" />
       </video>
       <div className="absolute inset-0 bg-background/35" />
       <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-background/40" />

@@ -16,7 +16,7 @@ export default function CommercialContactPage() {
       <Header />
       <section className="relative flex min-h-[60vh] items-center justify-center overflow-hidden">
         <Image
-          src="/images/Wildfire sprinklers.jpeg"
+          src="/images/wildfire-sprinklers-commercial.jpeg"
           alt="Commercial wildfire protection system installation"
           fill
           className="object-cover"

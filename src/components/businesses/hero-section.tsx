@@ -10,8 +10,8 @@ export function HeroSection() {
         playsInline
         className="absolute inset-0 h-full w-full object-cover"
       >
-        <source src="/images/Banff Gondola Wildfire Sprinkler.MOV" type="video/mp4" />
-        <source src="/images/Banff Gondola Wildfire Sprinkler.MOV" type="video/quicktime" />
+        <source src="/images/banff-gondola-wildfire-sprinkler.mp4" type="video/mp4" />
+        <source src="/images/banff-gondola-wildfire-sprinkler.mp4" type="video/quicktime" />
       </video>
       <div className="absolute inset-0 bg-background/35" />
 

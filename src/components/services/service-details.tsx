@@ -31,7 +31,7 @@ const services = [
   {
     icon: ScanEye,
     title: "ADVANCED EMBER & FLAME DETECTION",
-    image: "/images/Flame Sensor.png",
+    image: "/images/wildfire-flame-sensor.jpg",
     imageAlt: "Prodigy Wildfire advanced ember and flame detection sensor providing 24/7 wildfire monitoring for homes and businesses",
     stats: [
       { value: "360\u00b0", label: "Perimeter Scanning" },

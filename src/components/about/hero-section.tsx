@@ -5,7 +5,7 @@ export function HeroSection() {
   return (
     <section className="relative h-screen w-full overflow-hidden">
       <Image
-        src="/images/hero-sprinkler.jpg"
+        src="/images/sprinkler-system.jpg"
         alt="Roof mounted wildfire protection sprinkler system"
         fill
         className="object-cover"

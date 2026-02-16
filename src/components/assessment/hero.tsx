@@ -11,7 +11,7 @@ export function Hero() {
         playsInline
         className="absolute inset-0 h-full w-full object-cover"
       >
-        <source src="/images/hero_wildfire.mov" type="video/quicktime" />
+        <source src="/images/wildfire-protection-hero-video.mp4" type="video/quicktime" />
       </video>
       {/* Overlay */}
       <div className="absolute inset-0 bg-background/35" />

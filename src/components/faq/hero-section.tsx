@@ -5,7 +5,7 @@ export function HeroSection() {
   return (
     <section className="relative overflow-hidden py-24 sm:py-32 lg:py-40">
       <Image
-        src="/images/XH201009.jpg.avif"
+        src="/images/wildfire-protection-faq-hero.avif"
         alt="Prodigy Wildfire sprinkler system protecting property from wildfire"
         fill
         className="object-cover"

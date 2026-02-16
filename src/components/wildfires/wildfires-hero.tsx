@@ -5,7 +5,7 @@ export function WildfiresHero() {
   return (
     <section className="relative flex min-h-[85vh] items-end overflow-hidden pb-24">
       <Image
-        src="/images/Jasper national park.png"
+        src="/images/jasper-national-park-wildfire.jpg"
         alt="Wildfire devastation in Jasper National Park showing burned forest and the Athabasca River valley"
         fill
         className="object-cover"

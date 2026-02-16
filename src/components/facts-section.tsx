@@ -3,19 +3,19 @@ import Link from "next/link";
 
 const projects = [
   {
-    image: "/images/banff gondola wildfire protection.png",
+    image: "/images/banff-gondola-wildfire-protection.png",
     title: "Banff Gondola Upper Terminal",
     location: "Banff, Alberta, Canada",
     result: "34 sprinkler heads installed across the upper and lower terminal buildings at 7,500ft elevation in the Canadian Rockies",
   },
   {
-    image: "/images/golden sky bridge wildfire protection.png",
+    image: "/images/golden-skybridge-wildfire-protection.png",
     title: "Golden Skybridge",
     location: "Golden, British Columbia, Canada",
     result: "Complete wildfire suppression for multi-structure tourism attraction in dense forest",
   },
   {
-    image: "/images/ubc wildfire protection.png",
+    image: "/images/ubc-wildfire-protection.png",
     title: "UBC Campus Facilities",
     location: "British Columbia, Canada",
     result: "Multi-building campus deployment protecting research facilities and student housing",

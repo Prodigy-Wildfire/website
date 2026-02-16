@@ -12,7 +12,7 @@ const caseStudies = [
     location: "Banff, Alberta, Canada",
     country: "Canada",
     type: "Commercial",
-    image: "/images/Banff-Upper-Terminal-Photo-Courtesy-Banff-Gondola-by-Pursuit-scaled.jpg.avif",
+    image: "/images/banff-gondola-upper-terminal-case-study.avif",
     summary:
       "A world-renowned mountain resort required a wildfire protection system that could defend its upper terminal and surrounding infrastructure at over 7,000 ft elevation.",
     challenge:

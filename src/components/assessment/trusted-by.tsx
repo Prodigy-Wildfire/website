@@ -1,12 +1,12 @@
 import Image from "next/image";
 
 const trustedLogos = [
-  { src: "/images/golden sky bridge wildfire protection.png", alt: "Golden Skybridge" },
-  { src: "/images/pursuit group wildfire protection.png", alt: "Pursuit" },
-  { src: "/images/banff gondola wildfire protection.png", alt: "Banff Gondola" },
-  { src: "/images/forest park hotel wildfire protection.png", alt: "Forest Park Hotel" },
-  { src: "/images/ubc wildfire protection.png", alt: "UBC" },
-  { src: "/images/lake minnewanka wildfire protection.png", alt: "Lake Minnewanka" },
+  { src: "/images/golden-skybridge-wildfire-protection.png", alt: "Golden Skybridge" },
+  { src: "/images/pursuit-group-wildfire-protection.png", alt: "Pursuit" },
+  { src: "/images/banff-gondola-wildfire-protection.png", alt: "Banff Gondola" },
+  { src: "/images/forest-park-hotel-wildfire-protection.png", alt: "Forest Park Hotel" },
+  { src: "/images/ubc-wildfire-protection.png", alt: "UBC" },
+  { src: "/images/lake-minnewanka-wildfire-protection.png", alt: "Lake Minnewanka" },
 ];
 
 export function TrustedBy() {

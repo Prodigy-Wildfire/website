@@ -3,7 +3,7 @@ import Image from "next/image"
 const regions = [
   {
     name: "Canada",
-    image: "/images/Jasper national park.png",
+    image: "/images/jasper-national-park-wildfire.jpg",
     description:
       "Serving some of the world's most wildfire-prone landscapes, our Canadian team delivers advanced exterior wildfire sprinkler systems, ember detection, and remote activation technology for homes, businesses, and communities from British Columbia to Ontario.",
     detail:
@@ -11,7 +11,7 @@ const regions = [
   },
   {
     name: "U.S.A",
-    image: "/images/USA wildfire home under threat.jpg",
+    image: "/images/usa-wildfire-home-under-threat.jpg",
     description:
       "From California and Colorado to the Pacific Northwest and beyond, our U.S. team partners with property owners, builders, and communities to deliver custom-engineered exterior wildfire sprinkler systems built for America's evolving wildfire environment.",
     detail:

@@ -5,7 +5,7 @@ export function ContactHero() {
     <section className="relative flex min-h-[60vh] items-center justify-center overflow-hidden">
       {/* Background Image */}
       <Image
-        src="/images/Wildfire sprinklers.jpeg"
+        src="/images/wildfire-sprinklers-commercial.jpeg"
         alt="Wildfire burning through forest landscape"
         fill
         className="object-cover"

@@ -1,12 +1,12 @@
 import Image from "next/image";
 
 const trustedLogos = [
-  { src: "/images/golden sky bridge wildfire protection.png", alt: "Golden Skybridge", url: "https://goldenskybridge.com" },
-  { src: "/images/pursuit group wildfire protection.png", alt: "Pursuit", url: "https://www.pursuitcollection.com" },
-  { src: "/images/banff gondola wildfire protection.png", alt: "Banff Gondola", url: "https://www.banffjaspercollection.com/attractions/banff-gondola" },
-  { src: "/images/forest park hotel wildfire protection.png", alt: "Forest Park Hotel", url: "https://www.banffjaspercollection.com/hotels/forest-park-hotel/" },
-  { src: "/images/ubc wildfire protection.png", alt: "UBC", url: "https://www.ubc.ca" },
-  { src: "/images/lake minnewanka wildfire protection.png", alt: "Lake Minnewanka", url: "https://www.banfflakecruise.com" },
+  { src: "/images/golden-skybridge-wildfire-protection.png", alt: "Golden Skybridge", url: "https://goldenskybridge.com" },
+  { src: "/images/pursuit-group-wildfire-protection.png", alt: "Pursuit", url: "https://www.pursuitcollection.com" },
+  { src: "/images/banff-gondola-wildfire-protection.png", alt: "Banff Gondola", url: "https://www.banffjaspercollection.com/attractions/banff-gondola" },
+  { src: "/images/forest-park-hotel-wildfire-protection.png", alt: "Forest Park Hotel", url: "https://www.banffjaspercollection.com/hotels/forest-park-hotel/" },
+  { src: "/images/ubc-wildfire-protection.png", alt: "UBC", url: "https://www.ubc.ca" },
+  { src: "/images/lake-minnewanka-wildfire-protection.png", alt: "Lake Minnewanka", url: "https://www.banfflakecruise.com" },
 ];
 
 export function TrustedSection() {

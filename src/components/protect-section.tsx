@@ -11,7 +11,7 @@ const items = [
   },
   {
     image: "/images/protect-business.jpg",
-    video: "/images/Banff Gondola Wildfire Sprinkler.MOV",
+    video: "/images/banff-gondola-wildfire-sprinkler.mp4",
     title: "For Businesses",
     description:
       "Commercial-grade wildfire suppression engineered for resorts, campuses, critical infrastructure, and commercial properties at any scale.",

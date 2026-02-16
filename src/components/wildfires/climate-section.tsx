@@ -39,7 +39,7 @@ export function ClimateSection() {
         <div className="mt-16 grid items-center gap-12 lg:grid-cols-2">
           <div className="relative h-80 overflow-hidden rounded lg:h-[420px]">
             <Image
-              src="/images/Jasper national park.png"
+              src="/images/jasper-national-park-wildfire.jpg"
               alt="Wildfire devastation in Jasper National Park showing burned forest hillside overlooking the Athabasca River valley and Rocky Mountains"
               fill
               className="object-cover"

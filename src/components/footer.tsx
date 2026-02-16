@@ -40,7 +40,7 @@ export function Footer() {
           <div>
             <Link href="/" className="flex items-center">
               <Image
-                src="/images/PWS Logo_White writing copy.png"
+                src="/images/pws-logo-white-text.png"
                 alt="Prodigy Wildfire Solutions"
                 width={280}
                 height={80}

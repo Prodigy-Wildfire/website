@@ -13,47 +13,47 @@ const videoFaqs: VideoFaq[] = [
   {
     id: "water-supply-options",
     title: "Introduction - Water Supply Options",
-    videoSrc: "/images/1st introduction FAQ Water supply options.mov",
+    videoSrc: "/images/faq-water-supply-options-intro.mp4",
   },
   {
     id: "why-invest",
     title: "Why Should I Invest in the System?",
-    videoSrc: "/images/Why Should I invest in the system .mov",
+    videoSrc: "/images/faq-why-invest-in-wildfire-protection.mp4",
   },
   {
     id: "cycles",
     title: "Does the System Run Continuously or in Cycles?",
-    videoSrc: "/images/Does the system run continuously or in cycles.mov",
+    videoSrc: "/images/faq-system-continuous-or-cycle-operation.mp4",
   },
   {
     id: "homeowner-responsibility",
     title: "What Falls Under Homeowner Responsibility?",
-    videoSrc: "/images/What falls under home owner resposibility.mov",
+    videoSrc: "/images/faq-homeowner-responsibility-wildfire.mp4",
   },
   {
     id: "draw-from-lake",
     title: "Can I Draw Water From a Nearby Lake?",
-    videoSrc: "/images/Can I draw from a nearby lake.mov",
+    videoSrc: "/images/faq-drawing-water-from-nearby-lake.mp4",
   },
   {
     id: "metal-roof",
     title: "Do I Still Need a System if I Have a Metal Roof?",
-    videoSrc: "/images/Do I still need a system if I have a metal roof.mov",
+    videoSrc: "/images/faq-wildfire-system-with-metal-roof.mp4",
   },
   {
     id: "remote-monitoring",
     title: "How Do I Know if the System is Running When I'm Not There?",
-    videoSrc: "/images/How do I know if the system is running if I am not there.mov",
+    videoSrc: "/images/faq-remote-system-monitoring.mp4",
   },
   {
     id: "sell-home",
     title: "What Happens if I Sell My Home?",
-    videoSrc: "/images/What happens if I sell my home.mov",
+    videoSrc: "/images/faq-selling-home-with-wildfire-system.mp4",
   },
   {
     id: "best-time-activate",
     title: "When is the Best Time to Activate the System?",
-    videoSrc: "/images/When is the best time to activate the system.mov",
+    videoSrc: "/images/faq-best-time-to-activate-system.mp4",
   },
 ];
 
