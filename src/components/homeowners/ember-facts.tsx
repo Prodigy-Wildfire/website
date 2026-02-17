@@ -47,7 +47,7 @@ export function EmberFacts() {
             Residential Systems
           </p>
           <h2 className="mt-3 font-heading text-3xl font-bold tracking-tight text-primary-foreground md:text-4xl">
-            What a Prodigy Home System Looks Like
+            What a Prodigy Home Wildfire Sprinkler System Looks Like
           </h2>
           <p className="mx-auto mt-4 text-4xl font-bold text-accent md:text-5xl">
             Full Roof Coverage in Under 3 Minutes

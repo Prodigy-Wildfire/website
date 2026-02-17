@@ -5,7 +5,7 @@ const mechanisms = [
     icon: Flame,
     title: "Ember Attack",
     description:
-      "Windborne embers are the number one cause of structure loss during wildfires. Embers can travel over 20 kilometres ahead of the fire front, landing on roofs, gutters, decks, and vents. A single ember reaching 1,200 degrees is enough to ignite dry material and start a new fire far from the main blaze.",
+      "Windborne embers are the number one cause of structure loss during wildfires. Embers can travel over 20 kilometres ahead of the fire front, landing on roofs, gutters, decks, and vents. A single ember reaching 1,200 degrees is enough to ignite dry material and start a new fire far from the main blaze. Ember attack protection systems from Prodigy are specifically engineered to neutralise this threat before it reaches your structure.",
   },
   {
     icon: Sun,

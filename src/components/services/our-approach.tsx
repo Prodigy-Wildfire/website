@@ -28,7 +28,7 @@ export function OurApproach() {
       <div className="mx-auto max-w-7xl px-6">
         <div className="mx-auto max-w-3xl text-center">
           <h2 className="font-heading text-3xl font-bold tracking-tight text-foreground md:text-4xl">
-            Our Approach
+            Our Approach to Wildfire Protection
           </h2>
           <p className="mt-4 text-base leading-relaxed text-muted-foreground">
             We believe effective wildfire defense is built on innovation,

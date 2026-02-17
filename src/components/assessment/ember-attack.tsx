@@ -19,7 +19,7 @@ export function EmberAttack() {
           The greatest threat to property is not always the fire front itself; it
           is the embers that it generates. These large burning fragments can
           travel over 12.5 miles ahead of the flames, igniting roofs, decks,
-          vents, and siding.
+          vents, and siding. Prodigy&apos;s ember attack protection systems are engineered to intercept this threat before it reaches your structure.
         </p>
       </div>
     </section>

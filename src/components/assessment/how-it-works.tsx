@@ -49,7 +49,7 @@ export function HowItWorks() {
                   <Shield className="h-5 w-5 text-primary-foreground" />
                 </div>
                 <h3 className="text-lg font-semibold text-foreground">
-                  How Can I Protect Against Wildfires?
+                  How to Protect Your House from Wildfire
                 </h3>
               </div>
             </div>

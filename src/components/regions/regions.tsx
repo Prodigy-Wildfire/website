@@ -1,8 +1,10 @@
 import Image from "next/image"
+import Link from "next/link"
 
 const regions = [
   {
     name: "Canada",
+    href: "/regions/canada",
     image: "/images/jasper-national-park-wildfire.jpg",
     description:
       "Serving some of the world's most wildfire-prone landscapes, our Canadian team delivers advanced exterior wildfire sprinkler systems, ember detection, and remote activation technology for homes, businesses, and communities from British Columbia to Ontario.",
@@ -11,6 +13,7 @@ const regions = [
   },
   {
     name: "U.S.A",
+    href: "/regions/usa",
     image: "/images/usa-wildfire-home-under-threat.jpg",
     description:
       "From California and Colorado to the Pacific Northwest and beyond, our U.S. team partners with property owners, builders, and communities to deliver custom-engineered exterior wildfire sprinkler systems built for America's evolving wildfire environment.",
@@ -19,6 +22,7 @@ const regions = [
   },
   {
     name: "Australia",
+    href: "/regions/australia",
     image: "/images/australia-bushfires-kangaroo.avif",
     description:
       "In one of the most bushfire-challenged regions on the planet, our Australian team brings unmatched field expertise and cutting-edge wildfire protection technology to defend homes, rural properties, and entire communities from ember attack and radiant heat.",
@@ -81,6 +85,12 @@ export function Regions() {
                 <p className="text-muted-foreground leading-relaxed">
                   {region.detail}
                 </p>
+                <Link
+                  href={region.href}
+                  className="mt-4 inline-block text-sm font-semibold text-primary transition-colors hover:text-primary/80"
+                >
+                  Wildfire Protection in {region.name} &rarr;
+                </Link>
               </div>
             </div>
           ))}

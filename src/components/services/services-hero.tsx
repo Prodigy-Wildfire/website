@@ -18,7 +18,7 @@ export function ServicesHero() {
         <h1 className="font-heading text-4xl font-bold leading-tight tracking-tight text-primary-foreground md:text-5xl lg:text-6xl">
           <span className="text-balance">Wildfire Protection Services</span>
           <br />
-          <span className="text-accent">Water, Remote, Detection</span>
+          <span className="text-accent">Wildfire Sprinkler Systems, Remote Activation &amp; Ember Detection</span>
         </h1>
         <p className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-primary-foreground/80">
           At Prodigy Wildfire Solutions, we provide permanent exterior wildfire

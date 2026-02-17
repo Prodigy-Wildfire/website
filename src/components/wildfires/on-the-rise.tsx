@@ -22,7 +22,7 @@ export function OnTheRise() {
           seasons, extreme heat, and drier conditions are accelerating the
           threat, putting homes, businesses, and critical infrastructure at
           greater risk than ever before. Proactive wildfire protection  -
-          including exterior sprinkler systems, ember detection, and remote
+          including exterior wildfire sprinkler systems, ember detection, and remote
           activation  - is no longer optional.
         </p>
         <div className="mt-8 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">

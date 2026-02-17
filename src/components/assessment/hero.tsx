@@ -27,7 +27,7 @@ export function Hero() {
           <span className="text-primary text-3xl md:text-5xl lg:text-6xl">Assess Your Property Risk</span>
         </h1>
         <p className="mx-auto mt-6 max-w-2xl text-lg text-muted-foreground leading-relaxed md:text-xl">
-          Redefining Wildfire Defense
+          Take our wildfire preparedness quiz to complete a wildfire risk assessment and discover how ready your property is.
         </p>
         <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
           <Link

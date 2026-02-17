@@ -59,9 +59,10 @@ export function RiskSection() {
             {"Your Home's Wildfire Vulnerabilities"}
           </h2>
           <p className="mx-auto mt-4 max-w-3xl text-base leading-relaxed text-muted-foreground">
-            Every home in a fire-prone area has weak points where embers and
-            radiant heat can exploit gaps in your defences. Understanding where
-            your home is most vulnerable is the first step toward protecting it.
+            Understanding how to protect your house from wildfire starts with
+            knowing where embers and radiant heat can exploit gaps in your
+            defences. Identifying your home&apos;s most vulnerable points is
+            the first step toward effective protection.
           </p>
         </div>
 

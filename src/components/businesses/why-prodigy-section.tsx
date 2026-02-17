@@ -36,7 +36,7 @@ export function WhyProdigySection() {
           <p className="mt-4 max-w-3xl mx-auto text-muted-foreground text-base leading-relaxed">
             Commercial properties face unique wildfire risks including
             liability, business interruption, and regulatory compliance. Prodigy
-            addresses all three.
+            addresses all three with commercial wildfire protection systems engineered for resilience.
           </p>
         </div>
 

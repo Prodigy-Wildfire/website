@@ -36,7 +36,7 @@ export function GettingProtectedSection() {
             <Accordion type="single" collapsible className="mt-8">
               <AccordionItem value="cost" className="border-border">
                 <AccordionTrigger className="text-foreground font-semibold text-base hover:no-underline hover:text-primary">
-                  How Is Commercial Pricing Determined?
+                  How Much Does a Commercial Wildfire Protection System Cost?
                 </AccordionTrigger>
                 <AccordionContent className="text-muted-foreground leading-relaxed">
                   <p className="mb-3">

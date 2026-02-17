@@ -5,7 +5,7 @@ export function QuizCta() {
     <section className="bg-background py-24">
       <div className="mx-auto max-w-4xl px-6 text-center">
         <h2 className="font-serif text-3xl font-bold text-foreground md:text-5xl text-balance">
-          How Prepared Are You?
+          How Prepared Are You? Take the Wildfire Preparedness Quiz.
         </h2>
         <p className="mx-auto mt-6 max-w-2xl text-muted-foreground leading-relaxed">
           As wildfire seasons grow longer and more severe, preparation is no

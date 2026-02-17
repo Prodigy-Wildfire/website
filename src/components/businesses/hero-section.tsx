@@ -25,7 +25,7 @@ export function HeroSection() {
           <span className="text-primary">Protection Solutions</span>
         </h1>
         <p className="mt-6 max-w-2xl mx-auto text-muted-foreground text-lg md:text-xl leading-relaxed">
-          Commercial-grade wildfire suppression systems for resorts, critical
+          Commercial wildfire sprinkler systems for resorts, critical
           infrastructure, and commercial properties across the United States,
           Canada, and Australia. Engineered to scale.
         </p>

@@ -3,7 +3,7 @@ import { Droplets, Smartphone, ScanEye } from "lucide-react";
 const features = [
   {
     icon: Droplets,
-    title: "WATER SYSTEMS",
+    title: "WILDFIRE SPRINKLER SYSTEMS",
     stats: [
       { value: "Up to 50 ft", label: "Sprinkler Range" },
       { value: "3 minutes", label: "to Full Coverage" },

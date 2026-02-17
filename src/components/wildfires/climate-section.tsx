@@ -67,7 +67,7 @@ export function ClimateSection() {
               faster, spread farther, and burn with unprecedented intensity.
               Communities across the United States, Canada, and Australia are
               facing longer fire seasons, more severe fire behaviour, and
-              record-breaking destruction  - making proactive wildfire protection
+              record-breaking destruction  - making proactive wildfire sprinkler
               systems essential for every home and business in fire-prone regions.
             </p>
 

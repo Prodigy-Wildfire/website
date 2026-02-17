@@ -50,7 +50,7 @@ const emergencySteps = [
     icon: ShieldCheck,
     title: "Step 6: Activate Your Wildfire Protection System",
     description:
-      "If you have a Prodigy exterior sprinkler system, activate it remotely before you evacuate. Our systems are designed to defend your property while you are safely away, wetting the roof, walls, and surrounding vegetation to reduce ember ignition risk. Remote activation through the Prodigy app means your home or business stays protected even after you leave.",
+      "If you have a Prodigy exterior wildfire sprinkler system, activate it remotely before you evacuate. Our systems are designed to defend your property while you are safely away, wetting the roof, walls, and surrounding vegetation to reduce ember ignition risk. Remote activation through the Prodigy app means your home or business stays protected even after you leave.",
     href: "/services",
   },
   {
@@ -160,7 +160,7 @@ export function GettingPrepared() {
             rel="noopener noreferrer"
             className="inline-block rounded border border-border px-8 py-3.5 text-sm font-semibold text-foreground transition-colors hover:border-accent hover:text-accent"
           >
-            Take the Readiness Quiz
+            Take the Wildfire Preparedness Quiz
           </a>
         </div>
       </div>

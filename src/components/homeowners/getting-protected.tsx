@@ -4,7 +4,7 @@ import { DollarSign, Clock, ClipboardCheck, Ruler, Wrench } from "lucide-react";
 const faqs = [
   {
     icon: DollarSign,
-    title: "How Much Does a Home System Cost?",
+    title: "How Much Does a Wildfire Protection System Cost?",
     description:
       "Residential pricing depends on your property size, roof complexity, number of sprinkler zones required, water supply location, and local installation standards. Systems in the United States, Canada, and Australia are priced to reflect regional materials and labour. We provide a detailed quote after your free home assessment, so you know exactly what to expect.",
   },
