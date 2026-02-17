@@ -18,9 +18,35 @@ export const metadata: Metadata = {
     "Protect your property with Prodigy's engineered wildfire sprinkler systems. Remotely activated, ember-proof protection across USA, Canada & Australia.",
 };
 
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  name: "Prodigy Wildfire Solutions",
+  url: "https://www.prodigywildfire.com",
+  description:
+    "Protect your property with Prodigy's engineered wildfire sprinkler systems. Remotely activated, ember-proof protection across USA, Canada & Australia.",
+  image: "https://www.prodigywildfire.com/images/pws-logo-white-text.png",
+  email: "sales@prodigywildfire.com",
+  serviceType: [
+    "Wildfire Protection",
+    "Exterior Sprinkler Systems",
+    "Ember Detection",
+    "Remote Activation Systems",
+  ],
+  areaServed: [
+    { "@type": "Country", name: "United States" },
+    { "@type": "Country", name: "Canada" },
+    { "@type": "Country", name: "Australia" },
+  ],
+};
+
 export default function HomePage() {
   return (
     <div>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <Header />
       <main>
         <Hero />

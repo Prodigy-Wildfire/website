@@ -42,6 +42,31 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${inter.variable} ${montserrat.variable}`}>
       <body className="font-sans antialiased">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Organization",
+              name: "Prodigy Wildfire Solutions",
+              url: "https://www.prodigywildfire.com",
+              logo: "https://www.prodigywildfire.com/images/pws-logo-white-text.png",
+              description:
+                "Prodigy Wildfire provides permanent exterior wildfire sprinkler systems, ember detection, and remote activation technology to protect homes, businesses, and communities across the USA, Canada, and Australia.",
+              contactPoint: {
+                "@type": "ContactPoint",
+                email: "sales@prodigywildfire.com",
+                contactType: "sales",
+              },
+              sameAs: [],
+              areaServed: [
+                { "@type": "Country", name: "United States" },
+                { "@type": "Country", name: "Canada" },
+                { "@type": "Country", name: "Australia" },
+              ],
+            }),
+          }}
+        />
         {children}
         <StickyCtaBar />
         <ChatWidget />
