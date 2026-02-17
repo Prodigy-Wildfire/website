@@ -3,13 +3,13 @@ import { ArrowDown } from "lucide-react";
 
 export function Hero() {
   return (
-    <section className="relative flex min-h-screen items-center justify-center overflow-hidden">
+    <section className="relative flex min-h-[85vh] items-center justify-center overflow-hidden">
       <Image
         src="/images/prodigy-global-connections.png"
         alt="Prodigy Wildfire global coverage map showing service areas across USA, Canada, and Australia"
         fill
         sizes="100vw"
-        className="object-cover"
+        className="object-cover object-top"
         priority
       />
       <div className="absolute inset-0 bg-black/30" />
