@@ -11,13 +11,13 @@ const values = [
     icon: CloudSun,
     title: "All-Conditions",
     description:
-      "Every advancement we make, whether in system layout, activation technology, or water efficiency, is guided by one goal: protecting properties more effectively and responsibly. Purpose gives our progress direction, and that is what keeps Prodigy ahead of the curve.",
+      "Our systems are engineered to perform in the harshest environments — extreme heat, high winds, drought, and heavy ember loads. Every component is tested and selected for durability so your protection works when it matters most, no matter the conditions.",
   },
   {
     icon: Handshake,
     title: "Responsibly Reliable",
     description:
-      "Integrity sits at the core of our business. We believe clear communication builds trust, and trust builds lasting partnerships. From consultation to completion, we're transparent about our process, our pricing, and our performance. We take ownership of every project and pride in standing behind our work.",
+      "Integrity sits at the core of our business. We believe clear communication builds trust, and trust builds lasting partnerships. From consultation to completion, we're transparent about our process and our performance. We take ownership of every project and pride in standing behind our work.",
   },
 ];
 

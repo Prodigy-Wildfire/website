@@ -84,7 +84,7 @@ const caseStudies = [
     challenge:
       "Located in a high-value wildfire interface zone surrounded by mature forest, this residence required a system that could defend against ember attack and radiant heat while blending seamlessly with the home's premium architectural design.",
     solution:
-      "Prodigy installed a full exterior wildfire sprinkler system using type L copper piping routed discreetly along rooflines and ridges. The homeowner can activate the system remotely via the Prodigy app from anywhere in the world, with real-time Ember Watch alerts for early warning.",
+      "Prodigy installed a full exterior wildfire sprinkler system using type L copper (316 Stainless steel in Australia) piping routed discreetly along rooflines and ridges. The homeowner can activate the system remotely via the Prodigy app from anywhere in the world, with real-time Ember Watch alerts for early warning.",
     clientQuote:
       "We barely notice the system is there, but knowing we can activate it from anywhere gives us incredible peace of mind, especially during fire season.",
     clientName: "Steve S., Whistler BC",

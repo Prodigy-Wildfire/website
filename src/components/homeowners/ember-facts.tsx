@@ -7,7 +7,7 @@ const features = [
     icon: Droplets,
     title: "Discreet Copper Piping",
     description:
-      "Type L copper piping routes discreetly along your rooflines and ridges, creating a low-profile system that blends with your home's architecture.",
+      "Type L copper (316 Stainless steel in Australia) piping routes discreetly along your rooflines and ridges, creating a low-profile system that blends with your home's architecture.",
   },
   {
     icon: Smartphone,

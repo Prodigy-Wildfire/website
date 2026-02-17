@@ -18,7 +18,7 @@ const pillars = [
     icon: ShieldCheck,
     title: "High Standards",
     description:
-      "Not all suppression systems are built equal. Our system is approved by Fire Protection experts and built by structural engineers using the highest quality materials designed to withstand the most extreme conditions.",
+      "Not all suppression systems are built equal. Our system is designed alongside Structural Protection fire fighters and installed by qualified plumbers using the highest quality materials designed to withstand the most extreme conditions.",
   },
 ];
 

@@ -12,7 +12,7 @@ const faqs = [
     icon: Clock,
     title: "How Long Does It Last?",
     description:
-      "Prodigy residential systems are built with Type L copper piping and commercial-grade components designed for decades of service. Every part is serviceable and replaceable. Our annual maintenance program includes a spring commissioning check, system flush, nozzle inspection, and winterisation in cold climates to keep your system ready year after year.",
+      "Prodigy residential systems are built with Type L copper (316 Stainless steel in Australia) piping and commercial-grade components designed for decades of service. Every part is serviceable and replaceable. Our annual maintenance program includes a spring commissioning check, system flush, nozzle inspection, and winterisation in cold climates to keep your system ready year after year.",
   },
 ];
 

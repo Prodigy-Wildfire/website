@@ -37,7 +37,7 @@ const jsonLd = {
           "@type": "Service",
           name: "Exterior Wildfire Sprinkler Systems",
           description:
-            "Custom-engineered permanent roof-mounted sprinkler systems using type L copper piping. Delivers up to 50 feet of coverage and full property saturation in under 3 minutes.",
+            "Custom-engineered permanent roof-mounted sprinkler systems using type L copper (316 Stainless steel in Australia) piping. Delivers up to 50 feet of coverage and full property saturation in under 3 minutes.",
         },
       },
       {
