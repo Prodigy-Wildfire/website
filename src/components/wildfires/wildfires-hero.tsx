@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export function WildfiresHero() {
   return (
-    <section className="relative flex min-h-[85vh] items-end overflow-hidden pb-24">
+    <section className="relative flex min-h-[85vh] items-center justify-center overflow-hidden">
       <Image
         src="/images/jasper-national-park-wildfire.jpg"
         alt="Wildfire devastation in Jasper National Park showing burned forest and the Athabasca River valley"
@@ -19,7 +19,7 @@ export function WildfiresHero() {
           Education &amp; Awareness
         </p>
         <h1 className="mt-3 font-heading text-4xl font-bold leading-tight tracking-tight text-primary-foreground md:text-6xl lg:text-7xl">
-          How Wildfires Spread and How to Protect Against Them
+          How Wildfires Spread
         </h1>
         <p className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-primary-foreground/80 md:text-xl">
           How wildfires start, how they spread, and what you can do to prepare

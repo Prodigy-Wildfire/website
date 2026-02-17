@@ -19,11 +19,9 @@ export function Hero() {
       <div className="relative z-10 mx-auto max-w-4xl px-6 text-center">
         <h1 className="font-heading text-4xl font-bold leading-tight tracking-tight text-primary-foreground md:text-6xl lg:text-7xl">
           <span className="text-balance">Wildfire Protection Systems</span>
-          <br />
-          <span className="text-accent">for Homes &amp; Businesses</span>
         </h1>
         <p className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-primary-foreground/80 md:text-xl">
-          Redefining Wildfire Defense Across the USA, Canada &amp; Australia
+          For Homes &amp; Businesses Across the USA, Canada &amp; Australia
         </p>
         <div className="mt-10 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
           <Link
