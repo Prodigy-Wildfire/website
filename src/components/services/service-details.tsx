@@ -61,6 +61,7 @@ export function ServiceDetails() {
                   src={service.image || "/placeholder.svg"}
                   alt={service.imageAlt}
                   fill
+                  sizes="(max-width: 1024px) 100vw, 50vw"
                   className={service.title === "REMOTE ACTIVATION" ? "object-contain" : "object-cover"}
                 />
               </div>

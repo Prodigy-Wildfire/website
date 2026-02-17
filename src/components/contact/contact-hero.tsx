@@ -8,6 +8,7 @@ export function ContactHero() {
         src="/images/wildfire-sprinklers-commercial.jpeg"
         alt="Wildfire burning through forest landscape"
         fill
+        sizes="100vw"
         className="object-cover"
         priority
       />

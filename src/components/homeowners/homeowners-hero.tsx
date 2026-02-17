@@ -8,6 +8,7 @@ export function HomeownersHero() {
         src="/images/homeowners-hero.jpg"
         alt="Family home with wildfire protection system installed"
         fill
+        sizes="100vw"
         className="object-cover"
         priority
       />

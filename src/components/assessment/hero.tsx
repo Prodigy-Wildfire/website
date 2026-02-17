@@ -9,9 +9,11 @@ export function Hero() {
         muted
         loop
         playsInline
+        preload="auto"
+        poster="/images/hero-poster-assessment.jpg"
         className="absolute inset-0 h-full w-full object-cover"
       >
-        <source src="/images/wildfire-protection-hero-video.mp4" type="video/quicktime" />
+        <source src="/images/wildfire-protection-hero-video.mp4" type="video/mp4" />
       </video>
       {/* Overlay */}
       <div className="absolute inset-0 bg-background/35" />

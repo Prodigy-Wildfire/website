@@ -7,6 +7,7 @@ export function CaseStudiesHero() {
         src="/images/services-hero.jpg"
         alt="Prodigy Wildfire exterior sprinkler system installation on commercial property"
         fill
+        sizes="100vw"
         className="object-cover"
         priority
       />

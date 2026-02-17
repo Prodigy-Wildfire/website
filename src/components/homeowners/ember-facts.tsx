@@ -36,6 +36,7 @@ export function EmberFacts() {
         src="/images/ember-attack.jpg"
         alt="Exterior wildfire sprinkler system protecting a residential home"
         fill
+        sizes="100vw"
         className="object-cover"
       />
       <div className="absolute inset-0 bg-primary/85" />

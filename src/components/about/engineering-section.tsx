@@ -33,6 +33,7 @@ export function EngineeringSection() {
               src="/images/engineering.jpg"
               alt="Prodigy Wildfire precision-engineered exterior wildfire sprinkler system installation"
               fill
+              sizes="(max-width: 1024px) 100vw, 50vw"
               className="object-cover"
             />
           </div>

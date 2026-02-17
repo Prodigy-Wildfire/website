@@ -8,6 +8,8 @@ export function Hero() {
         muted
         loop
         playsInline
+        preload="auto"
+        poster="/images/hero-poster-home.jpg"
         className="absolute inset-0 h-full w-full object-cover"
       >
         <source src="/images/wildfire-hero-canada-australia-usa.mp4" type="video/mp4" />

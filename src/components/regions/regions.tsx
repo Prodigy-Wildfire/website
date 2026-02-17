@@ -60,6 +60,7 @@ export function Regions() {
                     src={region.image || "/placeholder.svg"}
                     alt={`${region.name} wildfire-prone landscape`}
                     fill
+                    sizes="(max-width: 1024px) 100vw, 50vw"
                     className="object-cover"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-background/50 to-transparent" />

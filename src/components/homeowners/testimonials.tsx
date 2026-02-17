@@ -23,6 +23,7 @@ export function Testimonials() {
         src="/images/whistler-home.jpg"
         alt="Mountain home with wildfire protection"
         fill
+        sizes="100vw"
         className="object-cover"
       />
       <div className="absolute inset-0 bg-primary/85" />

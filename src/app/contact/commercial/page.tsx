@@ -19,6 +19,7 @@ export default function CommercialContactPage() {
           src="/images/wildfire-sprinklers-commercial.jpeg"
           alt="Commercial wildfire protection system installation"
           fill
+          sizes="100vw"
           className="object-cover"
           priority
         />

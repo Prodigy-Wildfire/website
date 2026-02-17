@@ -98,6 +98,7 @@ export function GettingPrepared() {
               src="/images/getting-prepared.jpg"
               alt="Homeowner preparing property for wildfire season with exterior sprinkler system in a fire-prone area"
               fill
+              sizes="(max-width: 1024px) 100vw, 50vw"
               className="object-cover"
             />
           </div>

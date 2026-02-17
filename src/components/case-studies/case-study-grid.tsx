@@ -110,6 +110,7 @@ function CaseStudyCard({
           src={study.image}
           alt={`${study.title} wildfire protection installation by Prodigy`}
           fill
+          sizes="(max-width: 1024px) 100vw, 50vw"
           className="object-cover"
         />
         <div className="absolute top-4 left-4">

@@ -25,6 +25,7 @@ export function HowItWorks() {
               src="/images/humidity-bubble.jpg"
               alt="Humidity bubble protective barrier created by Prodigy sprinkler system"
               fill
+              sizes="(max-width: 1024px) 100vw, 50vw"
               className="object-cover"
             />
           </div>

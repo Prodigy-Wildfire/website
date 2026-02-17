@@ -8,6 +8,7 @@ export function HeroSection() {
         src="/images/sprinkler-system.jpg"
         alt="Roof mounted wildfire protection sprinkler system"
         fill
+        sizes="100vw"
         className="object-cover"
         priority
       />

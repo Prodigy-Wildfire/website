@@ -92,6 +92,7 @@ export function GettingProtectedSection() {
                 src="/images/system-demo.jpg"
                 alt="Wildfire protection system demonstration"
                 fill
+                sizes="(max-width: 1024px) 100vw, 50vw"
                 className="object-cover"
               />
               <div className="absolute inset-0 bg-background/20" />

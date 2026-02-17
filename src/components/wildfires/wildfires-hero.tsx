@@ -8,6 +8,7 @@ export function WildfiresHero() {
         src="/images/jasper-national-park-wildfire.jpg"
         alt="Wildfire devastation in Jasper National Park showing burned forest and the Athabasca River valley"
         fill
+        sizes="100vw"
         className="object-cover"
         priority
       />

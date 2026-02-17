@@ -42,6 +42,7 @@ export function ClimateSection() {
               src="/images/jasper-national-park-wildfire.jpg"
               alt="Wildfire devastation in Jasper National Park showing burned forest hillside overlooking the Athabasca River valley and Rocky Mountains"
               fill
+              sizes="(max-width: 1024px) 100vw, 50vw"
               className="object-cover"
             />
           </div>

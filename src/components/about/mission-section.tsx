@@ -40,6 +40,7 @@ export function MissionSection() {
               src="/images/customer-demo.jpg"
               alt="Prodigy Wildfire exterior sprinkler system demonstration for wildfire protection"
               fill
+              sizes="(max-width: 1024px) 100vw, 50vw"
               className="object-cover"
             />
           </div>

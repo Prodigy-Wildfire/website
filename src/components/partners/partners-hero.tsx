@@ -7,6 +7,7 @@ export function PartnersHero() {
         src="/images/engineering.jpg"
         alt="Prodigy Wildfire partner installation team working on exterior sprinkler system"
         fill
+        sizes="100vw"
         className="object-cover"
         priority
       />

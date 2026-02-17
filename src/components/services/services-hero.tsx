@@ -8,6 +8,7 @@ export function ServicesHero() {
         src="/images/services-hero.jpg"
         alt="Prodigy wildfire sprinkler system installed on residential roofline"
         fill
+        sizes="100vw"
         className="object-cover"
         priority
       />

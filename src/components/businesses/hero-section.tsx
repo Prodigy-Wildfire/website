@@ -8,10 +8,11 @@ export function HeroSection() {
         muted
         loop
         playsInline
+        preload="auto"
+        poster="/images/hero-poster-businesses.jpg"
         className="absolute inset-0 h-full w-full object-cover"
       >
         <source src="/images/banff-gondola-wildfire-sprinkler.mp4" type="video/mp4" />
-        <source src="/images/banff-gondola-wildfire-sprinkler.mp4" type="video/quicktime" />
       </video>
       <div className="absolute inset-0 bg-background/35" />
 

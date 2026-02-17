@@ -63,6 +63,7 @@ export function ContactCta() {
             src="/images/sprinkler-system.jpg"
             alt="Prodigy fire sprinkler system protecting a home"
             fill
+            sizes="100vw"
             className="object-cover"
           />
           <div className="absolute inset-0 bg-secondary/90" />

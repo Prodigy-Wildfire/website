@@ -8,9 +8,11 @@ export function Hero() {
         muted
         loop
         playsInline
+        preload="auto"
+        poster="/images/hero-poster-regions.jpg"
         className="absolute inset-0 h-full w-full object-cover"
       >
-        <source src="/images/wildfire-protection-hero-video.mp4" type="video/quicktime" />
+        <source src="/images/wildfire-protection-hero-video.mp4" type="video/mp4" />
       </video>
       <div className="absolute inset-0 bg-background/35" />
       <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-background/40" />

@@ -8,6 +8,7 @@ export function HeroSection() {
         src="/images/wildfire-protection-faq-hero.avif"
         alt="Prodigy Wildfire sprinkler system protecting property from wildfire"
         fill
+        sizes="100vw"
         className="object-cover"
         priority
       />

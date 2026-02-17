@@ -60,6 +60,7 @@ function VideoCard({
             src={testimonial.posterSrc}
             alt={`${testimonial.name} video testimonial`}
             fill
+            sizes="(max-width: 1024px) 100vw, 50vw"
             className="object-cover"
           />
         )}
@@ -108,6 +109,7 @@ export function VideoTestimonials() {
         src="/images/protect-home.jpg"
         alt="Wildfire protection for homes"
         fill
+        sizes="100vw"
         className="object-cover"
       />
       <div className="absolute inset-0 bg-primary/85" />

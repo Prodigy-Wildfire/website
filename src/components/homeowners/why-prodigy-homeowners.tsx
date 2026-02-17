@@ -68,6 +68,7 @@ export function WhyProdigyHomeowners() {
               src="/images/custom-approach.jpg"
               alt="Prodigy technician installing custom exterior wildfire sprinkler system on residential property"
               fill
+              sizes="(max-width: 1024px) 100vw, 50vw"
               className="object-cover"
             />
           </div>
