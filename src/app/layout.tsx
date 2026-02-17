@@ -31,6 +31,18 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     siteName: "Prodigy Wildfire Solutions",
+    images: [
+      {
+        url: "/images/og-default.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Prodigy Wildfire Solutions - Wildfire Protection Systems",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    images: ["/images/og-default.jpg"],
   },
 };
 
