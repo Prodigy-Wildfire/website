@@ -57,17 +57,17 @@ const regions: Region[] = [
     name: "Australia",
     stats: [
       {
+        value: 3094,
+        label: "Homes Destroyed (Black Summer)",
+        source: "CSIRO",
+        sourceUrl: "https://www.csiro.au/en/research/natural-disasters/bushfires",
+      },
+      {
         value: 46,
         suffix: "M",
         label: "Acres Burned (Black Summer 2019-20)",
         source: "Australian Government",
         sourceUrl: "https://www.agriculture.gov.au/abares/forestsaustralia/forest-data-maps-and-tools/spatial-data/forest-fire",
-      },
-      {
-        value: 3094,
-        label: "Homes Destroyed (Black Summer)",
-        source: "CSIRO",
-        sourceUrl: "https://www.csiro.au/en/research/natural-disasters/bushfires",
       },
     ],
   },
