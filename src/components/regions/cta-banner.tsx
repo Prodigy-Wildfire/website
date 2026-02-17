@@ -11,7 +11,7 @@ export function CtaBanner() {
         </p>
         <div className="mt-10 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
           <a
-            href="mailto:info@prodigywildfire.com"
+            href="mailto:sales@prodigywildfire.com"
             className="bg-background text-foreground px-8 py-3.5 text-sm font-semibold uppercase tracking-wider hover:bg-background/90 transition-colors"
           >
             Email Us
