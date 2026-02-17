@@ -18,27 +18,47 @@ export const metadata: Metadata = {
     "Protect your property with Prodigy's engineered wildfire sprinkler systems. Remotely activated, ember-proof protection across USA, Canada & Australia.",
 };
 
-const jsonLd = {
-  "@context": "https://schema.org",
-  "@type": "LocalBusiness",
-  name: "Prodigy Wildfire Solutions",
-  url: "https://www.prodigywildfire.com",
-  description:
-    "Protect your property with Prodigy's engineered wildfire sprinkler systems. Remotely activated, ember-proof protection across USA, Canada & Australia.",
-  image: "https://www.prodigywildfire.com/images/pws-logo-white-text.png",
-  email: "sales@prodigywildfire.com",
-  serviceType: [
-    "Wildfire Protection",
-    "Exterior Sprinkler Systems",
-    "Ember Detection",
-    "Remote Activation Systems",
-  ],
-  areaServed: [
-    { "@type": "Country", name: "United States" },
-    { "@type": "Country", name: "Canada" },
-    { "@type": "Country", name: "Australia" },
-  ],
-};
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    name: "Prodigy Wildfire Solutions",
+    url: "https://www.prodigywildfire.com",
+    description:
+      "Protect your property with Prodigy's engineered wildfire sprinkler systems. Remotely activated, ember-proof protection across USA, Canada & Australia.",
+    image: "https://www.prodigywildfire.com/images/pws-logo-white-text.png",
+    logo: "https://www.prodigywildfire.com/images/pws-logo-white-text.png",
+    email: "sales@prodigywildfire.com",
+    address: {
+      "@type": "PostalAddress",
+      addressLocality: "Whistler",
+      addressRegion: "BC",
+      addressCountry: "CA",
+    },
+    areaServed: [
+      { "@type": "Country", name: "United States" },
+      { "@type": "Country", name: "Canada" },
+      { "@type": "Country", name: "Australia" },
+    ],
+    serviceType: [
+      "Wildfire Protection",
+      "Exterior Sprinkler Systems",
+      "Ember Detection",
+      "Remote Activation Systems",
+    ],
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    name: "Prodigy Wildfire Solutions",
+    url: "https://www.prodigywildfire.com",
+    potentialAction: {
+      "@type": "SearchAction",
+      target: "https://www.prodigywildfire.com/?q={search_term_string}",
+      "query-input": "required name=search_term_string",
+    },
+  },
+];
 
 export default function HomePage() {
   return (

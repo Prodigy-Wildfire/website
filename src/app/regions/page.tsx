@@ -14,9 +14,42 @@ export const metadata = {
     "Prodigy provides wildfire protection across high-risk regions in Canada, the United States, and Australia. Find coverage in your area.",
 };
 
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  name: "Prodigy Wildfire Solutions",
+  url: "https://www.prodigywildfire.com",
+  description:
+    "Prodigy provides wildfire protection across high-risk regions in Canada, the United States, and Australia.",
+  areaServed: [
+    {
+      "@type": "AdministrativeArea",
+      name: "Canada",
+      description:
+        "Serving wildfire-prone landscapes from British Columbia to Ontario with advanced exterior wildfire sprinkler systems, ember detection, and remote activation technology.",
+    },
+    {
+      "@type": "AdministrativeArea",
+      name: "United States",
+      description:
+        "From California and Colorado to the Pacific Northwest, delivering custom-engineered exterior wildfire sprinkler systems for America's evolving wildfire environment.",
+    },
+    {
+      "@type": "AdministrativeArea",
+      name: "Australia",
+      description:
+        "Defending homes, rural properties, and communities from ember attack and radiant heat across every Australian state and territory.",
+    },
+  ],
+};
+
 export default function Page() {
   return (
     <main className="min-h-screen">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <Header />
       <Hero />
       <Stats />

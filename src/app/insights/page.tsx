@@ -37,9 +37,31 @@ const posts = [
   },
 ];
 
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Blog",
+  name: "Wildfire Protection Insights",
+  description:
+    "Expert advice, wildfire preparedness tips, and the latest news on protecting homes and businesses across the USA, Canada, and Australia.",
+  url: "https://www.prodigywildfire.com/insights",
+  publisher: {
+    "@type": "Organization",
+    name: "Prodigy Wildfire Solutions",
+    url: "https://www.prodigywildfire.com",
+    logo: {
+      "@type": "ImageObject",
+      url: "https://www.prodigywildfire.com/images/pws-logo-white-text.png",
+    },
+  },
+};
+
 export default function InsightsPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <Header />
       <main>
         {/* Hero */}

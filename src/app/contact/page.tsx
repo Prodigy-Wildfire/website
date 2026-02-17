@@ -10,9 +10,44 @@ export const metadata = {
     "Get in touch with Prodigy Wildfire for a property assessment and custom wildfire protection quote. Serving USA, Canada, and Australia.",
 };
 
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "ContactPage",
+  mainEntity: {
+    "@type": "LocalBusiness",
+    name: "Prodigy Wildfire Solutions",
+    url: "https://www.prodigywildfire.com",
+    email: "sales@prodigywildfire.com",
+    image: "https://www.prodigywildfire.com/images/pws-logo-white-text.png",
+    address: {
+      "@type": "PostalAddress",
+      addressLocality: "Whistler",
+      addressRegion: "BC",
+      addressCountry: "CA",
+    },
+    areaServed: [
+      { "@type": "Country", name: "United States" },
+      { "@type": "Country", name: "Canada" },
+      { "@type": "Country", name: "Australia" },
+    ],
+    contactPoint: [
+      {
+        "@type": "ContactPoint",
+        email: "sales@prodigywildfire.com",
+        contactType: "sales",
+        availableLanguage: "English",
+      },
+    ],
+  },
+};
+
 export default function ContactPage() {
   return (
     <main>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <Header />
       <ContactHero />
       <ContactForm />

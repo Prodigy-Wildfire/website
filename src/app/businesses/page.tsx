@@ -14,9 +14,41 @@ export const metadata = {
     "Protect your commercial property with engineered wildfire defense systems. Full-service from design through installation and year-round maintenance.",
 };
 
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  name: "Commercial Wildfire Protection",
+  provider: {
+    "@type": "Organization",
+    name: "Prodigy Wildfire Solutions",
+    url: "https://www.prodigywildfire.com",
+  },
+  description:
+    "Protect your commercial property with engineered wildfire defense systems. Full-service from design through installation and year-round maintenance.",
+  serviceType: "Commercial Wildfire Sprinkler System",
+  areaServed: [
+    { "@type": "Country", name: "United States" },
+    { "@type": "Country", name: "Canada" },
+    { "@type": "Country", name: "Australia" },
+  ],
+  offers: {
+    "@type": "Offer",
+    availability: "https://schema.org/InStock",
+    eligibleRegion: [
+      { "@type": "Country", name: "United States" },
+      { "@type": "Country", name: "Canada" },
+      { "@type": "Country", name: "Australia" },
+    ],
+  },
+};
+
 export default function Page() {
   return (
     <main>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <Header />
       <HeroSection />
       <StatsSection />

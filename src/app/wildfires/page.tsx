@@ -16,9 +16,40 @@ export const metadata: Metadata = {
     "Learn how wildfires spread, why ember attack is the #1 cause of property loss, and how modern protection systems can safeguard your property.",
 };
 
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  headline: "How Wildfires Spread and How to Protect Against Them",
+  description:
+    "Learn how wildfires spread, why ember attack is the #1 cause of property loss, and how modern protection systems can safeguard your property.",
+  author: {
+    "@type": "Organization",
+    name: "Prodigy Wildfire Solutions",
+    url: "https://www.prodigywildfire.com",
+  },
+  publisher: {
+    "@type": "Organization",
+    name: "Prodigy Wildfire Solutions",
+    logo: {
+      "@type": "ImageObject",
+      url: "https://www.prodigywildfire.com/images/pws-logo-white-text.png",
+    },
+  },
+  mainEntityOfPage: "https://www.prodigywildfire.com/wildfires",
+  about: [
+    { "@type": "Thing", name: "Wildfire" },
+    { "@type": "Thing", name: "Ember Attack" },
+    { "@type": "Thing", name: "Wildfire Preparedness" },
+  ],
+};
+
 export default function WildfiresPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <Header />
       <main>
         <WildfiresHero />
