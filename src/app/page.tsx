@@ -46,6 +46,12 @@ const jsonLd = [
       "Ember Detection",
       "Remote Activation Systems",
     ],
+    aggregateRating: {
+      "@type": "AggregateRating",
+      ratingValue: "5",
+      reviewCount: "2",
+      bestRating: "5",
+    },
   },
   {
     "@context": "https://schema.org",

@@ -19,9 +19,6 @@ const montserrat = Montserrat({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.prodigywildfire.com"),
-  alternates: {
-    canonical: "./",
-  },
   title: {
     default: "Prodigy Wildfire | Exterior Wildfire Sprinkler Systems for Homes & Businesses",
     template: "%s | Prodigy Wildfire Solutions",

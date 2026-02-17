@@ -42,6 +42,36 @@ const jsonLd = {
       { "@type": "Country", name: "Australia" },
     ],
   },
+  aggregateRating: {
+    "@type": "AggregateRating",
+    ratingValue: "5",
+    reviewCount: "2",
+    bestRating: "5",
+  },
+  review: [
+    {
+      "@type": "Review",
+      author: { "@type": "Person", name: "Steve S." },
+      reviewRating: {
+        "@type": "Rating",
+        ratingValue: "5",
+        bestRating: "5",
+      },
+      reviewBody:
+        "Surrounded by forest in Whistler, we installed a Prodigy Wildfire Suppression System to protect our home from ember-driven wildfire risk. It's a smart preventative investment that gives us peace of mind.",
+    },
+    {
+      "@type": "Review",
+      author: { "@type": "Person", name: "The Peterson Family" },
+      reviewRating: {
+        "@type": "Rating",
+        ratingValue: "5",
+        bestRating: "5",
+      },
+      reviewBody:
+        "We can finally leave for the summer without worrying. The remote start feature gives us complete peace of mind.",
+    },
+  ],
 };
 
 export default function HomeownersPage() {
