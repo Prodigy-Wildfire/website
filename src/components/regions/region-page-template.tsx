@@ -12,6 +12,11 @@ interface CaseStudy {
   href: string;
 }
 
+interface SubRegion {
+  name: string;
+  slug: string;
+}
+
 interface RegionPageTemplateProps {
   name: string;
   heroImage: string;
@@ -20,6 +25,8 @@ interface RegionPageTemplateProps {
   detail: string;
   stats: Stat[];
   caseStudies?: CaseStudy[];
+  subRegions?: SubRegion[];
+  subRegionLabel?: string;
 }
 
 export function RegionPageTemplate({
@@ -30,6 +37,8 @@ export function RegionPageTemplate({
   detail,
   stats,
   caseStudies,
+  subRegions,
+  subRegionLabel = "Region",
 }: RegionPageTemplateProps) {
   return (
     <>
@@ -98,6 +107,28 @@ export function RegionPageTemplate({
           </div>
         </div>
       </section>
+
+      {/* Sub-Regions */}
+      {subRegions && subRegions.length > 0 && (
+        <section className="bg-muted py-20 md:py-28">
+          <div className="mx-auto max-w-7xl px-6">
+            <h2 className="mb-12 text-center font-heading text-3xl font-bold tracking-tight text-foreground md:text-4xl">
+              Wildfire Protection by {subRegionLabel}
+            </h2>
+            <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+              {subRegions.map((sub) => (
+                <Link
+                  key={sub.slug}
+                  href={`/regions/${sub.slug}`}
+                  className="rounded border border-border bg-card px-6 py-4 text-sm font-semibold text-card-foreground transition-all hover:border-accent hover:text-accent hover:shadow-md"
+                >
+                  {sub.name} &rarr;
+                </Link>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
 
       {/* Case Studies */}
       {caseStudies && caseStudies.length > 0 && (

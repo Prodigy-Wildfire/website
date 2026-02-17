@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
 import { RegionPageTemplate } from "@/components/regions/region-page-template";
+import { getRegionsByCountry } from "@/lib/regions";
 
 export const metadata: Metadata = {
   title: "Wildfire Protection in Canada | Prodigy Wildfire",
@@ -78,6 +79,8 @@ export default function CanadaRegionPage() {
           detail="Canada's wildfire seasons are growing longer and more severe. In 2023 alone, over 17.3 million hectares burned across the country, displacing tens of thousands and destroying critical infrastructure. Prodigy's wildfire protection systems are custom-engineered for diverse Canadian terrain, from coastal forests to interior grasslands. Our roof sprinkler systems, ember attack protection sensors, and remote activation technology provide permanent, proactive defence for homeowners, businesses, and communities facing escalating wildfire risk."
           stats={stats}
           caseStudies={caseStudies}
+          subRegions={getRegionsByCountry("canada")}
+          subRegionLabel="Province"
         />
       </main>
       <Footer />
