@@ -16,7 +16,9 @@ export function HomeownersHero() {
 
       <div className="relative z-10 mx-auto max-w-4xl px-6 text-center">
         <h1 className="font-heading text-4xl font-bold leading-tight tracking-tight text-primary-foreground md:text-6xl lg:text-7xl">
-          <span className="text-balance">Protect Your Home.</span>
+          <span className="text-balance">Home Wildfire Protection</span>
+          <br />
+          <span className="text-accent">Permanent Sprinkler Systems</span>
         </h1>
         <p className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-primary-foreground/80 md:text-xl">
           Permanent exterior sprinkler systems custom-designed for your home.

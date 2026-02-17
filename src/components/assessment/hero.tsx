@@ -21,9 +21,10 @@ export function Hero() {
       <div className="relative z-10 mx-auto max-w-5xl px-6 py-32 text-center">
         <h1 className="font-serif text-5xl font-bold leading-tight tracking-tight text-foreground md:text-7xl lg:text-8xl">
           <span className="text-balance">
-            Prepare. Protect.{" "}
-            <span className="text-primary">Prodigy.</span>
+            Wildfire Readiness Quiz{" "}
           </span>
+          <br />
+          <span className="text-primary text-3xl md:text-5xl lg:text-6xl">Assess Your Property Risk</span>
         </h1>
         <p className="mx-auto mt-6 max-w-2xl text-lg text-muted-foreground leading-relaxed md:text-xl">
           Redefining Wildfire Defense

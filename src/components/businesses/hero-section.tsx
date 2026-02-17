@@ -21,8 +21,8 @@ export function HeroSection() {
           Commercial Wildfire Defence
         </p>
         <h1 className="font-serif text-5xl md:text-7xl lg:text-8xl font-bold text-foreground leading-tight text-balance">
-          Protect<br />
-          <span className="text-primary">Your Business</span>
+          Commercial Wildfire<br />
+          <span className="text-primary">Protection Solutions</span>
         </h1>
         <p className="mt-6 max-w-2xl mx-auto text-muted-foreground text-lg md:text-xl leading-relaxed">
           Commercial-grade wildfire suppression systems for resorts, critical

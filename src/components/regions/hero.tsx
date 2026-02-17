@@ -22,9 +22,9 @@ export function Hero() {
           Regions | Prodigy Wildfire
         </p>
         <h1 className="font-display text-5xl font-bold uppercase leading-tight tracking-wide text-foreground md:text-7xl lg:text-8xl">
-          We Are{" "}
-          <span className="text-primary">Global</span>{" "}
-          Protection
+          Wildfire Protection Across{" "}
+          <span className="text-primary">USA, Canada</span>{" "}
+          &amp; Australia
         </h1>
         <p className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-muted-foreground md:text-xl">
           From North America to Australia, Prodigy Wildfire Solutions sets the

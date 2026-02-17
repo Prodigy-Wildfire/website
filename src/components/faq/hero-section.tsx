@@ -16,7 +16,7 @@ export function HeroSection() {
       <div className="relative z-10 mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
         <div className="max-w-2xl">
           <h1 className="text-balance font-serif text-4xl font-bold tracking-tight text-primary-foreground sm:text-5xl lg:text-6xl">
-            Have a Question?
+            Wildfire Protection FAQ
           </h1>
           <p className="mt-6 max-w-xl text-lg leading-relaxed text-primary-foreground/70">
             Get in touch with our team. Share a question, make a request, or

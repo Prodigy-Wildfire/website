@@ -21,7 +21,7 @@ export function ContactHero() {
           Get in Touch
         </p>
         <h1 className="font-heading text-4xl font-bold leading-tight text-primary-foreground md:text-5xl lg:text-6xl">
-          <span className="text-balance">Protect Your Property Now.</span>
+          <span className="text-balance">Contact Prodigy Wildfire</span>
         </h1>
         <p className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-primary-foreground/70">
           Ready to safeguard your home or business from wildfire? Our team of

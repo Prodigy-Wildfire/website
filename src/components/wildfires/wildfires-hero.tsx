@@ -19,7 +19,7 @@ export function WildfiresHero() {
           Education &amp; Awareness
         </p>
         <h1 className="mt-3 font-heading text-4xl font-bold leading-tight tracking-tight text-primary-foreground md:text-6xl lg:text-7xl">
-          Understanding Wildfire
+          How Wildfires Spread and How to Protect Against Them
         </h1>
         <p className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-primary-foreground/80 md:text-xl">
           How wildfires start, how they spread, and what you can do to prepare
