@@ -2,6 +2,8 @@ import React from "react"
 import type { Metadata, Viewport } from "next";
 import { Inter, Montserrat } from "next/font/google";
 import "./globals.css";
+import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import { StickyCtaBar } from "@/components/sticky-cta-bar";
 import { ChatWidget } from "@/components/chat-widget";
 
@@ -86,6 +88,8 @@ export default function RootLayout({
         {children}
         <StickyCtaBar />
         <ChatWidget />
+        <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );
