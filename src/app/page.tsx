@@ -13,9 +13,9 @@ import { LeadMagnetSection } from "@/components/lead-magnet-section";
 import { Footer } from "@/components/footer";
 
 export const metadata: Metadata = {
-  title: "Wildfire Protection Systems for Homes & Businesses | USA, Canada & Australia",
+  title: "Prodigy Wildfire | Wildfire Protection Systems for Homes & Businesses",
   description:
-    "Prodigy Wildfire delivers permanent exterior sprinkler systems, real-time ember detection, and remote activation technology to defend homes, businesses, and critical infrastructure from wildfire across the United States, Canada, and Australia.",
+    "Protect your property with Prodigy's engineered wildfire sprinkler systems. Remotely activated, ember-proof protection across USA, Canada & Australia.",
 };
 
 export default function HomePage() {

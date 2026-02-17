@@ -11,9 +11,9 @@ import { VideoTestimonials } from "@/components/video-testimonials";
 import { LeadMagnetSection } from "@/components/lead-magnet-section";
 
 export const metadata: Metadata = {
-  title: "Wildfire Protection for Homeowners | Exterior Sprinkler Systems",
+  title: "Home Wildfire Protection Systems | Prodigy Wildfire",
   description:
-    "Protect your home from wildfire with Prodigy's custom-engineered exterior sprinkler systems. Defending homes across the USA, Canada, and Australia from ember ignition, radiant heat, and direct flame contact.",
+    "Custom-designed, permanent roof-mounted sprinkler systems that protect your home from ember attack. Remotely activated from anywhere in the world.",
 };
 
 export default function HomeownersPage() {

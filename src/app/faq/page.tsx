@@ -6,9 +6,9 @@ import { ContactSection } from "@/components/faq/contact-section"
 import { Footer } from "@/components/footer"
 
 export const metadata = {
-  title: "FAQ | Wildfire Sprinkler System Questions Answered",
+  title: "Wildfire Protection FAQ | Prodigy Wildfire",
   description:
-    "Get answers to frequently asked questions about Prodigy's exterior wildfire sprinkler systems, ember detection, remote activation, water usage, and installation across the USA, Canada, and Australia.",
+    "Answers to common questions about wildfire sprinkler systems, installation, costs, maintenance, and how Prodigy protects your property.",
 };
 
 export default function Page() {

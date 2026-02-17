@@ -8,9 +8,9 @@ import { HowItWorks } from "@/components/services/how-it-works";
 import { ServiceDetails } from "@/components/services/service-details";
 
 export const metadata: Metadata = {
-  title: "Wildfire Protection Services | Sprinklers, Ember Detection & Remote Activation",
+  title: "Our Wildfire Protection Services | Prodigy Wildfire",
   description:
-    "Explore Prodigy's permanent exterior wildfire sprinkler systems, advanced ember and flame detection sensors, and remote activation technology protecting homes and businesses across the USA, Canada, and Australia.",
+    "Water systems, remote activation, and ember detection technology. Prodigy delivers end-to-end wildfire defence for properties of all sizes.",
 };
 
 export default function ServicesPage() {

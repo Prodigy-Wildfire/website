@@ -11,9 +11,9 @@ import { OnTheRise } from "@/components/wildfires/on-the-rise";
 import { LeadMagnetSection } from "@/components/lead-magnet-section";
 
 export const metadata: Metadata = {
-  title: "Understanding Wildfire Risks | How Wildfires Spread & How to Prepare",
+  title: "Understanding Wildfires | How They Spread & How to Protect",
   description:
-    "Learn how wildfires spread through ember attack, radiant heat, and direct flame contact. Understand wildfire risks driven by climate change and discover how to protect your home and business in the USA, Canada, and Australia.",
+    "Learn how wildfires spread, why ember attack is the #1 cause of property loss, and how modern protection systems can safeguard your property.",
 };
 
 export default function WildfiresPage() {

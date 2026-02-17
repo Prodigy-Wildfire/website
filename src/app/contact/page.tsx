@@ -5,9 +5,9 @@ import { ContactCta } from "@/components/contact/contact-cta"
 import { Footer } from "@/components/footer"
 
 export const metadata = {
-  title: "Contact Us | Get a Free Wildfire Protection Assessment",
+  title: "Contact Prodigy Wildfire | Get a Quote",
   description:
-    "Contact Prodigy Wildfire Solutions for a personalized wildfire defense assessment. Serving homeowners and businesses across the USA, Canada, and Australia with custom exterior sprinkler systems.",
+    "Get in touch with Prodigy Wildfire for a property assessment and custom wildfire protection quote. Serving USA, Canada, and Australia.",
 };
 
 export default function ContactPage() {

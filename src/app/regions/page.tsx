@@ -9,9 +9,9 @@ import { CtaBanner } from "@/components/regions/cta-banner"
 import { Footer } from "@/components/footer"
 
 export const metadata = {
-  title: "Service Regions | Wildfire Protection in USA, Canada & Australia",
+  title: "Wildfire Protection by Region | Prodigy Wildfire",
   description:
-    "Prodigy Wildfire provides custom-engineered exterior sprinkler systems and wildfire defense solutions for homes, businesses, and communities across the United States, Canada, and Australia.",
+    "Prodigy provides wildfire protection across high-risk regions in Canada, the United States, and Australia. Find coverage in your area.",
 };
 
 export default function Page() {

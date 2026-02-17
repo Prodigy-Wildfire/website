@@ -12,9 +12,9 @@ import { Stats } from "@/components/assessment/stats";
 import { TrustedBy } from "@/components/assessment/trusted-by";
 
 export const metadata = {
-  title: "Wildfire Risk Assessment | Is Your Property Protected?",
+  title: "Wildfire Readiness Quiz | How Prepared Is Your Property?",
   description:
-    "Take Prodigy's wildfire risk assessment to evaluate your property's vulnerability to ember attack, radiant heat, and wildfire ignition. Discover custom protection solutions for homes and businesses in the USA, Canada, and Australia.",
+    "Take our wildfire readiness assessment to discover your property's vulnerability score and get personalized protection recommendations.",
 };
 
 export default function Page() {

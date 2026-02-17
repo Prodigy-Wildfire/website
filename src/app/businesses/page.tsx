@@ -9,9 +9,9 @@ import { LeadMagnetSection } from "@/components/lead-magnet-section"
 import { Footer } from "@/components/footer"
 
 export const metadata = {
-  title: "Commercial Wildfire Protection | Business Sprinkler Systems",
+  title: "Commercial Wildfire Protection | Prodigy Wildfire",
   description:
-    "Protect your business from wildfire with Prodigy's custom-engineered exterior sprinkler systems for commercial properties, critical infrastructure, and resorts across the USA, Canada, and Australia.",
+    "Protect your commercial property with engineered wildfire defense systems. Full-service from design through installation and year-round maintenance.",
 };
 
 export default function Page() {

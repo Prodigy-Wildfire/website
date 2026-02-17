@@ -6,9 +6,9 @@ import { TeamSection } from "@/components/about/team-section"
 import { Footer } from "@/components/footer"
 
 export const metadata = {
-  title: "About Us - Wildfire Defense Experts in USA, Canada & Australia",
+  title: "About Prodigy Wildfire | The Future of Wildfire Protection",
   description:
-    "Meet the Prodigy Wildfire team redefining wildfire defense with precision-engineered exterior sprinkler systems for homes, businesses, and communities across the United States, Canada, and Australia.",
+    "Meet the team redefining wildfire defense across North America and Australia. Engineering excellence meets innovation in every installation.",
 };
 
 export default function Page() {
