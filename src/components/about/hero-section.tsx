@@ -12,10 +12,10 @@ export function HeroSection() {
         className="object-cover"
         priority
       />
-      <div className="absolute inset-0 bg-background/35" />
+      <div className="absolute inset-0 bg-black/50" />
 
       <div className="relative z-10 flex h-full flex-col items-center justify-center px-6 text-center">
-        <h1 className="font-display text-5xl font-bold leading-tight tracking-tight text-foreground sm:text-6xl md:text-7xl lg:text-8xl">
+        <h1 className="font-display text-5xl font-bold leading-tight tracking-tight text-primary-foreground sm:text-6xl md:text-7xl lg:text-8xl">
           <span className="block">About</span>
           <span className="block text-primary">Prodigy Wildfire</span>
           <span className="block">Redefining</span>

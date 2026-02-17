@@ -14,17 +14,17 @@ export function HeroSection() {
       >
         <source src="/images/banff-gondola-wildfire-sprinkler.mp4" type="video/mp4" />
       </video>
-      <div className="absolute inset-0 bg-background/35" />
+      <div className="absolute inset-0 bg-black/50" />
 
       <div className="relative z-10 max-w-5xl mx-auto px-6 text-center">
         <p className="text-primary text-sm font-semibold tracking-widest uppercase mb-4">
           Commercial Wildfire Defence
         </p>
-        <h1 className="font-serif text-5xl md:text-7xl lg:text-8xl font-bold text-foreground leading-tight text-balance">
+        <h1 className="font-serif text-5xl md:text-7xl lg:text-8xl font-bold text-primary-foreground leading-tight text-balance">
           Commercial Wildfire<br />
           <span className="text-primary">Protection Solutions</span>
         </h1>
-        <p className="mt-6 max-w-2xl mx-auto text-muted-foreground text-lg md:text-xl leading-relaxed">
+        <p className="mt-6 max-w-2xl mx-auto text-primary-foreground/80 text-lg md:text-xl leading-relaxed">
           Commercial wildfire sprinkler systems for resorts, critical
           infrastructure, and commercial properties across the United States,
           Canada, and Australia. Engineered to scale.
@@ -38,7 +38,7 @@ export function HeroSection() {
           </Link>
           <Link
             href="/case-studies"
-            className="rounded border border-foreground/30 px-8 py-3.5 text-base font-semibold text-foreground transition-colors hover:border-primary hover:text-primary"
+            className="rounded border border-primary-foreground/30 px-8 py-3.5 text-base font-semibold text-primary-foreground transition-colors hover:border-primary hover:text-primary"
           >
             View Case Studies
           </Link>

@@ -16,17 +16,17 @@ export function Hero() {
         <source src="/images/wildfire-protection-hero-video.mp4" type="video/mp4" />
       </video>
       {/* Overlay */}
-      <div className="absolute inset-0 bg-background/35" />
+      <div className="absolute inset-0 bg-black/50" />
 
       <div className="relative z-10 mx-auto max-w-5xl px-6 py-32 text-center">
-        <h1 className="font-serif text-5xl font-bold leading-tight tracking-tight text-foreground md:text-7xl lg:text-8xl">
+        <h1 className="font-serif text-5xl font-bold leading-tight tracking-tight text-primary-foreground md:text-7xl lg:text-8xl">
           <span className="text-balance">
             Wildfire Readiness Quiz{" "}
           </span>
           <br />
           <span className="text-primary text-3xl md:text-5xl lg:text-6xl">Assess Your Property Risk</span>
         </h1>
-        <p className="mx-auto mt-6 max-w-2xl text-lg text-muted-foreground leading-relaxed md:text-xl">
+        <p className="mx-auto mt-6 max-w-2xl text-lg text-primary-foreground/80 leading-relaxed md:text-xl">
           Take our wildfire preparedness quiz to complete a wildfire risk assessment and discover how ready your property is.
         </p>
         <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
