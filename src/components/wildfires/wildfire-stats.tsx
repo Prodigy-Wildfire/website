@@ -7,13 +7,13 @@ interface RegionStat {
   prefix?: string;
   suffix?: string;
   label: string;
-  source: string;
-  sourceUrl: string;
 }
 
 interface Region {
   name: string;
   stats: RegionStat[];
+  source: string;
+  sourceUrl: string;
 }
 
 const regions: Region[] = [
@@ -23,53 +23,48 @@ const regions: Region[] = [
       {
         value: 64897,
         label: "Wildfires in 2024",
-        source: "NIFC 2024 Annual Report",
-        sourceUrl: "https://www.nifc.gov/sites/default/files/NICC/2-Predictive%20Services/Intelligence/Annual%20Reports/2024/annual_report_2024.pdf",
       },
       {
         value: 8.9,
         suffix: "M",
         label: "Acres Burned in 2024",
-        source: "NIFC",
-        sourceUrl: "https://www.nifc.gov/fire-information/statistics/wildfires",
       },
     ],
+    source: "NIFC Annual Report 2024",
+    sourceUrl: "https://www.nifc.gov/fire-information/statistics",
   },
   {
     name: "Canada",
     stats: [
       {
-        value: 6551,
-        label: "Wildfires in 2024",
-        source: "CIFFC 2024 Report",
-        sourceUrl: "https://ciffc.net/statistics",
+        value: 6500,
+        prefix: ">",
+        label: "Wildfires in 2023",
       },
       {
-        value: 17.3,
-        suffix: "M",
-        label: "Hectares Burned in 2023 (Record)",
-        source: "CIFFC",
-        sourceUrl: "https://ciffc.ca/sites/default/files/2024-03/03.07.24_CIFFC_2023CanadaReport%20(1).pdf",
+        value: 15,
+        suffix: "M+",
+        label: "Hectares Burned in 2023",
       },
     ],
+    source: "CIFFC",
+    sourceUrl: "https://ciffc.net/statistics",
   },
   {
     name: "Australia",
     stats: [
       {
         value: 3094,
-        label: "Homes Destroyed (Black Summer)",
-        source: "CSIRO",
-        sourceUrl: "https://www.csiro.au/en/research/natural-disasters/bushfires",
+        label: "Homes Destroyed (Black Summer 2019-20)",
       },
       {
-        value: 46,
-        suffix: "M",
-        label: "Acres Burned (Black Summer 2019-20)",
-        source: "Australian Government",
-        sourceUrl: "https://www.agriculture.gov.au/abares/forestsaustralia/forest-data-maps-and-tools/spatial-data/forest-fire",
+        value: 17,
+        suffix: "M+",
+        label: "Hectares Burned (Black Summer 2019-20)",
       },
     ],
+    source: "Australian Government",
+    sourceUrl: "https://www.apsc.gov.au/state-service/state-service-report-2019-20/chapter-1-commitmenrvice/black-summer",
   },
 ];
 
@@ -112,14 +107,6 @@ function StatDisplay({ stat, inView }: { stat: RegionStat; inView: boolean }) {
         {stat.suffix || ""}
       </p>
       <p className="mt-1 text-sm text-primary-foreground/60">{stat.label}</p>
-      <a
-        href={stat.sourceUrl}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="mt-1 inline-block text-xs text-primary-foreground/40 underline transition-colors hover:text-accent"
-      >
-        {stat.source}
-      </a>
     </div>
   );
 }
@@ -152,7 +139,7 @@ export function WildfireStats() {
             Global Crisis
           </p>
           <h2 className="mt-3 font-heading text-3xl font-bold tracking-tight text-primary-foreground md:text-4xl lg:text-5xl">
-            Wildfire by the Numbers
+            Wildfire by the <span className="text-accent">Numbers</span>
           </h2>
           <p className="mx-auto mt-4 max-w-3xl text-base leading-relaxed text-primary-foreground/70">
             Wildfires are escalating across three continents. These figures show
@@ -172,6 +159,14 @@ export function WildfireStats() {
                   <StatDisplay key={stat.label} stat={stat} inView={inView} />
                 ))}
               </div>
+              <a
+                href={region.sourceUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-4 inline-block text-xs text-primary-foreground/40 underline transition-colors hover:text-accent"
+              >
+                {region.source}
+              </a>
             </div>
           ))}
         </div>

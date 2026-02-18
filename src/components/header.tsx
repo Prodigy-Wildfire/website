@@ -9,21 +9,21 @@ const dropdowns = [
   {
     label: "Protection",
     items: [
-      { label: "Our Services", href: "/services" },
+      { label: "Our System", href: "/system" },
       { label: "Homeowners", href: "/homeowners" },
       { label: "Businesses", href: "/businesses" },
       { label: "Regions", href: "/regions" },
     ],
   },
   {
-    label: "Prodigy",
+    label: "Prodigy Wildfire Solutions",
     items: [
       { label: "About Us", href: "/about" },
       { label: "Case Studies", href: "/case-studies" },
       { label: "Partners", href: "/partners" },
-      { label: "Contact Us", href: "/contact" },
       { label: "FAQ", href: "/faq" },
       { label: "Insights", href: "/insights" },
+      { label: "Contact Us", href: "/contact" },
     ],
   },
 ];
@@ -131,9 +131,9 @@ export function Header() {
           ))}
           <Link
             href="/contact"
-            className="rounded bg-accent px-5 py-2.5 text-sm font-semibold text-accent-foreground transition-colors hover:bg-accent/90"
+            className="rounded bg-accent px-5 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-accent/90"
           >
-            Get Assessment
+            Get a Quote
           </Link>
         </nav>
 
@@ -167,10 +167,10 @@ export function Header() {
             ))}
             <Link
               href="/contact"
-              className="mt-2 rounded bg-accent px-5 py-2.5 text-center text-sm font-semibold text-accent-foreground transition-colors hover:bg-accent/90"
+              className="mt-2 rounded bg-accent px-5 py-2.5 text-center text-sm font-semibold text-white transition-colors hover:bg-accent/90"
               onClick={() => setMobileOpen(false)}
             >
-              Get Assessment
+              Get a Quote
             </Link>
           </nav>
         </div>

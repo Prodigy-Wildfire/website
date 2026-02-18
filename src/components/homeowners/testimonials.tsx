@@ -30,7 +30,7 @@ export function Testimonials() {
 
       <div className="relative z-10 mx-auto max-w-7xl px-6">
         <h2 className="mb-12 text-center font-heading text-3xl font-bold tracking-tight text-primary-foreground md:text-4xl">
-          What Our Clients Say
+          What Our <span className="text-accent">Clients</span> Say
         </h2>
 
         <div className="grid gap-8 md:grid-cols-2">

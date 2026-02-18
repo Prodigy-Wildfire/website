@@ -417,7 +417,7 @@ export function PartnerApplyForm({ partnerType }: { partnerType: string }) {
 
           <button
             type="submit"
-            className="mt-6 flex w-full items-center justify-center gap-2 rounded bg-accent px-8 py-3.5 text-sm font-semibold text-accent-foreground transition-colors hover:bg-accent/90 md:w-auto"
+            className="mt-6 flex w-full items-center justify-center gap-2 rounded bg-accent px-8 py-3.5 text-sm font-semibold text-white transition-colors hover:bg-accent/90 md:w-auto"
           >
             <Send className="h-4 w-4" />
             Submit Application

@@ -11,7 +11,7 @@ export function Footer() {
                 <span className="text-primary-foreground font-bold text-sm">P</span>
               </div>
               <span className="font-serif text-lg font-bold text-foreground tracking-tight">
-                Prodigy
+                Prodigy Wildfire Solutions
               </span>
             </div>
             <p className="text-sm text-muted-foreground leading-relaxed">
@@ -86,7 +86,7 @@ export function Footer() {
 
         <div className="mt-12 pt-6 border-t border-border flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-xs text-muted-foreground">
-            &copy; {new Date().getFullYear()} Prodigy Wildfire Solutions. All rights reserved.
+            &copy; 2026 Prodigy Wildfire Solutions Inc. All rights reserved.
           </p>
           <div className="flex items-center gap-4">
             <Link href="#" className="text-xs text-muted-foreground hover:text-foreground transition-colors">

@@ -44,7 +44,7 @@ export function Footer() {
               </div>
             </div>
             <p className="mt-4 max-w-xs text-sm leading-relaxed text-primary-foreground/60">
-              Redefining Wildfire Defense. Protecting homes, businesses, and
+              Redefining Wildfire Defence. Protecting homes, businesses, and
               communities across North America and Australia.
             </p>
           </div>
@@ -73,8 +73,8 @@ export function Footer() {
 
         <div className="mt-12 flex flex-col items-center justify-between gap-4 border-t border-primary-foreground/10 pt-8 md:flex-row">
           <p className="text-xs text-primary-foreground/40">
-            &copy; {new Date().getFullYear()} Prodigy Wildfire Solutions. All
-            rights reserved.
+            &copy; 2026 Prodigy Wildfire Solutions Inc. All rights
+            reserved.
           </p>
           <div className="flex gap-6">
             <Link

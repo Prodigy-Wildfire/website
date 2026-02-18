@@ -1,26 +1,25 @@
 import Link from "next/link";
-import { Flag, MapPin, Globe } from "lucide-react";
 
 const regions = [
   {
-    icon: Flag,
+    flag: "🇺🇸",
     title: "United States",
     description:
-      "California, Colorado, Oregon, and wildfire-prone states across the West. Over 64,000 wildfires burned 8.9 million acres in 2024 alone.",
+      "Currently serving California, Colorado, Oregon, and wildfire-prone states across the West, with coverage expanding across the United States.",
     link: "/regions",
   },
   {
-    icon: MapPin,
+    flag: "🇨🇦",
     title: "Canada",
     description:
-      "British Columbia, Alberta, and communities across the wildland-urban interface. The 2023 season burned a record 17.3 million hectares nationwide.",
+      "Currently serving British Columbia, Alberta, and communities across the wildland-urban interface, with coverage expanding across Canada.",
     link: "/regions",
   },
   {
-    icon: Globe,
+    flag: "🇦🇺",
     title: "Australia",
     description:
-      "New South Wales, Victoria, and bushfire-prone regions. The 2019-20 Black Summer burned 46 million acres and destroyed over 3,000 homes.",
+      "Currently serving New South Wales, Victoria, and bushfire-prone regions, with coverage expanding across Australia.",
     link: "/regions",
   },
 ];
@@ -34,10 +33,10 @@ export function WhyProdigy() {
             Where We Protect
           </p>
           <h2 className="mt-3 font-heading text-3xl font-bold tracking-tight text-foreground md:text-4xl">
-            Serving Three Countries, One Mission
+            Serving Three Countries, One <span className="text-accent">Mission</span>
           </h2>
           <p className="mx-auto mt-4 max-w-3xl text-base leading-relaxed text-muted-foreground">
-            Prodigy designs, installs, and maintains wildfire sprinkler systems
+            Prodigy Wildfire Solutions designs, installs, and maintains wildfire sprinkler systems
             across the United States, Canada, and Australia. Wherever wildfire
             risk exists, we deliver protection engineered for local conditions.
           </p>
@@ -45,12 +44,13 @@ export function WhyProdigy() {
 
         <div className="grid gap-8 md:grid-cols-3">
           {regions.map((region) => (
-            <div
+            <Link
               key={region.title}
+              href={region.link}
               className="group rounded border border-border bg-card p-8 text-center transition-all hover:border-accent hover:shadow-lg"
             >
               <div className="mx-auto mb-5 flex h-14 w-14 items-center justify-center rounded-full border-2 border-accent/30 bg-accent/5">
-                <region.icon className="h-7 w-7 text-accent" />
+                <span className="text-3xl leading-none">{region.flag}</span>
               </div>
               <h3 className="font-heading text-xl font-semibold text-card-foreground">
                 {region.title}
@@ -58,14 +58,14 @@ export function WhyProdigy() {
               <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
                 {region.description}
               </p>
-            </div>
+            </Link>
           ))}
         </div>
 
         <div className="mt-10 text-center">
           <Link
             href="/regions"
-            className="inline-block rounded bg-accent px-8 py-3.5 text-sm font-semibold text-accent-foreground transition-colors hover:bg-accent/90"
+            className="inline-block rounded bg-accent px-8 py-3.5 text-sm font-semibold text-white transition-colors hover:bg-accent/90"
           >
             View All Regions
           </Link>

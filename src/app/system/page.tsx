@@ -6,11 +6,12 @@ import { OurApproach } from "@/components/services/our-approach";
 import { InnovationSection } from "@/components/services/innovation-section";
 import { HowItWorks } from "@/components/services/how-it-works";
 import { ServiceDetails } from "@/components/services/service-details";
+import { SystemCta } from "@/components/services/system-cta";
 
 export const metadata: Metadata = {
-  title: "Our Wildfire Protection Services | Prodigy Wildfire",
+  title: "The Prodigy System | Prodigy Wildfire Solutions",
   description:
-    "Water systems, remote activation, and ember detection technology. Prodigy delivers end-to-end wildfire defence for properties of all sizes.",
+    "Exterior wildfire sprinkler systems, remote activation, and ember detection technology. Prodigy delivers end-to-end wildfire defence for properties of all sizes.",
 };
 
 const jsonLd = {
@@ -62,7 +63,7 @@ const jsonLd = {
   },
 };
 
-export default function ServicesPage() {
+export default function SystemPage() {
   return (
     <>
       <script
@@ -76,6 +77,7 @@ export default function ServicesPage() {
         <InnovationSection />
         <HowItWorks />
         <ServiceDetails />
+        <SystemCta />
       </main>
       <Footer />
     </>

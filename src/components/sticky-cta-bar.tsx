@@ -43,7 +43,7 @@ export function StickyCtaBar() {
           <div className="flex items-center gap-4 w-full sm:w-auto justify-between sm:justify-end">
             <Link
               href="/contact"
-              className="rounded bg-accent px-6 py-2.5 text-sm font-semibold text-accent-foreground transition-colors hover:bg-accent/90"
+              className="rounded bg-accent px-6 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-accent/90"
             >
               Get a Free Assessment
             </Link>

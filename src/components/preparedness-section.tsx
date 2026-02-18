@@ -14,7 +14,7 @@ const cards = [
     title: "Getting Protected",
     description:
       "Explore how Prodigy systems work, what installation involves, and how to get started with a free assessment.",
-    href: "/services",
+    href: "/system",
   },
 ];
 
@@ -24,7 +24,7 @@ export function PreparednessSection() {
       <div className="mx-auto max-w-7xl px-6">
         <div className="mb-12 text-center">
           <h2 className="font-heading text-3xl font-bold tracking-tight text-foreground md:text-4xl">
-            How Prepared Are You?
+            How Prepared Are <span className="text-accent">You</span>?
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-base leading-relaxed text-muted-foreground">
             Wildfire seasons are growing longer and more severe across the USA,
@@ -39,21 +39,23 @@ export function PreparednessSection() {
               key={card.title}
               className="group rounded border border-border bg-card p-8 transition-all hover:border-accent hover:shadow-lg"
             >
-              <div className="mb-4 flex h-12 w-12 items-center justify-center rounded bg-accent/10">
+              <div className="mb-4 flex h-12 w-12 items-center justify-center rounded bg-accent/10 mx-auto">
                 <card.icon className="h-6 w-6 text-accent" />
               </div>
-              <h3 className="font-heading text-xl font-semibold text-card-foreground">
+              <h3 className="font-heading text-xl font-semibold text-card-foreground text-center">
                 {card.title}
               </h3>
-              <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
+              <p className="mt-3 text-sm leading-relaxed text-muted-foreground text-center">
                 {card.description}
               </p>
-              <Link
-                href={card.href}
-                className="mt-6 inline-block text-sm font-semibold text-accent transition-colors hover:text-accent/80"
-              >
-                Learn More &rarr;
-              </Link>
+              <div className="mt-6 text-center">
+                <Link
+                  href={card.href}
+                  className="inline-block text-sm font-semibold text-accent transition-colors hover:text-accent/80"
+                >
+                  Learn More &rarr;
+                </Link>
+              </div>
             </div>
           ))}
         </div>

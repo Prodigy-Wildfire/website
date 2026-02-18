@@ -12,7 +12,7 @@ export function WhyProdigyHomeowners() {
               Homeowner Benefits
             </p>
             <h2 className="mt-3 font-heading text-3xl font-bold tracking-tight text-foreground md:text-4xl">
-              Insurance, Property Value &amp; Peace of Mind
+              Insurance, Property Value &amp; Peace of <span className="text-accent">Mind</span>
             </h2>
 
             <div className="mt-10 space-y-8">
@@ -57,7 +57,7 @@ export function WhyProdigyHomeowners() {
 
             <Link
               href="/contact"
-              className="mt-10 inline-block rounded bg-accent px-8 py-3.5 text-sm font-semibold text-accent-foreground transition-colors hover:bg-accent/90"
+              className="mt-10 inline-block rounded bg-accent px-8 py-3.5 text-sm font-semibold text-white transition-colors hover:bg-accent/90"
             >
               Protect Your Home
             </Link>

@@ -1,12 +1,12 @@
 import Image from "next/image";
 
 const trustedLogos = [
-  { src: "/images/golden-skybridge-wildfire-protection.png", alt: "Golden Skybridge", url: "https://goldenskybridge.com" },
-  { src: "/images/pursuit-group-wildfire-protection.png", alt: "Pursuit", url: "https://www.pursuitcollection.com" },
-  { src: "/images/banff-gondola-wildfire-protection.png", alt: "Banff Gondola", url: "https://www.banffjaspercollection.com/attractions/banff-gondola" },
-  { src: "/images/forest-park-hotel-wildfire-protection.png", alt: "Forest Park Hotel", url: "https://www.banffjaspercollection.com/hotels/forest-park-hotel/" },
-  { src: "/images/ubc-wildfire-protection.png", alt: "UBC", url: "https://www.ubc.ca" },
-  { src: "/images/lake-minnewanka-wildfire-protection.png", alt: "Lake Minnewanka", url: "https://www.banfflakecruise.com" },
+  { src: "/images/golden-skybridge-wildfire-protection.png", alt: "Golden Skybridge" },
+  { src: "/images/pursuit-group-wildfire-protection.png", alt: "Pursuit" },
+  { src: "/images/banff-gondola-wildfire-protection.png", alt: "Banff Gondola" },
+  { src: "/images/forest-park-hotel-wildfire-protection.png", alt: "Forest Park Hotel" },
+  { src: "/images/ubc-wildfire-protection.png", alt: "UBC" },
+  { src: "/images/lake-minnewanka-wildfire-protection.png", alt: "Lake Minnewanka" },
 ];
 
 export function TrustedSection() {
@@ -20,13 +20,13 @@ export function TrustedSection() {
           Trusted By:
         </h2>
         <p className="mx-auto mt-4 max-w-2xl text-sm leading-relaxed text-muted-foreground">
-          Organizations across North America and Australia rely on Prodigy to
+          Organizations across North America and Australia rely on Prodigy Wildfire Solutions to
           safeguard their people, assets, and operations from wildfire risk.
         </p>
 
         <div className="mt-10 grid grid-cols-2 items-center gap-10 sm:grid-cols-3 max-w-4xl mx-auto">
           {trustedLogos.map((logo) => (
-            <a key={logo.alt} href={logo.url} target="_blank" rel="noopener noreferrer" className="flex aspect-square items-center justify-center overflow-hidden rounded-2xl bg-white p-8 transition-shadow hover:shadow-lg">
+            <div key={logo.alt} className="flex aspect-square items-center justify-center overflow-hidden rounded-2xl bg-white p-8">
               <Image
                 src={logo.src}
                 alt={logo.alt}
@@ -34,7 +34,7 @@ export function TrustedSection() {
                 height={560}
                 className="h-full w-full object-contain grayscale transition-all hover:grayscale-0"
               />
-            </a>
+            </div>
           ))}
         </div>
 

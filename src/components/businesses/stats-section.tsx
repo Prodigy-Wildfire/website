@@ -114,15 +114,15 @@ function AnimatedCounter({ stat }: { stat: StatItem }) {
 
 export function StatsSection() {
   return (
-    <section id="risk" className="py-24 bg-secondary">
+    <section id="risk" className="py-20 md:py-28 bg-muted">
       <div className="max-w-7xl mx-auto px-6">
-        <div className="text-center mb-16">
-          <p className="text-primary text-sm font-semibold tracking-widest uppercase mb-3">
+        <div className="text-center mb-14">
+          <p className="font-heading text-sm font-semibold tracking-widest uppercase text-accent mb-3">
             Business Risk
           </p>
-          <h2 className="font-serif text-4xl md:text-5xl font-bold text-foreground text-balance">
+          <h2 className="font-heading text-3xl md:text-4xl font-bold tracking-tight text-foreground">
             The Cost of Being{" "}
-            <span className="text-primary">Unprepared</span>
+            <span className="text-accent">Unprepared</span>
           </h2>
           <p className="mt-4 max-w-3xl mx-auto text-muted-foreground text-base leading-relaxed">
             Wildfires do not just destroy buildings. They shut down operations,
@@ -136,28 +136,23 @@ export function StatsSection() {
           {stats.map((stat) => (
             <div
               key={stat.label}
-              className="bg-card border border-border rounded-lg p-6 text-center flex flex-col items-center gap-3"
+              className="bg-card border border-border rounded p-6 text-center flex flex-col items-center gap-3"
             >
-              <div className="text-primary">{stat.icon}</div>
-              <p className="font-serif text-3xl md:text-4xl font-bold text-foreground">
+              <div className="text-accent">{stat.icon}</div>
+              <p className="font-heading text-3xl md:text-4xl font-bold text-foreground">
                 <AnimatedCounter stat={stat} />
               </p>
               <p className="text-sm text-muted-foreground">{stat.label}</p>
-              <a
-                href={stat.sourceUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-xs text-accent hover:text-accent/80 transition-colors"
-              >
-                {stat.source} &rarr;
-              </a>
+              <span className="text-xs text-muted-foreground/60">
+                {stat.source}
+              </span>
             </div>
           ))}
         </div>
         <div className="mt-10 text-center">
           <a
             href="/contact/commercial"
-            className="inline-block rounded bg-primary px-8 py-3.5 text-sm font-semibold text-primary-foreground transition-opacity hover:opacity-90"
+            className="inline-block rounded bg-accent px-8 py-3.5 text-sm font-semibold text-white transition-colors hover:bg-accent/90"
           >
             Request a Commercial Assessment
           </a>

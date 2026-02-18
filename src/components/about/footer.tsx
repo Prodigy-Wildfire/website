@@ -8,7 +8,7 @@ export function Footer() {
               <span className="text-primary-foreground font-bold text-sm">P</span>
             </div>
             <span className="text-foreground font-display font-bold text-xl tracking-tight">
-              Prodigy
+              Prodigy Wildfire Solutions
             </span>
           </div>
           <p className="text-muted-foreground text-sm max-w-md leading-relaxed">
@@ -27,7 +27,7 @@ export function Footer() {
           </div>
           <div className="h-px w-full max-w-md bg-border" />
           <p className="text-xs text-muted-foreground">
-            {"© 2026 Prodigy Wildfire Solutions. All rights reserved."}
+            {"© 2026 Prodigy Wildfire Solutions Inc. All rights reserved."}
           </p>
         </div>
       </div>

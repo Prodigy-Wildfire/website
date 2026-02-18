@@ -25,7 +25,7 @@ export const metadata: Metadata = {
   },
   description:
     "Prodigy Wildfire provides permanent exterior wildfire sprinkler systems, ember detection, and remote activation technology to protect homes, businesses, and communities across the USA, Canada, and Australia.",
-  keywords: ["wildfire protection", "exterior sprinkler system", "ember detection", "wildfire defense", "fire sprinkler", "wildfire preparedness", "USA", "Canada", "Australia"],
+  keywords: ["wildfire protection", "exterior sprinkler system", "ember detection", "wildfire defence", "fire sprinkler", "wildfire preparedness", "USA", "Canada", "Australia"],
   openGraph: {
     type: "website",
     locale: "en_US",

@@ -43,7 +43,7 @@ export function RegionPageTemplate({
   return (
     <>
       {/* Hero */}
-      <section className="relative flex min-h-[70vh] items-end justify-center overflow-hidden pb-20">
+      <section className="relative flex min-h-[85vh] items-center justify-center overflow-hidden">
         <Image
           src={heroImage}
           alt={heroAlt}
@@ -94,12 +94,12 @@ export function RegionPageTemplate({
           <div className="mt-8 flex flex-col gap-4 sm:flex-row">
             <Link
               href="/contact"
-              className="rounded bg-accent px-8 py-3.5 text-center text-sm font-semibold text-accent-foreground transition-colors hover:bg-accent/90"
+              className="rounded bg-accent px-8 py-3.5 text-center text-sm font-semibold text-white transition-colors hover:bg-accent/90"
             >
               Get a Free Assessment
             </Link>
             <Link
-              href="/services"
+              href="/system"
               className="rounded border border-border px-8 py-3.5 text-center text-sm font-semibold text-foreground transition-colors hover:border-accent hover:text-accent"
             >
               Explore Our Systems
@@ -174,7 +174,7 @@ export function RegionPageTemplate({
           <div className="mt-8 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
             <Link
               href="/contact"
-              className="rounded bg-accent px-8 py-3.5 text-sm font-semibold text-accent-foreground transition-colors hover:bg-accent/90"
+              className="rounded bg-accent px-8 py-3.5 text-sm font-semibold text-white transition-colors hover:bg-accent/90"
             >
               Get Protected
             </Link>
@@ -182,7 +182,7 @@ export function RegionPageTemplate({
               href="https://quiz.prodigywildfire.com/wildfirereadiness"
               target="_blank"
               rel="noopener noreferrer"
-              className="rounded border border-primary-foreground/30 px-8 py-3.5 text-sm font-semibold text-primary-foreground transition-colors hover:border-accent hover:text-accent"
+              className="rounded border-2 border-accent px-8 py-3.5 text-sm font-semibold text-accent transition-colors hover:bg-accent hover:text-white"
             >
               Take the Wildfire Preparedness Quiz
             </Link>

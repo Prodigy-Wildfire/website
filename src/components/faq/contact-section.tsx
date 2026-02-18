@@ -44,7 +44,7 @@ export function ContactSection() {
       <div className="mx-auto max-w-2xl px-4 sm:px-6 lg:px-8">
         <div className="mb-10 text-center">
           <h2 className="text-balance font-serif text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
-            {"Didn't find what you're looking for?"}
+            {"Didn't find what you're "}<span className="text-accent">looking</span>{" for?"}
           </h2>
           <p className="mt-3 text-base text-muted-foreground">
             Reach out to us and we will get back to you as soon as possible.

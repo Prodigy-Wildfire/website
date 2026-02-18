@@ -18,13 +18,13 @@ const benefits = [
     icon: GraduationCap,
     title: "Training & Certification",
     description:
-      "Receive comprehensive training on Prodigy's exterior wildfire sprinkler systems, ember detection technology, and remote activation platform.",
+      "Receive comprehensive training on Prodigy Wildfire Solutions' exterior wildfire sprinkler systems, ember detection technology, and remote activation platform.",
   },
   {
     icon: Megaphone,
     title: "Marketing Support",
     description:
-      "Access co-branded marketing materials, lead generation support, and listing on the Prodigy partner directory to attract clients in your region.",
+      "Access co-branded marketing materials, lead generation support, and listing on the Prodigy Wildfire Solutions partner directory to attract clients in your region.",
   },
   {
     icon: MapPinned,
@@ -34,9 +34,9 @@ const benefits = [
   },
   {
     icon: ShieldCheck,
-    title: "Insurance Partnerships",
+    title: "Reduced Risk for Clients",
     description:
-      "Partner with us to offer policyholders proven wildfire protection solutions that reduce risk and can positively impact insurance premiums.",
+      "Help your clients lower their wildfire risk with proven exterior sprinkler systems. Properties protected by Prodigy Wildfire Solutions demonstrate proactive risk mitigation, which can support insurance renewals and premium negotiations.",
   },
   {
     icon: Headphones,
@@ -55,12 +55,12 @@ export function BenefitsGrid() {
             Why Partner With Us
           </p>
           <h2 className="mt-3 font-heading text-3xl font-bold tracking-tight text-foreground md:text-4xl">
-            Built for Mutual Success
+            Built for Mutual <span className="text-accent">Success</span>
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-base leading-relaxed text-muted-foreground">
-            Prodigy partners gain access to industry-leading wildfire protection
+            Prodigy Wildfire Solutions partners gain access to industry-leading wildfire protection
             technology, training, and support to grow their business in the
-            fastest-growing segment of property defense.
+            fastest-growing segment of property defence.
           </p>
         </div>
 
@@ -68,10 +68,10 @@ export function BenefitsGrid() {
           {benefits.map((benefit) => (
             <div
               key={benefit.title}
-              className="group rounded border border-border bg-card p-8 transition-all hover:border-accent hover:shadow-lg"
+              className="group rounded border border-border bg-card p-8 text-center transition-all hover:border-accent hover:shadow-lg"
             >
-              <div className="mb-5 flex h-12 w-12 items-center justify-center rounded bg-accent/10">
-                <benefit.icon className="h-6 w-6 text-accent" />
+              <div className="mx-auto mb-5 flex h-14 w-14 items-center justify-center rounded-full bg-accent/10">
+                <benefit.icon className="h-7 w-7 text-accent" />
               </div>
               <h3 className="font-heading text-lg font-bold text-card-foreground">
                 {benefit.title}

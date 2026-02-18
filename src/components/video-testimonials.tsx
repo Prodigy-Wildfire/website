@@ -120,7 +120,7 @@ export function VideoTestimonials() {
             Customer Stories
           </p>
           <h2 className="mt-3 font-heading text-3xl font-bold tracking-tight text-primary-foreground md:text-4xl">
-            Hear From Homeowners We Protect
+            Hear From Homeowners We <span className="text-accent">Protect</span>
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-base leading-relaxed text-primary-foreground/70">
             Real stories from property owners across the USA, Canada, and

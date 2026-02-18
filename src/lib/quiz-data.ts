@@ -60,7 +60,7 @@ export const quizQuestions: QuizQuestion[] = [
   },
   {
     id: 6,
-    question: "Can you remotely activate your property's fire defense systems?",
+    question: "Can you remotely activate your property's fire defence systems?",
     options: [
       { text: "No remote capabilities", score: 0 },
       { text: "I can call a neighbor to help", score: 1 },
@@ -135,7 +135,7 @@ export const quizQuestions: QuizQuestion[] = [
       { text: "No independent water supply", score: 0 },
       { text: "Standard municipal water only", score: 1 },
       { text: "Water tank or cistern on property", score: 2 },
-      { text: "Dedicated water supply with pump system for fire defense", score: 3 },
+      { text: "Dedicated water supply with pump system for fire defence", score: 3 },
     ],
   },
   {

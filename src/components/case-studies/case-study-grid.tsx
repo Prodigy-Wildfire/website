@@ -18,9 +18,9 @@ const caseStudies = [
     challenge:
       "The Banff Gondola upper terminal sits atop Sulphur Mountain in a remote, high-altitude location surrounded by dense forest. Traditional fire response is limited by access, terrain, and response times. The system needed to perform autonomously in extreme mountain conditions including high winds, freezing temperatures, and lightning storms.",
     solution:
-      "Prodigy designed and installed a custom exterior wildfire sprinkler system with full roofline coverage, remote activation via the Prodigy app, and integration with on-site fire safety protocols. The system delivers complete property saturation in under 3 minutes and operates on programmable cycles to conserve water supply.",
+      "Prodigy Wildfire Solutions designed and installed a custom exterior wildfire sprinkler system with full roofline coverage, remote activation via the Prodigy app, and integration with on-site fire safety protocols. The system delivers complete property saturation in under 3 minutes and operates on programmable cycles to conserve water supply.",
     clientQuote:
-      "Prodigy delivered a system that gives us confidence in our wildfire preparedness, even in one of the most challenging environments in the Canadian Rockies.",
+      "The Prodigy Wildfire Solutions team delivered a system that gives the Pursuit Collection team confidence in our wildfire preparedness, even in one of the most challenging environments in the Canadian Rockies.",
     clientName: "Pursuit Collection",
     specs: [
       { label: "Elevation", value: "7,486 ft" },
@@ -34,15 +34,15 @@ const caseStudies = [
     location: "Golden, British Columbia, Canada",
     country: "Canada",
     type: "Commercial",
-    image: "/images/region-canada.jpg",
+    image: "/images/golden-skybridge-wildfire-protection.png",
     summary:
       "One of Canada's premier tourism attractions needed comprehensive wildfire protection for its bridge structures and visitor facilities nestled in the Columbia Valley.",
     challenge:
       "The Golden Skybridge complex spans a deep canyon surrounded by British Columbia's wildfire-prone interior forests. With thousands of daily visitors during peak season, the system needed to protect both infrastructure and provide rapid response capability without disrupting operations.",
     solution:
-      "Prodigy engineered a multi-zone exterior sprinkler system covering all critical structures, with remote monitoring and activation through the Prodigy app. The system was designed to complement the site's architecture while providing full ember and radiant heat defense.",
+      "Prodigy Wildfire Solutions engineered a multi-zone exterior sprinkler system covering all critical structures, with remote monitoring and activation through the Prodigy app. The system was designed to complement the site's architecture while providing full ember and radiant heat defence.",
     clientQuote:
-      "Working with Prodigy gave us a wildfire defense system that protects our guests, our team, and our investment without compromising the visitor experience.",
+      "Working with the Prodigy Wildfire Solutions team gave the Golden Skybridge team a wildfire defence system that protects our guests, our team, and our investment without compromising the visitor experience.",
     clientName: "Golden Skybridge",
     specs: [
       { label: "Zones", value: "Multi-Zone" },
@@ -56,19 +56,19 @@ const caseStudies = [
     location: "Vancouver, British Columbia, Canada",
     country: "Canada",
     type: "Infrastructure",
-    image: "/images/region-canada.jpg",
+    image: "/images/ubc-wildfire-protection.png",
     summary:
       "UBC required wildfire protection for critical campus buildings surrounded by the Pacific Spirit Regional Park forest.",
     challenge:
       "UBC's campus borders thousands of hectares of temperate rainforest that, during drought conditions, presents a significant wildfire risk to campus infrastructure, research facilities, and student residences. The system needed to integrate with existing campus fire safety infrastructure.",
     solution:
-      "Prodigy delivered a custom-engineered exterior sprinkler system for key campus buildings, with centralized remote activation and monitoring. The installation was completed with minimal disruption to campus operations and designed for long-term, low-maintenance performance.",
+      "Prodigy Wildfire Solutions delivered a custom-engineered exterior sprinkler system for key campus buildings, with centralised remote activation and monitoring. The installation was completed with minimal disruption to campus operations and designed for long-term, low-maintenance performance.",
     clientQuote:
-      "Prodigy provided a wildfire protection solution that meets the unique demands of a university campus environment while delivering the performance and reliability we required.",
+      "The Prodigy Wildfire Solutions team provided a wildfire protection solution that meets the unique demands of a university campus environment while delivering the performance and reliability the UBC Facilities team required.",
     clientName: "UBC Facilities",
     specs: [
       { label: "Type", value: "Institutional" },
-      { label: "Control", value: "Centralized" },
+      { label: "Control", value: "Centralised" },
       { label: "Maintenance", value: "Low-Profile" },
     ],
   },
@@ -78,13 +78,13 @@ const caseStudies = [
     location: "Whistler, British Columbia, Canada",
     country: "Canada",
     type: "Residential",
-    image: "/images/protect-home.jpg",
+    image: "/images/whistler-home.jpg",
     summary:
       "A luxury mountain home in Whistler's wildfire interface zone needed discreet, permanent wildfire protection that preserved the property's aesthetic.",
     challenge:
       "Located in a high-value wildfire interface zone surrounded by mature forest, this residence required a system that could defend against ember attack and radiant heat while blending seamlessly with the home's premium architectural design.",
     solution:
-      "Prodigy installed a full exterior wildfire sprinkler system using type L copper (316 Stainless steel in Australia) piping routed discreetly along rooflines and ridges. The homeowner can activate the system remotely via the Prodigy app from anywhere in the world, with real-time Ember Watch alerts for early warning.",
+      "Prodigy Wildfire Solutions installed a full exterior wildfire sprinkler system using type L copper piping routed discreetly along rooflines and ridges. The homeowner can activate the system remotely via the Prodigy app from anywhere in the world, utilising Prodigy's unique EmberWatch feature for early fire warnings.",
     clientQuote:
       "We barely notice the system is there, but knowing we can activate it from anywhere gives us incredible peace of mind, especially during fire season.",
     clientName: "Steve S., Whistler BC",
@@ -104,7 +104,7 @@ function CaseStudyCard({
   const [expanded, setExpanded] = useState(false);
 
   return (
-    <article className="overflow-hidden rounded border border-border bg-card transition-all hover:shadow-lg">
+    <article className="flex flex-col overflow-hidden rounded border border-border bg-card transition-all hover:shadow-lg">
       <div className="relative h-56 overflow-hidden">
         <Image
           src={study.image}
@@ -114,14 +114,14 @@ function CaseStudyCard({
           className="object-cover"
         />
         <div className="absolute top-4 left-4">
-          <span className="rounded bg-accent px-3 py-1 text-xs font-semibold text-accent-foreground">
+          <span className="rounded bg-accent px-3 py-1 text-xs font-semibold text-white">
             {study.type}
           </span>
         </div>
       </div>
 
-      <div className="p-6">
-        <div className="flex items-center gap-2 text-xs text-muted-foreground">
+      <div className="flex flex-1 flex-col p-6 text-center">
+        <div className="flex items-center justify-center gap-2 text-xs text-muted-foreground">
           <MapPin className="h-3.5 w-3.5" />
           {study.location}
         </div>
@@ -132,21 +132,21 @@ function CaseStudyCard({
           {study.summary}
         </p>
 
-        {/* Specs */}
-        <div className="mt-4 flex gap-4">
+        {/* Specs as pills */}
+        <div className="mt-4 flex flex-wrap justify-center gap-2">
           {study.specs.map((spec) => (
-            <div key={spec.label}>
-              <p className="font-heading text-lg font-bold text-accent">
-                {spec.value}
-              </p>
-              <p className="text-xs text-muted-foreground">{spec.label}</p>
-            </div>
+            <span
+              key={spec.label}
+              className="rounded-full border border-accent/30 bg-accent/10 px-4 py-1.5 text-xs font-semibold text-accent"
+            >
+              {spec.value}
+            </span>
           ))}
         </div>
 
         {/* Expandable Details */}
         {expanded && (
-          <div className="mt-6 space-y-4 border-t border-border pt-6">
+          <div className="mt-6 space-y-4 border-t border-border pt-6 text-left">
             <div>
               <h3 className="text-sm font-semibold text-foreground">
                 The Challenge
@@ -178,7 +178,7 @@ function CaseStudyCard({
         <button
           type="button"
           onClick={() => setExpanded(!expanded)}
-          className="mt-4 flex items-center gap-1 text-sm font-semibold text-accent transition-colors hover:text-accent/80"
+          className="mt-4 inline-flex items-center justify-center gap-1 text-sm font-semibold text-accent transition-colors hover:text-accent/80"
         >
           {expanded ? "Show Less" : "View Full Case Study"}
           {expanded ? (
@@ -204,11 +204,11 @@ export function CaseStudyGrid() {
 
         <div className="mt-16 text-center">
           <p className="text-muted-foreground">
-            Ready to protect your property?
+            Ready to protect what matters most?
           </p>
           <Link
             href="/contact"
-            className="mt-4 inline-block rounded bg-accent px-8 py-3.5 text-sm font-semibold text-accent-foreground transition-colors hover:bg-accent/90"
+            className="mt-4 inline-block rounded bg-accent px-8 py-3.5 text-sm font-semibold text-white transition-colors hover:bg-accent/90"
           >
             Get a Free Assessment
           </Link>

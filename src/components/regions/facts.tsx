@@ -1,3 +1,4 @@
+import Link from "next/link"
 import { Flame, Wind, ShieldAlert, Thermometer, Users, AlertTriangle } from "lucide-react"
 
 const facts = [
@@ -15,7 +16,7 @@ const facts = [
   },
   {
     icon: Thermometer,
-    text: "A single ember can reach 1200\u00B0, enough to ignite dry material.",
+    text: "A single ember can reach 1,200\u00B0, enough to ignite dry material.",
   },
   {
     icon: Users,
@@ -29,18 +30,29 @@ const facts = [
 
 export function Facts() {
   return (
-    <section className="bg-background py-20 md:py-28">
+    <section className="bg-muted py-20 md:py-28">
       <div className="mx-auto max-w-7xl px-6">
+        <div className="text-center mb-14">
+          <p className="font-heading text-sm font-semibold uppercase tracking-widest text-accent">
+            The Facts
+          </p>
+          <h2 className="mt-3 font-heading text-3xl font-bold tracking-tight text-foreground md:text-4xl">
+            What You Need to <span className="text-accent">Know</span>
+          </h2>
+        </div>
+
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {facts.map((fact) => {
             const Icon = fact.icon
             return (
               <div
                 key={fact.text}
-                className="group border border-border bg-card p-8 hover:border-primary/40 transition-colors"
+                className="rounded border border-border bg-card p-8 text-center transition-all hover:shadow-lg"
               >
-                <Icon className="mb-4 h-8 w-8 text-primary" />
-                <p className="text-sm leading-relaxed text-muted-foreground group-hover:text-foreground transition-colors">
+                <div className="mx-auto mb-5 flex h-14 w-14 items-center justify-center rounded-full bg-accent/10">
+                  <Icon className="h-7 w-7 text-accent" />
+                </div>
+                <p className="text-sm leading-relaxed text-muted-foreground">
                   {fact.text}
                 </p>
               </div>
@@ -48,19 +60,19 @@ export function Facts() {
           })}
         </div>
 
-        <div className="mt-12 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
-          <a
-            href="#why-prodigy"
-            className="bg-primary text-primary-foreground px-8 py-3.5 text-sm font-semibold uppercase tracking-wider hover:bg-primary/90 transition-colors"
+        <div className="mt-10 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
+          <Link
+            href="/system"
+            className="rounded bg-accent px-8 py-3.5 text-sm font-semibold text-white transition-colors hover:bg-accent/90"
           >
             Learn More
-          </a>
-          <a
-            href="#contact"
-            className="border border-foreground/30 text-foreground px-8 py-3.5 text-sm font-semibold uppercase tracking-wider hover:border-foreground/60 transition-colors"
+          </Link>
+          <Link
+            href="/contact"
+            className="rounded border-2 border-accent px-8 py-3.5 text-sm font-semibold text-accent transition-colors hover:bg-accent hover:text-white"
           >
             Get Protected
-          </a>
+          </Link>
         </div>
       </div>
     </section>

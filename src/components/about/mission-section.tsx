@@ -1,44 +1,33 @@
 import Image from "next/image"
-import { ArrowRight } from "lucide-react"
 
 export function MissionSection() {
   return (
-    <section id="mission" className="bg-background py-24 lg:py-32">
-      <div className="mx-auto max-w-7xl px-6 lg:px-8">
-        {/* Section label */}
-        <p className="text-sm font-semibold uppercase tracking-widest text-primary mb-4">
-          Our Mission
-        </p>
+    <section id="mission" className="bg-background py-20 md:py-28">
+      <div className="mx-auto max-w-7xl px-6">
+        <div className="text-center mb-14">
+          <p className="font-heading text-sm font-semibold uppercase tracking-widest text-accent">
+            Our Mission
+          </p>
+          <h2 className="mt-3 font-heading text-3xl font-bold tracking-tight text-foreground md:text-4xl">
+            Peace of Mind in a{" "}
+            <span className="text-accent">Changing Climate</span>
+          </h2>
+        </div>
 
-        <h2 className="font-display text-4xl font-bold leading-tight text-foreground sm:text-5xl lg:text-6xl max-w-2xl">
-          Peace of Mind in a{" "}
-          <span className="text-primary">Changing Climate</span>
-        </h2>
-
-        {/* Content grid */}
-        <div className="mt-16 grid gap-12 lg:grid-cols-2 lg:gap-16 items-center">
-          {/* Text */}
-          <div className="space-y-6">
-            <p className="text-muted-foreground leading-relaxed text-lg">
+        <div className="grid gap-12 lg:grid-cols-2 lg:gap-16 items-center">
+          <div className="text-center lg:text-left">
+            <p className="text-muted-foreground leading-relaxed text-sm">
               Our philosophy is defined by precision, protection, and peace of mind. From concept to commissioning, every Prodigy exterior wildfire sprinkler system reflects our commitment to excellence. Serving homeowners, businesses, and communities across the United States, Canada, and Australia, we take responsibility for every detail so our clients can feel secure knowing their property is defended by the industry&apos;s most advanced wildfire protection technology.
             </p>
-            <p className="text-muted-foreground leading-relaxed text-lg">
-              Prodigy has set a new benchmark for wildfire defence, merging engineering innovation, ember detection technology, and remote activation capabilities to create systems that perform without compromise in the world&apos;s most fire-prone regions.
+            <p className="mt-6 text-muted-foreground leading-relaxed text-sm">
+              Prodigy Wildfire Solutions has set a new benchmark for wildfire defence, merging engineering innovation, ember detection technology, and remote activation capabilities to create systems that perform without compromise in the world&apos;s most fire-prone regions.
             </p>
-            <a
-              href="#engineering"
-              className="inline-flex items-center gap-2 text-primary font-semibold text-sm hover:gap-3 transition-all"
-            >
-              Learn More
-              <ArrowRight className="h-4 w-4" />
-            </a>
           </div>
 
-          {/* Image */}
-          <div className="relative aspect-[4/3] overflow-hidden rounded-lg">
+          <div className="relative aspect-[4/3] overflow-hidden rounded">
             <Image
-              src="/images/customer-demo.jpg"
-              alt="Prodigy Wildfire exterior sprinkler system demonstration for wildfire protection"
+              src="/images/wildfire-customer-sprinkler-demo.avif"
+              alt="Prodigy Wildfire Solutions exterior sprinkler system demonstration"
               fill
               sizes="(max-width: 1024px) 100vw, 50vw"
               className="object-cover"

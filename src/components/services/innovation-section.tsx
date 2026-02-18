@@ -5,13 +5,13 @@ const values = [
     icon: Lightbulb,
     title: "Forward Thinking",
     description:
-      "Every advancement we make, whether in system layout, activation technology, or water efficiency, is guided by one goal: protecting properties more effectively and responsibly. Purpose gives our progress direction, and that is what keeps Prodigy ahead of the curve.",
+      "Every advancement we make, whether in system layout, activation technology, or water efficiency, is guided by one goal: protecting properties more effectively and responsibly. Purpose gives our progress direction, and that is what keeps Prodigy Wildfire Solutions ahead of the curve.",
   },
   {
     icon: CloudSun,
     title: "All-Conditions",
     description:
-      "Our systems are engineered to perform in the harshest environments — extreme heat, high winds, drought, and heavy ember loads. Every component is tested and selected for durability so your protection works when it matters most, no matter the conditions.",
+      "Our systems are engineered to perform in the harshest environments, extreme heat, high winds, drought, and heavy ember loads. Every component is tested and selected for durability so your protection works when it matters most, no matter the conditions.",
   },
   {
     icon: Handshake,
@@ -27,7 +27,7 @@ export function InnovationSection() {
       <div className="mx-auto max-w-7xl px-6">
         <div className="mx-auto max-w-3xl text-center">
           <h2 className="font-heading text-3xl font-bold tracking-tight text-primary-foreground md:text-4xl">
-            Innovation With <span className="text-accent">Purpose.</span>
+            Innovation With <span className="text-accent">Purpose</span>
           </h2>
         </div>
 

@@ -13,7 +13,7 @@ export function EmberAttack() {
           The Hidden Threat
         </p>
         <h2 className="mt-4 font-serif text-3xl font-bold text-foreground md:text-5xl text-balance">
-          90% of Wildfire Damage is caused by Ember Attack.
+          90% of Wildfire Damage is caused by Ember <span className="text-accent">Attack.</span>
         </h2>
         <p className="mx-auto mt-6 max-w-2xl text-muted-foreground leading-relaxed">
           The greatest threat to property is not always the fire front itself; it

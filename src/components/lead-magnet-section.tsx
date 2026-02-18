@@ -22,22 +22,22 @@ export function LeadMagnetSection() {
 
   return (
     <>
-      <section className="bg-primary py-20 md:py-28">
+      <section className="bg-muted py-20 md:py-28">
         <div className="mx-auto max-w-7xl px-6">
-          <div className="flex flex-col items-center gap-8 text-center md:flex-row md:text-left">
+          <div className="flex flex-col items-center gap-8 text-center">
             <div className="flex h-20 w-20 shrink-0 items-center justify-center rounded-full bg-accent/10">
               <BookOpen className="h-10 w-10 text-accent" />
             </div>
-            <div className="flex-1">
+            <div>
               <p className="font-heading text-sm font-semibold uppercase tracking-widest text-accent">
                 Free Download
               </p>
-              <h2 className="mt-2 font-heading text-2xl font-bold tracking-tight text-primary-foreground md:text-3xl">
-                The Homeowner&apos;s Guide to Wildfire Preparedness
+              <h2 className="mt-2 font-heading text-2xl font-bold tracking-tight text-foreground md:text-3xl">
+                The Homeowner&apos;s Guide to Wildfire <span className="text-accent">Preparedness</span>
               </h2>
-              <p className="mt-3 max-w-2xl text-base leading-relaxed text-primary-foreground/70">
+              <p className="mx-auto mt-3 max-w-2xl text-base leading-relaxed text-muted-foreground">
                 Everything you need to know about protecting your property from
-                wildfire - from understanding ember attack risks to choosing the
+                wildfire — from understanding ember attack risks to choosing the
                 right exterior sprinkler system. Trusted by homeowners across the
                 USA, Canada, and Australia.
               </p>
@@ -45,7 +45,7 @@ export function LeadMagnetSection() {
             <button
               type="button"
               onClick={() => setDialogOpen(true)}
-              className="shrink-0 flex items-center gap-2 rounded bg-accent px-8 py-3.5 text-sm font-semibold text-accent-foreground transition-colors hover:bg-accent/90"
+              className="shrink-0 flex items-center gap-2 rounded bg-accent px-8 py-3.5 text-sm font-semibold text-white transition-colors hover:bg-accent/90"
             >
               <Download className="h-4 w-4" />
               Download Free Guide
@@ -103,7 +103,7 @@ export function LeadMagnetSection() {
                 />
                 <button
                   type="submit"
-                  className="flex items-center justify-center gap-2 rounded bg-accent px-5 py-3 text-sm font-semibold text-accent-foreground transition-colors hover:bg-accent/90"
+                  className="flex items-center justify-center gap-2 rounded bg-accent px-5 py-3 text-sm font-semibold text-white transition-colors hover:bg-accent/90"
                 >
                   <Download className="h-4 w-4" />
                   Send Me the Guide

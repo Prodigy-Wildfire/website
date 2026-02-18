@@ -28,7 +28,7 @@ export function ProtectSection() {
             Who We Protect
           </p>
           <h2 className="font-heading text-3xl font-bold tracking-tight text-foreground md:text-4xl">
-            {"Protect What's Important to You"}
+            Protect What&apos;s Important to <span className="text-accent">You</span>
           </h2>
         </div>
 
@@ -60,7 +60,7 @@ export function ProtectSection() {
                   />
                 )}
               </div>
-              <div className="p-8">
+              <div className="p-8 text-center">
                 <h3 className="font-heading text-xl font-semibold text-card-foreground">
                   {item.title}
                 </h3>

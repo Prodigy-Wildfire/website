@@ -5,13 +5,13 @@ import { FactsSection } from "@/components/businesses/facts-section"
 import { WhyProdigySection } from "@/components/businesses/why-prodigy-section"
 import { GettingProtectedSection } from "@/components/businesses/getting-protected-section"
 import { ProcessSection } from "@/components/businesses/process-section"
-import { LeadMagnetSection } from "@/components/lead-magnet-section"
+import { BusinessCta } from "@/components/businesses/business-cta"
 import { Footer } from "@/components/footer"
 
 export const metadata = {
   title: "Commercial Wildfire Protection | Prodigy Wildfire",
   description:
-    "Protect your commercial property with engineered wildfire defense systems. Full-service from design through installation and year-round maintenance.",
+    "Protect your commercial property with engineered wildfire defence systems. Full-service from design through installation and year-round maintenance.",
 };
 
 const jsonLd = {
@@ -24,7 +24,7 @@ const jsonLd = {
     url: "https://www.prodigywildfire.com",
   },
   description:
-    "Protect your commercial property with engineered wildfire defense systems. Full-service from design through installation and year-round maintenance.",
+    "Protect your commercial property with engineered wildfire defence systems. Full-service from design through installation and year-round maintenance.",
   serviceType: "Commercial Wildfire Sprinkler System",
   areaServed: [
     { "@type": "Country", name: "United States" },
@@ -56,7 +56,7 @@ export default function Page() {
       <WhyProdigySection />
       <GettingProtectedSection />
       <ProcessSection />
-      <LeadMagnetSection />
+      <BusinessCta />
       <Footer />
     </main>
   )

@@ -56,7 +56,7 @@ export function RiskSection() {
             Know Your Risks
           </p>
           <h2 className="mt-3 font-heading text-3xl font-bold tracking-tight text-foreground md:text-4xl">
-            {"Your Home's Wildfire Vulnerabilities"}
+            {"Your Home's Wildfire "}<span className="text-accent">Vulnerabilities</span>
           </h2>
           <p className="mx-auto mt-4 max-w-3xl text-base leading-relaxed text-muted-foreground">
             Understanding how to protect your house from wildfire starts with
@@ -91,7 +91,7 @@ export function RiskSection() {
         <div className="mt-12 text-center">
           <Link
             href="/contact"
-            className="inline-block rounded bg-accent px-8 py-3.5 text-sm font-semibold text-accent-foreground transition-colors hover:bg-accent/90"
+            className="inline-block rounded bg-accent px-8 py-3.5 text-sm font-semibold text-white transition-colors hover:bg-accent/90"
           >
             Get a Free Home Assessment
           </Link>

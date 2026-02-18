@@ -16,7 +16,7 @@ export function Footer() {
               </span>
             </div>
             <p className="text-sm text-muted-foreground leading-relaxed">
-              Redefining wildfire defense for homes, businesses, and communities
+              Redefining wildfire defence for homes, businesses, and communities
               across Canada, the United States, and Australia.
             </p>
           </div>
@@ -94,7 +94,7 @@ export function Footer() {
             </h4>
             <p className="text-sm text-muted-foreground leading-relaxed">
               Ready to protect your property? Contact our team for a
-              personalized wildfire defense assessment.
+              personalized wildfire defence assessment.
             </p>
             <Link
               href="https://quiz.prodigywildfire.com/wildfirereadiness"
@@ -107,7 +107,7 @@ export function Footer() {
 
         <div className="mt-12 border-t border-border pt-8 flex flex-col items-center justify-between gap-4 md:flex-row">
           <p className="text-xs text-muted-foreground">
-            &copy; {new Date().getFullYear()} Prodigy Wildfire. All rights
+            &copy; 2026 Prodigy Wildfire Solutions Inc. All rights
             reserved.
           </p>
           <div className="flex gap-6">

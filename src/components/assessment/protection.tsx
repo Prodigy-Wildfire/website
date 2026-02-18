@@ -6,7 +6,7 @@ export function Protection() {
       <div className="mx-auto max-w-7xl px-6">
         <div className="text-center mb-16">
           <h2 className="font-serif text-3xl font-bold text-foreground md:text-5xl text-balance">
-            {"Protect What's Important to You."}
+            <span className="text-accent">Protect</span>{" What's Important to You."}
           </h2>
           <p className="mx-auto mt-6 max-w-3xl text-muted-foreground leading-relaxed">
             Prodigy Wildfire is dedicated to safeguarding homes, businesses, and

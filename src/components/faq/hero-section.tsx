@@ -1,9 +1,8 @@
 import Image from "next/image"
-import { ArrowDown } from "lucide-react"
 
 export function HeroSection() {
   return (
-    <section className="relative overflow-hidden py-24 sm:py-32 lg:py-40">
+    <section className="relative flex min-h-[85vh] items-center justify-center overflow-hidden">
       <Image
         src="/images/wildfire-protection-faq-hero.avif"
         alt="Prodigy Wildfire sprinkler system protecting property from wildfire"
@@ -13,22 +12,22 @@ export function HeroSection() {
         priority
       />
       <div className="absolute inset-0 bg-primary/65" />
-      <div className="relative z-10 mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
-        <div className="max-w-2xl">
-          <h1 className="text-balance font-serif text-4xl font-bold tracking-tight text-primary-foreground sm:text-5xl lg:text-6xl">
-            Wildfire Protection FAQ
-          </h1>
-          <p className="mt-6 max-w-xl text-lg leading-relaxed text-primary-foreground/70">
-            Get in touch with our team. Share a question, make a request, or
-            provide feedback. Our Wildfire Protection Specialists are here to
-            help.
-          </p>
+
+      <div className="relative z-10 mx-auto max-w-4xl px-6 text-center">
+        <h1 className="font-heading text-4xl font-bold leading-tight tracking-tight text-primary-foreground md:text-5xl lg:text-6xl">
+          <span className="text-balance">Wildfire Protection FAQ</span>
+        </h1>
+        <p className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-primary-foreground/80">
+          Get in touch with our team. Share a question, make a request, or
+          provide feedback. Our Wildfire Protection Specialists are here to
+          help.
+        </p>
+        <div className="mt-10">
           <a
             href="#contact"
-            className="mt-8 inline-flex items-center gap-2 rounded-md bg-accent px-6 py-3 text-sm font-semibold text-accent-foreground transition-colors hover:bg-accent/90"
+            className="inline-block rounded bg-accent px-8 py-3.5 text-base font-semibold text-white transition-colors hover:bg-accent/90"
           >
             Protect Your Property Now
-            <ArrowDown className="h-4 w-4" />
           </a>
         </div>
       </div>

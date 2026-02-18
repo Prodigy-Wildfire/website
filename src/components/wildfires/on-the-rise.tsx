@@ -14,7 +14,7 @@ export function OnTheRise() {
 
       <div className="relative z-10 mx-auto max-w-3xl px-6 text-center">
         <h2 className="font-heading text-3xl font-bold tracking-tight text-primary-foreground md:text-4xl lg:text-5xl">
-          Wildfires are on the <span className="text-accent">Rise.</span>
+          Wildfires are on the <span className="text-accent">Rise</span>
         </h2>
         <p className="mx-auto mt-6 max-w-2xl text-base leading-relaxed text-primary-foreground/70 md:text-lg">
           Wildfires are becoming more frequent, more intense, and more
@@ -28,13 +28,13 @@ export function OnTheRise() {
         <div className="mt-8 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
           <a
             href="/contact"
-            className="inline-block rounded bg-accent px-8 py-3.5 text-sm font-semibold text-accent-foreground transition-colors hover:bg-accent/90"
+            className="inline-block rounded bg-accent px-8 py-3.5 text-sm font-semibold text-white transition-colors hover:bg-accent/90"
           >
             Protect Your Property Now
           </a>
           <a
-            href="/services"
-            className="inline-block rounded border border-primary-foreground/30 px-8 py-3.5 text-sm font-semibold text-primary-foreground transition-colors hover:border-accent hover:text-accent"
+            href="/system"
+            className="inline-block rounded border-2 border-accent px-8 py-3.5 text-sm font-semibold text-accent transition-colors hover:bg-accent hover:text-white"
           >
             Explore Our Systems
           </a>

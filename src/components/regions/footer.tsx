@@ -15,7 +15,7 @@ export function Footer() {
               </span>
             </div>
             <p className="text-sm text-muted-foreground leading-relaxed max-w-sm">
-              Setting the standard in engineered wildfire defense across the
+              Setting the standard in engineered wildfire defence across the
               globe. Precision. Protection. Peace of Mind.
             </p>
           </div>
@@ -59,8 +59,8 @@ export function Footer() {
 
         <div className="mt-12 pt-8 border-t border-border flex flex-col items-center gap-4 md:flex-row md:justify-between">
           <p className="text-xs text-muted-foreground">
-            &copy; {new Date().getFullYear()} Prodigy Wildfire Solutions. All
-            rights reserved.
+            &copy; 2026 Prodigy Wildfire Solutions Inc. All rights
+            reserved.
           </p>
           <div className="flex gap-6">
             <a

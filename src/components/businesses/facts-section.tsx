@@ -41,18 +41,18 @@ const sectors = [
 
 export function FactsSection() {
   return (
-    <section className="py-24 bg-background">
+    <section className="py-20 md:py-28 bg-background">
       <div className="max-w-7xl mx-auto px-6">
-        <div className="text-center mb-16">
-          <p className="text-primary text-sm font-semibold tracking-widest uppercase mb-3">
+        <div className="text-center mb-14">
+          <p className="font-heading text-sm font-semibold tracking-widest uppercase text-accent mb-3">
             Commercial Expertise
           </p>
-          <h2 className="font-serif text-4xl md:text-5xl font-bold text-foreground text-balance">
-            Industries We <span className="text-primary">Protect</span>
+          <h2 className="font-heading text-3xl md:text-4xl font-bold tracking-tight text-foreground">
+            Industries We <span className="text-accent">Protect</span>
           </h2>
           <p className="mt-4 max-w-3xl mx-auto text-muted-foreground text-base leading-relaxed">
             From mountain-top gondola terminals to urban campus facilities,
-            Prodigy designs and installs commercial wildfire suppression systems
+            Prodigy Wildfire Solutions designs and installs commercial wildfire suppression systems
             tailored to every industry and environment.
           </p>
         </div>
@@ -63,19 +63,17 @@ export function FactsSection() {
             return (
               <div
                 key={sector.title}
-                className="bg-card border border-border rounded-lg p-6 flex items-start gap-4 hover:border-primary/50 transition-colors"
+                className="bg-card border border-border rounded p-8 text-center transition-all hover:shadow-lg"
               >
-                <div className="shrink-0 flex h-12 w-12 items-center justify-center rounded bg-primary/10">
-                  <Icon className="w-6 h-6 text-primary" />
+                <div className="mx-auto mb-5 flex h-14 w-14 items-center justify-center rounded-full bg-accent/10">
+                  <Icon className="w-7 h-7 text-accent" />
                 </div>
-                <div>
-                  <h3 className="font-serif text-base font-bold text-foreground">
-                    {sector.title}
-                  </h3>
-                  <p className="mt-1 text-sm text-muted-foreground leading-relaxed">
-                    {sector.description}
-                  </p>
-                </div>
+                <h3 className="font-heading text-base font-bold text-foreground">
+                  {sector.title}
+                </h3>
+                <p className="mt-3 text-sm text-muted-foreground leading-relaxed">
+                  {sector.description}
+                </p>
               </div>
             );
           })}

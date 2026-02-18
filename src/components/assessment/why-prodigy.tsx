@@ -6,16 +6,16 @@ export function WhyProdigy() {
       <div className="mx-auto max-w-7xl px-6">
         <div className="text-center mb-16">
           <p className="text-sm font-semibold uppercase tracking-widest text-primary">
-            Why Prodigy
+            Why Prodigy Wildfire Solutions
           </p>
           <h2 className="mt-4 font-serif text-3xl font-bold text-foreground md:text-5xl text-balance">
-            A Fully Custom Approach to Wildfire Protection.
+            A Fully Custom Approach to Wildfire <span className="text-accent">Protection.</span>
           </h2>
           <p className="mx-auto mt-6 max-w-3xl text-muted-foreground leading-relaxed">
             From initial design to system commissioning, every Prodigy
             installation reflects our unwavering commitment to excellence. We
             manage every detail so you can feel confident knowing your property
-            is safeguarded by the industry{"'"}s most advanced wildfire defense.
+            is safeguarded by the industry{"'"}s most advanced wildfire defence.
           </p>
         </div>
 

@@ -5,8 +5,8 @@ export function WildfiresHero() {
   return (
     <section className="relative flex min-h-[85vh] items-center justify-center overflow-hidden">
       <Image
-        src="/images/jasper-national-park-wildfire.jpg"
-        alt="Wildfire devastation in Jasper National Park showing burned forest and the Athabasca River valley"
+        src="/images/wildfire-ember-attack-cayetano-gil.avif"
+        alt="Intense wildfire ember attack with burning embers flying through the air"
         fill
         sizes="100vw"
         className="object-cover"
@@ -15,13 +15,10 @@ export function WildfiresHero() {
       <div className="absolute inset-0 bg-primary/50" />
 
       <div className="relative z-10 mx-auto max-w-4xl px-6 text-center">
-        <p className="font-heading text-sm font-semibold uppercase tracking-widest text-accent">
-          Education &amp; Awareness
-        </p>
-        <h1 className="mt-3 font-heading text-4xl font-bold leading-tight tracking-tight text-primary-foreground md:text-6xl lg:text-7xl">
-          How Wildfires Spread
+        <h1 className="font-heading text-4xl font-bold leading-tight tracking-tight text-primary-foreground md:text-5xl lg:text-6xl">
+          <span className="text-balance">How Wildfires Spread</span>
         </h1>
-        <p className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-primary-foreground/80 md:text-xl">
+        <p className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-primary-foreground/80">
           How wildfires start, how they spread, and what you can do to prepare
           and protect your property across the United States, Canada, and
           Australia.
@@ -29,17 +26,15 @@ export function WildfiresHero() {
         <div className="mt-10 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
           <a
             href="#emergency-plan"
-            className="rounded bg-accent px-8 py-3.5 text-base font-semibold text-accent-foreground transition-colors hover:bg-accent/90"
+            className="rounded bg-accent px-8 py-3.5 text-base font-semibold text-white transition-colors hover:bg-accent/90"
           >
             Read the Emergency Plan
           </a>
           <Link
-            href="https://quiz.prodigywildfire.com/wildfirereadiness"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="rounded border border-primary-foreground/30 px-8 py-3.5 text-base font-semibold text-primary-foreground transition-colors hover:border-accent hover:text-accent"
+            href="/assessment"
+            className="rounded border-2 border-accent px-8 py-3.5 text-base font-semibold text-accent transition-colors hover:bg-accent hover:text-white"
           >
-            Take the Readiness Quiz
+            Take the Wildfire Assessment
           </Link>
         </div>
       </div>

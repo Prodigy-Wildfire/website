@@ -2,8 +2,7 @@ import Link from "next/link";
 
 export function Hero() {
   return (
-    <section className="relative flex min-h-screen items-center justify-center overflow-hidden">
-      {/* Background Video */}
+    <section className="relative flex min-h-[85vh] items-center justify-center overflow-hidden">
       <video
         autoPlay
         muted
@@ -15,33 +14,27 @@ export function Hero() {
       >
         <source src="/images/wildfire-protection-hero-video.mp4" type="video/mp4" />
       </video>
-      {/* Overlay */}
       <div className="absolute inset-0 bg-black/50" />
 
-      <div className="relative z-10 mx-auto max-w-5xl px-6 py-32 text-center">
-        <h1 className="font-serif text-5xl font-bold leading-tight tracking-tight text-primary-foreground md:text-7xl lg:text-8xl">
-          <span className="text-balance">
-            Wildfire Readiness Quiz{" "}
-          </span>
-          <br />
-          <span className="text-primary text-3xl md:text-5xl lg:text-6xl">Assess Your Property Risk</span>
+      <div className="relative z-10 mx-auto max-w-4xl px-6 text-center">
+        <h1 className="font-heading text-4xl font-bold leading-tight tracking-tight text-primary-foreground md:text-5xl lg:text-6xl">
+          <span className="text-balance">Wildfire Readiness Quiz</span>
         </h1>
-        <p className="mx-auto mt-6 max-w-2xl text-lg text-primary-foreground/80 leading-relaxed md:text-xl">
+        <p className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-primary-foreground/80">
           Take our wildfire preparedness quiz to complete a wildfire risk assessment and discover how ready your property is.
         </p>
-        <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
+        <div className="mt-10">
           <Link
             href="https://quiz.prodigywildfire.com/wildfirereadiness"
             target="_blank"
             rel="noopener noreferrer"
-            className="rounded-sm bg-primary px-8 py-3.5 text-sm font-semibold uppercase tracking-wider text-primary-foreground transition-opacity hover:opacity-90"
+            className="inline-block rounded bg-accent px-8 py-3.5 text-base font-semibold text-white transition-colors hover:bg-accent/90"
           >
             Protect Your Property Now
           </Link>
         </div>
       </div>
 
-      {/* Bottom fade */}
       <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-background to-transparent" />
     </section>
   );

@@ -38,7 +38,7 @@ const faqItems = [
   {
     question: "How do I monitor my wildfire protection system remotely?",
     answer:
-      "Every Prodigy wildfire protection system comes with our app-based remote monitoring and activation technology. From anywhere in the world, you can check system status, receive real-time Ember Watch alerts, run activation cycles, and control your exterior sprinkler system with one tap. Whether you're at home or travelling abroad, you'll always have full visibility and control over your property's wildfire defense.",
+      "Every Prodigy wildfire protection system comes with our app-based remote monitoring and activation technology. From anywhere in the world, you can check system status, receive real-time Ember Watch alerts, run activation cycles, and control your exterior sprinkler system with one tap. Whether you're at home or travelling abroad, you'll always have full visibility and control over your property's wildfire defence.",
   },
   {
     question: "Does a wildfire sprinkler system increase my property value?",
@@ -58,7 +58,7 @@ export function FaqSection() {
       <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
         <div className="mb-12 text-center">
           <h2 className="text-balance font-serif text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
-            {"We've got Answers."}
+            {"We've got "}<span className="text-accent">Answers.</span>
           </h2>
           <p className="mx-auto mt-4 max-w-xl text-base leading-relaxed text-muted-foreground">
             {"We're listening to our customers and want to help make things as clear as we can. Here's a compilation of our most commonly asked questions."}

@@ -46,7 +46,7 @@ export function GettingProtected() {
             Getting Protected
           </p>
           <h2 className="mt-3 font-heading text-3xl font-bold tracking-tight text-foreground md:text-4xl">
-            From Assessment to Installation
+            From Assessment to <span className="text-accent">Installation</span>
           </h2>
           <p className="mx-auto mt-4 max-w-3xl text-base leading-relaxed text-muted-foreground">
             Our residential protection process is designed to be straightforward
@@ -103,14 +103,14 @@ export function GettingProtected() {
 
         <div className="mt-12 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
           <Link
-            href="/services"
+            href="/system"
             className="rounded border border-border px-8 py-3.5 text-sm font-semibold text-foreground transition-colors hover:border-accent hover:text-accent"
           >
             Learn About Our Systems
           </Link>
           <Link
             href="/contact"
-            className="rounded bg-accent px-8 py-3.5 text-sm font-semibold text-accent-foreground transition-colors hover:bg-accent/90"
+            className="rounded bg-accent px-8 py-3.5 text-sm font-semibold text-white transition-colors hover:bg-accent/90"
           >
             Book Your Free Assessment
           </Link>

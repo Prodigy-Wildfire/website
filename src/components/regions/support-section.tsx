@@ -1,3 +1,4 @@
+import Link from "next/link"
 import { Globe, MapPin, HelpCircle } from "lucide-react"
 
 const supportItems = [
@@ -15,53 +16,64 @@ const supportItems = [
     description:
       "We recognize that remote properties often face higher-than-normal wildfire risk. With advanced satellite imaging, flexible water-source options, and specialized engineering, we can design effective protection systems for even the most isolated locations.",
     cta: "Contact Us",
-    href: "#contact",
+    href: "/contact",
   },
   {
     icon: HelpCircle,
-    title: "I Have More Questions.",
+    title: "I Have More Questions",
     description:
       "Explore our FAQs or reach out to us directly. Our wildfire specialist team is always happy to assist.",
     cta: "FAQs",
-    href: "#faq",
+    href: "/faq",
     secondaryCta: "Contact Us",
-    secondaryHref: "#contact",
+    secondaryHref: "/contact",
   },
 ]
 
 export function SupportSection() {
   return (
-    <section id="faq" className="bg-card py-20 md:py-28">
+    <section id="faq" className="bg-muted py-20 md:py-28">
       <div className="mx-auto max-w-7xl px-6">
-        <div className="grid gap-8 md:grid-cols-3">
+        <div className="text-center mb-14">
+          <p className="font-heading text-sm font-semibold uppercase tracking-widest text-accent">
+            Need Help?
+          </p>
+          <h2 className="mt-3 font-heading text-3xl font-bold tracking-tight text-foreground md:text-4xl">
+            We&apos;re Here to <span className="text-accent">Help</span>
+          </h2>
+        </div>
+
+        <div className="grid gap-6 md:grid-cols-3">
           {supportItems.map((item) => {
             const Icon = item.icon
             return (
               <div
                 key={item.title}
-                className="border border-border bg-background p-8 flex flex-col"
+                className="rounded border border-border bg-card p-8 text-center flex flex-col items-center"
               >
-                <Icon className="mb-4 h-8 w-8 text-primary" />
-                <h3 className="font-display text-xl font-bold uppercase tracking-wide text-foreground mb-4">
+                <div className="mx-auto mb-5 flex h-14 w-14 items-center justify-center rounded-full bg-accent/10">
+                  <Icon className="h-7 w-7 text-accent" />
+                </div>
+                <h3 className="font-heading text-lg font-bold text-foreground mb-3">
                   {item.title}
                 </h3>
                 <p className="text-sm text-muted-foreground leading-relaxed mb-6 flex-1">
                   {item.description}
                 </p>
                 <div className="flex gap-3">
-                  <a
+                  <Link
                     href={item.href}
-                    className="bg-primary text-primary-foreground px-6 py-2.5 text-xs font-semibold uppercase tracking-wider hover:bg-primary/90 transition-colors"
+                    className="rounded bg-accent px-6 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-accent/90"
                   >
                     {item.cta}
-                  </a>
-                  {item.secondaryCta && (
-                    <a
+                  </Link>
+                  {item.secondaryCta && item.secondaryHref && (
+                    <Link
                       href={item.secondaryHref}
-                      className="border border-foreground/30 text-foreground px-6 py-2.5 text-xs font-semibold uppercase tracking-wider hover:border-foreground/60 transition-colors"
+                      className="rounded border-2 border-accent px-6 py-2.5 text-sm font-semibold text-accent transition-colors hover:bg-accent hover:text-white"
                     >
                       {item.secondaryCta}
-                    </a>
+                    </Link>
                   )}
                 </div>
               </div>

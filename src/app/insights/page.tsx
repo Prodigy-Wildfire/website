@@ -121,7 +121,7 @@ export default function InsightsPage() {
               </p>
               <Link
                 href="/contact"
-                className="mt-4 inline-block rounded bg-accent px-8 py-3.5 text-sm font-semibold text-accent-foreground transition-colors hover:bg-accent/90"
+                className="mt-4 inline-block rounded bg-accent px-8 py-3.5 text-sm font-semibold text-white transition-colors hover:bg-accent/90"
               >
                 Get in Touch
               </Link>

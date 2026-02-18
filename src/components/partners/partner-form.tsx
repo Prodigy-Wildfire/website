@@ -4,17 +4,20 @@ import { useState } from "react";
 import { CheckCircle } from "lucide-react";
 
 const inputClass =
-  "w-full rounded-sm border border-border bg-background px-4 py-3 text-sm text-foreground transition-colors focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary";
+  "w-full rounded-sm border border-border bg-background px-4 py-3 text-sm text-foreground transition-colors focus:border-accent focus:outline-none focus:ring-1 focus:ring-accent";
 
 export function PartnerForm() {
   const [submitted, setSubmitted] = useState(false);
   const [form, setForm] = useState({
-    companyName: "",
-    contactName: "",
+    firstName: "",
+    lastName: "",
     email: "",
     phone: "",
+    companyName: "",
+    city: "",
+    stateProvince: "",
+    country: "",
     partnerType: "",
-    region: "",
     message: "",
   });
 
@@ -40,9 +43,9 @@ export function PartnerForm() {
             Application Received
           </h2>
           <p className="mt-4 text-base leading-relaxed text-muted-foreground">
-            Thank you for your interest in partnering with Prodigy Wildfire. A
-            member of our team will review your application and be in touch
-            within 2 business days.
+            Thank you for your interest in partnering with Prodigy Wildfire
+            Solutions. A member of our team will review your application and be
+            in touch within 2 business days.
           </p>
         </div>
       </section>
@@ -72,26 +75,26 @@ export function PartnerForm() {
           <div className="grid gap-5 md:grid-cols-2">
             <div>
               <label className="mb-1.5 block text-sm font-medium text-foreground">
-                Company Name
+                First Name
               </label>
               <input
                 type="text"
-                name="companyName"
+                name="firstName"
                 required
-                value={form.companyName}
+                value={form.firstName}
                 onChange={handleChange}
                 className={inputClass}
               />
             </div>
             <div>
               <label className="mb-1.5 block text-sm font-medium text-foreground">
-                Contact Name
+                Last Name
               </label>
               <input
                 type="text"
-                name="contactName"
+                name="lastName"
                 required
-                value={form.contactName}
+                value={form.lastName}
                 onChange={handleChange}
                 className={inputClass}
               />
@@ -111,7 +114,7 @@ export function PartnerForm() {
             </div>
             <div>
               <label className="mb-1.5 block text-sm font-medium text-foreground">
-                Phone
+                Phone Number
               </label>
               <input
                 type="tel"
@@ -122,6 +125,60 @@ export function PartnerForm() {
               />
             </div>
             <div>
+              <label className="mb-1.5 block text-sm font-medium text-foreground">
+                Company Name
+              </label>
+              <input
+                type="text"
+                name="companyName"
+                required
+                value={form.companyName}
+                onChange={handleChange}
+                className={inputClass}
+              />
+            </div>
+            <div>
+              <label className="mb-1.5 block text-sm font-medium text-foreground">
+                City
+              </label>
+              <input
+                type="text"
+                name="city"
+                value={form.city}
+                onChange={handleChange}
+                className={inputClass}
+              />
+            </div>
+            <div>
+              <label className="mb-1.5 block text-sm font-medium text-foreground">
+                State / Province
+              </label>
+              <input
+                type="text"
+                name="stateProvince"
+                value={form.stateProvince}
+                onChange={handleChange}
+                className={inputClass}
+              />
+            </div>
+            <div>
+              <label className="mb-1.5 block text-sm font-medium text-foreground">
+                Country
+              </label>
+              <select
+                name="country"
+                value={form.country}
+                onChange={handleChange}
+                className={inputClass}
+              >
+                <option value="">Select a country</option>
+                <option value="us">United States</option>
+                <option value="ca">Canada</option>
+                <option value="au">Australia</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+            <div className="md:col-span-2">
               <label className="mb-1.5 block text-sm font-medium text-foreground">
                 Partner Type
               </label>
@@ -140,19 +197,6 @@ export function PartnerForm() {
                 <option value="other">Other</option>
               </select>
             </div>
-            <div>
-              <label className="mb-1.5 block text-sm font-medium text-foreground">
-                Region / Territory
-              </label>
-              <input
-                type="text"
-                name="region"
-                placeholder="e.g. California, British Columbia, NSW"
-                value={form.region}
-                onChange={handleChange}
-                className={inputClass}
-              />
-            </div>
           </div>
 
           <div className="mt-5">
@@ -169,12 +213,14 @@ export function PartnerForm() {
             />
           </div>
 
-          <button
-            type="submit"
-            className="mt-6 w-full rounded bg-accent px-8 py-3.5 text-sm font-semibold text-accent-foreground transition-colors hover:bg-accent/90 md:w-auto"
-          >
-            Submit Application
-          </button>
+          <div className="mt-6 text-center">
+            <button
+              type="submit"
+              className="rounded bg-accent px-8 py-3.5 text-sm font-semibold text-white transition-colors hover:bg-accent/90"
+            >
+              Submit Application
+            </button>
+          </div>
         </form>
       </div>
     </section>

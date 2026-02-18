@@ -47,7 +47,7 @@ export function EmberFacts() {
             Residential Systems
           </p>
           <h2 className="mt-3 font-heading text-3xl font-bold tracking-tight text-primary-foreground md:text-4xl">
-            What a Prodigy Home Wildfire Sprinkler System Looks Like
+            What a Prodigy Home Wildfire Sprinkler System <span className="text-accent">Looks Like</span>
           </h2>
           <p className="mx-auto mt-4 text-4xl font-bold text-accent md:text-5xl">
             Full Roof Coverage in Under 3 Minutes
@@ -78,8 +78,8 @@ export function EmberFacts() {
 
         <div className="mt-12 text-center">
           <Link
-            href="/services"
-            className="inline-block rounded bg-accent px-8 py-3.5 text-sm font-semibold text-accent-foreground transition-colors hover:bg-accent/90"
+            href="/system"
+            className="inline-block rounded bg-accent px-8 py-3.5 text-sm font-semibold text-white transition-colors hover:bg-accent/90"
           >
             See How It Works
           </Link>

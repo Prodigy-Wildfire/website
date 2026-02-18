@@ -1,9 +1,9 @@
 import Image from "next/image"
-import { ArrowDown } from "lucide-react"
+import Link from "next/link"
 
 export function HeroSection() {
   return (
-    <section className="relative h-screen w-full overflow-hidden">
+    <section className="relative flex min-h-[85vh] items-center justify-center overflow-hidden">
       <Image
         src="/images/sprinkler-system.jpg"
         alt="Roof mounted wildfire protection sprinkler system"
@@ -14,27 +14,22 @@ export function HeroSection() {
       />
       <div className="absolute inset-0 bg-black/50" />
 
-      <div className="relative z-10 flex h-full flex-col items-center justify-center px-6 text-center">
-        <h1 className="font-display text-5xl font-bold leading-tight tracking-tight text-primary-foreground sm:text-6xl md:text-7xl lg:text-8xl">
-          <span className="block">About</span>
-          <span className="block text-accent">Prodigy Wildfire</span>
-          <span className="block">Redefining</span>
-          <span className="block">Wildfire Defense</span>
+      <div className="relative z-10 mx-auto max-w-4xl px-6 text-center">
+        <h1 className="font-heading text-4xl font-bold leading-tight tracking-tight text-primary-foreground md:text-5xl lg:text-6xl">
+          <span className="text-balance">About Prodigy Wildfire Solutions</span>
         </h1>
-
-        <a
-          href="#mission"
-          className="mt-12 inline-flex items-center gap-2 rounded-md bg-primary px-8 py-3.5 text-sm font-semibold text-primary-foreground hover:bg-primary/90 transition-colors"
-        >
-          LEARN MORE
-          <ArrowDown className="h-4 w-4" />
-        </a>
-      </div>
-
-      <div className="absolute bottom-0 left-0 right-0 bg-primary py-4">
-        <p className="text-center text-sm font-semibold text-primary-foreground tracking-wide">
-          Protect Your Property Now.
+        <p className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-primary-foreground/80">
+          Redefining wildfire defence for homes, businesses, and communities
+          across Canada, the United States, and Australia.
         </p>
+        <div className="mt-10">
+          <Link
+            href="/contact"
+            className="inline-block rounded bg-accent px-8 py-3.5 text-base font-semibold text-white transition-colors hover:bg-accent/90"
+          >
+            Contact Us
+          </Link>
+        </div>
       </div>
     </section>
   )

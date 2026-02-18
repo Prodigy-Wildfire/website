@@ -13,14 +13,14 @@ const footerLinks = [
   {
     heading: "Protection",
     links: [
-      { label: "Our Services", href: "/services" },
+      { label: "Our System", href: "/system" },
       { label: "Homeowners", href: "/homeowners" },
       { label: "Businesses", href: "/businesses" },
       { label: "Regions", href: "/regions" },
     ],
   },
   {
-    heading: "Prodigy",
+    heading: "Prodigy Wildfire Solutions",
     links: [
       { label: "About Us", href: "/about" },
       { label: "Case Studies", href: "/case-studies" },
@@ -44,17 +44,18 @@ export function Footer() {
                 alt="Prodigy Wildfire Solutions"
                 width={280}
                 height={80}
-                className="h-16 w-auto"
+                className="h-20 w-auto"
               />
             </Link>
             <p className="mt-4 max-w-xs text-sm leading-relaxed text-primary-foreground/60">
-              Redefining wildfire defense for homes, businesses, and communities
+              Redefining wildfire defence for homes, businesses, and communities
               across Canada, the United States and Australia.
             </p>
           </div>
 
-          {footerLinks.map((group) => (
-            <div key={group.heading}>
+          {footerLinks.map((group, index) => (
+            <div key={group.heading} className={index === 0 ? "md:pl-8" : ""}>
+
               <h3 className="font-heading text-sm font-semibold uppercase tracking-wider text-primary-foreground">
                 {group.heading}
               </h3>
@@ -76,7 +77,7 @@ export function Footer() {
 
         <div className="mt-14 border-t border-primary-foreground/10 pt-8 text-center">
           <p className="text-xs text-primary-foreground/40">
-            &copy; {new Date().getFullYear()} Prodigy Wildfire. All rights
+            &copy; 2026 Prodigy Wildfire Solutions Inc. All rights
             reserved.
           </p>
         </div>

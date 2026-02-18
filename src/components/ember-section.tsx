@@ -6,7 +6,7 @@ const steps = [
     icon: Droplets,
     title: "Roof-Mounted Sprinklers",
     description:
-      "Discreet, permanently installed copper sprinkler heads line your roofline. Engineered for full coverage, they saturate your roof, walls, and surrounding defensible space within minutes of activation.",
+      "Discreet, permanently installed copper sprinkler heads line your roofline. Engineered for full coverage, they saturate your roof, walls, and surrounding defencible space within minutes of activation.",
   },
   {
     icon: Smartphone,
@@ -16,9 +16,9 @@ const steps = [
   },
   {
     icon: CloudRain,
-    title: "Humidity Bubble",
+    title: "Protective Moisture Layer",
     description:
-      "Water creates a protective moisture envelope around your property, neutralising airborne embers before they land and cooling surfaces against radiant heat. The #1 defence against ember attack.",
+      "Water creates a protective moisture layer around your property, neutralising airborne embers before they land and cooling surfaces against radiant heat. The #1 defence against ember attack.",
   },
 ];
 
@@ -31,7 +31,7 @@ export function EmberSection() {
             How It Works
           </p>
           <h2 className="mt-3 font-heading text-3xl font-bold tracking-tight text-primary-foreground md:text-4xl">
-            Three Steps to Wildfire Defence
+            Three Steps to Wildfire <span className="text-accent">Defence</span>
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-base leading-relaxed text-primary-foreground/80">
             Prodigy systems combine permanent hardware, smart technology, and
@@ -64,8 +64,8 @@ export function EmberSection() {
 
         <div className="mt-10 text-center">
           <Link
-            href="/services"
-            className="inline-block rounded bg-accent px-8 py-3.5 text-sm font-semibold text-accent-foreground transition-colors hover:bg-accent/90"
+            href="/system"
+            className="inline-block rounded bg-accent px-8 py-3.5 text-sm font-semibold text-white transition-colors hover:bg-accent/90"
           >
             Explore Our Systems
           </Link>
