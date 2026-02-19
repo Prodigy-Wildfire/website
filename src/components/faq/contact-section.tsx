@@ -3,15 +3,29 @@
 import React from "react"
 
 import { useState } from "react"
-import { Input } from "@/components/ui/input"
-import { Label } from "@/components/ui/label"
-import { Textarea } from "@/components/ui/textarea"
-import { Checkbox } from "@/components/ui/checkbox"
-import { Button } from "@/components/ui/button"
-import { Send } from "lucide-react"
+import { Send, CheckCircle } from "lucide-react"
+
+const inputClass =
+  "w-full rounded-sm border border-border bg-background px-4 py-3 text-sm text-foreground transition-colors focus:border-accent focus:outline-none focus:ring-1 focus:ring-accent"
 
 export function ContactSection() {
   const [submitted, setSubmitted] = useState(false)
+  const [formData, setFormData] = useState({
+    firstName: "",
+    lastName: "",
+    email: "",
+    phone: "",
+    country: "",
+    message: "",
+  })
+
+  function handleChange(
+    e: React.ChangeEvent<
+      HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
+    >
+  ) {
+    setFormData((prev) => ({ ...prev, [e.target.name]: e.target.value }))
+  }
 
   function handleSubmit(e: React.FormEvent) {
     e.preventDefault()
@@ -20,18 +34,18 @@ export function ContactSection() {
 
   if (submitted) {
     return (
-      <section id="contact" className="bg-secondary py-20 sm:py-28">
-        <div className="mx-auto max-w-2xl px-4 text-center sm:px-6 lg:px-8">
-          <div className="rounded-xl border border-border bg-background p-12">
-            <div className="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-full bg-primary/10">
-              <Send className="h-6 w-6 text-primary" />
+      <section id="contact" className="bg-muted py-20 md:py-28">
+        <div className="mx-auto max-w-2xl px-6 text-center">
+          <div className="flex flex-col items-center gap-4">
+            <div className="flex h-16 w-16 items-center justify-center rounded-full bg-accent/10">
+              <CheckCircle className="h-8 w-8 text-accent" />
             </div>
-            <h3 className="font-serif text-2xl font-bold text-foreground">
-              Message Sent
-            </h3>
-            <p className="mt-3 text-muted-foreground">
-              Thank you for reaching out. Our team will get back to you as soon
-              as possible.
+            <h2 className="font-heading text-3xl font-bold text-foreground">
+              Thank You!
+            </h2>
+            <p className="text-lg text-muted-foreground">
+              Your message has been received. Our team will get back to you as
+              soon as possible.
             </p>
           </div>
         </div>
@@ -40,100 +54,149 @@ export function ContactSection() {
   }
 
   return (
-    <section id="contact" className="bg-secondary py-20 sm:py-28">
-      <div className="mx-auto max-w-2xl px-4 sm:px-6 lg:px-8">
+    <section id="contact" className="bg-muted py-20 md:py-28">
+      <div className="mx-auto max-w-2xl px-6">
         <div className="mb-10 text-center">
-          <h2 className="text-balance font-serif text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
-            {"Didn't find what you're "}<span className="text-accent">looking</span>{" for?"}
+          <p className="font-heading text-sm font-semibold uppercase tracking-widest text-accent">
+            Still Have Questions?
+          </p>
+          <h2 className="mt-3 font-heading text-3xl font-bold tracking-tight text-foreground md:text-4xl">
+            {"Didn't Find What You're "}
+            <span className="text-accent">Looking</span>
+            {" For?"}
           </h2>
-          <p className="mt-3 text-base text-muted-foreground">
+          <p className="mx-auto mt-4 max-w-xl text-sm leading-relaxed text-muted-foreground">
             Reach out to us and we will get back to you as soon as possible.
           </p>
         </div>
         <form
           onSubmit={handleSubmit}
-          className="rounded-xl border border-border bg-background p-6 shadow-sm sm:p-8"
+          className="rounded border border-border bg-card p-8 md:p-10"
         >
-          <div className="grid grid-cols-1 gap-5 sm:grid-cols-2">
-            <div className="space-y-2">
-              <Label htmlFor="firstName">First name</Label>
-              <Input id="firstName" placeholder="Jane" required />
-            </div>
-            <div className="space-y-2">
-              <Label htmlFor="lastName">Last name</Label>
-              <Input id="lastName" placeholder="Doe" required />
-            </div>
-            <div className="space-y-2">
-              <Label htmlFor="email">Email</Label>
-              <Input
-                id="email"
-                type="email"
-                placeholder="jane@example.com"
+          <div className="grid gap-6 sm:grid-cols-2">
+            <div>
+              <label
+                htmlFor="firstName"
+                className="mb-2 block text-sm font-medium text-foreground"
+              >
+                First Name <span className="text-accent">*</span>
+              </label>
+              <input
+                id="firstName"
+                name="firstName"
+                type="text"
+                value={formData.firstName}
+                onChange={handleChange}
                 required
+                placeholder="First name"
+                className={inputClass}
               />
             </div>
-            <div className="space-y-2">
-              <Label htmlFor="phone">Phone</Label>
-              <Input id="phone" type="tel" placeholder="+1 (555) 000-0000" />
+            <div>
+              <label
+                htmlFor="lastName"
+                className="mb-2 block text-sm font-medium text-foreground"
+              >
+                Last Name <span className="text-accent">*</span>
+              </label>
+              <input
+                id="lastName"
+                name="lastName"
+                type="text"
+                value={formData.lastName}
+                onChange={handleChange}
+                required
+                placeholder="Last name"
+                className={inputClass}
+              />
             </div>
-            <div className="space-y-2">
-              <Label htmlFor="address">Street address</Label>
-              <Input id="address" placeholder="123 Main St" />
+            <div>
+              <label
+                htmlFor="email"
+                className="mb-2 block text-sm font-medium text-foreground"
+              >
+                Email <span className="text-accent">*</span>
+              </label>
+              <input
+                id="email"
+                name="email"
+                type="email"
+                value={formData.email}
+                onChange={handleChange}
+                required
+                placeholder="you@example.com"
+                className={inputClass}
+              />
             </div>
-            <div className="space-y-2">
-              <Label htmlFor="city">City</Label>
-              <Input id="city" placeholder="Vancouver" />
+            <div>
+              <label
+                htmlFor="phone"
+                className="mb-2 block text-sm font-medium text-foreground"
+              >
+                Phone Number
+              </label>
+              <input
+                id="phone"
+                name="phone"
+                type="tel"
+                value={formData.phone}
+                onChange={handleChange}
+                placeholder="+1 (555) 000-0000"
+                className={inputClass}
+              />
             </div>
-            <div className="space-y-2">
-              <Label htmlFor="province">Province / State</Label>
-              <Input id="province" placeholder="British Columbia" />
-            </div>
-            <div className="space-y-2">
-              <Label htmlFor="country">Country</Label>
-              <Input id="country" placeholder="Canada" />
-            </div>
-            <div className="space-y-2 sm:col-span-2">
-              <Label htmlFor="postal">Postal / ZIP code</Label>
-              <Input id="postal" placeholder="V6B 1A1" />
+            <div className="sm:col-span-2">
+              <label
+                htmlFor="country"
+                className="mb-2 block text-sm font-medium text-foreground"
+              >
+                Country <span className="text-accent">*</span>
+              </label>
+              <select
+                id="country"
+                name="country"
+                value={formData.country}
+                onChange={handleChange}
+                required
+                className={inputClass}
+              >
+                <option value="">Select a country</option>
+                <option value="us">United States</option>
+                <option value="ca">Canada</option>
+                <option value="au">Australia</option>
+                <option value="other">Other</option>
+              </select>
             </div>
           </div>
 
-          <div className="mt-5 space-y-2">
-            <Label htmlFor="message">Message</Label>
-            <Textarea
+          <div className="mt-6">
+            <label
+              htmlFor="message"
+              className="mb-2 block text-sm font-medium text-foreground"
+            >
+              Message <span className="text-accent">*</span>
+            </label>
+            <textarea
               id="message"
-              placeholder="Tell us how we can help..."
+              name="message"
+              value={formData.message}
+              onChange={handleChange}
               rows={4}
               required
+              className={`${inputClass} resize-none`}
+              placeholder="Tell us how we can help..."
             />
           </div>
 
-          <div className="mt-6 space-y-4">
-            <div className="flex items-start gap-3">
-              <Checkbox id="assessment" className="mt-0.5" />
-              <Label
-                htmlFor="assessment"
-                className="text-sm font-normal leading-relaxed text-muted-foreground"
-              >
-                Yes, I would like to book my free property assessment
-              </Label>
-            </div>
-            <div className="flex items-start gap-3">
-              <Checkbox id="marketing" className="mt-0.5" />
-              <Label
-                htmlFor="marketing"
-                className="text-sm font-normal leading-relaxed text-muted-foreground"
-              >
-                Yes, I would like to receive marketing communications, special
-                promotions, and updates from Prodigy Wildfire.
-              </Label>
-            </div>
+          <div className="mt-8 text-center">
+            <button
+              type="submit"
+              className="inline-flex items-center justify-center gap-2 rounded bg-accent px-8 py-3.5 text-sm font-semibold text-white transition-colors hover:bg-accent/90"
+            >
+              <Send className="h-4 w-4" />
+              Send Message
+            </button>
           </div>
-
-          <Button type="submit" size="lg" className="mt-8 w-full">
-            <Send className="mr-2 h-4 w-4" />
-            Send Message
-          </Button>
         </form>
       </div>
     </section>

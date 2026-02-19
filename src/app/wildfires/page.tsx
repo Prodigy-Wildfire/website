@@ -8,7 +8,7 @@ import { GettingPrepared } from "@/components/wildfires/getting-prepared";
 import { PreparednessTips } from "@/components/wildfires/preparedness-tips";
 import { WildfireStats } from "@/components/wildfires/wildfire-stats";
 import { OnTheRise } from "@/components/wildfires/on-the-rise";
-import { LeadMagnetSection } from "@/components/lead-magnet-section";
+import { MailingListSection } from "@/components/mailing-list-section";
 
 export const metadata: Metadata = {
   title: "Understanding Wildfires | How They Spread & How to Protect",
@@ -59,7 +59,7 @@ export default function WildfiresPage() {
         <PreparednessTips />
         <WildfireStats />
         <OnTheRise />
-        <LeadMagnetSection />
+        <MailingListSection />
       </main>
       <Footer />
     </>

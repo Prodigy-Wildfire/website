@@ -15,7 +15,7 @@ export function SystemCta() {
         </p>
         <div className="mt-10 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
           <Link
-            href="/contact"
+            href="/quote"
             className="rounded bg-accent px-8 py-3.5 text-base font-semibold text-white transition-colors hover:bg-accent/90"
           >
             Get a Free Quote

@@ -32,6 +32,12 @@ const footerLinks = [
   },
 ];
 
+const legalLinks = [
+  { label: "Privacy Policy", href: "/privacy" },
+  { label: "Terms and Conditions", href: "/terms" },
+  { label: "Cookie Policy", href: "/cookies" },
+];
+
 export function Footer() {
   return (
     <footer className="bg-primary py-16">
@@ -75,11 +81,24 @@ export function Footer() {
           ))}
         </div>
 
-        <div className="mt-14 border-t border-primary-foreground/10 pt-8 text-center">
-          <p className="text-xs text-primary-foreground/40">
-            &copy; 2026 Prodigy Wildfire Solutions Inc. All rights
-            reserved.
-          </p>
+        <div className="mt-14 border-t border-primary-foreground/10 pt-8">
+          <div className="flex flex-col items-center gap-4 sm:flex-row sm:justify-between">
+            <p className="text-xs text-primary-foreground/40">
+              &copy; 2026 Prodigy Wildfire Solutions Inc. All rights
+              reserved.
+            </p>
+            <div className="flex flex-wrap justify-center gap-x-6 gap-y-2">
+              {legalLinks.map((link) => (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  className="text-xs text-primary-foreground/40 transition-colors hover:text-accent"
+                >
+                  {link.label}
+                </Link>
+              ))}
+            </div>
+          </div>
         </div>
       </div>
     </footer>

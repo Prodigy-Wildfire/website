@@ -6,6 +6,7 @@ import { WhyProdigy } from "@/components/regions/why-prodigy"
 import { Regions } from "@/components/regions/regions"
 import { SupportSection } from "@/components/regions/support-section"
 import { CtaBanner } from "@/components/regions/cta-banner"
+import { MailingListSection } from "@/components/mailing-list-section"
 import { Footer } from "@/components/footer"
 
 export const metadata = {
@@ -58,6 +59,7 @@ export default function Page() {
       <Regions />
       <SupportSection />
       <CtaBanner />
+      <MailingListSection />
       <Footer />
     </main>
   )

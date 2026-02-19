@@ -6,7 +6,8 @@ import { OurApproach } from "@/components/services/our-approach";
 import { InnovationSection } from "@/components/services/innovation-section";
 import { HowItWorks } from "@/components/services/how-it-works";
 import { ServiceDetails } from "@/components/services/service-details";
-import { SystemCta } from "@/components/services/system-cta";
+import { SystemCta } from "@/components/services/system-cta"
+import { MailingListSection } from "@/components/mailing-list-section";
 
 export const metadata: Metadata = {
   title: "The Prodigy System | Prodigy Wildfire Solutions",
@@ -78,6 +79,7 @@ export default function SystemPage() {
         <HowItWorks />
         <ServiceDetails />
         <SystemCta />
+        <MailingListSection />
       </main>
       <Footer />
     </>

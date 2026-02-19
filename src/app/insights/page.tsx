@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
+import { MailingListSection } from "@/components/mailing-list-section";
 import Link from "next/link";
 import Image from "next/image";
 
@@ -128,6 +129,7 @@ export default function InsightsPage() {
             </div>
           </div>
         </section>
+        <MailingListSection />
       </main>
       <Footer />
     </>

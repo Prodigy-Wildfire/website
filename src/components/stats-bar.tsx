@@ -89,7 +89,7 @@ export function StatsBar() {
         </div>
         <div className="mt-10 text-center">
           <a
-            href="/contact"
+            href="/quote"
             className="inline-block rounded bg-accent px-8 py-3.5 text-sm font-semibold text-white transition-colors hover:bg-accent/90"
           >
             Get Your Free Assessment

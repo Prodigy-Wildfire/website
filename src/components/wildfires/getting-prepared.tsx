@@ -137,7 +137,7 @@ export function GettingPrepared() {
 
         <div className="mt-12 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
           <a
-            href="/contact"
+            href="/quote"
             className="inline-block rounded bg-accent px-8 py-3.5 text-sm font-semibold text-white transition-colors hover:bg-accent/90"
           >
             Get a Free Property Assessment

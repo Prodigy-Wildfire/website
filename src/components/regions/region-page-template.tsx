@@ -43,7 +43,7 @@ export function RegionPageTemplate({
   return (
     <>
       {/* Hero */}
-      <section className="relative flex min-h-[85vh] items-center justify-center overflow-hidden">
+      <section className="relative flex min-h-screen items-center justify-center overflow-hidden pt-24 md:min-h-[85vh]">
         <Image
           src={heroImage}
           alt={heroAlt}
@@ -93,7 +93,7 @@ export function RegionPageTemplate({
           </p>
           <div className="mt-8 flex flex-col gap-4 sm:flex-row">
             <Link
-              href="/contact"
+              href="/quote"
               className="rounded bg-accent px-8 py-3.5 text-center text-sm font-semibold text-white transition-colors hover:bg-accent/90"
             >
               Get a Free Assessment
@@ -173,7 +173,7 @@ export function RegionPageTemplate({
           </p>
           <div className="mt-8 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
             <Link
-              href="/contact"
+              href="/quote"
               className="rounded bg-accent px-8 py-3.5 text-sm font-semibold text-white transition-colors hover:bg-accent/90"
             >
               Get Protected

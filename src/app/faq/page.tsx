@@ -1,7 +1,6 @@
 import { Header } from "@/components/header"
 import { HeroSection } from "@/components/faq/hero-section"
 import { VideoFaqSection } from "@/components/faq/video-faq-section"
-import { FaqSection } from "@/components/faq/faq-section"
 import { ContactSection } from "@/components/faq/contact-section"
 import { Footer } from "@/components/footer"
 
@@ -60,7 +59,7 @@ const faqJsonLd = {
       name: "How do I monitor my wildfire protection system remotely?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Every Prodigy wildfire protection system comes with app-based remote monitoring and activation technology. From anywhere in the world, you can check system status, receive real-time Ember Watch alerts, run activation cycles, and control your exterior sprinkler system with one tap.",
+        text: "Every Prodigy wildfire protection system comes with app-based remote monitoring and activation technology. From anywhere in the world, you can check system status, receive real-time EmberWatch alerts, run activation cycles, and control your exterior sprinkler system with one tap.",
       },
     },
     {
@@ -93,7 +92,6 @@ export default function Page() {
       <main className="flex-1">
         <HeroSection />
         <VideoFaqSection />
-        <FaqSection />
         <ContactSection />
       </main>
       <Footer />

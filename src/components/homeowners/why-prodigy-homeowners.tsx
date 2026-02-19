@@ -56,7 +56,7 @@ export function WhyProdigyHomeowners() {
             </div>
 
             <Link
-              href="/contact"
+              href="/quote"
               className="mt-10 inline-block rounded bg-accent px-8 py-3.5 text-sm font-semibold text-white transition-colors hover:bg-accent/90"
             >
               Protect Your Home

@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export function PartnersHero() {
   return (
-    <section className="relative flex min-h-[85vh] items-center justify-center overflow-hidden">
+    <section className="relative flex min-h-screen items-center justify-center overflow-hidden pt-24 md:min-h-[85vh]">
       <Image
         src="/images/engineering.jpg"
         alt="Prodigy Wildfire partner installation team working on exterior sprinkler system"
@@ -15,7 +15,7 @@ export function PartnersHero() {
 
       <div className="relative z-10 mx-auto max-w-4xl px-6 text-center">
         <h1 className="font-heading text-4xl font-bold leading-tight tracking-tight text-primary-foreground md:text-5xl lg:text-6xl">
-          <span className="text-balance">Partner With Prodigy Wildfire Solutions</span>
+          <span className="text-balance">Partner With Prodigy Wildfire <span className="text-accent">Solutions</span></span>
         </h1>
         <p className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-primary-foreground/80">
           Join a growing network of builders, insurers, HOAs, and certified

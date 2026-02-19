@@ -3,10 +3,18 @@
 import { useState } from "react";
 import { MessageCircle, X, CheckCircle, Send } from "lucide-react";
 
+const inputClass =
+  "w-full rounded-sm border border-border bg-background px-4 py-3 text-sm text-foreground transition-colors focus:border-accent focus:outline-none focus:ring-1 focus:ring-accent";
+
 export function ChatWidget() {
   const [open, setOpen] = useState(false);
   const [submitted, setSubmitted] = useState(false);
-  const [form, setForm] = useState({ name: "", email: "", message: "" });
+  const [form, setForm] = useState({
+    firstName: "",
+    lastName: "",
+    email: "",
+    message: "",
+  });
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -18,7 +26,7 @@ export function ChatWidget() {
     if (submitted) {
       setTimeout(() => {
         setSubmitted(false);
-        setForm({ name: "", email: "", message: "" });
+        setForm({ firstName: "", lastName: "", email: "", message: "" });
       }, 300);
     }
   };
@@ -32,10 +40,10 @@ export function ChatWidget() {
           <div className="flex items-center justify-between bg-primary px-5 py-4">
             <div>
               <p className="text-sm font-semibold text-primary-foreground">
-                Chat with us
+                Leave Us a Message
               </p>
               <p className="text-xs text-primary-foreground/60">
-                Wildfire Protection Specialist
+                We&apos;ll get back to you within 24 hours
               </p>
             </div>
             <button
@@ -57,26 +65,43 @@ export function ChatWidget() {
                   Message Sent
                 </p>
                 <p className="text-sm text-muted-foreground">
-                  A Wildfire Protection Specialist will get back to you shortly.
+                  A Wildfire Protection Specialist will get back to you within
+                  24 hours.
                 </p>
               </div>
             ) : (
-              <form onSubmit={handleSubmit} className="flex flex-col gap-4">
-                <input
-                  type="text"
-                  placeholder="Your name"
-                  required
-                  value={form.name}
-                  onChange={(e) => setForm({ ...form, name: e.target.value })}
-                  className="w-full rounded-sm border border-border bg-background px-4 py-3 text-sm text-foreground transition-colors focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary"
-                />
+              <form onSubmit={handleSubmit} className="flex flex-col gap-3">
+                <div className="grid grid-cols-2 gap-3">
+                  <input
+                    type="text"
+                    placeholder="First name"
+                    required
+                    value={form.firstName}
+                    onChange={(e) =>
+                      setForm({ ...form, firstName: e.target.value })
+                    }
+                    className={inputClass}
+                  />
+                  <input
+                    type="text"
+                    placeholder="Last name"
+                    required
+                    value={form.lastName}
+                    onChange={(e) =>
+                      setForm({ ...form, lastName: e.target.value })
+                    }
+                    className={inputClass}
+                  />
+                </div>
                 <input
                   type="email"
                   placeholder="Email address"
                   required
                   value={form.email}
-                  onChange={(e) => setForm({ ...form, email: e.target.value })}
-                  className="w-full rounded-sm border border-border bg-background px-4 py-3 text-sm text-foreground transition-colors focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary"
+                  onChange={(e) =>
+                    setForm({ ...form, email: e.target.value })
+                  }
+                  className={inputClass}
                 />
                 <textarea
                   placeholder="How can we help?"
@@ -86,11 +111,11 @@ export function ChatWidget() {
                   onChange={(e) =>
                     setForm({ ...form, message: e.target.value })
                   }
-                  className="w-full resize-none rounded-sm border border-border bg-background px-4 py-3 text-sm text-foreground transition-colors focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary"
+                  className={`${inputClass} resize-none`}
                 />
                 <button
                   type="submit"
-                  className="flex items-center justify-center gap-2 rounded bg-primary px-5 py-3 text-sm font-semibold text-primary-foreground transition-colors hover:bg-primary/90"
+                  className="flex items-center justify-center gap-2 rounded bg-accent px-5 py-3 text-sm font-semibold text-white transition-colors hover:bg-accent/90"
                 >
                   Send Message
                   <Send className="h-3.5 w-3.5" />
@@ -105,7 +130,7 @@ export function ChatWidget() {
       <button
         type="button"
         onClick={() => setOpen(!open)}
-        className="fixed bottom-20 right-4 z-50 flex h-14 w-14 items-center justify-center rounded-full bg-accent text-accent-foreground shadow-lg transition-transform hover:scale-105 sm:right-6"
+        className="fixed bottom-20 right-4 z-50 flex h-14 w-14 items-center justify-center rounded-full bg-accent text-white shadow-lg transition-transform hover:scale-105 sm:right-6"
         aria-label={open ? "Close chat" : "Open chat"}
       >
         {open ? (

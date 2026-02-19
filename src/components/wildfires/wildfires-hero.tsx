@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export function WildfiresHero() {
   return (
-    <section className="relative flex min-h-[85vh] items-center justify-center overflow-hidden">
+    <section className="relative flex min-h-screen items-center justify-center overflow-hidden pt-24 md:min-h-[85vh]">
       <Image
         src="/images/wildfire-ember-attack-cayetano-gil.avif"
         alt="Intense wildfire ember attack with burning embers flying through the air"
@@ -16,7 +16,7 @@ export function WildfiresHero() {
 
       <div className="relative z-10 mx-auto max-w-4xl px-6 text-center">
         <h1 className="font-heading text-4xl font-bold leading-tight tracking-tight text-primary-foreground md:text-5xl lg:text-6xl">
-          <span className="text-balance">How Wildfires Spread</span>
+          <span className="text-balance">How Wildfires <span className="text-accent">Spread</span></span>
         </h1>
         <p className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-primary-foreground/80">
           How wildfires start, how they spread, and what you can do to prepare

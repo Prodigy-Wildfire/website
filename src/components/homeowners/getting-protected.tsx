@@ -109,7 +109,7 @@ export function GettingProtected() {
             Learn About Our Systems
           </Link>
           <Link
-            href="/contact"
+            href="/quote"
             className="rounded bg-accent px-8 py-3.5 text-sm font-semibold text-white transition-colors hover:bg-accent/90"
           >
             Book Your Free Assessment

@@ -66,7 +66,7 @@ export function OurApproach() {
             Take the Wildfire Readiness Quiz
           </Link>
           <Link
-            href="/contact"
+            href="/quote"
             className="rounded bg-accent px-8 py-3.5 text-base font-semibold text-white transition-colors hover:bg-accent/90"
           >
             Get Protected

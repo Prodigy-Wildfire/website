@@ -4,7 +4,7 @@ import React from "react"
 
 import { useState } from "react"
 import { getInstallCount, getSprinklerCount, COUNTRIES } from "@/lib/stats"
-import { Send, CheckCircle, MapPin, Phone, Mail, Clock, ChevronDown } from "lucide-react"
+import { Send, CheckCircle, MapPin, Mail, ChevronDown } from "lucide-react"
 
 const serviceOptions = [
   "Residential Protection",
@@ -18,9 +18,11 @@ export function ContactForm() {
   const [submitted, setSubmitted] = useState(false)
   const [showMore, setShowMore] = useState(false)
   const [formData, setFormData] = useState({
-    name: "",
+    firstName: "",
+    lastName: "",
     email: "",
     phone: "",
+    country: "",
     service: "",
     propertyType: "",
     message: "",
@@ -42,16 +44,16 @@ export function ContactForm() {
       <section id="contact" className="bg-muted py-20">
         <div className="mx-auto max-w-3xl px-6 text-center">
           <div className="flex flex-col items-center gap-4">
-            <div className="flex h-16 w-16 items-center justify-center rounded-full bg-primary/10">
-              <CheckCircle className="h-8 w-8 text-primary" />
+            <div className="flex h-16 w-16 items-center justify-center rounded-full bg-accent/10">
+              <CheckCircle className="h-8 w-8 text-accent" />
             </div>
             <h2 className="font-heading text-3xl font-bold text-foreground">
               Thank You!
             </h2>
             <p className="text-lg text-muted-foreground">
-              Your inquiry has been received. A member of the Prodigy team will
-              be in touch within 24 hours to discuss your wildfire protection
-              needs.
+              Your inquiry has been received. A member of the Prodigy Wildfire
+              Solutions team will be in touch within 24 hours to discuss your
+              wildfire protection needs.
             </p>
           </div>
         </div>
@@ -64,8 +66,8 @@ export function ContactForm() {
       <div className="mx-auto max-w-7xl px-6">
         <div className="grid gap-16 lg:grid-cols-5">
           {/* Contact Info Sidebar */}
-          <div className="lg:col-span-2">
-            <p className="text-sm font-semibold uppercase tracking-[0.25em] text-primary">
+          <div className="lg:col-span-2 text-center lg:text-left">
+            <p className="font-heading text-sm font-semibold uppercase tracking-widest text-accent">
               Contact Us
             </p>
             <h2 className="mt-3 font-heading text-3xl font-bold text-foreground md:text-4xl">
@@ -79,26 +81,25 @@ export function ContactForm() {
             <div className="mt-10 flex flex-col gap-6">
               <ContactInfoItem
                 icon={<MapPin className="h-5 w-5" />}
-                title="Location"
-                detail="United States, Canada & Australia"
+                title="United States"
+              />
+              <ContactInfoItem
+                icon={<MapPin className="h-5 w-5" />}
+                title="Canada"
+              />
+              <ContactInfoItem
+                icon={<MapPin className="h-5 w-5" />}
+                title="Australia"
+              />
+              {/* TODO: Update install count manually as projects are completed */}
+              <ContactInfoItem
+                icon={<Send className="h-5 w-5" />}
+                title={`${getInstallCount()}+ Installations Completed`}
               />
               <ContactInfoItem
                 icon={<Mail className="h-5 w-5" />}
-                title="Email"
-                detail="sales@prodigywildfire.com"
+                title="sales@prodigywildfire.com"
               />
-              <ContactInfoItem
-                icon={<Clock className="h-5 w-5" />}
-                title="Hours"
-                detail="7:00 AM - 6:00 PM, 7 Days a Week"
-              />
-            </div>
-
-            {/* Stats */}
-            <div className="mt-12 grid grid-cols-3 gap-4 rounded-sm border border-border bg-background p-6">
-              <StatItem value={`${getInstallCount()}+`} label="Installs" />
-              <StatItem value={`${COUNTRIES}`} label="Countries" />
-              <StatItem value={`${getSprinklerCount()}`} label="Sprinklers" />
             </div>
           </div>
 
@@ -106,17 +107,27 @@ export function ContactForm() {
           <div className="lg:col-span-3">
             <form
               onSubmit={handleSubmit}
-              className="rounded-sm border border-border bg-background p-8 shadow-sm md:p-10"
+              className="rounded border border-border bg-background p-8 shadow-sm md:p-10"
             >
               <div className="grid gap-6">
-                <FormField
-                  label="Name"
-                  name="name"
-                  value={formData.name}
-                  onChange={handleChange}
-                  required
-                  placeholder="Your full name"
-                />
+                <div className="grid gap-6 sm:grid-cols-2">
+                  <FormField
+                    label="First Name"
+                    name="firstName"
+                    value={formData.firstName}
+                    onChange={handleChange}
+                    required
+                    placeholder="First name"
+                  />
+                  <FormField
+                    label="Last Name"
+                    name="lastName"
+                    value={formData.lastName}
+                    onChange={handleChange}
+                    required
+                    placeholder="Last name"
+                  />
+                </div>
                 <div className="grid gap-6 sm:grid-cols-2">
                   <FormField
                     label="Email Address"
@@ -137,13 +148,31 @@ export function ContactForm() {
                     placeholder="+1 (555) 000-0000"
                   />
                 </div>
+                <div>
+                  <label htmlFor="country" className="mb-2 block text-sm font-medium text-foreground">
+                    Country
+                  </label>
+                  <select
+                    id="country"
+                    name="country"
+                    value={formData.country}
+                    onChange={handleChange}
+                    className="w-full rounded-sm border border-border bg-background px-4 py-3 text-sm text-foreground transition-colors focus:border-accent focus:outline-none focus:ring-1 focus:ring-accent"
+                  >
+                    <option value="">Select a country</option>
+                    <option value="us">United States</option>
+                    <option value="ca">Canada</option>
+                    <option value="au">Australia</option>
+                    <option value="other">Other</option>
+                  </select>
+                </div>
               </div>
 
               {/* Optional details toggle */}
               <button
                 type="button"
                 onClick={() => setShowMore(!showMore)}
-                className="mt-6 flex items-center gap-2 text-sm font-medium text-primary transition-colors hover:text-primary/80"
+                className="mt-6 flex items-center gap-2 text-sm font-medium text-accent transition-colors hover:text-accent/80"
               >
                 <ChevronDown className={`h-4 w-4 transition-transform ${showMore ? "rotate-180" : ""}`} />
                 {showMore ? "Hide additional details" : "Add more details (optional)"}
@@ -163,7 +192,7 @@ export function ContactForm() {
                       name="service"
                       value={formData.service}
                       onChange={handleChange}
-                      className="w-full rounded-sm border border-border bg-background px-4 py-3 text-sm text-foreground transition-colors focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary"
+                      className="w-full rounded-sm border border-border bg-background px-4 py-3 text-sm text-foreground transition-colors focus:border-accent focus:outline-none focus:ring-1 focus:ring-accent"
                     >
                       <option value="">Select a service</option>
                       {serviceOptions.map((opt) => (
@@ -187,7 +216,7 @@ export function ContactForm() {
                             key={type}
                             className={`cursor-pointer rounded-sm border px-4 py-2.5 text-sm transition-colors ${
                               formData.propertyType === type
-                                ? "border-accent bg-accent text-accent-foreground"
+                                ? "border-accent bg-accent text-white"
                                 : "border-border text-muted-foreground hover:border-accent/50"
                             }`}
                           >
@@ -218,20 +247,22 @@ export function ContactForm() {
                       value={formData.message}
                       onChange={handleChange}
                       rows={4}
-                      className="w-full resize-none rounded-sm border border-border bg-background px-4 py-3 text-sm text-foreground transition-colors focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary"
+                      className="w-full resize-none rounded-sm border border-border bg-background px-4 py-3 text-sm text-foreground transition-colors focus:border-accent focus:outline-none focus:ring-1 focus:ring-accent"
                       placeholder="Describe your property, location, and any specific wildfire concerns..."
                     />
                   </div>
                 </div>
               )}
 
-              <button
-                type="submit"
-                className="mt-8 flex w-full items-center justify-center gap-2 rounded-sm bg-primary px-8 py-4 text-sm font-semibold uppercase tracking-wider text-primary-foreground transition-colors hover:bg-primary/90"
-              >
-                <Send className="h-4 w-4" />
-                Get Your Free Assessment
-              </button>
+              <div className="mt-8 text-center">
+                <button
+                  type="submit"
+                  className="inline-flex items-center justify-center gap-2 rounded bg-accent px-8 py-3.5 text-sm font-semibold text-white transition-colors hover:bg-accent/90"
+                >
+                  <Send className="h-4 w-4" />
+                  Get Your Free Assessment
+                </button>
+              </div>
 
               <p className="mt-4 text-center text-xs text-muted-foreground">
                 By submitting this form, you agree to be contacted by Prodigy
@@ -266,7 +297,7 @@ function FormField({
     <div>
       <label htmlFor={name} className="mb-2 block text-sm font-medium text-foreground">
         {label}
-        {required && <span className="ml-1 text-primary">*</span>}
+        {required && <span className="ml-1 text-accent">*</span>}
       </label>
       <input
         id={name}
@@ -276,7 +307,7 @@ function FormField({
         onChange={onChange}
         required={required}
         placeholder={placeholder}
-        className="w-full rounded-sm border border-border bg-background px-4 py-3 text-sm text-foreground transition-colors focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary"
+        className="w-full rounded-sm border border-border bg-background px-4 py-3 text-sm text-foreground transition-colors focus:border-accent focus:outline-none focus:ring-1 focus:ring-accent"
       />
     </div>
   )
@@ -285,30 +316,16 @@ function FormField({
 function ContactInfoItem({
   icon,
   title,
-  detail,
 }: {
   icon: React.ReactNode
   title: string
-  detail: string
 }) {
   return (
-    <div className="flex items-start gap-4">
-      <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-sm bg-primary/10 text-primary">
+    <div className="flex items-center gap-4 justify-center lg:justify-start">
+      <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-accent/10 text-accent">
         {icon}
       </div>
-      <div>
-        <p className="text-sm font-semibold text-foreground">{title}</p>
-        <p className="text-sm text-muted-foreground">{detail}</p>
-      </div>
-    </div>
-  )
-}
-
-function StatItem({ value, label }: { value: string; label: string }) {
-  return (
-    <div className="text-center">
-      <p className="font-heading text-2xl font-bold text-primary">{value}</p>
-      <p className="mt-1 text-xs text-muted-foreground">{label}</p>
+      <p className="text-sm font-semibold text-foreground">{title}</p>
     </div>
   )
 }
