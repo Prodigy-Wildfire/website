@@ -11,7 +11,7 @@ const founders = [
   {
     name: "Liam Sheppard",
     role: "COO",
-    image: "/images/liam-sheppard-coo.jpg",
+    image: "/images/Liam Sheppard COO About us Page.png",
     bio: "With a background in home building and insurance work, Liam co-founded Prodigy Wildfire Solutions with George to bring practical wildfire protection to communities. He expanded operations from Canada, to Australia and the US, focusing on durable systems, skilled installer training, and scalable wildfire protection across the world.",
   },
   {
