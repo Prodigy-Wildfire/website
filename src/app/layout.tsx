@@ -7,6 +7,7 @@ import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { StickyCtaBar } from "@/components/sticky-cta-bar";
 import { ChatWidget } from "@/components/chat-widget";
+import { CookieConsent } from "@/components/cookie-consent";
 
 const GTM_ID = process.env.NEXT_PUBLIC_GTM_ID;
 const META_PIXEL_ID = process.env.NEXT_PUBLIC_META_PIXEL_ID;
@@ -169,6 +170,7 @@ s.parentNode.insertBefore(b,s);})(window.lintrk);`,
           }}
         />
         {children}
+        <CookieConsent />
         <StickyCtaBar />
         <ChatWidget />
         <Analytics />
