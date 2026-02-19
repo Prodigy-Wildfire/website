@@ -78,7 +78,7 @@ const caseStudies = [
     location: "Whistler, British Columbia, Canada",
     country: "Canada",
     type: "Residential",
-    image: "/images/whistler-home.jpg",
+    image: "/images/Whistler Private Residence.jpeg",
     summary:
       "A luxury mountain home in Whistler's wildfire interface zone needed discreet, permanent wildfire protection that preserved the property's aesthetic.",
     challenge:
