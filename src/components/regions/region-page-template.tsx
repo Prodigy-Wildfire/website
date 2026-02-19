@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { RegionContactForm } from "@/components/regions/region-contact-form";
 
 interface Stat {
   value: string;
@@ -27,6 +28,8 @@ interface RegionPageTemplateProps {
   caseStudies?: CaseStudy[];
   subRegions?: SubRegion[];
   subRegionLabel?: string;
+  subRegionBasePath?: string;
+  showContactForm?: boolean;
 }
 
 export function RegionPageTemplate({
@@ -39,6 +42,8 @@ export function RegionPageTemplate({
   caseStudies,
   subRegions,
   subRegionLabel = "Region",
+  subRegionBasePath = "/regions",
+  showContactForm = false,
 }: RegionPageTemplateProps) {
   return (
     <>
@@ -119,7 +124,7 @@ export function RegionPageTemplate({
               {subRegions.map((sub) => (
                 <Link
                   key={sub.slug}
-                  href={`/regions/${sub.slug}`}
+                  href={`${subRegionBasePath}/${sub.slug}`}
                   className="rounded border border-border bg-card px-6 py-4 text-sm font-semibold text-card-foreground transition-all hover:border-accent hover:text-accent hover:shadow-md"
                 >
                   {sub.name} &rarr;
@@ -159,6 +164,9 @@ export function RegionPageTemplate({
           </div>
         </section>
       )}
+
+      {/* Contact Form */}
+      {showContactForm && <RegionContactForm regionName={name} />}
 
       {/* CTA */}
       <section className="bg-primary py-20">

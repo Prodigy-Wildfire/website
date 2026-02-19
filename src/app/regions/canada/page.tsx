@@ -81,6 +81,7 @@ export default function CanadaRegionPage() {
           caseStudies={caseStudies}
           subRegions={getRegionsByCountry("canada")}
           subRegionLabel="Province"
+          subRegionBasePath="/regions/canada"
         />
       </main>
       <Footer />

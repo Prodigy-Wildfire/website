@@ -24,6 +24,47 @@ const nextConfig: NextConfig = {
         destination: "/",
         permanent: true,
       },
+      // Canadian provinces moved under /regions/canada/
+      {
+        source: "/regions/british-columbia",
+        destination: "/regions/canada/british-columbia",
+        permanent: true,
+      },
+      {
+        source: "/regions/alberta",
+        destination: "/regions/canada/alberta",
+        permanent: true,
+      },
+      {
+        source: "/regions/saskatchewan",
+        destination: "/regions/canada/saskatchewan",
+        permanent: true,
+      },
+      {
+        source: "/regions/ontario",
+        destination: "/regions/canada/ontario",
+        permanent: true,
+      },
+      {
+        source: "/regions/newfoundland-and-labrador",
+        destination: "/regions/canada/newfoundland-and-labrador",
+        permanent: true,
+      },
+      {
+        source: "/regions/nova-scotia",
+        destination: "/regions/canada/nova-scotia",
+        permanent: true,
+      },
+      {
+        source: "/regions/new-brunswick",
+        destination: "/regions/canada/new-brunswick",
+        permanent: true,
+      },
+      {
+        source: "/regions/manitoba",
+        destination: "/regions/canada/manitoba",
+        permanent: true,
+      },
     ];
   },
 };

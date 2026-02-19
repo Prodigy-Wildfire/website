@@ -143,11 +143,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "yearly",
       priority: 0.3,
     },
-    ...regions.map((region) => ({
-      url: `${BASE_URL}/regions/${region.slug}`,
-      lastModified: new Date(),
-      changeFrequency: "monthly" as const,
-      priority: 0.7,
-    })),
+    ...regions.map((region) => {
+      const countryPrefix = region.country === "canada" ? "/regions/canada" : "/regions";
+      return {
+        url: `${BASE_URL}${countryPrefix}/${region.slug}`,
+        lastModified: new Date(),
+        changeFrequency: "monthly" as const,
+        priority: 0.7,
+      };
+    }),
   ];
 }
