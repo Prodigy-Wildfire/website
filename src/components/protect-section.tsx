@@ -10,7 +10,7 @@ const items = [
     href: "/homeowners",
   },
   {
-    image: "/images/Banff Gondola Business image.png",
+    image: "/images/banff-gondola-business.png",
     title: "For Businesses",
     description:
       "Commercial-grade wildfire suppression engineered for resorts, campuses, critical infrastructure, and commercial properties at any scale.",
