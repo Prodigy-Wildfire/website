@@ -16,8 +16,8 @@ export function ClimateSection() {
         <div className="mt-16 grid items-center gap-12 lg:grid-cols-2">
           <div className="relative h-80 overflow-hidden rounded lg:h-[420px]">
             <Image
-              src="/images/climate-change-fire.jpg"
-              alt="Climate-driven wildfire burning through dry forest landscape"
+              src="/images/Dry-landscape.jpg"
+              alt="Dry eucalyptus forest landscape with fallen branches and debris"
               fill
               sizes="(max-width: 1024px) 100vw, 50vw"
               className="object-cover"
