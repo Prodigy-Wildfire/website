@@ -53,6 +53,7 @@ export default function AustraliaRegionPage() {
           stats={stats}
           subRegions={getRegionsByCountry("australia")}
           subRegionLabel="State and Territory"
+          subRegionBasePath="/regions/australia"
         />
       </main>
       <Footer />

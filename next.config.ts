@@ -126,6 +126,47 @@ const nextConfig: NextConfig = {
         destination: "/regions/usa/texas",
         permanent: true,
       },
+      // Australian states/territories moved under /regions/australia/
+      {
+        source: "/regions/new-south-wales",
+        destination: "/regions/australia/new-south-wales",
+        permanent: true,
+      },
+      {
+        source: "/regions/victoria",
+        destination: "/regions/australia/victoria",
+        permanent: true,
+      },
+      {
+        source: "/regions/queensland",
+        destination: "/regions/australia/queensland",
+        permanent: true,
+      },
+      {
+        source: "/regions/south-australia",
+        destination: "/regions/australia/south-australia",
+        permanent: true,
+      },
+      {
+        source: "/regions/western-australia",
+        destination: "/regions/australia/western-australia",
+        permanent: true,
+      },
+      {
+        source: "/regions/tasmania",
+        destination: "/regions/australia/tasmania",
+        permanent: true,
+      },
+      {
+        source: "/regions/northern-territory",
+        destination: "/regions/australia/northern-territory",
+        permanent: true,
+      },
+      {
+        source: "/regions/act",
+        destination: "/regions/australia/act",
+        permanent: true,
+      },
     ];
   },
 };
