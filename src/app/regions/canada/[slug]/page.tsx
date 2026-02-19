@@ -11,12 +11,13 @@ export function generateStaticParams() {
   return canadianSlugs.map((slug) => ({ slug }));
 }
 
-export function generateMetadata({
+export async function generateMetadata({
   params,
 }: {
-  params: { slug: string };
-}): Metadata {
-  const region = getRegionBySlug(params.slug);
+  params: Promise<{ slug: string }>;
+}): Promise<Metadata> {
+  const { slug } = await params;
+  const region = getRegionBySlug(slug);
   if (!region) return {};
 
   return {
@@ -25,12 +26,13 @@ export function generateMetadata({
   };
 }
 
-export default function CanadaProvincePage({
+export default async function CanadaProvincePage({
   params,
 }: {
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
 }) {
-  const region = getRegionBySlug(params.slug);
+  const { slug } = await params;
+  const region = getRegionBySlug(slug);
   if (!region || region.country !== "canada") notFound();
 
   const jsonLd = {
