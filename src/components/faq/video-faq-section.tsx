@@ -72,7 +72,7 @@ const combinedFaqs: CombinedFaq[] = [
   {
     id: "homeowner-responsibility",
     question: "What falls under homeowner responsibility?",
-    answer: null,
+    answer: "Prodigy offers a one-year service plan, which is standard with our installations. We look after the winterisation and the spring activation in this period. Following this we do a subscription model, which most of our clients go for, which keeps us responsible for looking after your system. Alternatively you can choose to look after this yourself. You'll have to winterise efficiently and ensure it's running in the spring.",
     videoSrc: "/images/faq-homeowner-responsibility-wildfire.mp4",
   },
 ]
