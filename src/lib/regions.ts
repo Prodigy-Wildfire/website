@@ -214,9 +214,9 @@ export const regions: RegionData[] = [
     slug: "british-columbia",
     name: "British Columbia",
     country: "canada",
-    heroImage: "/images/jasper-national-park-wildfire.jpg",
+    heroImage: "/images/prodigy-bc-canada-sign.webp",
     heroAlt:
-      "Wildfire devastation in Jasper National Park with burned forest overlooking the Rocky Mountains",
+      "British Columbia wildfire scene with Prodigy Wildfire Solutions signage",
     description:
       "British Columbia faces the most severe wildfire risk of any Canadian province. Prodigy Wildfire Solutions delivers exterior wildfire sprinkler systems, ember detection, and remote activation for homes and businesses across the interior, Okanagan, and coastal regions.",
     detail:
@@ -238,9 +238,9 @@ export const regions: RegionData[] = [
     slug: "alberta",
     name: "Alberta",
     country: "canada",
-    heroImage: "/images/jasper-national-park-wildfire.jpg",
+    heroImage: "/images/prodigy-jasper-ab-fire.webp",
     heroAlt:
-      "Wildfire devastation in Jasper National Park with burned forest overlooking the Rocky Mountains",
+      "Wildfire in Jasper, Alberta",
     description:
       "Alberta has experienced two of Canada's most catastrophic wildfire events in the past decade. Prodigy Wildfire Solutions delivers exterior wildfire sprinkler systems and ember detection for homes and communities in the boreal forest, foothills, and mountain towns.",
     detail:
@@ -261,9 +261,9 @@ export const regions: RegionData[] = [
     slug: "saskatchewan",
     name: "Saskatchewan",
     country: "canada",
-    heroImage: "/images/jasper-national-park-wildfire.jpg",
+    heroImage: "/images/prodigy-saskatchewan-fire.webp",
     heroAlt:
-      "Wildfire devastation in Jasper National Park with burned forest overlooking the Rocky Mountains",
+      "Wildfire in Saskatchewan",
     description:
       "Saskatchewan's boreal forest and parkland regions face mounting wildfire threats. Prodigy Wildfire Solutions delivers wildfire sprinkler systems and ember detection for rural communities, First Nations, and resource industry operators.",
     detail:
@@ -285,9 +285,9 @@ export const regions: RegionData[] = [
     slug: "ontario",
     name: "Ontario",
     country: "canada",
-    heroImage: "/images/jasper-national-park-wildfire.jpg",
+    heroImage: "/images/Prodigy-Ontario-fire.jpg",
     heroAlt:
-      "Wildfire devastation in Jasper National Park with burned forest overlooking the Rocky Mountains",
+      "Wildfire in Ontario",
     description:
       "Northwestern Ontario faces serious and growing wildfire risk, with fire seasons far exceeding historical averages. Prodigy Wildfire Solutions delivers wildfire sprinkler systems for remote communities, cottagers, and resource operators across the boreal shield.",
     detail:
@@ -308,9 +308,9 @@ export const regions: RegionData[] = [
     slug: "newfoundland-and-labrador",
     name: "Newfoundland and Labrador",
     country: "canada",
-    heroImage: "/images/jasper-national-park-wildfire.jpg",
+    heroImage: "/images/prodigy-nfandl-fire.avif",
     heroAlt:
-      "Wildfire devastation in Jasper National Park with burned forest overlooking the Rocky Mountains",
+      "Wildfire in Newfoundland and Labrador",
     description:
       "Labrador's vast boreal forests are experiencing increasingly severe wildfire seasons driven by climate change. Prodigy Wildfire Solutions delivers wildfire protection for remote communities, industrial operators, and infrastructure in the Labrador interior.",
     detail:
@@ -332,9 +332,9 @@ export const regions: RegionData[] = [
     slug: "nova-scotia",
     name: "Nova Scotia",
     country: "canada",
-    heroImage: "/images/jasper-national-park-wildfire.jpg",
+    heroImage: "/images/prodigy-nova-scotia-fire.avif",
     heroAlt:
-      "Wildfire devastation in Jasper National Park with burned forest overlooking the Rocky Mountains",
+      "Wildfire in Nova Scotia",
     description:
       "Nova Scotia's 2023 wildfire season was the most destructive in the province's recorded history. Prodigy Wildfire Solutions delivers wildfire sprinkler systems for homeowners in both rural and suburban communities near the wildland-urban interface.",
     detail:
@@ -356,9 +356,9 @@ export const regions: RegionData[] = [
     slug: "new-brunswick",
     name: "New Brunswick",
     country: "canada",
-    heroImage: "/images/jasper-national-park-wildfire.jpg",
+    heroImage: "/images/Prodigy-NewBrunswick-Fire.jpg",
     heroAlt:
-      "Wildfire devastation in Jasper National Park with burned forest overlooking the Rocky Mountains",
+      "Wildfire in New Brunswick",
     description:
       "New Brunswick's wildfire risk is rising sharply as a warming climate dries out its predominantly softwood forests. Prodigy Wildfire Solutions delivers wildfire protection for rural homeowners and forest-adjacent communities across the Acadian forest.",
     detail:
@@ -380,9 +380,9 @@ export const regions: RegionData[] = [
     slug: "manitoba",
     name: "Manitoba",
     country: "canada",
-    heroImage: "/images/jasper-national-park-wildfire.jpg",
+    heroImage: "/images/Prodigy-manitoba-fire.jpg",
     heroAlt:
-      "Wildfire devastation in Jasper National Park with burned forest overlooking the Rocky Mountains",
+      "Wildfire in Manitoba",
     description:
       "Manitoba's northern boreal region faces severe and worsening wildfire conditions. Prodigy Wildfire Solutions delivers wildfire protection for remote First Nations, northern communities, and anyone living adjacent to the provincial boreal zone.",
     detail:
