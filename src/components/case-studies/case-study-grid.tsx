@@ -57,18 +57,19 @@ const caseStudies = [
     country: "Canada",
     type: "Infrastructure",
     image: "/images/ubc-wildfire-protection.png",
+    imageContain: true,
     summary:
-      "UBC required wildfire protection for critical campus buildings surrounded by the Pacific Spirit Regional Park forest.",
+      "UBC required wildfire protection for critical campus buildings on the shoreline of Loon Lake, utilising the lake as a water source for the suppression system.",
     challenge:
-      "UBC's campus borders thousands of hectares of temperate rainforest that, during drought conditions, presents a significant wildfire risk to campus infrastructure, research facilities, and student residences. The system needed to integrate with existing campus fire safety infrastructure.",
+      "UBC's campus sits on the shoreline of Loon Lake, bordered by thousands of hectares of temperate rainforest that, during drought conditions, presents a significant wildfire risk to campus infrastructure, research facilities, and student residences. The system needed to integrate with existing campus fire safety infrastructure.",
     solution:
-      "Prodigy Wildfire Solutions delivered a custom-engineered exterior sprinkler system for key campus buildings, with centralised remote activation and monitoring. The installation was completed with minimal disruption to campus operations and designed for long-term, low-maintenance performance.",
+      "Prodigy Wildfire Solutions delivered a custom-engineered exterior sprinkler system across over a dozen individual buildings, drawing water directly from Loon Lake to supply the suppression system. The multi-structure installation was completed with minimal disruption to campus operations and is designed for long-term, low-maintenance performance.",
     clientQuote:
       "The Prodigy Wildfire Solutions team provided a wildfire protection solution that meets the unique demands of a university campus environment while delivering the performance and reliability the UBC Facilities team required.",
     clientName: "UBC Facilities",
     specs: [
       { label: "Type", value: "Institutional" },
-      { label: "Control", value: "Centralised" },
+      { label: "Scale", value: "Multi-Structure" },
       { label: "Maintenance", value: "Low-Profile" },
     ],
   },
@@ -111,7 +112,7 @@ function CaseStudyCard({
           alt={`${study.title} wildfire protection installation by Prodigy`}
           fill
           sizes="(max-width: 1024px) 100vw, 50vw"
-          className="object-cover"
+          className={study.imageContain ? "object-contain p-4" : "object-cover"}
         />
         <div className="absolute top-4 left-4">
           <span className="rounded bg-accent px-3 py-1 text-xs font-semibold text-white">
