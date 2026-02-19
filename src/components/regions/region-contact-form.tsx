@@ -5,9 +5,11 @@ import { Send, CheckCircle } from "lucide-react"
 
 interface RegionContactFormProps {
   regionName: string
+  regionLabel?: string
+  country?: string
 }
 
-export function RegionContactForm({ regionName }: RegionContactFormProps) {
+export function RegionContactForm({ regionName, regionLabel = "Province", country = "Canada" }: RegionContactFormProps) {
   const [submitted, setSubmitted] = useState(false)
   const [formData, setFormData] = useState({
     firstName: "",
@@ -136,12 +138,12 @@ export function RegionContactForm({ regionName }: RegionContactFormProps) {
             </div>
             <div className="grid gap-6 sm:grid-cols-2">
               <div>
-                <label htmlFor="province" className="mb-2 block text-sm font-medium text-foreground">
-                  Province
+                <label htmlFor="region" className="mb-2 block text-sm font-medium text-foreground">
+                  {regionLabel}
                 </label>
                 <input
-                  id="province"
-                  name="province"
+                  id="region"
+                  name="region"
                   type="text"
                   value={regionName}
                   readOnly
@@ -156,7 +158,7 @@ export function RegionContactForm({ regionName }: RegionContactFormProps) {
                   id="country"
                   name="country"
                   type="text"
-                  value="Canada"
+                  value={country}
                   readOnly
                   className="w-full rounded-sm border border-border bg-muted px-4 py-3 text-sm text-muted-foreground cursor-not-allowed"
                 />

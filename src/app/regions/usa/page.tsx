@@ -53,6 +53,7 @@ export default function UsaRegionPage() {
           stats={stats}
           subRegions={getRegionsByCountry("usa")}
           subRegionLabel="State"
+          subRegionBasePath="/regions/usa"
         />
       </main>
       <Footer />

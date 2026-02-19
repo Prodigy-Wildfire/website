@@ -30,6 +30,8 @@ interface RegionPageTemplateProps {
   subRegionLabel?: string;
   subRegionBasePath?: string;
   showContactForm?: boolean;
+  contactRegionLabel?: string;
+  contactCountry?: string;
 }
 
 export function RegionPageTemplate({
@@ -44,6 +46,8 @@ export function RegionPageTemplate({
   subRegionLabel = "Region",
   subRegionBasePath = "/regions",
   showContactForm = false,
+  contactRegionLabel = "Province",
+  contactCountry = "Canada",
 }: RegionPageTemplateProps) {
   return (
     <>
@@ -166,7 +170,7 @@ export function RegionPageTemplate({
       )}
 
       {/* Contact Form */}
-      {showContactForm && <RegionContactForm regionName={name} />}
+      {showContactForm && <RegionContactForm regionName={name} regionLabel={contactRegionLabel} country={contactCountry} />}
 
       {/* CTA */}
       <section className="bg-primary py-20">

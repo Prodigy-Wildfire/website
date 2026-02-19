@@ -65,6 +65,62 @@ const nextConfig: NextConfig = {
         destination: "/regions/canada/manitoba",
         permanent: true,
       },
+      // US states moved under /regions/usa/
+      {
+        source: "/regions/california",
+        destination: "/regions/usa/california",
+        permanent: true,
+      },
+      {
+        source: "/regions/oregon",
+        destination: "/regions/usa/oregon",
+        permanent: true,
+      },
+      {
+        source: "/regions/washington",
+        destination: "/regions/usa/washington",
+        permanent: true,
+      },
+      {
+        source: "/regions/idaho",
+        destination: "/regions/usa/idaho",
+        permanent: true,
+      },
+      {
+        source: "/regions/montana",
+        destination: "/regions/usa/montana",
+        permanent: true,
+      },
+      {
+        source: "/regions/wyoming",
+        destination: "/regions/usa/wyoming",
+        permanent: true,
+      },
+      {
+        source: "/regions/nevada",
+        destination: "/regions/usa/nevada",
+        permanent: true,
+      },
+      {
+        source: "/regions/utah",
+        destination: "/regions/usa/utah",
+        permanent: true,
+      },
+      {
+        source: "/regions/arizona",
+        destination: "/regions/usa/arizona",
+        permanent: true,
+      },
+      {
+        source: "/regions/colorado",
+        destination: "/regions/usa/colorado",
+        permanent: true,
+      },
+      {
+        source: "/regions/texas",
+        destination: "/regions/usa/texas",
+        permanent: true,
+      },
     ];
   },
 };

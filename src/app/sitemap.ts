@@ -144,7 +144,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.3,
     },
     ...regions.map((region) => {
-      const countryPrefix = region.country === "canada" ? "/regions/canada" : "/regions";
+      const countryPrefixMap = { canada: "/regions/canada", usa: "/regions/usa", australia: "/regions" };
+      const countryPrefix = countryPrefixMap[region.country] || "/regions";
       return {
         url: `${BASE_URL}${countryPrefix}/${region.slug}`,
         lastModified: new Date(),
