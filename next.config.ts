@@ -117,6 +117,11 @@ const nextConfig: NextConfig = {
         permanent: true,
       },
       {
+        source: "/regions/hawaii",
+        destination: "/regions/usa/hawaii",
+        permanent: true,
+      },
+      {
         source: "/regions/texas",
         destination: "/regions/usa/texas",
         permanent: true,

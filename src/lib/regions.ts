@@ -626,6 +626,28 @@ export const regions: RegionData[] = [
     areaServedType: "State",
   },
   {
+    slug: "hawaii",
+    name: "Hawaii",
+    country: "usa",
+    heroImage: "/images/usa-wildfire-home-under-threat.jpg",
+    heroAlt: "American home under threat from approaching wildfire",
+    description:
+      "Hawaii faces a devastating and growing wildfire threat driven by invasive grasses, drought, and powerful trade winds. Prodigy Wildfire Solutions delivers exterior wildfire sprinkler systems and ember detection for homeowners across the Hawaiian Islands.",
+    detail:
+      "The August 2023 Lahaina fire on Maui was the deadliest U.S. wildfire in over a century, killing 102 people, destroying more than 2,200 structures, and causing an estimated $5.5 billion in damage. The fire levelled nearly the entire historic town of Lahaina in a matter of hours, driven by hurricane-force winds from passing Hurricane Dora and fuelled by non-native grasslands that cover roughly 26% of Hawaii's land area. Hawaii burns an average of 20,000 acres per year, a rate that has accelerated as former agricultural land has been overtaken by fire-prone invasive grasses. Prodigy Wildfire Solutions' exterior wildfire sprinkler systems provide the structural defence Hawaii homeowners need in these uniquely dangerous fire conditions.",
+    stats: [
+      { value: "102", label: "Lives Lost (Lahaina Fire Aug 2023)" },
+      { value: "2,200+", label: "Structures Destroyed (Lahaina 2023)" },
+      { value: "$5.5B", label: "Estimated Damage (Lahaina 2023)" },
+      { value: "20,000", label: "Avg. Acres Burned Per Year in Hawaii" },
+    ],
+    metaTitle: "Wildfire Protection in Hawaii | Prodigy Wildfire",
+    metaDescription:
+      "Prodigy Wildfire Solutions delivers wildfire sprinkler systems, ember detection, and remote activation for homes across Hawaii. Protect your property from wildfire after the devastating Lahaina fire.",
+    areaServedName: "Hawaii",
+    areaServedType: "State",
+  },
+  {
     slug: "texas",
     name: "Texas",
     country: "usa",
