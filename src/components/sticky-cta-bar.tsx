@@ -38,7 +38,7 @@ export function StickyCtaBar() {
       <div className="bg-primary/95 backdrop-blur-sm border-t border-primary-foreground/10">
         <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-3">
           <p className="text-sm font-medium text-primary-foreground/80 hidden sm:block">
-            Protect your property from wildfire - get a free assessment today.
+            Protect your property from wildfire - Get a free assessment today.
           </p>
           <div className="flex items-center gap-4 w-full sm:w-auto justify-between sm:justify-end">
             <Link
