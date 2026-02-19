@@ -41,12 +41,12 @@ export function Regions() {
           </p>
           <h2 className="mt-3 font-heading text-3xl font-bold tracking-tight text-foreground md:text-4xl">
             Our Systems Are Engineered to{" "}
-            <span className="text-accent">Save Lives</span>
+            <span className="text-accent">Protect What Matters</span>
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-muted-foreground text-base leading-relaxed">
             Our mission is to provide lasting security and confidence in our
-            changing climate. Every system we build is custom engineered to save
-            lives, homes, businesses and communities without compromise.
+            changing climate. Every system we build is custom engineered to
+            protect homes, businesses and communities without compromise.
           </p>
         </div>
 

@@ -33,7 +33,7 @@ export function OurApproach() {
           <p className="mt-4 text-base leading-relaxed text-muted-foreground">
             We believe effective wildfire defence is built on innovation,
             reliability, and integrity. Every system we design is engineered to
-            protect lives, homes, businesses and communities without compromise.
+            protect homes, businesses and communities without compromise.
             Our mission is to provide lasting security and confidence in the face
             of a changing climate.
           </p>
