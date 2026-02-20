@@ -32,6 +32,7 @@ const services = [
     anchor: "detection",
     image: "/images/wildfire-flame-sensor.png",
     imageAlt: "Prodigy Wildfire advanced ember and flame detection sensor providing 24/7 wildfire monitoring",
+    imageClassName: "object-contain scale-[4]",
     stats: [
       { value: "360°", label: "Perimeter Scanning" },
       { value: "24/7", label: "Automated Monitoring" },
@@ -62,7 +63,7 @@ export function ServiceDetails() {
                   alt={service.imageAlt}
                   fill
                   sizes="(max-width: 1024px) 100vw, 50vw"
-                  className="object-cover"
+                  className={service.imageClassName || "object-cover"}
                 />
               </div>
 
