@@ -5,21 +5,21 @@ const regions = [
     flag: "🇺🇸",
     title: "United States",
     description:
-      "Currently serving California, Colorado, Oregon, and wildfire-prone states across the West, with coverage expanding across the United States.",
+      "Serving homes, businesses, and communities across all 50 states with custom-engineered wildfire sprinkler systems built for America's evolving fire environment.",
     link: "/regions",
   },
   {
     flag: "🇨🇦",
     title: "Canada",
     description:
-      "Currently serving British Columbia, Alberta, and communities across the wildland-urban interface, with coverage expanding across Canada.",
+      "Serving homes, businesses, and communities across every province and territory with advanced exterior wildfire sprinkler systems and ember detection technology.",
     link: "/regions",
   },
   {
     flag: "🇦🇺",
     title: "Australia",
     description:
-      "Currently serving New South Wales, Victoria, and bushfire-prone regions, with coverage expanding across Australia.",
+      "Serving homes, rural properties, and communities across every state and territory with bushfire sprinkler systems engineered for Australia's extreme conditions.",
     link: "/regions",
   },
 ];

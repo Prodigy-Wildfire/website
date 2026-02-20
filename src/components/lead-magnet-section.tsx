@@ -37,7 +37,7 @@ export function LeadMagnetSection() {
               </h2>
               <p className="mx-auto mt-3 max-w-2xl text-base leading-relaxed text-muted-foreground">
                 Everything you need to know about protecting your property from
-                wildfire — from understanding ember attack risks to choosing the
+                wildfire, from understanding ember attack risks to choosing the
                 right exterior sprinkler system. Trusted by homeowners across the
                 USA, Canada, and Australia.
               </p>

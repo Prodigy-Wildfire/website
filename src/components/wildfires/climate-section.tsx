@@ -32,7 +32,7 @@ export function ClimateSection() {
               faster, spread farther, and burn with unprecedented intensity.
               Communities across the United States, Canada, and Australia are
               facing longer fire seasons, more severe fire behaviour, and
-              record-breaking destruction — making proactive wildfire sprinkler
+              record-breaking destruction, making proactive wildfire sprinkler
               systems essential for every home and business in fire-prone regions.
             </p>
 
@@ -41,7 +41,7 @@ export function ClimateSection() {
                 {'"Climate change has been a key factor in increasing the risk and extent of wildfires. Rising temperatures, more frequent droughts, and decreasing summer rainfall are all contributing to longer fire seasons and increased wildfire activity across the globe."'}
               </p>
               <p className="mt-3 text-xs font-medium text-accent">
-                NASA Science — Climate-Driven Wildfire Trends
+                NASA Science - Climate-Driven Wildfire Trends
               </p>
             </div>
           </div>

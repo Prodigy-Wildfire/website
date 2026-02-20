@@ -7,7 +7,6 @@ import { ProtectSection } from "@/components/protect-section";
 import { ServicesCards } from "@/components/services-cards";
 import { WhyProdigy } from "@/components/why-prodigy";
 import { FactsSection } from "@/components/facts-section";
-import { StatsBar } from "@/components/stats-bar";
 import { TrustedSection } from "@/components/trusted-section";
 import { LeadMagnetSection } from "@/components/lead-magnet-section";
 import { Footer } from "@/components/footer";
@@ -83,7 +82,6 @@ export default function HomePage() {
         <WhyProdigy />
         <LeadMagnetSection />
         <FactsSection />
-        <StatsBar />
         <TrustedSection />
       </main>
       <Footer />

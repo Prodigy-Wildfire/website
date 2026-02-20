@@ -16,11 +16,11 @@ const industryOptions = [
 ]
 
 const timelineOptions = [
-  "Urgent — active fire season",
+  "Urgent - active fire season",
   "Within 3 months",
   "Within 6 months",
   "Within 12 months",
-  "Planning phase — no rush",
+  "Planning phase - no rush",
 ]
 
 export function CommercialForm() {

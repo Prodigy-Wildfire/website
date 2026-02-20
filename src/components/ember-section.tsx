@@ -16,9 +16,9 @@ const steps = [
   },
   {
     icon: CloudRain,
-    title: "Protective Moisture Layer",
+    title: "Humidity Bubble",
     description:
-      "Water creates a protective moisture layer around your property, neutralising airborne embers before they land and cooling surfaces against radiant heat. The #1 defence against ember attack.",
+      "Water creates a humidity bubble around your property, neutralising airborne embers before they land and cooling surfaces against radiant heat. The #1 defence against ember attack.",
   },
 ];
 

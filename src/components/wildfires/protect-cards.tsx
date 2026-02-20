@@ -6,19 +6,19 @@ const mechanisms = [
     icon: Flame,
     title: "Ember Attack",
     description:
-      "Windborne embers are the number one cause of structure loss during wildfires. Embers can travel over 20 kilometres ahead of the fire front, reaching 1,200 degrees — enough to ignite dry material and start new fires far from the main blaze. The Prodigy system from Prodigy Wildfire Solutions creates a protective humidity bubble around your property, neutralising embers before they land.",
+      "Windborne embers are the number one cause of structure loss during wildfires. Embers can travel over 20 kilometres ahead of the fire front, reaching 1,200 degrees, enough to ignite dry material and start new fires far from the main blaze. The Prodigy system from Prodigy Wildfire Solutions creates a protective humidity bubble around your property, neutralising embers before they land.",
   },
   {
     icon: Sun,
     title: "Radiant Heat",
     description:
-      "Radiant heat from a nearby wildfire can exceed 1,000 degrees Celsius, igniting materials without direct contact. This intense heat can crack windows, melt siding, and weaken structural elements — allowing embers to enter even before flames arrive.",
+      "Radiant heat from a nearby wildfire can exceed 1,000 degrees Celsius, igniting materials without direct contact. This intense heat can crack windows, melt siding, and weaken structural elements, allowing embers to enter even before flames arrive.",
   },
   {
     icon: TreePine,
     title: "Direct Flame Contact",
     description:
-      "When the fire front reaches a structure, direct flame contact ignites anything in its path. However, research shows this is actually the least common cause of home loss — most structures are destroyed by embers and radiant heat well before the fire front arrives.",
+      "When the fire front reaches a structure, direct flame contact ignites anything in its path. However, research shows this is actually the least common cause of home loss - most structures are destroyed by embers and radiant heat well before the fire front arrives.",
   },
 ];
 

@@ -12,7 +12,7 @@ const faqs = [
     icon: Clock,
     title: "How Long Does It Last?",
     description:
-      "Prodigy residential systems are built with Type L copper (316 Stainless steel in Australia) piping and commercial-grade components designed for decades of service. Every part is serviceable and replaceable. Our annual maintenance program includes a spring commissioning check, system flush, nozzle inspection, and winterisation in cold climates to keep your system ready year after year.",
+      "Prodigy residential systems are built with Type L copper (316 Stainless steel in Australia) piping and commercial-grade components designed for decades of service. Every part is serviceable and replaceable. Our optional annual maintenance program includes a spring commissioning check, system flush, nozzle inspection, and winterisation in cold climates to keep your system ready year after year.",
   },
 ];
 
@@ -21,7 +21,7 @@ const steps = [
     icon: ClipboardCheck,
     title: "Home Assessment",
     description:
-      "Our surveyor walks your property to identify ember entry points, defensible space gaps, roof exposure zones, and water supply options. We assess your home's unique vulnerabilities and design a protection plan specific to your layout.",
+      "We assess your property to identify ember entry points, defensible space gaps, roof exposure zones, and water supply options. Depending on your location, this can be done on-site with one of our surveyors or remotely using satellite imagery and a guided virtual walkthrough. Either way, you get a detailed protection plan designed specifically for your property.",
   },
   {
     icon: Ruler,

@@ -54,7 +54,7 @@ export const trackingPages: TrackingPage[] = [
     source: "Affiliate - RE/MAX",
     type: "affiliate",
     contactName: "RE/MAX",
-    subtitle: "Referred by RE/MAX — protect your new property from wildfire.",
+    subtitle: "Referred by RE/MAX - protect your new property from wildfire.",
   },
   {
     slug: "partner-insurance-co",

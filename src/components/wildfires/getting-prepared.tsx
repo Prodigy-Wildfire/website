@@ -35,7 +35,7 @@ const emergencySteps = [
     icon: Radio,
     title: "Step 4: Monitor Conditions",
     description:
-      "During high fire danger days, monitor local fire agencies, weather services, and emergency broadcasts. Track wind speed, humidity, and fire weather warnings — conditions can change in minutes.",
+      "During high fire danger days, monitor local fire agencies, weather services, and emergency broadcasts. Track wind speed, humidity, and fire weather warnings, conditions can change in minutes.",
   },
   {
     icon: Car,

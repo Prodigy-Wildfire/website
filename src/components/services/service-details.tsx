@@ -11,7 +11,7 @@ const services = [
       { value: "3 min", label: "Full Coverage" },
     ],
     description:
-      "Custom-engineered for your property using durable type L copper piping (316 stainless steel in Australia), routed discreetly along rooflines and ridges. Delivers up to 50 feet of sprinkler coverage and achieves full property saturation in under three minutes — proven, permanent wildfire protection without compromising your property's appearance.",
+      "Custom-engineered for your property using durable type L copper piping (316 stainless steel in Australia), routed discreetly along rooflines and ridges. Delivers up to 50 feet of sprinkler coverage and achieves full property saturation in under three minutes - proven, permanent wildfire protection without compromising your property's appearance.",
     reverse: false,
   },
   {
@@ -24,7 +24,7 @@ const services = [
       { value: "Real-Time", label: "Fire Tracking" },
     ],
     description:
-      "Control your wildfire protection system from anywhere in the world with the Prodigy app. Schedule custom activation cycles, monitor system status, and manage multiple properties from a single account. Ember Watch uses live fire detection to alert you the moment a fire is identified in your watch zone — delivering forecasts, estimated travel times, and projected paths directly to your device.",
+      "Control your wildfire protection system from anywhere in the world with the Prodigy app. Schedule custom activation cycles, monitor system status, and manage multiple properties from a single account. Ember Watch uses live fire detection to alert you the moment a fire is identified in your watch zone, delivering forecasts, estimated travel times, and projected paths directly to your device.",
     reverse: true,
   },
   {
@@ -37,7 +37,7 @@ const services = [
       { value: "24/7", label: "Automated Monitoring" },
     ],
     description:
-      "Fully automated wildfire detection that requires zero human intervention. Weather-resistant sensors continuously monitor for airborne embers and flame activity with 360-degree perimeter scanning. When a threat is detected, the system automatically activates your sprinkler system — ensuring your property is defended even when you're away, asleep, or evacuated.",
+      "Fully automated wildfire detection that requires zero human intervention. Weather-resistant sensors continuously monitor for airborne embers and flame activity with 360-degree perimeter scanning. When a threat is detected, the system automatically activates your sprinkler system, ensuring your property is defended even when you're away, asleep, or evacuated.",
     reverse: false,
   },
 ];

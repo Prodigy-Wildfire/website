@@ -23,9 +23,9 @@ const features = [
   },
   {
     icon: Wrench,
-    title: "Annual Maintenance Included",
+    title: "Annual Maintenance Option",
     description:
-      "Every residential system comes with an annual maintenance program including spring commissioning, system checks, and winterisation in cold climates.",
+      "Keep your system in peak condition with our optional annual maintenance program, including spring commissioning, system checks, and winterisation in cold climates.",
   },
 ];
 

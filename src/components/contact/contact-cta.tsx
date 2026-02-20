@@ -74,8 +74,8 @@ export function ContactCta() {
             <p className="mx-auto mt-4 max-w-2xl text-primary-foreground">
               Embers can travel over 20km ahead of the flames, igniting
               roofs, decks, vents, and siding. Prodigy&apos;s exterior wildfire
-              sprinkler systems protect your roofline — the number one point of
-              ignition — for homes and businesses across the USA, Canada, and
+              sprinkler systems protect your roofline, the number one point of
+              ignition, for homes and businesses across the USA, Canada, and
               Australia.
             </p>
             <Link
