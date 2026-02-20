@@ -126,13 +126,12 @@ export function RegionPageTemplate({
             </h2>
             <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
               {subRegions.map((sub) => (
-                <Link
+                <div
                   key={sub.slug}
-                  href={`${subRegionBasePath}/${sub.slug}`}
-                  className="rounded border border-border bg-card px-6 py-4 text-sm font-semibold text-card-foreground transition-all hover:border-accent hover:text-accent hover:shadow-md"
+                  className="rounded border border-border bg-card px-6 py-4 text-sm font-semibold text-card-foreground"
                 >
-                  {sub.name} &rarr;
-                </Link>
+                  {sub.name}
+                </div>
               ))}
             </div>
           </div>

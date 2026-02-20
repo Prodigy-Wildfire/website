@@ -1,5 +1,4 @@
 import type { MetadataRoute } from "next";
-import { regions } from "@/lib/regions";
 
 const BASE_URL = "https://www.prodigywildfire.com";
 
@@ -143,15 +142,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "yearly",
       priority: 0.3,
     },
-    ...regions.map((region) => {
-      const countryPrefixMap = { canada: "/regions/canada", usa: "/regions/usa", australia: "/regions/australia" };
-      const countryPrefix = countryPrefixMap[region.country] || "/regions";
-      return {
-        url: `${BASE_URL}${countryPrefix}/${region.slug}`,
-        lastModified: new Date(),
-        changeFrequency: "monthly" as const,
-        priority: 0.7,
-      };
-    }),
   ];
 }

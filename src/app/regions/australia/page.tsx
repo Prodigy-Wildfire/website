@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
 import { RegionPageTemplate } from "@/components/regions/region-page-template";
@@ -55,6 +56,26 @@ export default function AustraliaRegionPage() {
           subRegionLabel="State and Territory"
           subRegionBasePath="/regions/australia"
         />
+
+        {/* Bushfire Risk Assessment CTA */}
+        <section className="bg-background py-20 md:py-28">
+          <div className="mx-auto max-w-3xl px-6 text-center">
+            <h2 className="font-heading text-3xl font-bold tracking-tight text-foreground md:text-4xl">
+              How Prepared Is Your Property?
+            </h2>
+            <p className="mx-auto mt-4 max-w-2xl text-base leading-relaxed text-muted-foreground">
+              Take our free Bushfire Risk Assessment to understand your
+              property&apos;s risk level and discover how Prodigy can help
+              protect your home from ember attack and radiant heat.
+            </p>
+            <Link
+              href="/regions/australia/bushfire-risk-assessment"
+              className="mt-8 inline-block rounded bg-accent px-8 py-3.5 text-sm font-semibold text-white transition-colors hover:bg-accent/90"
+            >
+              Take the Bushfire Risk Assessment
+            </Link>
+          </div>
+        </section>
       </main>
       <Footer />
     </>
