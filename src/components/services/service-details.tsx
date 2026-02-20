@@ -30,7 +30,7 @@ const services = [
   {
     title: "ADVANCED EMBER & FLAME DETECTION",
     anchor: "detection",
-    image: "/images/wildfire-flame-sensor.jpg",
+    image: "/images/wildfire-flame-sensor.png",
     imageAlt: "Prodigy Wildfire advanced ember and flame detection sensor providing 24/7 wildfire monitoring",
     stats: [
       { value: "360°", label: "Perimeter Scanning" },
