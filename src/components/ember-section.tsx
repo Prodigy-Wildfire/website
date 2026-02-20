@@ -31,7 +31,7 @@ export function EmberSection() {
             How It Works
           </p>
           <h2 className="mt-3 font-heading text-3xl font-bold tracking-tight text-primary-foreground md:text-4xl">
-            Three Steps to Wildfire <span className="text-accent">Defence</span>
+            <span className="text-accent">Three</span> Steps to Wildfire Defence
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-base leading-relaxed text-primary-foreground/80">
             Prodigy systems combine permanent hardware, smart technology, and

@@ -33,7 +33,7 @@ export function WhyProdigy() {
             Where We Protect
           </p>
           <h2 className="mt-3 font-heading text-3xl font-bold tracking-tight text-foreground md:text-4xl">
-            Serving Three Countries, One <span className="text-accent">Mission</span>
+            Serving Three Countries, <span className="text-accent">One Mission</span>
           </h2>
           <p className="mx-auto mt-4 max-w-3xl text-base leading-relaxed text-muted-foreground">
             Prodigy Wildfire Solutions designs, installs, and maintains wildfire sprinkler systems

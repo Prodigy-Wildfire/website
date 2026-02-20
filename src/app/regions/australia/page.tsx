@@ -61,7 +61,7 @@ export default function AustraliaRegionPage() {
         <section className="bg-background py-20 md:py-28">
           <div className="mx-auto max-w-3xl px-6 text-center">
             <h2 className="font-heading text-3xl font-bold tracking-tight text-foreground md:text-4xl">
-              How Prepared Is Your Property?
+              How <span className="text-accent">Prepared</span> Is Your Property?
             </h2>
             <p className="mx-auto mt-4 max-w-2xl text-base leading-relaxed text-muted-foreground">
               Take our free Bushfire Risk Assessment to understand your
