@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 const trustedLogos = [
   { src: "/images/golden-skybridge-wildfire-protection.png", alt: "Golden Skybridge" },
@@ -13,8 +14,8 @@ export function TrustedSection() {
   return (
     <section className="bg-muted py-16 md:py-20">
       <div className="mx-auto max-w-5xl px-6 text-center">
-        <h2 className="font-heading text-2xl font-bold tracking-tight text-foreground md:text-3xl">
-          Trusted By:
+        <h2 className="font-heading text-3xl font-bold tracking-tight text-foreground md:text-4xl">
+          Wildfire Protection <span className="text-accent">Trusted</span> By:
         </h2>
         <p className="mx-auto mt-4 max-w-2xl text-sm leading-relaxed text-muted-foreground">
           Organizations across North America and Australia rely on Prodigy Wildfire Solutions to
@@ -35,9 +36,14 @@ export function TrustedSection() {
           ))}
         </div>
 
-        <p className="mt-8 text-sm font-medium text-foreground/60">
-          Trusted to Protect What Matters Most
-        </p>
+        <div className="mt-10">
+          <Link
+            href="/quote"
+            className="inline-block rounded bg-accent px-8 py-3.5 text-sm font-semibold text-white transition-colors hover:bg-accent/90"
+          >
+            Get a Quote
+          </Link>
+        </div>
       </div>
     </section>
   );
