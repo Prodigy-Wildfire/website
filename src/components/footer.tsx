@@ -7,7 +7,7 @@ const footerLinks = [
     links: [
       { label: "Wildfires", href: "/wildfires" },
       { label: "Insights", href: "/insights" },
-      { label: "Assessment", href: "https://quiz.prodigywildfire.com/wildfirereadiness" },
+      { label: "Assessment", href: "/assessment" },
     ],
   },
   {

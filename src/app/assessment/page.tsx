@@ -1,4 +1,6 @@
 import type { Metadata } from "next"
+import { Header } from "@/components/header"
+import { Footer } from "@/components/footer"
 import { WildfireRiskAssessment } from "@/components/assessment/wildfire-risk-assessment"
 
 export const metadata: Metadata = {
@@ -8,5 +10,13 @@ export const metadata: Metadata = {
 }
 
 export default function Page() {
-  return <WildfireRiskAssessment />
+  return (
+    <>
+      <Header />
+      <main>
+        <WildfireRiskAssessment />
+      </main>
+      <Footer />
+    </>
+  )
 }

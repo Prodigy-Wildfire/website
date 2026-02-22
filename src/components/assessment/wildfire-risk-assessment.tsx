@@ -22,6 +22,12 @@ interface Terminology {
 
 type CountryKey = "australia" | "usa" | "canada"
 
+const countryLabels: Record<CountryKey, string> = {
+  australia: "Australia",
+  usa: "United States",
+  canada: "Canada",
+}
+
 const terminology: Record<CountryKey, Terminology> = {
   australia: {
     fire: "bushfire",
@@ -250,11 +256,169 @@ function getQuestions(selectedCountry: CountryKey): Question[] {
   ]
 }
 
+function generatePdf(
+  formData: { firstName: string; lastName: string; email: string; phone: string; address: string },
+  country: CountryKey,
+  answers: Record<string, { option: QuestionOption; index: number }>,
+  riskLevel: string,
+  riskDescription: string,
+  category: string,
+  t: Terminology,
+  totalScore: number,
+) {
+  import("jspdf").then(({ jsPDF }) => {
+    const doc = new jsPDF()
+    const pageWidth = doc.internal.pageSize.getWidth()
+    const margin = 20
+    const contentWidth = pageWidth - margin * 2
+    let y = 20
+
+    // Header bar
+    doc.setFillColor(26, 29, 35) // primary color
+    doc.rect(0, 0, pageWidth, 40, "F")
+    doc.setFillColor(180, 150, 12) // accent color
+    doc.rect(0, 40, pageWidth, 3, "F")
+
+    doc.setFont("helvetica", "bold")
+    doc.setFontSize(20)
+    doc.setTextColor(212, 175, 55) // accent gold
+    doc.text("Prodigy Wildfire Solutions", margin, 22)
+    doc.setFontSize(12)
+    doc.setTextColor(200, 200, 200)
+    doc.text(`${t.Fire} Risk Assessment Report`, margin, 33)
+
+    y = 55
+
+    // Customer details
+    doc.setFontSize(14)
+    doc.setTextColor(26, 29, 35)
+    doc.setFont("helvetica", "bold")
+    doc.text("Assessment Summary", margin, y)
+    y += 10
+
+    doc.setFontSize(10)
+    doc.setFont("helvetica", "normal")
+    doc.setTextColor(80, 80, 80)
+
+    const details = [
+      `Name: ${formData.firstName} ${formData.lastName}`,
+      `Email: ${formData.email}`,
+      `Phone: ${formData.phone}`,
+      ...(formData.address ? [`Property: ${formData.address}`] : []),
+      `Country: ${countryLabels[country]}`,
+      ...(answers.region ? [`Region: ${answers.region.option.text}`] : []),
+      `Date: ${new Date().toLocaleDateString("en-GB", { day: "numeric", month: "long", year: "numeric" })}`,
+    ]
+
+    details.forEach((line) => {
+      doc.text(line, margin, y)
+      y += 6
+    })
+
+    y += 6
+
+    // Risk level box
+    const riskColors: Record<string, [number, number, number]> = {
+      High: [220, 38, 38],
+      Moderate: [245, 158, 11],
+      Lower: [16, 185, 129],
+    }
+    const riskColor = riskColors[riskLevel] || [100, 100, 100]
+
+    doc.setFillColor(riskColor[0], riskColor[1], riskColor[2])
+    doc.roundedRect(margin, y, contentWidth, 28, 3, 3, "F")
+
+    doc.setFont("helvetica", "bold")
+    doc.setFontSize(16)
+    doc.setTextColor(255, 255, 255)
+    doc.text(`${riskLevel} Risk`, margin + 10, y + 12)
+
+    doc.setFont("helvetica", "normal")
+    doc.setFontSize(9)
+    const descLines = doc.splitTextToSize(riskDescription, contentWidth - 20)
+    doc.text(descLines, margin + 10, y + 20)
+
+    y += 36
+
+    // Key answers
+    doc.setFont("helvetica", "bold")
+    doc.setFontSize(12)
+    doc.setTextColor(26, 29, 35)
+    doc.text("Your Key Responses", margin, y)
+    y += 8
+
+    doc.setFont("helvetica", "normal")
+    doc.setFontSize(9)
+    doc.setTextColor(80, 80, 80)
+
+    const keyAnswerIds = [
+      { id: "location", label: "Property Location" },
+      { id: "current_protection", label: "Current Protection" },
+      { id: "preparedness", label: "Preparedness Level" },
+      { id: "ownership", label: "Home Ownership" },
+      { id: "timeline", label: "Desired Timeline" },
+      { id: "budget", label: "Budget Alignment" },
+    ]
+
+    keyAnswerIds.forEach((item) => {
+      const answer = answers[item.id]
+      if (answer) {
+        doc.setFont("helvetica", "bold")
+        doc.text(`${item.label}:`, margin, y)
+        doc.setFont("helvetica", "normal")
+        const answerText = doc.splitTextToSize(answer.option.text, contentWidth - 50)
+        doc.text(answerText, margin + 48, y)
+        y += answerText.length > 1 ? 10 : 6
+      }
+    })
+
+    y += 6
+
+    // Recommendation
+    doc.setFont("helvetica", "bold")
+    doc.setFontSize(12)
+    doc.setTextColor(26, 29, 35)
+    doc.text("Recommended Next Steps", margin, y)
+    y += 8
+
+    doc.setFont("helvetica", "normal")
+    doc.setFontSize(9)
+    doc.setTextColor(80, 80, 80)
+
+    let recommendation = ""
+    if (category === "hot") {
+      recommendation = `Based on your assessment score, your property has significant ${t.fire} risk factors. We strongly recommend booking a free consultation with one of our ${t.fire} protection specialists to discuss a tailored protection system for your property.`
+    } else if (category === "warm") {
+      recommendation = `Your assessment indicates notable ${t.fire} risk factors. We recommend speaking with our team to explore protection options that fit your situation and timeline.`
+    } else {
+      recommendation = `While your immediate risk factors are lower, staying prepared is important. We recommend reviewing our ${t.fire} preparation resources and reaching out when you're ready to take the next step.`
+    }
+
+    const recLines = doc.splitTextToSize(recommendation, contentWidth)
+    doc.text(recLines, margin, y)
+    y += recLines.length * 5 + 10
+
+    // Footer
+    doc.setFillColor(26, 29, 35)
+    doc.rect(0, 275, pageWidth, 22, "F")
+    doc.setFontSize(9)
+    doc.setTextColor(212, 175, 55)
+    doc.setFont("helvetica", "bold")
+    doc.text("Prodigy Wildfire Solutions", margin, 285)
+    doc.setFont("helvetica", "normal")
+    doc.setTextColor(180, 180, 180)
+    doc.text("www.prodigywildfire.com  |  sales@prodigywildfire.com", margin, 291)
+
+    doc.save(`${t.Fire}-Risk-Assessment-${formData.lastName}.pdf`)
+  })
+}
+
 export function WildfireRiskAssessment() {
   const [currentQuestion, setCurrentQuestion] = useState(0)
   const [answers, setAnswers] = useState<Record<string, { option: QuestionOption; index: number }>>({})
   const [showResults, setShowResults] = useState(false)
-  const [showCaptureForm, setShowCaptureForm] = useState(true)
+  const [showCaptureForm, setShowCaptureForm] = useState(false)
+  const [quizComplete, setQuizComplete] = useState(false)
   const [totalScore, setTotalScore] = useState(0)
   const [country, setCountry] = useState<CountryKey | null>(null)
   const [formData, setFormData] = useState({
@@ -270,11 +434,20 @@ export function WildfireRiskAssessment() {
     e.preventDefault()
     if (formData.firstName && formData.lastName && formData.email && formData.phone) {
       setShowCaptureForm(false)
+      setShowResults(true)
     }
   }
 
   const handleCountrySelect = (selectedCountry: CountryKey) => {
     setCountry(selectedCountry)
+  }
+
+  const handleBack = () => {
+    if (currentQuestion > 0) {
+      setCurrentQuestion(currentQuestion - 1)
+    } else {
+      setCountry(null)
+    }
   }
 
   const handleAnswer = (questionId: string, option: QuestionOption, index: number) => {
@@ -286,6 +459,7 @@ export function WildfireRiskAssessment() {
     if (currentQuestion < questions.length - 1) {
       setTimeout(() => setCurrentQuestion(currentQuestion + 1), 300)
     } else {
+      // Quiz is done, calculate score and show contact form
       let score = 0
       let isRenter = false
       Object.keys(newAnswers).forEach((key) => {
@@ -305,7 +479,8 @@ export function WildfireRiskAssessment() {
       if (isRenter) score = 0
 
       setTotalScore(score)
-      setTimeout(() => setShowResults(true), 300)
+      setQuizComplete(true)
+      setTimeout(() => setShowCaptureForm(true), 300)
     }
   }
 
@@ -343,14 +518,18 @@ export function WildfireRiskAssessment() {
   }
 
   const questions = country ? getQuestions(country) : []
-  const progress = country ? ((currentQuestion + 1) / questions.length) * 100 : 0
+  const progress = country
+    ? quizComplete
+      ? 100
+      : ((currentQuestion + 1) / questions.length) * 100
+    : 0
   const t = country ? terminology[country] : null
 
-  // Capture Form
-  if (showCaptureForm) {
+  // Country Selection
+  if (!country) {
     return (
-      <div className="flex min-h-screen items-start justify-center bg-primary px-5 py-10 pt-28">
-        <div className="w-full max-w-[500px] overflow-hidden rounded-2xl bg-white shadow-2xl">
+      <div className="flex items-start justify-center bg-primary px-5 py-16 pt-28">
+        <div className="w-full max-w-[600px] overflow-hidden rounded-2xl bg-white shadow-2xl">
           <div className="border-b-4 border-accent bg-primary p-8 text-center">
             <div className="mx-auto mb-5">
               <Image
@@ -366,6 +545,48 @@ export function WildfireRiskAssessment() {
             </h1>
             <p className="text-sm text-primary-foreground/60">
               Get your free property risk assessment in 2 minutes
+            </p>
+          </div>
+
+          <div className="p-8">
+            <h2 className="mb-6 text-xl font-semibold text-foreground">
+              Which country is your property located in?
+            </h2>
+
+            <div className="flex flex-col gap-3">
+              {(["australia", "usa", "canada"] as const).map((key) => (
+                <button
+                  key={key}
+                  onClick={() => handleCountrySelect(key)}
+                  className="w-full rounded-lg border-2 border-border bg-muted px-5 py-4 text-left text-lg font-medium text-foreground transition-all hover:border-accent hover:bg-accent/5"
+                >
+                  {countryLabels[key]}
+                </button>
+              ))}
+            </div>
+          </div>
+
+          <div className="border-t border-border bg-muted px-8 py-4">
+            <p className="text-center text-xs text-muted-foreground">
+              This helps us tailor the assessment to your region.
+            </p>
+          </div>
+        </div>
+      </div>
+    )
+  }
+
+  // Contact Form (after quiz, before results)
+  if (showCaptureForm && !showResults) {
+    return (
+      <div className="flex items-start justify-center bg-primary px-5 py-16 pt-28">
+        <div className="w-full max-w-[500px] overflow-hidden rounded-2xl bg-white shadow-2xl">
+          <div className="border-b-4 border-accent bg-primary p-8 text-center">
+            <h1 className="mb-2 font-heading text-2xl font-bold text-accent">
+              Almost There!
+            </h1>
+            <p className="text-sm text-primary-foreground/60">
+              Enter your details to see your results and receive a PDF copy
             </p>
           </div>
 
@@ -453,7 +674,7 @@ export function WildfireRiskAssessment() {
               type="submit"
               className="w-full rounded-lg bg-accent py-4 text-lg font-bold text-white transition-colors hover:bg-accent/90"
             >
-              Start My Assessment
+              See My Results
             </button>
 
             <p className="mt-4 text-center text-xs text-muted-foreground">
@@ -465,60 +686,17 @@ export function WildfireRiskAssessment() {
     )
   }
 
-  // Country Selection
-  if (!country) {
-    return (
-      <div className="flex min-h-screen items-start justify-center bg-primary px-5 py-10 pt-28">
-        <div className="w-full max-w-[600px] overflow-hidden rounded-2xl bg-white shadow-2xl">
-          <div className="border-b-4 border-accent bg-primary px-8 py-6">
-            <h1 className="mb-1 font-heading text-xl font-bold text-accent">
-              Fire Risk Assessment
-            </h1>
-            <p className="text-sm text-primary-foreground/60">Prodigy Wildfire Solutions</p>
-          </div>
-
-          <div className="p-8">
-            <h2 className="mb-6 text-xl font-semibold text-foreground">
-              Which country is your property located in?
-            </h2>
-
-            <div className="flex flex-col gap-3">
-              {(["australia", "usa", "canada"] as const).map((key) => {
-                const labels: Record<CountryKey, string> = {
-                  australia: "Australia",
-                  usa: "United States",
-                  canada: "Canada",
-                }
-                return (
-                  <button
-                    key={key}
-                    onClick={() => handleCountrySelect(key)}
-                    className="w-full rounded-lg border-2 border-border bg-muted px-5 py-4 text-left text-lg font-medium text-foreground transition-all hover:border-accent hover:bg-accent/5"
-                  >
-                    {labels[key]}
-                  </button>
-                )
-              })}
-            </div>
-          </div>
-
-          <div className="border-t border-border bg-muted px-8 py-4">
-            <p className="text-center text-xs text-muted-foreground">
-              This helps us tailor the assessment to your region.
-            </p>
-          </div>
-        </div>
-      </div>
-    )
-  }
-
   // Results Screen
   if (showResults) {
     const category = getLeadCategory()
     const risk = getRiskLevel()
 
+    const handleDownloadPdf = () => {
+      generatePdf(formData, country, answers, risk.level, risk.description, category, t!, totalScore)
+    }
+
     return (
-      <div className="flex min-h-screen items-start justify-center bg-primary px-5 py-10 pt-28">
+      <div className="flex items-start justify-center bg-primary px-5 py-16 pt-28">
         <div className="w-full max-w-[600px] overflow-hidden rounded-2xl bg-white shadow-2xl">
           <div className="border-b-4 border-accent bg-primary p-8 text-center">
             <div className={`mx-auto mb-5 flex h-20 w-20 items-center justify-center rounded-full ${risk.color}`}>
@@ -541,6 +719,17 @@ export function WildfireRiskAssessment() {
               </div>
               <p className="text-base leading-relaxed text-muted-foreground">{risk.description}</p>
             </div>
+
+            {/* Download PDF */}
+            <button
+              onClick={handleDownloadPdf}
+              className="mb-6 flex w-full items-center justify-center gap-2 rounded-lg border-2 border-accent bg-accent/5 py-3.5 text-sm font-semibold text-accent transition-colors hover:bg-accent/10"
+            >
+              <svg className="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3" />
+              </svg>
+              Download Your Assessment (PDF)
+            </button>
 
             {category === "hot" && (
               <div>
@@ -634,7 +823,7 @@ export function WildfireRiskAssessment() {
   const currentQ = questions[currentQuestion]
 
   return (
-    <div className="flex min-h-screen items-start justify-center bg-primary px-5 py-10 pt-28">
+    <div className="flex items-start justify-center bg-primary px-5 py-16 pt-28">
       <div className="w-full max-w-[600px] overflow-hidden rounded-2xl bg-white shadow-2xl">
         <div className="border-b-4 border-accent bg-primary px-8 py-6">
           <h1 className="mb-1 font-heading text-xl font-bold text-accent">
@@ -686,8 +875,15 @@ export function WildfireRiskAssessment() {
           </div>
         </div>
 
-        <div className="border-t border-border bg-muted px-8 py-4">
-          <p className="text-center text-xs text-muted-foreground">
+        <div className="flex items-center justify-between border-t border-border bg-muted px-8 py-4">
+          <button
+            type="button"
+            onClick={handleBack}
+            className="text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
+          >
+            &larr; Back
+          </button>
+          <p className="text-xs text-muted-foreground">
             Your answers help us understand how we can best protect your property.
           </p>
         </div>
