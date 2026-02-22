@@ -105,7 +105,7 @@ function CaseStudyCard({
   const [expanded, setExpanded] = useState(false);
 
   return (
-    <article className="flex flex-col overflow-hidden rounded border border-border bg-card transition-all hover:shadow-lg">
+    <article id={study.id} className="flex flex-col overflow-hidden rounded border border-border bg-card transition-all hover:shadow-lg scroll-mt-24">
       <div className="relative h-56 overflow-hidden">
         <Image
           src={study.image}

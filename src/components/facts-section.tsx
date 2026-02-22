@@ -7,12 +7,14 @@ const projects = [
     title: "Banff Gondola Upper Terminal",
     location: "Banff, Alberta, Canada",
     result: "34 sprinkler heads installed across the upper and lower terminal buildings at 7,500ft elevation in the Canadian Rockies.",
+    href: "/case-studies#banff-gondola",
   },
   {
     image: "/images/golden-skybridge-wildfire-protection.png",
     title: "Golden Skybridge",
     location: "Golden, British Columbia, Canada",
     result: "Complete wildfire suppression for multi-structure tourism attraction in dense forest.",
+    href: "/case-studies#golden-skybridge",
   },
   {
     image: "/images/ubc-logo.png",
@@ -20,6 +22,7 @@ const projects = [
     title: "UBC Campus Facilities",
     location: "British Columbia, Canada",
     result: "Multi-building campus deployment protecting research facilities and student housing.",
+    href: "/case-studies#ubc-campus",
   },
 ];
 
@@ -35,9 +38,10 @@ export function FactsSection() {
 
         <div className="grid gap-6 md:grid-cols-3">
           {projects.map((project) => (
-            <div
+            <Link
               key={project.title}
-              className="group overflow-hidden rounded border border-border bg-background"
+              href={project.href}
+              className="group overflow-hidden rounded border border-border bg-background transition-all hover:border-accent hover:shadow-lg"
             >
               <div className="relative h-48 overflow-hidden">
                 <Image
@@ -59,7 +63,7 @@ export function FactsSection() {
                   {project.result}
                 </p>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
 

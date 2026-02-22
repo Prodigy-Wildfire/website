@@ -7,6 +7,13 @@ import { Menu, X, ChevronDown } from "lucide-react";
 
 const dropdowns = [
   {
+    label: "Education",
+    items: [
+      { label: "Wildfires", href: "/wildfires" },
+      { label: "Insights", href: "/insights" },
+    ],
+  },
+  {
     label: "Protection",
     items: [
       { label: "Our System", href: "/system" },
@@ -16,13 +23,12 @@ const dropdowns = [
     ],
   },
   {
-    label: "Prodigy Wildfire Solutions",
+    label: "About",
     items: [
       { label: "About Us", href: "/about" },
       { label: "Case Studies", href: "/case-studies" },
       { label: "Partners", href: "/partners" },
       { label: "FAQ", href: "/faq" },
-      { label: "Insights", href: "/insights" },
       { label: "Contact Us", href: "/contact" },
     ],
   },
@@ -120,12 +126,6 @@ export function Header() {
         </Link>
 
         <nav className="hidden items-center gap-6 lg:flex">
-          <Link
-            href="/wildfires"
-            className="text-sm font-medium text-primary-foreground/80 transition-colors hover:text-accent"
-          >
-            Wildfires
-          </Link>
           {dropdowns.map((dropdown) => (
             <DesktopDropdown key={dropdown.label} label={dropdown.label} items={dropdown.items} />
           ))}
@@ -150,13 +150,6 @@ export function Header() {
       {mobileOpen && (
         <div className="border-t border-primary-foreground/10 bg-primary lg:hidden">
           <nav className="mx-auto flex max-w-7xl flex-col gap-1 px-6 py-4">
-            <Link
-              href="/wildfires"
-              className="rounded px-3 py-2.5 text-sm font-medium text-primary-foreground/80 transition-colors hover:bg-primary-foreground/10 hover:text-accent"
-              onClick={() => setMobileOpen(false)}
-            >
-              Wildfires
-            </Link>
             {dropdowns.map((dropdown) => (
               <MobileDropdown
                 key={dropdown.label}

@@ -3,10 +3,10 @@ import Image from "next/image";
 
 const footerLinks = [
   {
-    heading: "Wildfires",
-    href: "/wildfires",
+    heading: "Education",
     links: [
-      { label: "Wildfire Risks", href: "/wildfires" },
+      { label: "Wildfires", href: "/wildfires" },
+      { label: "Insights", href: "/insights" },
       { label: "Assessment", href: "https://quiz.prodigywildfire.com/wildfirereadiness" },
     ],
   },
@@ -20,14 +20,13 @@ const footerLinks = [
     ],
   },
   {
-    heading: "Prodigy Wildfire Solutions",
+    heading: "About",
     links: [
       { label: "About Us", href: "/about" },
       { label: "Case Studies", href: "/case-studies" },
       { label: "Partners", href: "/partners" },
-      { label: "Contact Us", href: "/contact" },
       { label: "FAQ", href: "/faq" },
-      { label: "Insights", href: "/insights" },
+      { label: "Contact Us", href: "/contact" },
     ],
   },
 ];
