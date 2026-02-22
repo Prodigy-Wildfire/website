@@ -20,7 +20,7 @@ const projects = [
     name: "UBC Campus Facilities",
     location: "British Columbia, Canada",
     scope: "Multi-building campus deployment protecting research facilities and student housing.",
-    image: "/images/ubc-wildfire-protection.png",
+    image: "/images/ubc-logo.png",
     imageAlt: "UBC campus wildfire protection installation",
   },
 ];

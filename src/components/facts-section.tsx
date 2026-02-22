@@ -15,7 +15,7 @@ const projects = [
     result: "Complete wildfire suppression for multi-structure tourism attraction in dense forest.",
   },
   {
-    image: "/images/ubc-wildfire-protection.png",
+    image: "/images/ubc-logo.png",
     title: "UBC Campus Facilities",
     location: "British Columbia, Canada",
     result: "Multi-building campus deployment protecting research facilities and student housing.",
@@ -27,10 +27,7 @@ export function FactsSection() {
     <section className="bg-card py-20 md:py-28">
       <div className="mx-auto max-w-7xl px-6">
         <div className="mb-14 text-center">
-          <p className="font-heading text-sm font-semibold uppercase tracking-widest text-accent">
-            Proven Results
-          </p>
-          <h2 className="mt-3 font-heading text-3xl font-bold tracking-tight text-foreground md:text-4xl">
+          <h2 className="font-heading text-3xl font-bold tracking-tight text-foreground md:text-4xl">
             Projects That Speak for <span className="text-accent">Themselves</span>
           </h2>
         </div>

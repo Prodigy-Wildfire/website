@@ -5,7 +5,7 @@ const trustedLogos = [
   { src: "/images/pursuit-group-wildfire-protection.png", alt: "Pursuit" },
   { src: "/images/banff-gondola-wildfire-protection.png", alt: "Banff Gondola" },
   { src: "/images/forest-park-hotel-wildfire-protection.png", alt: "Forest Park Hotel" },
-  { src: "/images/ubc-wildfire-protection.png", alt: "UBC" },
+  { src: "/images/ubc-logo.png", alt: "UBC" },
   { src: "/images/lake-minnewanka-wildfire-protection.png", alt: "Lake Minnewanka" },
 ];
 

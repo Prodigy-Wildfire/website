@@ -56,7 +56,7 @@ const caseStudies = [
     location: "Vancouver, British Columbia, Canada",
     country: "Canada",
     type: "Infrastructure",
-    image: "/images/ubc-wildfire-protection.png",
+    image: "/images/ubc-logo.png",
     imageContain: true,
     summary:
       "UBC required wildfire protection for critical campus buildings on the shoreline of Loon Lake, utilising the lake as a water source for the suppression system.",
