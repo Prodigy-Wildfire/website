@@ -6,7 +6,7 @@ export function ClimateSection() {
       <div className="mx-auto max-w-7xl px-6">
         <div className="mb-6 text-center">
           <h2 className="font-heading text-3xl font-bold tracking-tight text-primary-foreground md:text-4xl lg:text-5xl">
-            Drought, Heat &amp; High Winds Are Fuelling More <span className="text-accent">Wildfires</span>
+            The Impact of Drought, Heat and <span className="text-accent">High Winds</span>
           </h2>
         </div>
 
@@ -21,7 +21,7 @@ export function ClimateSection() {
             />
           </div>
 
-          <div className="text-center lg:text-left">
+          <div className="text-center">
             <p className="text-base leading-relaxed text-primary-foreground/70">
               Our changing climate is rewriting the wildfire landscape across
               North America and Australia. Hotter temperatures, drier seasons,

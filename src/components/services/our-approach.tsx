@@ -60,7 +60,7 @@ export function OurApproach() {
 
         <div className="mt-12 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
           <Link
-            href="/assessment"
+            href="https://quiz.prodigywildfire.com/wildfirereadiness"
             className="rounded border-2 border-accent bg-transparent px-8 py-3.5 text-base font-semibold text-accent transition-colors hover:bg-accent hover:text-white"
           >
             Take the Wildfire Readiness Quiz

@@ -30,20 +30,19 @@ const regions: Region[] = [
         label: "Acres Burned in 2024",
       },
     ],
-    source: "NIFC Annual Report 2024",
+    source: "NIFC",
     sourceUrl: "https://www.nifc.gov/fire-information/statistics",
   },
   {
     name: "Canada",
     stats: [
       {
-        value: 6500,
-        prefix: ">",
+        value: 5475,
         label: "Wildfires in 2023",
       },
       {
-        value: 15,
-        suffix: "M+",
+        value: 17.3,
+        suffix: "M",
         label: "Hectares Burned in 2023",
       },
     ],
@@ -54,17 +53,18 @@ const regions: Region[] = [
     name: "Australia",
     stats: [
       {
-        value: 3094,
-        label: "Homes Destroyed (Black Summer 2019-20)",
+        value: 46.9,
+        suffix: "M",
+        label: "Hectares Burned (2016/17 - 2020/21)",
       },
       {
-        value: 17,
-        suffix: "M+",
-        label: "Hectares Burned (Black Summer 2019-20)",
+        value: 35,
+        suffix: "%",
+        label: "Of Australia's Total Forest Area",
       },
     ],
     source: "Australian Government",
-    sourceUrl: "https://www.apsc.gov.au/state-service/state-service-report-2019-20/chapter-1-commitmenrvice/black-summer",
+    sourceUrl: "https://www.agriculture.gov.au/abares/forestsaustralia/forest-data-maps-and-tools/data-by-topic/fire",
   },
 ];
 
