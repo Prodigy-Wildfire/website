@@ -5,7 +5,7 @@ export function WildfiresHero() {
   return (
     <section className="relative flex min-h-screen items-center justify-center overflow-hidden pt-24 md:min-h-[85vh]">
       <Image
-        src="/images/wildfire-ember-attack-cayetano-gil.avif"
+        src="/images/Wildfire-page-hero.png"
         alt="Intense wildfire ember attack with burning embers flying through the air"
         fill
         sizes="100vw"
