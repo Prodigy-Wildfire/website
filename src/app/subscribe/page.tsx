@@ -37,10 +37,7 @@ export default function SubscribePage() {
         {/* Hero */}
         <section className="bg-primary pt-32 pb-20">
           <div className="mx-auto max-w-3xl px-6 text-center">
-            <p className="font-heading text-sm font-semibold uppercase tracking-widest text-accent">
-              Stay Informed
-            </p>
-            <h1 className="mt-3 font-heading text-4xl font-bold tracking-tight text-primary-foreground md:text-5xl">
+            <h1 className="font-heading text-4xl font-bold tracking-tight text-primary-foreground md:text-5xl">
               Join Our Mailing List
             </h1>
             <p className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-primary-foreground/70">

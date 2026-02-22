@@ -51,10 +51,7 @@ export function BenefitsGrid() {
     <section className="bg-muted py-20 md:py-28">
       <div className="mx-auto max-w-7xl px-6">
         <div className="mb-14 text-center">
-          <p className="font-heading text-sm font-semibold uppercase tracking-widest text-accent">
-            Why Partner With Us
-          </p>
-          <h2 className="mt-3 font-heading text-3xl font-bold tracking-tight text-foreground md:text-4xl">
+          <h2 className="font-heading text-3xl font-bold tracking-tight text-foreground md:text-4xl">
             Built for Mutual <span className="text-accent">Success</span>
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-base leading-relaxed text-muted-foreground">

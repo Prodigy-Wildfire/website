@@ -43,10 +43,7 @@ export function EmberFacts() {
 
       <div className="relative z-10 mx-auto max-w-7xl px-6">
         <div className="mb-14 text-center">
-          <p className="font-heading text-sm font-semibold uppercase tracking-widest text-accent">
-            Residential Systems
-          </p>
-          <h2 className="mt-3 font-heading text-3xl font-bold tracking-tight text-primary-foreground md:text-4xl">
+          <h2 className="font-heading text-3xl font-bold tracking-tight text-primary-foreground md:text-4xl">
             What a Prodigy Home Wildfire Sprinkler System <span className="text-accent">Looks Like</span>
           </h2>
           <p className="mx-auto mt-4 text-4xl font-bold text-accent md:text-5xl">

@@ -8,10 +8,7 @@ export function WhyProdigyHomeowners() {
       <div className="mx-auto max-w-7xl px-6">
         <div className="grid items-center gap-12 lg:grid-cols-2">
           <div>
-            <p className="font-heading text-sm font-semibold uppercase tracking-widest text-accent">
-              Homeowner Benefits
-            </p>
-            <h2 className="mt-3 font-heading text-3xl font-bold tracking-tight text-foreground md:text-4xl">
+            <h2 className="font-heading text-3xl font-bold tracking-tight text-foreground md:text-4xl">
               Insurance, Property Value &amp; Peace of <span className="text-accent">Mind</span>
             </h2>
 

@@ -69,10 +69,7 @@ export function GettingPrepared() {
       <div className="mx-auto max-w-7xl px-6">
         {/* Header */}
         <div className="mb-14 text-center">
-          <p className="font-heading text-sm font-semibold uppercase tracking-widest text-accent">
-            Wildfire Emergency Plan
-          </p>
-          <h2 className="mt-3 font-heading text-3xl font-bold tracking-tight text-foreground md:text-4xl lg:text-5xl">
+          <h2 className="font-heading text-3xl font-bold tracking-tight text-foreground md:text-4xl lg:text-5xl">
             Your Step-by-Step Wildfire <span className="text-accent">Preparedness</span> Guide
           </h2>
           <p className="mx-auto mt-4 max-w-3xl text-base leading-relaxed text-muted-foreground">

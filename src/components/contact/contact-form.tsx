@@ -67,10 +67,7 @@ export function ContactForm() {
         <div className="grid gap-16 lg:grid-cols-5">
           {/* Contact Info Sidebar */}
           <div className="lg:col-span-2 text-center lg:text-left">
-            <p className="font-heading text-sm font-semibold uppercase tracking-widest text-accent">
-              Contact Us
-            </p>
-            <h2 className="mt-3 font-heading text-3xl font-bold text-foreground md:text-4xl">
+            <h2 className="font-heading text-3xl font-bold text-foreground md:text-4xl">
               Let{"'"}s Start a Conversation
             </h2>
             <p className="mt-4 leading-relaxed text-muted-foreground">

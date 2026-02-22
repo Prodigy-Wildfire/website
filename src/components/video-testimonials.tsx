@@ -116,10 +116,7 @@ export function VideoTestimonials() {
 
       <div className="relative z-10 mx-auto max-w-7xl px-6">
         <div className="mb-12 text-center">
-          <p className="font-heading text-sm font-semibold uppercase tracking-widest text-accent">
-            Customer Stories
-          </p>
-          <h2 className="mt-3 font-heading text-3xl font-bold tracking-tight text-primary-foreground md:text-4xl">
+          <h2 className="font-heading text-3xl font-bold tracking-tight text-primary-foreground md:text-4xl">
             Hear From Homeowners We <span className="text-accent">Protect</span>
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-base leading-relaxed text-primary-foreground/70">

@@ -35,10 +35,7 @@ export function SupportSection() {
     <section id="faq" className="bg-muted py-20 md:py-28">
       <div className="mx-auto max-w-7xl px-6">
         <div className="text-center mb-14">
-          <p className="font-heading text-sm font-semibold uppercase tracking-widest text-accent">
-            Need Help?
-          </p>
-          <h2 className="mt-3 font-heading text-3xl font-bold tracking-tight text-foreground md:text-4xl">
+          <h2 className="font-heading text-3xl font-bold tracking-tight text-foreground md:text-4xl">
             We&apos;re Here to <span className="text-accent">Help</span>
           </h2>
         </div>

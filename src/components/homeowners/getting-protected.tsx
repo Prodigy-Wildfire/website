@@ -42,10 +42,7 @@ export function GettingProtected() {
     <section className="bg-muted py-20 md:py-28">
       <div className="mx-auto max-w-7xl px-6">
         <div className="mb-14 text-center">
-          <p className="font-heading text-sm font-semibold uppercase tracking-widest text-accent">
-            Getting Protected
-          </p>
-          <h2 className="mt-3 font-heading text-3xl font-bold tracking-tight text-foreground md:text-4xl">
+          <h2 className="font-heading text-3xl font-bold tracking-tight text-foreground md:text-4xl">
             From Assessment to <span className="text-accent">Installation</span>
           </h2>
           <p className="mx-auto mt-4 max-w-3xl text-base leading-relaxed text-muted-foreground">

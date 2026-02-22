@@ -5,10 +5,7 @@ export function MissionSection() {
     <section id="mission" className="bg-background py-20 md:py-28">
       <div className="mx-auto max-w-7xl px-6">
         <div className="text-center mb-14">
-          <p className="font-heading text-sm font-semibold uppercase tracking-widest text-accent">
-            Our Mission
-          </p>
-          <h2 className="mt-3 font-heading text-3xl font-bold tracking-tight text-foreground md:text-4xl">
+          <h2 className="font-heading text-3xl font-bold tracking-tight text-foreground md:text-4xl">
             Peace of Mind in a{" "}
             <span className="text-accent">Changing Climate</span>
           </h2>

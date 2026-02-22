@@ -27,10 +27,7 @@ export function EmberSection() {
     <section className="bg-primary py-20 md:py-28">
       <div className="mx-auto max-w-7xl px-6">
         <div className="mb-14 text-center">
-          <p className="font-heading text-sm font-semibold uppercase tracking-widest text-accent">
-            How It Works
-          </p>
-          <h2 className="mt-3 font-heading text-3xl font-bold tracking-tight text-primary-foreground md:text-4xl">
+          <h2 className="font-heading text-3xl font-bold tracking-tight text-primary-foreground md:text-4xl">
             <span className="text-accent">Three</span> Steps to Wildfire Defence
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-base leading-relaxed text-primary-foreground/80">
@@ -49,9 +46,6 @@ export function EmberSection() {
               <div className="mx-auto mb-5 flex h-14 w-14 items-center justify-center rounded-full border-2 border-accent/30 bg-accent/10">
                 <step.icon className="h-7 w-7 text-accent" />
               </div>
-              <p className="mb-2 font-heading text-xs font-semibold uppercase tracking-widest text-accent">
-                Step {index + 1}
-              </p>
               <h3 className="font-heading text-lg font-bold text-primary-foreground">
                 {step.title}
               </h3>

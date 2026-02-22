@@ -17,10 +17,7 @@ export function EngineeringSection() {
           </div>
 
           <div className="text-center lg:text-left">
-            <p className="font-heading text-sm font-semibold uppercase tracking-widest text-accent">
-              Engineering Excellence
-            </p>
-            <h2 className="mt-3 font-heading text-3xl font-bold tracking-tight text-foreground md:text-4xl">
+            <h2 className="font-heading text-3xl font-bold tracking-tight text-foreground md:text-4xl">
               Built to Perform When It{" "}
               <span className="text-accent">Matters Most</span>
             </h2>

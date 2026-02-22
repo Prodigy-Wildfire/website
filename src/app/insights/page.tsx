@@ -68,10 +68,7 @@ export default function InsightsPage() {
         {/* Hero */}
         <section className="bg-primary pt-32 pb-20 md:pb-28">
           <div className="mx-auto max-w-7xl px-6 text-center">
-            <p className="font-heading text-sm font-semibold uppercase tracking-widest text-accent">
-              Prodigy Wildfire
-            </p>
-            <h1 className="mt-3 font-heading text-4xl font-bold tracking-tight text-primary-foreground md:text-5xl lg:text-6xl">
+            <h1 className="font-heading text-4xl font-bold tracking-tight text-primary-foreground md:text-5xl lg:text-6xl">
               Wildfire Protection Insights
             </h1>
             <p className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-primary-foreground/70">

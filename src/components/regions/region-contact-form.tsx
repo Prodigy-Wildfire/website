@@ -56,10 +56,7 @@ export function RegionContactForm({ regionName, regionLabel = "Province", countr
     <section id="contact" className="bg-muted py-20">
       <div className="mx-auto max-w-3xl px-6">
         <div className="text-center mb-12">
-          <p className="font-heading text-sm font-semibold uppercase tracking-widest text-accent">
-            Contact Us
-          </p>
-          <h2 className="mt-3 font-heading text-3xl font-bold text-foreground md:text-4xl">
+          <h2 className="font-heading text-3xl font-bold text-foreground md:text-4xl">
             Get Protected in {regionName}
           </h2>
           <p className="mt-4 text-muted-foreground">

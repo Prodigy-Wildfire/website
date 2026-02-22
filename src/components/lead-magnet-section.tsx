@@ -29,10 +29,7 @@ export function LeadMagnetSection() {
               <BookOpen className="h-10 w-10 text-accent" />
             </div>
             <div>
-              <p className="font-heading text-sm font-semibold uppercase tracking-widest text-accent">
-                Free Download
-              </p>
-              <h2 className="mt-2 font-heading text-2xl font-bold tracking-tight text-foreground md:text-3xl">
+              <h2 className="font-heading text-2xl font-bold tracking-tight text-foreground md:text-3xl">
                 The Homeowner&apos;s Guide to Wildfire <span className="text-accent">Preparedness</span>
               </h2>
               <p className="mx-auto mt-3 max-w-2xl text-base leading-relaxed text-muted-foreground">

@@ -75,10 +75,7 @@ export function StatsBar() {
     <section className="bg-background py-20 md:py-28" ref={ref}>
       <div className="mx-auto max-w-7xl px-6">
         <div className="mb-14 text-center">
-          <p className="font-heading text-sm font-semibold uppercase tracking-widest text-accent">
-            Prodigy in Numbers
-          </p>
-          <h2 className="mt-3 font-heading text-3xl font-bold tracking-tight text-foreground md:text-4xl">
+          <h2 className="font-heading text-3xl font-bold tracking-tight text-foreground md:text-4xl">
             Built to Scale, Proven to <span className="text-accent">Perform</span>
           </h2>
         </div>

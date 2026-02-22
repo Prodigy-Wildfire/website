@@ -42,14 +42,14 @@ export function Footer() {
     <footer className="bg-primary py-16">
       <div className="mx-auto max-w-7xl px-6">
         <div className="grid gap-12 md:grid-cols-4">
-          <div>
+          <div className="text-center md:text-center flex flex-col items-center">
             <Link href="/" className="flex items-center">
               <Image
                 src="/images/pws-logo-white-text.png"
                 alt="Prodigy Wildfire Solutions"
                 width={280}
                 height={80}
-                className="h-20 w-auto"
+                className="h-28 w-auto"
               />
             </Link>
             <p className="mt-4 max-w-xs text-sm leading-relaxed text-primary-foreground/60">
@@ -59,7 +59,7 @@ export function Footer() {
           </div>
 
           {footerLinks.map((group, index) => (
-            <div key={group.heading} className={index === 0 ? "md:pl-8" : ""}>
+            <div key={group.heading} className={`text-center ${index === 0 ? "md:pl-8" : ""}`}>
 
               <h3 className="font-heading text-sm font-semibold uppercase tracking-wider text-primary-foreground">
                 {group.heading}

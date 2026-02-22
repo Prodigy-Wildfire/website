@@ -52,10 +52,7 @@ export function MailingListSection() {
             <Mail className="h-7 w-7 text-accent" />
           </div>
         </div>
-        <p className="font-heading text-sm font-semibold uppercase tracking-widest text-accent">
-          Stay Informed
-        </p>
-        <h2 className="mt-3 font-heading text-3xl font-bold tracking-tight text-foreground md:text-4xl">
+        <h2 className="font-heading text-3xl font-bold tracking-tight text-foreground md:text-4xl">
           Join Our <span className="text-accent">Mailing List</span>
         </h2>
         <p className="mx-auto mt-4 max-w-md text-sm leading-relaxed text-muted-foreground">

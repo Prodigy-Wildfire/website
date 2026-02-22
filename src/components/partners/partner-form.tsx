@@ -56,10 +56,7 @@ export function PartnerForm() {
     <section id="partner-form" className="bg-muted py-20 md:py-28">
       <div className="mx-auto max-w-3xl px-6">
         <div className="mb-12 text-center">
-          <p className="font-heading text-sm font-semibold uppercase tracking-widest text-accent">
-            Get Started
-          </p>
-          <h2 className="mt-3 font-heading text-3xl font-bold tracking-tight text-foreground md:text-4xl">
+          <h2 className="font-heading text-3xl font-bold tracking-tight text-foreground md:text-4xl">
             Apply to Become a Partner
           </h2>
           <p className="mx-auto mt-4 max-w-xl text-base leading-relaxed text-muted-foreground">

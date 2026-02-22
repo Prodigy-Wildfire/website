@@ -135,10 +135,7 @@ export function Stats() {
     <section id="stats" className="bg-primary py-20 md:py-28" ref={ref}>
       <div className="mx-auto max-w-7xl px-6">
         <div className="text-center mb-14">
-          <p className="font-heading text-sm font-semibold uppercase tracking-widest text-accent">
-            Global Crisis
-          </p>
-          <h2 className="mt-3 font-heading text-3xl font-bold tracking-tight text-primary-foreground md:text-4xl">
+          <h2 className="font-heading text-3xl font-bold tracking-tight text-primary-foreground md:text-4xl">
             Wildfire by the <span className="text-accent">Numbers</span>
           </h2>
           <p className="mx-auto mt-4 max-w-3xl text-base leading-relaxed text-primary-foreground/70">

@@ -27,13 +27,10 @@ export function ProtectCards() {
     <section className="bg-background py-20 md:py-28">
       <div className="mx-auto max-w-7xl px-6">
         <div className="mb-14 text-center">
-          <p className="font-heading text-sm font-semibold uppercase tracking-widest text-accent">
-            The Science
-          </p>
-          <h2 className="mt-3 font-heading text-3xl font-bold tracking-tight text-foreground md:text-4xl lg:text-5xl">
+          <h2 className="font-heading text-3xl font-bold tracking-tight text-foreground md:text-4xl lg:text-5xl">
             How Wildfires <span className="text-accent">Destroy</span> Homes and Businesses
           </h2>
-          <p className="mx-auto mt-4 max-w-3xl text-base leading-relaxed text-muted-foreground">
+          <p className="mx-auto mt-4 max-w-4xl text-base leading-relaxed text-muted-foreground">
             Understanding the three mechanisms of wildfire damage is the first step toward effective protection. Most people assume direct flames cause the most destruction, but the reality is very different.
           </p>
         </div>
