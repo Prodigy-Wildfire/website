@@ -4,6 +4,7 @@ import Link from "next/link";
 const items = [
   {
     image: "/images/protect-home.jpg",
+    imageClassName: "object-cover object-[center_70%] transition-transform duration-500 group-hover:scale-105",
     title: "For Homeowners",
     description:
       "Custom-designed exterior sprinkler systems that protect your home from ember attack. Activate remotely and defend your property even during evacuation.",
@@ -23,9 +24,6 @@ export function ProtectSection() {
     <section className="bg-background py-20 md:py-28">
       <div className="mx-auto max-w-7xl px-6">
         <div className="mb-14 text-center">
-          <p className="font-heading text-sm font-semibold uppercase tracking-widest text-accent">
-            Who We Protect
-          </p>
           <h2 className="font-heading text-3xl font-bold tracking-tight text-foreground md:text-4xl">
             <span className="text-accent">Protect</span> What&apos;s Important to You
           </h2>
@@ -55,7 +53,7 @@ export function ProtectSection() {
                     alt={item.title}
                     fill
                     sizes="(max-width: 1024px) 100vw, 50vw"
-                    className="object-cover transition-transform duration-500 group-hover:scale-105"
+                    className={item.imageClassName || "object-cover transition-transform duration-500 group-hover:scale-105"}
                   />
                 )}
               </div>

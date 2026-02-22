@@ -6,21 +6,21 @@ const regions = [
     title: "United States",
     description:
       "Serving homes, businesses, and communities across all 50 states with custom-engineered wildfire sprinkler systems built for America's evolving fire environment.",
-    link: "/regions",
+    link: "/regions/usa",
   },
   {
     flag: "🇨🇦",
     title: "Canada",
     description:
       "Serving homes, businesses, and communities across every province and territory with advanced exterior wildfire sprinkler systems and ember detection technology.",
-    link: "/regions",
+    link: "/regions/canada",
   },
   {
     flag: "🇦🇺",
     title: "Australia",
     description:
       "Serving homes, rural properties, and communities across every state and territory with bushfire sprinkler systems engineered for Australia's extreme conditions.",
-    link: "/regions",
+    link: "/regions/australia",
   },
 ];
 
@@ -29,10 +29,7 @@ export function WhyProdigy() {
     <section className="bg-background py-20 md:py-28">
       <div className="mx-auto max-w-7xl px-6">
         <div className="mb-14 text-center">
-          <p className="font-heading text-sm font-semibold uppercase tracking-widest text-accent">
-            Where We Protect
-          </p>
-          <h2 className="mt-3 font-heading text-3xl font-bold tracking-tight text-foreground md:text-4xl">
+          <h2 className="font-heading text-3xl font-bold tracking-tight text-foreground md:text-4xl">
             Serving Three Countries, <span className="text-accent">One Mission</span>
           </h2>
           <p className="mx-auto mt-4 max-w-3xl text-base leading-relaxed text-muted-foreground">
@@ -62,14 +59,6 @@ export function WhyProdigy() {
           ))}
         </div>
 
-        <div className="mt-10 text-center">
-          <Link
-            href="/regions"
-            className="inline-block rounded bg-accent px-8 py-3.5 text-sm font-semibold text-white transition-colors hover:bg-accent/90"
-          >
-            View All Regions
-          </Link>
-        </div>
       </div>
     </section>
   );
