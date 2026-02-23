@@ -45,6 +45,42 @@ const posts = [
     slug: "/insights/wildfire-protection-homes-canada",
   },
   {
+    title:
+      "What the LA Fires Taught Us: The Homes That Survived Had One Thing in Common",
+    excerpt:
+      "The 2025 LA fires destroyed over 16,000 structures. But homes with active wildfire protection survived at remarkably high rates. Here’s what every property owner in fire-prone America needs to learn from that.",
+    image: "/images/insights/la-wildfire-protection-lessons.jpg",
+    date: "2 March 2026",
+    slug: "/insights/la-wildfire-protection-lessons",
+  },
+  {
+    title:
+      "Wildfire Risk and Commercial Property: Why Landlords and Property Managers Can't Afford to Wait",
+    excerpt:
+      "Commercial landlords, property managers, and multi-unit building owners in fire-prone areas face unique wildfire risks. Learn how engineered sprinkler systems protect assets and ensure business continuity.",
+    image: "/images/insights/wildfire-protection-commercial-usa.jpg",
+    date: "1 March 2026",
+    slug: "/insights/wildfire-protection-commercial-usa",
+  },
+  {
+    title:
+      "Building in Fire Country: Why the Smartest US Developers Are Designing Wildfire Protection Into Every Project",
+    excerpt:
+      "Developing property in fire-prone areas of the western US? Learn why integrating wildfire sprinkler systems at the build stage is becoming a competitive advantage for developers and builders.",
+    image: "/images/insights/wildfire-protection-new-construction-usa.jpg",
+    date: "28 February 2026",
+    slug: "/insights/wildfire-protection-new-construction-usa",
+  },
+  {
+    title:
+      "Your Home's Biggest Wildfire Threat Isn't the Flames. It's What You Can't See Coming.",
+    excerpt:
+      "Living in the wildland-urban interface means living with wildfire risk. Learn what every homeowner should know about protecting their property, and why roof-mounted sprinkler systems are the next essential step.",
+    image: "/images/insights/wildfire-protection-homes-usa.jpg",
+    date: "27 February 2026",
+    slug: "/insights/wildfire-protection-homes-usa",
+  },
+  {
     title: "Rising Premiums, Shrinking Coverage: How Wildfire Protection Is Changing the Insurance Equation in Australia",
     excerpt:
       "Struggling with rising insurance premiums or reduced coverage in bushfire-prone areas? Learn how engineered wildfire protection systems are changing the conversation with insurers.",
