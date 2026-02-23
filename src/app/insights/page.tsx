@@ -13,6 +13,38 @@ export const metadata: Metadata = {
 
 const posts = [
   {
+    title: "Protecting What Matters: How Prodigy Is Defending Canadian Landmarks, Businesses, and Homes",
+    excerpt:
+      "Prodigy Wildfire has installed protection systems for some of Canada's most iconic facilities. Here's why these organizations chose active wildfire defence, and what it means for your property.",
+    image: "/images/insights/prodigy-wildfire-installs-canada.jpg",
+    date: "6 March 2026",
+    slug: "/insights/prodigy-wildfire-installs-canada",
+  },
+  {
+    title: "The Wildfire Insurance Crisis in Canada: What Property Owners Need to Know, And What They Can Do About It",
+    excerpt:
+      "Canadian homeowners in fire-prone areas are facing rising premiums and shrinking coverage. Learn how engineered wildfire protection systems are helping property owners take control of their risk profile.",
+    image: "/images/insights/wildfire-protection-insurance-canada.jpg",
+    date: "5 March 2026",
+    slug: "/insights/wildfire-protection-insurance-cana",
+  },
+  {
+    title: "Building for the Fire Seasons Ahead: Why Canadian Developers Are Making Wildfire Protection Standard",
+    excerpt:
+      "Building in fire-prone areas of Canada? Learn why forward-thinking developers are integrating wildfire sprinkler systems at the construction stage, and how it's becoming a competitive advantage.",
+    image: "/images/insights/wildfire-protection-new-builds-canada.jpg",
+    date: "4 March 2026",
+    slug: "/insights/wildfire-protection-new-builds-canada",
+  },
+  {
+    title: "Canada's Wildfire Crisis Is Here, And Your Home Needs More Than a Garden Hose",
+    excerpt:
+      "Canada's wildfire seasons are intensifying year after year. Learn why ember attack is the biggest threat to your home and how permanent sprinkler systems are keeping Canadian properties standing.",
+    image: "/images/insights/wildfire-protection-homes-canada.jpg",
+    date: "3 March 2026",
+    slug: "/insights/wildfire-protection-homes-canada",
+  },
+  {
     title: "Is Your Home Ready for Bushfire Season? A Practical Guide for Australian Homeowners",
     excerpt:
       "Bushfire season is getting longer and more unpredictable. Learn what Australian homeowners can do right now to protect their property, and why permanent sprinkler systems are changing the game.",

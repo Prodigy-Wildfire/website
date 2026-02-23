@@ -200,7 +200,7 @@ export default function BushfireProtectionArticle() {
               Black Summer burned over 18 million hectares. Communities that
               were never considered high-risk are now finding themselves in the
               firing line. Insurance premiums are climbing, and in some regions,
-              coverage is becoming harder to get at all.
+              coverage is becoming almost impossible to get.
             </p>
             <p>
               Taking action now, before the next fire season, is the most
