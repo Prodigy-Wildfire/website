@@ -13,6 +13,14 @@ export const metadata: Metadata = {
 
 const posts = [
   {
+    title: "Is Your Home Ready for Bushfire Season? A Practical Guide for Australian Homeowners",
+    excerpt:
+      "Bushfire season is getting longer and more unpredictable. Learn what Australian homeowners can do right now to protect their property, and why permanent sprinkler systems are changing the game.",
+    image: "/images/insights/bushfire-protection-homes-australia.jpg",
+    date: "23 February 2026",
+    slug: "/insights/bushfire-protection-homes-australia",
+  },
+  {
     title: "Understanding Ember Attack: The #1 Cause of Property Loss During Wildfires",
     excerpt:
       "Ember attack is responsible for up to 90% of structure ignition during wildfire events. Learn how airborne embers travel, why they are so dangerous, and what you can do to protect your home or business.",
@@ -84,33 +92,46 @@ export default function InsightsPage() {
         <section className="bg-muted py-20 md:py-28">
           <div className="mx-auto max-w-7xl px-6">
             <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-              {posts.map((post) => (
-                <article
-                  key={post.title}
-                  className="group overflow-hidden rounded border border-border bg-card transition-all hover:shadow-lg"
-                >
-                  <div className="relative h-52 overflow-hidden">
-                    <Image
-                      src={post.image}
-                      alt={post.title}
-                      fill
-                      sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                      className="object-cover transition-transform duration-500 group-hover:scale-105"
-                    />
-                  </div>
-                  <div className="p-6">
-                    <p className="text-xs font-medium text-accent">
-                      {post.date}
-                    </p>
-                    <h2 className="mt-2 font-heading text-lg font-bold leading-snug text-card-foreground">
-                      {post.title}
-                    </h2>
-                    <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
-                      {post.excerpt}
-                    </p>
-                  </div>
-                </article>
-              ))}
+              {posts.map((post) => {
+                const Wrapper = post.slug === "#" ? "div" : Link;
+                const wrapperProps =
+                  post.slug === "#" ? {} : { href: post.slug };
+                return (
+                  <Wrapper
+                    key={post.title}
+                    {...wrapperProps}
+                    className="group overflow-hidden rounded border border-border bg-card transition-all hover:shadow-lg"
+                  >
+                    <article>
+                      <div className="relative h-52 overflow-hidden">
+                        <Image
+                          src={post.image}
+                          alt={post.title}
+                          fill
+                          sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                          className="object-cover transition-transform duration-500 group-hover:scale-105"
+                        />
+                      </div>
+                      <div className="p-6">
+                        <p className="text-xs font-medium text-accent">
+                          {post.date}
+                        </p>
+                        <h2 className="mt-2 font-heading text-lg font-bold leading-snug text-card-foreground">
+                          {post.title}
+                        </h2>
+                        <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
+                          {post.excerpt}
+                        </p>
+                        {post.slug !== "#" && (
+                          <span className="mt-4 inline-block text-sm font-semibold text-accent">
+                            Read Article &rarr;
+                          </span>
+                        )}
+                      </div>
+                    </article>
+                  </Wrapper>
+                );
+              })}
             </div>
 
             <div className="mt-16 text-center">
