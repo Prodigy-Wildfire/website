@@ -17,7 +17,7 @@ export function Footer() {
             </div>
             <p className="text-sm text-muted-foreground leading-relaxed">
               Redefining wildfire defence for homes, businesses, and communities
-              across Canada, the United States, and Australia.
+              across Canada, the USA, and Australia.
             </p>
           </div>
 
@@ -112,7 +112,7 @@ export function Footer() {
           </p>
           <div className="flex gap-6">
             <span className="text-xs text-muted-foreground">
-              Canada &middot; United States &middot; Australia
+              Canada &middot; USA &middot; Australia
             </span>
           </div>
         </div>

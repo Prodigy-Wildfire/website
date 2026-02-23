@@ -26,7 +26,7 @@ const navLinks = [
     label: "Regions",
     href: "#",
     children: [
-      { label: "United States", href: "#" },
+      { label: "USA", href: "#" },
       { label: "Canada", href: "#" },
       { label: "Australia", href: "#" },
     ],

@@ -96,7 +96,7 @@ export function CommercialForm() {
               <ContactInfoItem
                 icon={<MapPin className="h-5 w-5" />}
                 title="Location"
-                detail="United States, Canada & Australia"
+                detail="USA, Canada & Australia"
               />
               <ContactInfoItem
                 icon={<Mail className="h-5 w-5" />}

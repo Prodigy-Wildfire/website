@@ -108,7 +108,7 @@ export function RegionPageTemplate({
               Get a Free Assessment
             </Link>
             <Link
-              href="/system"
+              href="/systems"
               className="rounded border border-border px-8 py-3.5 text-center text-sm font-semibold text-foreground transition-colors hover:border-accent hover:text-accent"
             >
               Explore Our Systems

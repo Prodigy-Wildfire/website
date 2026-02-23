@@ -18,7 +18,7 @@ interface Region {
 
 const regions: Region[] = [
   {
-    name: "United States",
+    name: "USA",
     stats: [
       {
         value: 64897,
@@ -140,7 +140,7 @@ export function WildfireStats() {
           </h2>
           <p className="mx-auto mt-4 max-w-3xl text-base leading-relaxed text-primary-foreground/70">
             Wildfires are escalating across three continents. These figures show
-            the scale of the crisis facing communities in the United States,
+            the scale of the crisis facing communities in the USA,
             Canada, and Australia.
           </p>
         </div>

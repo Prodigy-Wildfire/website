@@ -22,18 +22,12 @@ export function HomeownersHero() {
           Permanent exterior wildfire sprinkler systems custom-designed for your home, providing ember attack protection when you need it most.
           Activate remotely. Protect your family, even when you are not there.
         </p>
-        <div className="mt-10 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
+        <div className="mt-10">
           <Link
             href="/quote"
-            className="rounded bg-accent px-8 py-3.5 text-base font-semibold text-white transition-colors hover:bg-accent/90"
+            className="inline-block rounded bg-accent px-8 py-3.5 text-base font-semibold text-white transition-colors hover:bg-accent/90"
           >
-            Protect Your Property Now
-          </Link>
-          <Link
-            href="/wildfires"
-            className="rounded border-2 border-accent px-8 py-3.5 text-base font-semibold text-accent transition-colors hover:bg-accent hover:text-white"
-          >
-            Read More
+            Protect Your Home Now
           </Link>
         </div>
       </div>

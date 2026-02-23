@@ -61,7 +61,7 @@ export function InternationalForm() {
             Expanding Worldwide
           </h1>
           <p className="mx-auto mt-4 max-w-lg text-base leading-relaxed text-muted-foreground">
-            Our teams currently operate in the United States, Canada, and
+            Our teams currently operate in the USA, Canada, and
             Australia, but we{"'"}re actively expanding. Register your interest
             and we{"'"}ll reach out as we grow into your region.
           </p>

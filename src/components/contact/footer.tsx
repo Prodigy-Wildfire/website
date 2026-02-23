@@ -12,7 +12,7 @@ const footerLinks = {
     { label: "Our Team", href: "#" },
   ],
   Regions: [
-    { label: "United States", href: "#" },
+    { label: "USA", href: "#" },
     { label: "Canada", href: "#" },
     { label: "Australia", href: "#" },
   ],

@@ -10,7 +10,7 @@ export function Protection() {
           </h2>
           <p className="mx-auto mt-6 max-w-3xl text-muted-foreground leading-relaxed">
             Prodigy Wildfire is dedicated to safeguarding homes, businesses, and
-            communities across Canada, the United States and Australia from the
+            communities across Canada, the USA and Australia from the
             devastating effects of wildfires. Our innovative, remotely activated,
             permanent roof-mounted sprinkler systems are expertly designed to
             prevent ember ignition - the leading cause of property loss during

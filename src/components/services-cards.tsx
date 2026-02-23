@@ -21,7 +21,7 @@ const services = [
       { label: "Fire Tracking & Alerts", value: "Real-Time", anchor: "#ember-watch" },
     ],
     description:
-      "Control your wildfire sprinkler system from anywhere in the world with the Prodigy app. Run custom activation cycles, monitor system status, and receive real-time Ember Watch alerts with live fire tracking, estimated travel times, and projected fire paths.",
+      "Control your wildfire sprinkler system from anywhere in the world with the Prodigy Wildfire app. Run custom activation cycles, monitor system status, and receive real-time Ember Watch alerts with live fire tracking, estimated travel times, and projected fire paths.",
   },
   {
     icon: ScanEye,
@@ -32,7 +32,7 @@ const services = [
       { label: "Auto Monitoring", value: "24/7", anchor: "#detection" },
     ],
     description:
-      "Prodigy's next-generation ember and flame detection sensors provide 360-degree perimeter scanning with 24/7 automated monitoring. Weather-resistant and engineered for extreme conditions, our sensors detect ignition risks early and alert you instantly via the Prodigy app.",
+      "Prodigy's next-generation ember and flame detection sensors provide 360-degree perimeter scanning with 24/7 automated monitoring. Weather-resistant and engineered for extreme conditions, our sensors detect ignition risks early and alert you instantly via the Prodigy Wildfire app.",
   },
 ];
 
@@ -73,7 +73,7 @@ export function ServicesCards() {
                 {service.stats.map((stat) => (
                   <Link
                     key={stat.label}
-                    href={`/system${stat.anchor}`}
+                    href={`/systems${stat.anchor}`}
                     className="rounded-full border border-accent/30 bg-accent/10 px-4 py-1.5 transition-colors hover:bg-accent/20"
                   >
                     <p className="font-heading text-sm font-bold text-accent">
@@ -92,7 +92,7 @@ export function ServicesCards() {
 
         <div className="mt-10 text-center">
           <Link
-            href="/system"
+            href="/systems"
             className="inline-block rounded bg-accent px-8 py-3.5 text-sm font-semibold text-white transition-colors hover:bg-accent/90"
           >
             Learn More

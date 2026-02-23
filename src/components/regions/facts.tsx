@@ -38,16 +38,16 @@ export function Facts() {
           </h2>
         </div>
 
-        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {facts.map((fact) => {
             const Icon = fact.icon
             return (
               <div
                 key={fact.text}
-                className="rounded border border-border bg-card p-8 text-center transition-all hover:shadow-lg"
+                className="rounded border border-border bg-card p-5 text-center"
               >
-                <div className="mx-auto mb-5 flex h-14 w-14 items-center justify-center rounded-full bg-accent/10">
-                  <Icon className="h-7 w-7 text-accent" />
+                <div className="mx-auto mb-3 flex h-10 w-10 items-center justify-center rounded-full bg-accent/10">
+                  <Icon className="h-5 w-5 text-accent" />
                 </div>
                 <p className="text-sm leading-relaxed text-muted-foreground">
                   {fact.text}
@@ -57,16 +57,10 @@ export function Facts() {
           })}
         </div>
 
-        <div className="mt-10 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
+        <div className="mt-10 text-center">
           <Link
-            href="/system"
-            className="rounded bg-accent px-8 py-3.5 text-sm font-semibold text-white transition-colors hover:bg-accent/90"
-          >
-            Learn More
-          </Link>
-          <Link
-            href="/contact"
-            className="rounded border-2 border-accent px-8 py-3.5 text-sm font-semibold text-accent transition-colors hover:bg-accent hover:text-white"
+            href="/quote"
+            className="inline-block rounded bg-accent px-8 py-3.5 text-sm font-semibold text-white transition-colors hover:bg-accent/90"
           >
             Get Protected
           </Link>

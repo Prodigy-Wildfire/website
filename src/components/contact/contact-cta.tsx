@@ -13,7 +13,7 @@ const features = [
     icon: <Smartphone className="h-6 w-6" />,
     title: "Remote Activation and Fire Alerts",
     description:
-      "Control your wildfire sprinkler system from anywhere in the world with the Prodigy app. Get real-time fire tracking and alerts using Prodigy Wildfire's EmberWatch for when every second counts.",
+      "Control your wildfire sprinkler system from anywhere in the world with the Prodigy Wildfire app. Get real-time fire tracking and alerts using Prodigy Wildfire's EmberWatch for when every second counts.",
   },
   {
     icon: <Eye className="h-6 w-6" />,
@@ -76,7 +76,7 @@ export function ContactCta() {
               Australia.
             </p>
             <Link
-              href="/system"
+              href="/systems"
               className="mt-8 inline-block rounded bg-accent px-8 py-3.5 text-sm font-semibold text-white transition-colors hover:bg-accent/90"
             >
               View Our Systems

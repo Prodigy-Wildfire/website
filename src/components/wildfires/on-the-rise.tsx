@@ -33,7 +33,7 @@ export function OnTheRise() {
             Protect Your Property Now
           </a>
           <a
-            href="/system"
+            href="/systems"
             className="inline-block rounded border-2 border-accent px-8 py-3.5 text-sm font-semibold text-accent transition-colors hover:bg-accent hover:text-white"
           >
             Explore Our Systems

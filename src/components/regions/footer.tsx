@@ -25,7 +25,7 @@ export function Footer() {
               Regions
             </h4>
             <ul className="flex flex-col gap-2">
-              {["Canada", "U.S.A", "Australia"].map((region) => (
+              {["Canada", "USA", "Australia"].map((region) => (
                 <li key={region}>
                   <a
                     href="#regions"

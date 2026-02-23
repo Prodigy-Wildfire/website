@@ -3,7 +3,7 @@ import Link from "next/link";
 const regions = [
   {
     flag: "🇺🇸",
-    title: "United States",
+    title: "USA",
     description:
       "Serving homes, businesses, and communities across all 50 states with custom-engineered wildfire sprinkler systems built for America's evolving fire environment.",
     link: "/regions/usa",
@@ -34,7 +34,7 @@ export function WhyProdigy() {
           </h2>
           <p className="mx-auto mt-4 max-w-3xl text-base leading-relaxed text-muted-foreground">
             Prodigy Wildfire Solutions designs, installs, and maintains wildfire sprinkler systems
-            across the United States, Canada, and Australia. Wherever wildfire
+            across the USA, Canada, and Australia. Wherever wildfire
             risk exists, we deliver protection engineered for local conditions.
           </p>
         </div>

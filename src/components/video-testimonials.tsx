@@ -1,8 +1,5 @@
-"use client";
-
-import { useRef, useState } from "react";
 import Image from "next/image";
-import { Play, Quote } from "lucide-react";
+import { Quote } from "lucide-react";
 
 const testimonials = [
   {
@@ -10,97 +7,18 @@ const testimonials = [
     name: "Steve S.",
     location: "Whistler, British Columbia",
     quote:
-      "We barely notice the system is there, but knowing we can activate it from anywhere gives us incredible peace of mind.",
+      "Surrounded by forest in Whistler, we installed a Prodigy Wildfire Suppression System to protect our home from ember-driven wildfire risk. It's a smart preventative investment that gives us peace of mind.",
     posterSrc: "/images/protect-home.jpg",
-    videoSrc: "",
   },
   {
     id: "peterson-family",
     name: "The Peterson Family",
     location: "Kelowna, British Columbia",
     quote:
-      "After the fires in our area, we knew we needed real protection. Prodigy delivered exactly what we needed.",
+      "We can finally leave for the summer without worrying. The remote start feature gives us complete peace of mind.",
     posterSrc: "/images/custom-approach.jpg",
-    videoSrc: "",
   },
 ];
-
-function VideoCard({
-  testimonial,
-}: {
-  testimonial: (typeof testimonials)[number];
-}) {
-  const videoRef = useRef<HTMLVideoElement>(null);
-  const [playing, setPlaying] = useState(false);
-
-  const handlePlay = () => {
-    if (videoRef.current && testimonial.videoSrc) {
-      videoRef.current.play();
-      setPlaying(true);
-    }
-  };
-
-  return (
-    <div className="rounded border border-primary-foreground/10 bg-primary-foreground/5 p-6 backdrop-blur-sm">
-      {/* Video / Poster */}
-      <div className="relative aspect-video overflow-hidden rounded">
-        {testimonial.videoSrc ? (
-          <video
-            ref={videoRef}
-            controls={playing}
-            preload="none"
-            poster={testimonial.posterSrc}
-            className="h-full w-full object-cover"
-            onEnded={() => setPlaying(false)}
-          >
-            <source src={testimonial.videoSrc} type="video/mp4" />
-          </video>
-        ) : (
-          <Image
-            src={testimonial.posterSrc}
-            alt={`${testimonial.name} video testimonial`}
-            fill
-            sizes="(max-width: 1024px) 100vw, 50vw"
-            className="object-cover"
-          />
-        )}
-        {!playing && (
-          <button
-            type="button"
-            onClick={handlePlay}
-            className="absolute inset-0 flex items-center justify-center bg-primary/30 transition-colors hover:bg-primary/40"
-            aria-label="Play video"
-          >
-            <div className="flex h-16 w-16 items-center justify-center rounded-full bg-accent/90 text-accent-foreground transition-transform hover:scale-110">
-              <Play className="ml-1 h-7 w-7" />
-            </div>
-            {!testimonial.videoSrc && (
-              <span className="absolute bottom-4 left-4 rounded bg-primary/80 px-3 py-1 text-xs font-medium text-primary-foreground">
-                Coming Soon
-              </span>
-            )}
-          </button>
-        )}
-      </div>
-
-      {/* Quote & Info */}
-      <div className="mt-5">
-        <Quote className="h-5 w-5 text-accent" />
-        <p className="mt-2 text-sm italic leading-relaxed text-primary-foreground/80">
-          {testimonial.quote}
-        </p>
-        <div className="mt-4">
-          <p className="text-sm font-semibold text-primary-foreground">
-            {testimonial.name}
-          </p>
-          <p className="text-xs text-primary-foreground/50">
-            {testimonial.location}
-          </p>
-        </div>
-      </div>
-    </div>
-  );
-}
 
 export function VideoTestimonials() {
   return (
@@ -127,7 +45,37 @@ export function VideoTestimonials() {
 
         <div className="grid gap-8 md:grid-cols-2">
           {testimonials.map((t) => (
-            <VideoCard key={t.id} testimonial={t} />
+            <div
+              key={t.id}
+              className="rounded border border-primary-foreground/10 bg-primary-foreground/5 p-6 backdrop-blur-sm"
+            >
+              {/* Image */}
+              <div className="relative aspect-video overflow-hidden rounded">
+                <Image
+                  src={t.posterSrc}
+                  alt={`${t.name} testimonial`}
+                  fill
+                  sizes="(max-width: 1024px) 100vw, 50vw"
+                  className="object-cover"
+                />
+              </div>
+
+              {/* Quote & Info */}
+              <div className="mt-5">
+                <Quote className="h-5 w-5 text-accent" />
+                <p className="mt-2 text-sm italic leading-relaxed text-primary-foreground/80">
+                  {t.quote}
+                </p>
+                <div className="mt-4">
+                  <p className="text-sm font-semibold text-primary-foreground">
+                    {t.name}
+                  </p>
+                  <p className="text-xs text-primary-foreground/50">
+                    {t.location}
+                  </p>
+                </div>
+              </div>
+            </div>
           ))}
         </div>
       </div>

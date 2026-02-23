@@ -53,7 +53,7 @@ const emergencySteps = [
     icon: Smartphone,
     title: "Step 7: Activate Your Protection System Remotely",
     description:
-      "Once safely at your evacuation centre, activate your Prodigy wildfire sprinkler system remotely via the Prodigy app. Our systems defend your property while you are safely away, wetting the roof, walls, and surroundings to reduce ember ignition risk.",
+      "Once safely at your evacuation centre, activate your Prodigy wildfire sprinkler system remotely via the Prodigy Wildfire app. Our systems defend your property while you are safely away, wetting the roof, walls, and surroundings to reduce ember ignition risk.",
   },
   {
     icon: Flame,
@@ -73,7 +73,7 @@ export function GettingPrepared() {
             Your Step-by-Step Wildfire <span className="text-accent">Preparedness</span> Guide
           </h2>
           <p className="mx-auto mt-4 max-w-3xl text-base leading-relaxed text-muted-foreground">
-            Wildfires across the United States, Canada, and Australia can
+            Wildfires across the USA, Canada, and Australia can
             escalate from warning to evacuation in minutes. This emergency action
             plan will help you protect your family, your property, and your
             livelihood before, during, and after a wildfire event.

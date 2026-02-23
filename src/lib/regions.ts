@@ -412,7 +412,7 @@ export const regions: RegionData[] = [
     description:
       "California faces the most severe wildfire threat in the nation. Prodigy Wildfire Solutions delivers exterior wildfire sprinkler systems, ember detection, and remote activation for homeowners and businesses across the wildland-urban interface.",
     detail:
-      "California recorded over 1 million acres burned in 2024, and the 2025 fire season began catastrophically with the Palisades and Eaton fires destroying more than 18,000 structures across Los Angeles County and killing at least 31 people. The two fires generated an estimated $40 billion or more in insured losses, making January 2025 the single costliest wildfire event in U.S. history. With over 11 million Californians living in high wildfire-risk zones and insurers pulling back coverage across the state, Prodigy Wildfire Solutions' exterior wildfire sprinkler systems and ember detection technology are purpose-built for California's uniquely severe fire conditions.",
+      "California recorded over 1 million acres burned in 2024, and the 2025 fire season began catastrophically with the Palisades and Eaton fires destroying more than 18,000 structures across Los Angeles County and killing at least 31 people. The two fires generated an estimated $40 billion or more in insured losses, making January 2025 the single costliest wildfire event in USA history. With over 11 million Californians living in high wildfire-risk zones and insurers pulling back coverage across the state, Prodigy Wildfire Solutions' exterior wildfire sprinkler systems and ember detection technology are purpose-built for California's uniquely severe fire conditions.",
     stats: [
       { value: "18,000+", label: "Structures Destroyed (LA Fires Jan 2025)" },
       { value: "$40B+", label: "Estimated Insured Losses (Jan 2025)" },
@@ -610,7 +610,7 @@ export const regions: RegionData[] = [
     heroImage: "/images/usa-wildfire-home-under-threat.jpg",
     heroAlt: "American home under threat from approaching wildfire",
     description:
-      "Colorado is home to some of the most destructive wildfires in U.S. history. Prodigy Wildfire Solutions delivers wildfire sprinkler systems for homeowners along the Front Range, in mountain communities, and across the Eastern Plains.",
+      "Colorado is home to some of the most destructive wildfires in USA history. Prodigy Wildfire Solutions delivers wildfire sprinkler systems for homeowners along the Front Range, in mountain communities, and across the Eastern Plains.",
     detail:
       "Colorado's wildfire history is defined by large, fast, and devastating events. The 2020 Cameron Peak Fire burned 208,663 acres, the largest in state history, while the concurrent East Troublesome Fire destroyed over 300 homes. Just months later, the December 2021 Marshall Fire destroyed 1,084 homes in Boulder County in a matter of hours, causing over $2 billion in damage and becoming the most destructive wildfire in Colorado history. In 2024, the Alexander Mountain Fire near Loveland burned 9,500 acres and destroyed nearly 50 structures. Prodigy Wildfire Solutions' exterior sprinkler systems and ember protection technology provide critical structural defence for Colorado's wildland-urban interface.",
     stats: [
@@ -634,7 +634,7 @@ export const regions: RegionData[] = [
     description:
       "Hawaii faces a devastating and growing wildfire threat driven by invasive grasses, drought, and powerful trade winds. Prodigy Wildfire Solutions delivers exterior wildfire sprinkler systems and ember detection for homeowners across the Hawaiian Islands.",
     detail:
-      "The August 2023 Lahaina fire on Maui was the deadliest U.S. wildfire in over a century, killing 102 people, destroying more than 2,200 structures, and causing an estimated $5.5 billion in damage. The fire levelled nearly the entire historic town of Lahaina in a matter of hours, driven by hurricane-force winds from passing Hurricane Dora and fuelled by non-native grasslands that cover roughly 26% of Hawaii's land area. Hawaii burns an average of 20,000 acres per year, a rate that has accelerated as former agricultural land has been overtaken by fire-prone invasive grasses. Prodigy Wildfire Solutions' exterior wildfire sprinkler systems provide the structural defence Hawaii homeowners need in these uniquely dangerous fire conditions.",
+      "The August 2023 Lahaina fire on Maui was the deadliest USA wildfire in over a century, killing 102 people, destroying more than 2,200 structures, and causing an estimated $5.5 billion in damage. The fire levelled nearly the entire historic town of Lahaina in a matter of hours, driven by hurricane-force winds from passing Hurricane Dora and fuelled by non-native grasslands that cover roughly 26% of Hawaii's land area. Hawaii burns an average of 20,000 acres per year, a rate that has accelerated as former agricultural land has been overtaken by fire-prone invasive grasses. Prodigy Wildfire Solutions' exterior wildfire sprinkler systems provide the structural defence Hawaii homeowners need in these uniquely dangerous fire conditions.",
     stats: [
       { value: "102", label: "Lives Lost (Lahaina Fire Aug 2023)" },
       { value: "2,200+", label: "Structures Destroyed (Lahaina 2023)" },
@@ -656,7 +656,7 @@ export const regions: RegionData[] = [
     description:
       "Texas set a new record in 2024 when the Smokehouse Creek Fire burned over 1 million acres in the Panhandle. Prodigy Wildfire Solutions delivers wildfire protection for rural landowners, ranchers, and communities across the Panhandle, Hill Country, and Piney Woods.",
     detail:
-      "The Smokehouse Creek Fire, ignited on February 26, 2024 in the Texas Panhandle, burned 1,058,482 acres across Texas and western Oklahoma, the largest wildfire in Texas history and the largest fire in the United States in 2024. The fire killed two people, destroyed over 500 structures, killed an estimated 15,000 cattle, and left 11,000 people without power. The disaster underscored how quickly wind-driven grassland fires in the Texas Panhandle can reach catastrophic scale. Prodigy Wildfire Solutions' wildfire protection systems are designed for the ranch and rural residential properties across Texas that face this type of extreme, fast-moving fire threat.",
+      "The Smokehouse Creek Fire, ignited on February 26, 2024 in the Texas Panhandle, burned 1,058,482 acres across Texas and western Oklahoma, the largest wildfire in Texas history and the largest fire in the USA in 2024. The fire killed two people, destroyed over 500 structures, killed an estimated 15,000 cattle, and left 11,000 people without power. The disaster underscored how quickly wind-driven grassland fires in the Texas Panhandle can reach catastrophic scale. Prodigy Wildfire Solutions' wildfire protection systems are designed for the ranch and rural residential properties across Texas that face this type of extreme, fast-moving fire threat.",
     stats: [
       { value: "1,058,482", label: "Acres Burned (Smokehouse Creek 2024)" },
       { value: "500+", label: "Structures Destroyed (2024)" },

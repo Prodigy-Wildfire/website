@@ -20,7 +20,7 @@ export function HeroSection() {
         </h1>
         <p className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-primary-foreground/80">
           Commercial wildfire sprinkler systems for resorts, critical
-          infrastructure, and commercial properties across the United States,
+          infrastructure, and commercial properties across the USA,
           Canada, and Australia. Engineered to scale.
         </p>
         <div className="mt-10 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">

@@ -29,7 +29,7 @@ export function HowItWorks() {
             />
           </div>
 
-          <div className="flex flex-col gap-10 text-center lg:text-left">
+          <div className="flex flex-col gap-10 text-center">
             <div>
               <h3 className="font-heading text-xl font-bold text-foreground">
                 What is a Humidity Bubble?

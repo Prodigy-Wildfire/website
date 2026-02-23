@@ -3,7 +3,6 @@
 import React from "react"
 
 import { useState } from "react"
-import { getInstallCount, getSprinklerCount, COUNTRIES } from "@/lib/stats"
 import { Send, CheckCircle, MapPin, Mail, ChevronDown } from "lucide-react"
 
 const serviceOptions = [
@@ -66,7 +65,7 @@ export function ContactForm() {
       <div className="mx-auto max-w-7xl px-6">
         <div className="grid gap-16 lg:grid-cols-5">
           {/* Contact Info Sidebar */}
-          <div className="lg:col-span-2 text-center lg:text-left">
+          <div className="lg:col-span-2 text-center">
             <h2 className="font-heading text-3xl font-bold text-foreground md:text-4xl">
               Let{"'"}s Start a Conversation
             </h2>
@@ -78,20 +77,7 @@ export function ContactForm() {
             <div className="mt-10 flex flex-col gap-6">
               <ContactInfoItem
                 icon={<MapPin className="h-5 w-5" />}
-                title="United States"
-              />
-              <ContactInfoItem
-                icon={<MapPin className="h-5 w-5" />}
-                title="Canada"
-              />
-              <ContactInfoItem
-                icon={<MapPin className="h-5 w-5" />}
-                title="Australia"
-              />
-              {/* TODO: Update install count manually as projects are completed */}
-              <ContactInfoItem
-                icon={<Send className="h-5 w-5" />}
-                title={`${getInstallCount()}+ Installations Completed`}
+                title="Canada · USA · Australia"
               />
               <ContactInfoItem
                 icon={<Mail className="h-5 w-5" />}
@@ -318,7 +304,7 @@ function ContactInfoItem({
   title: string
 }) {
   return (
-    <div className="flex items-center gap-4 justify-center lg:justify-start">
+    <div className="flex items-center gap-4 justify-center">
       <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-accent/10 text-accent">
         {icon}
       </div>

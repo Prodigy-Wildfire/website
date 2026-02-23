@@ -43,7 +43,7 @@ export function OurApproach() {
           {pillars.map((pillar) => (
             <div
               key={pillar.title}
-              className="flex flex-col items-center rounded border border-border bg-card p-8 text-center transition-all hover:border-accent hover:shadow-lg"
+              className="flex flex-col items-center rounded border border-border bg-card p-8 text-center"
             >
               <div className="mb-5 flex h-14 w-14 items-center justify-center rounded-full bg-accent/10">
                 <pillar.icon className="h-7 w-7 text-accent" />
@@ -60,14 +60,14 @@ export function OurApproach() {
 
         <div className="mt-12 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
           <Link
-            href="https://quiz.prodigywildfire.com/wildfirereadiness"
-            className="rounded border-2 border-accent bg-transparent px-8 py-3.5 text-base font-semibold text-accent transition-colors hover:bg-accent hover:text-white"
+            href="/assessment"
+            className="rounded border-2 border-accent bg-transparent px-8 py-3.5 text-sm font-semibold text-accent transition-colors hover:bg-accent hover:text-white"
           >
             Take the Wildfire Readiness Quiz
           </Link>
           <Link
             href="/quote"
-            className="rounded bg-accent px-8 py-3.5 text-base font-semibold text-white transition-colors hover:bg-accent/90"
+            className="rounded bg-accent px-8 py-3.5 text-sm font-semibold text-white transition-colors hover:bg-accent/90"
           >
             Get Protected
           </Link>

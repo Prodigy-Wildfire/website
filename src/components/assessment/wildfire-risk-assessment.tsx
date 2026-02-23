@@ -24,7 +24,7 @@ type CountryKey = "australia" | "usa" | "canada"
 
 const countryLabels: Record<CountryKey, string> = {
   australia: "Australia",
-  usa: "United States",
+  usa: "USA",
   canada: "Canada",
 }
 

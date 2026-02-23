@@ -20,7 +20,7 @@ export function WildfiresHero() {
         </h1>
         <p className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-primary-foreground/80">
           How wildfires start, how they spread, and what you can do to prepare
-          and protect your property across the United States, Canada, and
+          and protect your property across the USA, Canada, and
           Australia.
         </p>
         <div className="mt-10 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">

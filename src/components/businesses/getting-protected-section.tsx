@@ -11,7 +11,7 @@ export function GettingProtectedSection() {
     <section id="getting-protected" className="py-20 md:py-28 bg-background">
       <div className="max-w-7xl mx-auto px-6">
         <div className="grid lg:grid-cols-2 gap-12 items-start">
-          <div>
+          <div className="text-center">
             <p className="font-heading text-sm font-semibold tracking-widest uppercase text-accent mb-3">
               Getting Protected
             </p>
@@ -43,8 +43,7 @@ export function GettingProtectedSection() {
                     Commercial pricing is based on site complexity, the number of structures
                     requiring protection, total zone coverage requirements, municipal and
                     insurance code compliance needs, and water supply infrastructure. Multi-site
-                    operators may qualify for portfolio pricing across locations in the United
-                    States, Canada, and Australia.
+                    operators may qualify for portfolio pricing across locations in the USA, Canada, and Australia.
                   </p>
                   <p className="mb-3">
                     We provide a detailed commercial proposal after a comprehensive site
@@ -65,7 +64,7 @@ export function GettingProtectedSection() {
                     operation. Every component is fully serviceable and replaceable,
                     meaning wear over time requires targeted part replacement rather than
                     full system overhaul. Our commercial-grade hardware is built to
-                    withstand harsh environments across the United States, Canada, and
+                    withstand harsh environments across the USA, Canada, and
                     Australia.
                   </p>
                   <p className="mb-3">
@@ -96,7 +95,7 @@ export function GettingProtectedSection() {
                 className="object-cover"
               />
             </div>
-            <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+            <div className="mt-8 flex flex-col items-center gap-3 sm:flex-row sm:justify-center">
               <a
                 href="/contact/commercial"
                 className="inline-block rounded bg-accent px-8 py-3.5 text-center text-sm font-semibold text-white transition-colors hover:bg-accent/90"
@@ -104,7 +103,7 @@ export function GettingProtectedSection() {
                 Request a Commercial Assessment
               </a>
               <a
-                href="/system"
+                href="/systems"
                 className="inline-block rounded border-2 border-accent px-8 py-3.5 text-center text-sm font-semibold text-accent transition-colors hover:bg-accent hover:text-white"
               >
                 Learn About Our Systems

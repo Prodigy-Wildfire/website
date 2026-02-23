@@ -8,6 +8,7 @@ const projects = [
     scope: "34 sprinkler heads installed across the upper and lower terminal buildings at 7,500ft elevation in the Canadian Rockies.",
     image: "/images/banff-gondola-wildfire-protection.png",
     imageAlt: "Banff Gondola wildfire protection system installation",
+    anchor: "banff-gondola",
   },
   {
     name: "Golden Skybridge",
@@ -15,6 +16,7 @@ const projects = [
     scope: "Complete wildfire suppression for multi-structure tourism attraction in dense forest.",
     image: "/images/golden-skybridge-wildfire-protection.png",
     imageAlt: "Golden Skybridge wildfire protection system",
+    anchor: "golden-skybridge",
   },
   {
     name: "UBC Campus Facilities",
@@ -22,6 +24,7 @@ const projects = [
     scope: "Multi-building campus deployment protecting research facilities and student housing.",
     image: "/images/ubc-logo.png",
     imageAlt: "UBC campus wildfire protection installation",
+    anchor: "ubc-campus",
   },
 ];
 
@@ -46,7 +49,7 @@ export function ProcessSection() {
           {projects.map((project) => (
             <Link
               key={project.name}
-              href="/case-studies"
+              href={`/case-studies#${project.anchor}`}
               className="bg-background border border-border rounded overflow-hidden group hover:border-accent/50 hover:shadow-lg transition-all"
             >
               <div className="relative aspect-[16/10] overflow-hidden">

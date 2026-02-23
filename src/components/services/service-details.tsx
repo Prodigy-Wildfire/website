@@ -2,7 +2,7 @@ import Image from "next/image";
 
 const services = [
   {
-    title: "EXTERIOR WILDFIRE SPRINKLER SYSTEMS",
+    title: "Exterior Wildfire Sprinkler Systems",
     anchor: "sprinklers",
     image: "/images/wildfire-sprinkler-system-closeup.jpg",
     imageAlt: "Prodigy Wildfire exterior sprinkler system with copper piping installed on residential roofline for wildfire defence",
@@ -11,34 +11,34 @@ const services = [
       { value: "3 min", label: "Full Coverage" },
     ],
     description:
-      "Custom-engineered for your property using durable type L copper piping (316 stainless steel in Australia), routed discreetly along rooflines and ridges. Delivers up to 50 feet of sprinkler coverage and achieves full property saturation in under three minutes - proven, permanent wildfire protection without compromising your property's appearance.",
+      "Every Prodigy sprinkler system is custom-engineered to match your property's layout, roofline geometry, and surrounding terrain. We use durable type L copper piping in North America and 316 stainless steel in Australia, routed discreetly along rooflines, ridges, and eaves to maintain your property's appearance. Each sprinkler head delivers up to 50 feet of coverage, and the full system achieves complete property saturation in under three minutes. Once activated, the system creates a humidity bubble — a moisture-rich barrier that cools surfaces, raises ambient humidity, and makes structures significantly harder to ignite from ember attack or radiant heat.",
     reverse: false,
   },
   {
-    title: "REMOTE ACTIVATION & EMBER WATCH",
+    title: "Remote Activation and EmberWatch",
     anchor: "remote-activation",
     image: "/images/wildfire-app-phone-render.avif",
     imageAlt: "Prodigy Wildfire app for remote sprinkler activation and real-time ember detection alerts",
     stats: [
-      { value: "Global", label: "Activate Anywhere" },
+      { value: "Global", label: "Activation" },
       { value: "Real-Time", label: "Fire Tracking" },
     ],
     description:
-      "Control your wildfire protection system from anywhere in the world with the Prodigy app. Schedule custom activation cycles, monitor system status, and manage multiple properties from a single account. Ember Watch uses live fire detection to alert you the moment a fire is identified in your watch zone, delivering forecasts, estimated travel times, and projected paths directly to your device.",
+      "The Prodigy app gives you full control of your wildfire protection system from anywhere in the world. Schedule custom activation cycles based on fire danger ratings, monitor real-time system status including water pressure and flow rates, and manage multiple properties from a single account. EmberWatch integrates live satellite and ground-based fire detection to alert you the moment a fire is identified within your watch zone. You'll receive detailed forecasts, estimated travel times to your property, projected fire paths, and wind direction data — giving you the information you need to act early or activate your system remotely before conditions escalate.",
     reverse: true,
   },
   {
-    title: "ADVANCED EMBER & FLAME DETECTION",
+    title: "Advanced Ember and Flame Detection",
     anchor: "detection",
     image: "/images/wildfire-flame-sensor.png",
     imageAlt: "Prodigy Wildfire advanced ember and flame detection sensor providing 24/7 wildfire monitoring",
     imageClassName: "object-contain scale-[4]",
     stats: [
       { value: "360°", label: "Perimeter Scanning" },
-      { value: "24/7", label: "Automated Monitoring" },
+      { value: "24/7", label: "Auto Monitoring" },
     ],
     description:
-      "Fully automated wildfire detection that requires zero human intervention. Weather-resistant sensors continuously monitor for airborne embers and flame activity with 360-degree perimeter scanning. When a threat is detected, the system automatically activates your sprinkler system, ensuring your property is defended even when you're away, asleep, or evacuated.",
+      "Prodigy's ember and flame detection sensors provide a fully automated layer of protection that requires zero human intervention. Engineered to withstand extreme heat, wind, and smoke conditions, these weather-resistant sensors deliver continuous 360-degree perimeter scanning for airborne embers and flame activity around your property. When a threat is detected, the system automatically triggers your sprinkler system without delay — ensuring your property is actively defended even when you're away, asleep, or evacuated. Combined with the Prodigy Wildfire app, you'll receive instant notifications of any activation event, so you always know your property's status.",
     reverse: false,
   },
 ];
@@ -47,6 +47,11 @@ export function ServiceDetails() {
   return (
     <section className="bg-muted py-20 md:py-28">
       <div className="mx-auto max-w-7xl px-6">
+        <div className="mb-14 text-center">
+          <h2 className="font-heading text-3xl font-bold tracking-tight text-foreground md:text-4xl">
+            How Our Wildfire Sprinkler Systems <span className="text-accent">Work</span>
+          </h2>
+        </div>
         <div className="flex flex-col gap-24">
           {services.map((service) => (
             <div
@@ -69,15 +74,19 @@ export function ServiceDetails() {
 
               {/* Content */}
               <div>
-                <h3 className="font-heading text-xl font-bold uppercase tracking-wide text-foreground md:text-2xl">
+                <h3 className="font-heading text-xl font-bold tracking-wide text-foreground md:text-2xl">
                   {service.title}
                 </h3>
 
-                <div className="mt-5 flex flex-wrap gap-3">
+                <p className="mt-4 text-sm leading-relaxed text-muted-foreground">
+                  {service.description}
+                </p>
+
+                <div className="mt-5 grid grid-cols-2 gap-3">
                   {service.stats.map((stat) => (
                     <span
                       key={stat.label}
-                      className="inline-flex items-center gap-2 rounded-full border border-accent/30 bg-accent/10 px-4 py-1.5"
+                      className="inline-flex items-center justify-center gap-2 rounded-full border border-accent/30 bg-accent/10 px-4 py-1.5"
                     >
                       <span className="font-heading text-sm font-bold text-accent">
                         {stat.value}
@@ -88,10 +97,6 @@ export function ServiceDetails() {
                     </span>
                   ))}
                 </div>
-
-                <p className="mt-6 text-sm leading-relaxed text-muted-foreground">
-                  {service.description}
-                </p>
               </div>
             </div>
           ))}

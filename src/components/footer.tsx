@@ -13,7 +13,7 @@ const footerLinks = [
   {
     heading: "Protection",
     links: [
-      { label: "Our System", href: "/system" },
+      { label: "Our Systems", href: "/systems" },
       { label: "Homeowners", href: "/homeowners" },
       { label: "Businesses", href: "/businesses" },
       { label: "Regions", href: "/regions" },
@@ -54,7 +54,7 @@ export function Footer() {
             </Link>
             <p className="mt-4 max-w-xs text-sm leading-relaxed text-primary-foreground/60">
               Redefining wildfire defence for homes, businesses, and communities
-              across Canada, the United States and Australia.
+              across Canada, the USA and Australia.
             </p>
           </div>
 

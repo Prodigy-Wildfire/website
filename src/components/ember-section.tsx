@@ -12,7 +12,7 @@ const steps = [
     icon: Smartphone,
     title: "Remote Activation",
     description:
-      "Activate your system from anywhere using the Prodigy app. Whether you are at home, evacuating, or kilometres away, one tap triggers your wildfire defence. No manual setup required.",
+      "Activate your system from anywhere using the Prodigy Wildfire app. Whether you are at home, evacuating, or kilometres away, one tap triggers your wildfire defence. No manual setup required.",
   },
   {
     icon: CloudRain,
@@ -58,7 +58,7 @@ export function EmberSection() {
 
         <div className="mt-10 text-center">
           <Link
-            href="/system"
+            href="/systems"
             className="inline-block rounded bg-accent px-8 py-3.5 text-sm font-semibold text-white transition-colors hover:bg-accent/90"
           >
             Explore Our Systems

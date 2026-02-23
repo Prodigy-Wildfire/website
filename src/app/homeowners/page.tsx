@@ -6,9 +6,9 @@ import { RiskSection } from "@/components/homeowners/risk-section";
 import { EmberFacts } from "@/components/homeowners/ember-facts";
 import { WhyProdigyHomeowners } from "@/components/homeowners/why-prodigy-homeowners";
 import { GettingProtected } from "@/components/homeowners/getting-protected";
-import { Testimonials } from "@/components/homeowners/testimonials";
 import { VideoTestimonials } from "@/components/video-testimonials";
 import { LeadMagnetSection } from "@/components/lead-magnet-section";
+import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "Home Wildfire Protection Systems | Prodigy Wildfire",
@@ -89,8 +89,33 @@ export default function HomeownersPage() {
         <WhyProdigyHomeowners />
         <GettingProtected />
         <LeadMagnetSection />
-        <Testimonials />
         <VideoTestimonials />
+        <section className="bg-muted py-20 md:py-28">
+          <div className="mx-auto max-w-3xl px-6 text-center">
+            <h2 className="font-heading text-3xl font-bold tracking-tight text-foreground md:text-4xl">
+              Ready to Protect Your <span className="text-accent">Home</span>?
+            </h2>
+            <p className="mx-auto mt-4 max-w-2xl text-base leading-relaxed text-muted-foreground">
+              Get a free property assessment and find out how a Prodigy exterior
+              wildfire sprinkler system can defend your home from ember attack,
+              radiant heat, and direct flame contact.
+            </p>
+            <div className="mt-10 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
+              <Link
+                href="/quote"
+                className="rounded bg-accent px-8 py-3.5 text-sm font-semibold text-white transition-colors hover:bg-accent/90"
+              >
+                Get Your Free Quote
+              </Link>
+              <Link
+                href="/assessment"
+                className="rounded border-2 border-accent px-8 py-3.5 text-sm font-semibold text-accent transition-colors hover:bg-accent hover:text-white"
+              >
+                Take the Wildfire Readiness Quiz
+              </Link>
+            </div>
+          </div>
+        </section>
       </main>
       <Footer />
     </div>

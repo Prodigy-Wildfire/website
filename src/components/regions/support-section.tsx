@@ -6,27 +6,19 @@ const supportItems = [
     icon: Globe,
     title: "My Country is Not Listed",
     description:
-      "We are continually expanding our global installation reach. Although our current teams are based in Canada, the U.S., and Australia, we would love to speak with you about your property and explore what's possible in your region.",
-    cta: "Contact Us",
-    href: "/contact/international",
+      "We are continually expanding our global installation reach. Although our current teams are based in Canada, the USA, and Australia, we would love to speak with you about your property and explore what's possible in your region.",
   },
   {
     icon: MapPin,
     title: "I Live in a Remote Area",
     description:
       "We recognize that remote properties often face higher-than-normal wildfire risk. With advanced satellite imaging, flexible water-source options, and specialized engineering, we can design effective protection systems for even the most isolated locations.",
-    cta: "Contact Us",
-    href: "/contact",
   },
   {
     icon: HelpCircle,
     title: "I Have More Questions",
     description:
       "Explore our FAQs or reach out to us directly. Our wildfire specialist team is always happy to assist.",
-    cta: "FAQs",
-    href: "/faq",
-    secondaryCta: "Contact Us",
-    secondaryHref: "/contact",
   },
 ]
 
@@ -54,28 +46,27 @@ export function SupportSection() {
                 <h3 className="font-heading text-lg font-bold text-foreground mb-3">
                   {item.title}
                 </h3>
-                <p className="text-sm text-muted-foreground leading-relaxed mb-6 flex-1">
+                <p className="text-sm text-muted-foreground leading-relaxed">
                   {item.description}
                 </p>
-                <div className="flex gap-3">
-                  <Link
-                    href={item.href}
-                    className="rounded bg-accent px-6 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-accent/90"
-                  >
-                    {item.cta}
-                  </Link>
-                  {item.secondaryCta && item.secondaryHref && (
-                    <Link
-                      href={item.secondaryHref}
-                      className="rounded border-2 border-accent px-6 py-2.5 text-sm font-semibold text-accent transition-colors hover:bg-accent hover:text-white"
-                    >
-                      {item.secondaryCta}
-                    </Link>
-                  )}
-                </div>
               </div>
             )
           })}
+        </div>
+
+        <div className="mt-10 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
+          <Link
+            href="/contact"
+            className="rounded bg-accent px-8 py-3.5 text-sm font-semibold text-white transition-colors hover:bg-accent/90"
+          >
+            Contact Us
+          </Link>
+          <Link
+            href="/faq"
+            className="rounded border-2 border-accent px-8 py-3.5 text-sm font-semibold text-accent transition-colors hover:bg-accent hover:text-white"
+          >
+            FAQs
+          </Link>
         </div>
       </div>
     </section>

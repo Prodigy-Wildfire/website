@@ -18,10 +18,10 @@ const caseStudies = [
     challenge:
       "The Banff Gondola upper terminal sits atop Sulphur Mountain in a remote, high-altitude location surrounded by dense forest. Traditional fire response is limited by access, terrain, and response times. The system needed to perform autonomously in extreme mountain conditions including high winds, freezing temperatures, and lightning storms.",
     solution:
-      "Prodigy Wildfire Solutions designed and installed a custom exterior wildfire sprinkler system with full roofline coverage, remote activation via the Prodigy app, and integration with on-site fire safety protocols. The system delivers complete property saturation in under 3 minutes and operates on programmable cycles to conserve water supply.",
+      "We designed and installed a custom exterior wildfire sprinkler system with full roofline coverage, remote activation via the Prodigy Wildfire app, and integration with on-site fire safety protocols. The system delivers complete property saturation in under 3 minutes and operates on programmable cycles to conserve water supply.",
     clientQuote:
       "The Prodigy Wildfire Solutions team delivered a system that gives the Pursuit Collection team confidence in our wildfire preparedness, even in one of the most challenging environments in the Canadian Rockies.",
-    clientName: "Pursuit Collection",
+    clientName: "Pursuit Collection Team",
     specs: [
       { label: "Elevation", value: "7,486 ft" },
       { label: "Coverage", value: "Full Roofline" },
@@ -40,10 +40,10 @@ const caseStudies = [
     challenge:
       "The Golden Skybridge complex spans a deep canyon surrounded by British Columbia's wildfire-prone interior forests. With thousands of daily visitors during peak season, the system needed to protect both infrastructure and provide rapid response capability without disrupting operations.",
     solution:
-      "Prodigy Wildfire Solutions engineered a multi-zone exterior sprinkler system covering all critical structures, with remote monitoring and activation through the Prodigy app. The system was designed to complement the site's architecture while providing full ember and radiant heat defence.",
+      "We engineered a multi-zone exterior sprinkler system covering all critical structures, with remote monitoring and activation through the Prodigy Wildfire app. The system was designed to complement the site's architecture while providing full ember and radiant heat defence.",
     clientQuote:
       "Working with the Prodigy Wildfire Solutions team gave the Golden Skybridge team a wildfire defence system that protects our guests, our team, and our investment without compromising the visitor experience.",
-    clientName: "Golden Skybridge",
+    clientName: "Golden Skybridge Team",
     specs: [
       { label: "Zones", value: "Multi-Zone" },
       { label: "Monitoring", value: "24/7 Remote" },
@@ -63,10 +63,10 @@ const caseStudies = [
     challenge:
       "UBC's campus sits on the shoreline of Loon Lake, bordered by thousands of hectares of temperate rainforest that, during drought conditions, presents a significant wildfire risk to campus infrastructure, research facilities, and student residences. The system needed to integrate with existing campus fire safety infrastructure.",
     solution:
-      "Prodigy Wildfire Solutions delivered a custom-engineered exterior sprinkler system across over a dozen individual buildings, drawing water directly from Loon Lake to supply the suppression system. The multi-structure installation was completed with minimal disruption to campus operations and is designed for long-term, low-maintenance performance.",
+      "We delivered a custom-engineered exterior sprinkler system across over a dozen individual buildings, drawing water directly from Loon Lake to supply the suppression system. The multi-structure installation was completed with minimal disruption to campus operations and is designed for long-term, low-maintenance performance.",
     clientQuote:
       "The Prodigy Wildfire Solutions team provided a wildfire protection solution that meets the unique demands of a university campus environment while delivering the performance and reliability the UBC Facilities team required.",
-    clientName: "UBC Facilities",
+    clientName: "UBC Facilities Team",
     specs: [
       { label: "Type", value: "Institutional" },
       { label: "Scale", value: "Multi-Structure" },
@@ -85,7 +85,7 @@ const caseStudies = [
     challenge:
       "Located in a high-value wildfire interface zone surrounded by mature forest, this residence required a system that could defend against ember attack and radiant heat while blending seamlessly with the home's premium architectural design.",
     solution:
-      "Prodigy Wildfire Solutions installed a full exterior wildfire sprinkler system using type L copper piping routed discreetly along rooflines and ridges. The homeowner can activate the system remotely via the Prodigy app from anywhere in the world, utilising Prodigy's unique EmberWatch feature for early fire warnings.",
+      "We installed a full exterior wildfire sprinkler system using type L copper piping routed discreetly along rooflines and ridges. The homeowner can activate the system remotely via the Prodigy Wildfire app from anywhere in the world, utilising our unique EmberWatch feature for early fire warnings.",
     clientQuote:
       "We barely notice the system is there, but knowing we can activate it from anywhere gives us incredible peace of mind, especially during fire season.",
     clientName: "Steve S., Whistler BC",
@@ -147,7 +147,7 @@ function CaseStudyCard({
 
         {/* Expandable Details */}
         {expanded && (
-          <div className="mt-6 space-y-4 border-t border-border pt-6 text-left">
+          <div className="mt-6 space-y-4 border-t border-border pt-6 text-center">
             <div>
               <h3 className="text-sm font-semibold text-foreground">
                 The Challenge

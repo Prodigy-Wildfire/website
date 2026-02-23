@@ -16,7 +16,7 @@ export function EngineeringSection() {
             />
           </div>
 
-          <div className="text-center lg:text-left">
+          <div className="text-center">
             <h2 className="font-heading text-3xl font-bold tracking-tight text-foreground md:text-4xl">
               Built to Perform When It{" "}
               <span className="text-accent">Matters Most</span>
@@ -29,7 +29,7 @@ export function EngineeringSection() {
             </p>
             <div className="mt-8">
               <Link
-                href="/system"
+                href="/systems"
                 className="inline-block rounded bg-accent px-8 py-3.5 text-sm font-semibold text-white transition-colors hover:bg-accent/90"
               >
                 Explore Our Systems

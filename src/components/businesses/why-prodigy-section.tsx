@@ -5,13 +5,13 @@ const benefits = [
     icon: RefreshCw,
     title: "Business Continuity",
     description:
-      "Keep operations running. Remote activation through the Prodigy app means your system protects your business even during evacuation, minimising downtime, revenue loss, and operational disruption. Your business stays defended while you focus on employee safety.",
+      "Keep operations running. Remote activation through the Prodigy Wildfire app means your system protects your business even during evacuation, minimising downtime, revenue loss, and operational disruption. Your business stays defended while you focus on employee safety.",
   },
   {
     icon: ShieldCheck,
     title: "Insurance and Compliance",
     description:
-      "Support evolving insurance requirements and municipal wildfire resilience standards across the United States, Canada, and Australia. A Prodigy system can assist with policy renewals, premium negotiations, and demonstrates proactive risk mitigation to underwriters.",
+      "Support evolving insurance requirements and municipal wildfire resilience standards across the USA, Canada, and Australia. A Prodigy system can assist with policy renewals, premium negotiations, and demonstrates proactive risk mitigation to underwriters.",
   },
   {
     icon: Maximize,

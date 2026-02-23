@@ -7,7 +7,7 @@ import { getRegionsByCountry } from "@/lib/regions";
 export const metadata: Metadata = {
   title: "Wildfire Protection in the USA | Prodigy Wildfire",
   description:
-    "Prodigy delivers wildfire sprinkler systems, ember detection, and remote activation for homes and businesses across the United States. From California to Colorado, protect your property from wildfire.",
+    "Prodigy delivers wildfire sprinkler systems, ember detection, and remote activation for homes and businesses across the USA. From California to Colorado, protect your property from wildfire.",
 };
 
 const jsonLd = {
@@ -16,7 +16,7 @@ const jsonLd = {
   name: "Prodigy Wildfire Solutions - USA",
   url: "https://www.prodigywildfire.com/regions/usa",
   description:
-    "Wildfire sprinkler systems, ember detection, and remote activation for homes and businesses across the United States.",
+    "Wildfire sprinkler systems, ember detection, and remote activation for homes and businesses across the USA.",
   areaServed: {
     "@type": "Country",
     name: "United States",
@@ -45,11 +45,11 @@ export default function UsaRegionPage() {
       <Header />
       <main>
         <RegionPageTemplate
-          name="U.S.A"
+          name="USA"
           heroImage="/images/usa-wildfire-home-under-threat.jpg"
           heroAlt="American home under threat from approaching wildfire"
-          description="From California and Colorado to the Pacific Northwest and beyond, our U.S. team partners with property owners, builders, and communities to deliver custom-engineered exterior wildfire sprinkler systems built for America's evolving wildfire environment."
-          detail="The United States faces an escalating wildfire crisis. In 2024, over 64,000 wildfires burned nearly 9 million acres, with the western states bearing the heaviest impact. Prodigy's wildfire protection systems combine world-class engineering with local expertise, providing reliable and proactive defence for homes, businesses, and critical infrastructure across the country. Our exterior wildfire sprinkler systems, ember attack protection sensors, and remote activation technology are designed to meet NFPA standards and address the unique challenges of the American wildfire landscape."
+          description="From California and Colorado to the Pacific Northwest and beyond, our USA team partners with property owners, builders, and communities to deliver custom-engineered exterior wildfire sprinkler systems built for America's evolving wildfire environment."
+          detail="The USA faces an escalating wildfire crisis. In 2024, over 64,000 wildfires burned nearly 9 million acres, with the western states bearing the heaviest impact. Prodigy's wildfire protection systems combine world-class engineering with local expertise, providing reliable and proactive defence for homes, businesses, and critical infrastructure across the country. Our exterior wildfire sprinkler systems, ember attack protection sensors, and remote activation technology are designed to meet NFPA standards and address the unique challenges of the American wildfire landscape."
           stats={stats}
           subRegions={getRegionsByCountry("usa")}
           subRegionLabel="State"

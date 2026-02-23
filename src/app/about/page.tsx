@@ -40,7 +40,7 @@ const jsonLd = {
         jobTitle: "COO",
         image: "https://www.prodigywildfire.com/images/liam-sheppard.jpg",
         description:
-          "Co-founded Prodigy Wildfire with a background in home building and insurance work. Expanded operations from Canada to Australia and the U.S.",
+          "Co-founded Prodigy Wildfire with a background in home building and insurance work. Expanded operations from Canada to Australia and the USA.",
         worksFor: {
           "@type": "Organization",
           name: "Prodigy Wildfire Solutions",

@@ -12,11 +12,11 @@ export function MissionSection() {
         </div>
 
         <div className="grid gap-12 lg:grid-cols-2 lg:gap-16 items-center">
-          <div className="text-center lg:text-left">
-            <p className="text-muted-foreground leading-relaxed text-sm">
-              Our philosophy is defined by precision, protection, and peace of mind. From concept to commissioning, every Prodigy exterior wildfire sprinkler system reflects our commitment to excellence. Serving homeowners, businesses, and communities across the United States, Canada, and Australia, we take responsibility for every detail so our clients can feel secure knowing their property is defended by the industry&apos;s most advanced wildfire protection technology.
+          <div className="text-center">
+            <p className="text-muted-foreground leading-relaxed text-base">
+              Our philosophy is defined by precision, protection, and peace of mind. From concept to commissioning, every Prodigy exterior wildfire sprinkler system reflects our commitment to excellence. Serving homeowners, businesses, and communities across the USA, Canada, and Australia, we take responsibility for every detail so our clients can feel secure knowing their property is defended by the industry&apos;s most advanced wildfire protection technology.
             </p>
-            <p className="mt-6 text-muted-foreground leading-relaxed text-sm">
+            <p className="mt-6 text-muted-foreground leading-relaxed text-base">
               Prodigy Wildfire Solutions has set a new benchmark for wildfire defence, merging engineering innovation, ember detection technology, and remote activation capabilities to create systems that perform without compromise in the world&apos;s most fire-prone regions.
             </p>
           </div>

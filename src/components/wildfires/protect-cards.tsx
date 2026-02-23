@@ -60,13 +60,13 @@ export function ProtectCards() {
         <div className="mt-10 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
           <Link
             href="/homeowners"
-            className="rounded bg-accent px-7 py-3 text-sm font-semibold text-white transition-colors hover:bg-accent/90"
+            className="rounded bg-accent px-8 py-3.5 text-sm font-semibold text-white transition-colors hover:bg-accent/90"
           >
             Protect My Home
           </Link>
           <Link
             href="/businesses"
-            className="rounded border-2 border-accent px-7 py-3 text-sm font-semibold text-accent transition-colors hover:bg-accent hover:text-white"
+            className="rounded border-2 border-accent px-8 py-3.5 text-sm font-semibold text-accent transition-colors hover:bg-accent hover:text-white"
           >
             Protect My Business
           </Link>

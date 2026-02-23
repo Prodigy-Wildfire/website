@@ -12,7 +12,7 @@ import { Footer } from "@/components/footer"
 export const metadata = {
   title: "Wildfire Protection by Region | Prodigy Wildfire",
   description:
-    "Prodigy provides wildfire protection across high-risk regions in Canada, the United States, and Australia. Find coverage in your area.",
+    "Prodigy provides wildfire protection across high-risk regions in Canada, the USA, and Australia. Find coverage in your area.",
 };
 
 const jsonLd = {
@@ -21,7 +21,7 @@ const jsonLd = {
   name: "Prodigy Wildfire Solutions",
   url: "https://www.prodigywildfire.com",
   description:
-    "Prodigy provides wildfire protection across high-risk regions in Canada, the United States, and Australia.",
+    "Prodigy provides wildfire protection across high-risk regions in Canada, the USA, and Australia.",
   areaServed: [
     {
       "@type": "AdministrativeArea",
@@ -58,7 +58,6 @@ export default function Page() {
       <WhyProdigy />
       <Regions />
       <SupportSection />
-      <CtaBanner />
       <MailingListSection />
       <Footer />
     </main>

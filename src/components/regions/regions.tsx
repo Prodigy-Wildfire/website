@@ -12,13 +12,13 @@ const regions = [
       "With deep expertise in diverse Canadian terrain, from coastal forests to the interior, we provide custom-engineered wildfire protection systems backed by science and built to withstand Canada's most severe fire seasons.",
   },
   {
-    name: "U.S.A",
+    name: "USA",
     href: "/regions/usa",
     image: "/images/usa-wildfire-home-under-threat.jpg",
     description:
-      "From California and Colorado to the Pacific Northwest and beyond, our U.S. team partners with property owners, builders, and communities to deliver custom-engineered exterior wildfire sprinkler systems built for America's evolving wildfire environment.",
+      "From California and Colorado to the Pacific Northwest and beyond, our USA team partners with property owners, builders, and communities to deliver custom-engineered exterior wildfire sprinkler systems built for America's evolving wildfire environment.",
     detail:
-      "We combine world-class wildfire protection engineering with local insight to provide reliable, proactive defence for homes, businesses, and critical infrastructure across the United States.",
+      "We combine world-class wildfire protection engineering with local insight to provide reliable, proactive defence for homes, businesses, and critical infrastructure across the USA.",
   },
   {
     name: "Australia",
@@ -64,7 +64,7 @@ export function Regions() {
                   />
                 </div>
               </div>
-              <div className={`text-center lg:text-left ${i % 2 === 1 ? "lg:order-1" : ""}`}>
+              <div className={`text-center ${i % 2 === 1 ? "lg:order-1" : ""}`}>
                 <h3 className="font-heading text-2xl font-bold text-foreground mb-4 md:text-3xl">
                   {region.name}
                 </h3>

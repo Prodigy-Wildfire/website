@@ -69,7 +69,7 @@ export function RiskSection() {
             return (
               <div
                 key={item.title}
-                className="rounded border border-border bg-card p-6 transition-all hover:shadow-md"
+                className="flex flex-col items-center rounded border border-border bg-card p-6 text-center transition-all hover:shadow-md"
               >
                 <div className="mb-4 flex h-12 w-12 items-center justify-center rounded bg-accent/10">
                   <Icon className="h-6 w-6 text-accent" />
