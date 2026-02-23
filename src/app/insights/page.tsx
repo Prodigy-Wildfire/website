@@ -45,6 +45,30 @@ const posts = [
     slug: "/insights/wildfire-protection-homes-canada",
   },
   {
+    title: "Rising Premiums, Shrinking Coverage: How Wildfire Protection Is Changing the Insurance Equation in Australia",
+    excerpt:
+      "Struggling with rising insurance premiums or reduced coverage in bushfire-prone areas? Learn how engineered wildfire protection systems are changing the conversation with insurers.",
+    image: "/images/insights/bushfire-protection-insurance-australia.jpg",
+    date: "26 February 2026",
+    slug: "/insights/bushfire-protection-insurance-australia",
+  },
+  {
+    title: "Protecting Your Business From Bushfire: Why Commercial Properties Need More Than an Evacuation Plan",
+    excerpt:
+      "Hotels, resorts, and commercial buildings in bushfire-prone areas face unique risks. Learn how purpose-built wildfire suppression systems protect assets, guests, and business continuity.",
+    image: "/images/insights/bushfire-protection-commercial-australia.jpg",
+    date: "25 February 2026",
+    slug: "/insights/bushfire-protection-commercial-australia",
+  },
+  {
+    title: "Building in Bushfire Country: Why Australian Developers Are Integrating Wildfire Protection From Day One",
+    excerpt:
+      "Building in a bushfire-prone area? Learn why integrating wildfire protection systems into new developments is becoming essential for compliance, insurance, and buyer confidence in Australia.",
+    image: "/images/insights/bushfire-protection-new-builds-australia.jpg",
+    date: "24 February 2026",
+    slug: "/insights/bushfire-protection-new-builds-australia",
+  },
+  {
     title: "Is Your Home Ready for Bushfire Season? A Practical Guide for Australian Homeowners",
     excerpt:
       "Bushfire season is getting longer and more unpredictable. Learn what Australian homeowners can do right now to protect their property, and why permanent sprinkler systems are changing the game.",
