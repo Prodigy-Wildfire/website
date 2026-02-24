@@ -184,7 +184,7 @@ export default function QuotePage() {
                       required
                       value={formData.phone}
                       onChange={handleChange}
-                      placeholder="+1 (555) 000-0000"
+                      placeholder="Your phone number"
                       className={inputClass}
                     />
                   </div>

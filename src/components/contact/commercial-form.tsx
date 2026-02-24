@@ -160,7 +160,7 @@ export function CommercialForm() {
                     value={formData.phone}
                     onChange={handleChange}
                     required
-                    placeholder="+1 (555) 000-0000"
+                    placeholder="Your phone number"
                   />
                 </div>
                 <FormField

@@ -120,7 +120,7 @@ export function TrackingForm({ page }: { page: TrackingPage }) {
                   type="tel"
                   name="phone"
                   required
-                  placeholder="+1 (555) 000-0000"
+                  placeholder="Your phone number"
                   value={form.phone}
                   onChange={handleChange}
                   className={inputClass}

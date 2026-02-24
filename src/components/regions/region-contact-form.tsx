@@ -128,7 +128,7 @@ export function RegionContactForm({ regionName, regionLabel = "Province", countr
                   value={formData.phone}
                   onChange={handleChange}
                   required
-                  placeholder="+1 (555) 000-0000"
+                  placeholder="Your phone number"
                   className="w-full rounded-sm border border-border bg-background px-4 py-3 text-sm text-foreground transition-colors focus:border-accent focus:outline-none focus:ring-1 focus:ring-accent"
                 />
               </div>
