@@ -5,7 +5,7 @@ import { useState } from "react"
 import Image from "next/image"
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
-import { Send, CheckCircle } from "lucide-react"
+import { Send, CheckCircle, ChevronDown } from "lucide-react"
 
 const inputClass =
   "w-full rounded-sm border border-border bg-background px-4 py-3 text-sm text-foreground transition-colors focus:border-accent focus:outline-none focus:ring-1 focus:ring-accent"
@@ -31,12 +31,12 @@ const timelines = [
 
 export default function QuotePage() {
   const [submitted, setSubmitted] = useState(false)
+  const [showDetails, setShowDetails] = useState(false)
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
     email: "",
     phone: "",
-    companyName: "",
     address: "",
     city: "",
     stateProvince: "",
@@ -190,82 +190,6 @@ export default function QuotePage() {
                   </div>
                   <div className="sm:col-span-2">
                     <label
-                      htmlFor="companyName"
-                      className="mb-2 block text-sm font-medium text-foreground"
-                    >
-                      Company Name{" "}
-                      <span className="text-muted-foreground">(optional)</span>
-                    </label>
-                    <input
-                      id="companyName"
-                      name="companyName"
-                      type="text"
-                      value={formData.companyName}
-                      onChange={handleChange}
-                      placeholder="Company name"
-                      className={inputClass}
-                    />
-                  </div>
-                </div>
-
-                {/* Property Location */}
-                <h2 className="mt-10 font-heading text-lg font-bold text-foreground">
-                  Property Location
-                </h2>
-                <div className="mt-4 grid gap-5 sm:grid-cols-2">
-                  <div className="sm:col-span-2">
-                    <label
-                      htmlFor="address"
-                      className="mb-2 block text-sm font-medium text-foreground"
-                    >
-                      Address
-                    </label>
-                    <input
-                      id="address"
-                      name="address"
-                      type="text"
-                      value={formData.address}
-                      onChange={handleChange}
-                      placeholder="Street address"
-                      className={inputClass}
-                    />
-                  </div>
-                  <div>
-                    <label
-                      htmlFor="city"
-                      className="mb-2 block text-sm font-medium text-foreground"
-                    >
-                      City
-                    </label>
-                    <input
-                      id="city"
-                      name="city"
-                      type="text"
-                      value={formData.city}
-                      onChange={handleChange}
-                      placeholder="City"
-                      className={inputClass}
-                    />
-                  </div>
-                  <div>
-                    <label
-                      htmlFor="stateProvince"
-                      className="mb-2 block text-sm font-medium text-foreground"
-                    >
-                      State / Province
-                    </label>
-                    <input
-                      id="stateProvince"
-                      name="stateProvince"
-                      type="text"
-                      value={formData.stateProvince}
-                      onChange={handleChange}
-                      placeholder="State or province"
-                      className={inputClass}
-                    />
-                  </div>
-                  <div className="sm:col-span-2">
-                    <label
                       htmlFor="country"
                       className="mb-2 block text-sm font-medium text-foreground"
                     >
@@ -280,109 +204,193 @@ export default function QuotePage() {
                       className={inputClass}
                     >
                       <option value="">Select a country</option>
-                      <option value="us">United States</option>
-                      <option value="ca">Canada</option>
                       <option value="au">Australia</option>
+                      <option value="ca">Canada</option>
+                      <option value="us">United States</option>
                       <option value="other">Other</option>
                     </select>
                   </div>
                 </div>
 
-                {/* Property & Project Details */}
-                <h2 className="mt-10 font-heading text-lg font-bold text-foreground">
-                  Property & Project Details
-                </h2>
-                <div className="mt-4 grid gap-5">
-                  <div>
-                    <label className="mb-2 block text-sm font-medium text-foreground">
-                      Property Type <span className="text-accent">*</span>
-                    </label>
-                    <div className="flex flex-wrap gap-3">
-                      {propertyTypes.map((type) => (
-                        <label
-                          key={type}
-                          className={`cursor-pointer rounded-sm border px-4 py-2.5 text-sm transition-colors ${
-                            formData.propertyType === type
-                              ? "border-accent bg-accent text-white"
-                              : "border-border text-muted-foreground hover:border-accent/50"
-                          }`}
-                        >
-                          <input
-                            type="radio"
-                            name="propertyType"
-                            value={type}
-                            checked={formData.propertyType === type}
-                            onChange={handleChange}
-                            required
-                            className="sr-only"
-                          />
-                          {type}
-                        </label>
-                      ))}
-                    </div>
-                  </div>
-                  <div className="grid gap-5 sm:grid-cols-2">
-                    <div>
-                      <label
-                        htmlFor="budget"
-                        className="mb-2 block text-sm font-medium text-foreground"
-                      >
-                        Budget Range
-                      </label>
-                      <select
-                        id="budget"
-                        name="budget"
-                        value={formData.budget}
-                        onChange={handleChange}
-                        className={inputClass}
-                      >
-                        <option value="">Select a range</option>
-                        {budgetRanges.map((range) => (
-                          <option key={range} value={range}>
-                            {range}
-                          </option>
-                        ))}
-                      </select>
-                    </div>
-                    <div>
-                      <label
-                        htmlFor="timeline"
-                        className="mb-2 block text-sm font-medium text-foreground"
-                      >
-                        Timeline
-                      </label>
-                      <select
-                        id="timeline"
-                        name="timeline"
-                        value={formData.timeline}
-                        onChange={handleChange}
-                        className={inputClass}
-                      >
-                        <option value="">Select a timeline</option>
-                        {timelines.map((t) => (
-                          <option key={t} value={t}>
-                            {t}
-                          </option>
-                        ))}
-                      </select>
-                    </div>
-                  </div>
-                  <div>
-                    <label
-                      htmlFor="message"
-                      className="mb-2 block text-sm font-medium text-foreground"
-                    >
-                      Tell Us About Your Property
-                    </label>
-                    <textarea
-                      id="message"
-                      name="message"
-                      rows={4}
-                      value={formData.message}
-                      onChange={handleChange}
-                      placeholder="Describe your property, location, and any specific wildfire concerns..."
-                      className={`${inputClass} resize-none`}
+                {/* Expand toggle */}
+                <div className="mt-8 flex justify-center">
+                  <button
+                    type="button"
+                    onClick={() => setShowDetails(!showDetails)}
+                    className="flex items-center gap-2 text-sm font-medium text-muted-foreground transition-colors hover:text-accent"
+                  >
+                    <span>{showDetails ? "Hide" : "Add"} additional details</span>
+                    <ChevronDown
+                      className={`h-5 w-5 transition-transform duration-300 ${
+                        showDetails ? "rotate-180" : ""
+                      }`}
                     />
+                  </button>
+                </div>
+
+                {/* Collapsible additional details */}
+                <div
+                  className={`grid overflow-hidden transition-all duration-300 ease-in-out ${
+                    showDetails
+                      ? "mt-8 grid-rows-[1fr] opacity-100"
+                      : "grid-rows-[0fr] opacity-0"
+                  }`}
+                >
+                  <div className="overflow-hidden">
+                    {/* Property Location */}
+                    <h2 className="font-heading text-lg font-bold text-foreground">
+                      Property Location
+                    </h2>
+                    <div className="mt-4 grid gap-5 sm:grid-cols-2">
+                      <div className="sm:col-span-2">
+                        <label
+                          htmlFor="address"
+                          className="mb-2 block text-sm font-medium text-foreground"
+                        >
+                          Address
+                        </label>
+                        <input
+                          id="address"
+                          name="address"
+                          type="text"
+                          value={formData.address}
+                          onChange={handleChange}
+                          placeholder="Street address"
+                          className={inputClass}
+                        />
+                      </div>
+                      <div>
+                        <label
+                          htmlFor="city"
+                          className="mb-2 block text-sm font-medium text-foreground"
+                        >
+                          City
+                        </label>
+                        <input
+                          id="city"
+                          name="city"
+                          type="text"
+                          value={formData.city}
+                          onChange={handleChange}
+                          placeholder="City"
+                          className={inputClass}
+                        />
+                      </div>
+                      <div>
+                        <label
+                          htmlFor="stateProvince"
+                          className="mb-2 block text-sm font-medium text-foreground"
+                        >
+                          State / Province
+                        </label>
+                        <input
+                          id="stateProvince"
+                          name="stateProvince"
+                          type="text"
+                          value={formData.stateProvince}
+                          onChange={handleChange}
+                          placeholder="State or province"
+                          className={inputClass}
+                        />
+                      </div>
+                    </div>
+
+                    {/* Property & Project Details */}
+                    <h2 className="mt-10 font-heading text-lg font-bold text-foreground">
+                      Property & Project Details
+                    </h2>
+                    <div className="mt-4 grid gap-5">
+                      <div>
+                        <label className="mb-2 block text-sm font-medium text-foreground">
+                          Property Type
+                        </label>
+                        <div className="flex flex-wrap gap-3">
+                          {propertyTypes.map((type) => (
+                            <label
+                              key={type}
+                              className={`cursor-pointer rounded-sm border px-4 py-2.5 text-sm transition-colors ${
+                                formData.propertyType === type
+                                  ? "border-accent bg-accent text-white"
+                                  : "border-border text-muted-foreground hover:border-accent/50"
+                              }`}
+                            >
+                              <input
+                                type="radio"
+                                name="propertyType"
+                                value={type}
+                                checked={formData.propertyType === type}
+                                onChange={handleChange}
+                                className="sr-only"
+                              />
+                              {type}
+                            </label>
+                          ))}
+                        </div>
+                      </div>
+                      <div className="grid gap-5 sm:grid-cols-2">
+                        <div>
+                          <label
+                            htmlFor="budget"
+                            className="mb-2 block text-sm font-medium text-foreground"
+                          >
+                            Budget Range
+                          </label>
+                          <select
+                            id="budget"
+                            name="budget"
+                            value={formData.budget}
+                            onChange={handleChange}
+                            className={inputClass}
+                          >
+                            <option value="">Select a range</option>
+                            {budgetRanges.map((range) => (
+                              <option key={range} value={range}>
+                                {range}
+                              </option>
+                            ))}
+                          </select>
+                        </div>
+                        <div>
+                          <label
+                            htmlFor="timeline"
+                            className="mb-2 block text-sm font-medium text-foreground"
+                          >
+                            Timeline
+                          </label>
+                          <select
+                            id="timeline"
+                            name="timeline"
+                            value={formData.timeline}
+                            onChange={handleChange}
+                            className={inputClass}
+                          >
+                            <option value="">Select a timeline</option>
+                            {timelines.map((t) => (
+                              <option key={t} value={t}>
+                                {t}
+                              </option>
+                            ))}
+                          </select>
+                        </div>
+                      </div>
+                      <div>
+                        <label
+                          htmlFor="message"
+                          className="mb-2 block text-sm font-medium text-foreground"
+                        >
+                          Tell Us About Your Property
+                        </label>
+                        <textarea
+                          id="message"
+                          name="message"
+                          rows={4}
+                          value={formData.message}
+                          onChange={handleChange}
+                          placeholder="Describe your property, location, and any specific wildfire concerns..."
+                          className={`${inputClass} resize-none`}
+                        />
+                      </div>
+                    </div>
                   </div>
                 </div>
 
