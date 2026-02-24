@@ -4,7 +4,7 @@ import { Crosshair, Shield, Heart } from "lucide-react"
 const pillars = [
   { icon: Crosshair, label: "Precision" },
   { icon: Shield, label: "Protection" },
-  { icon: Heart, label: "Peace of Mind" },
+  { icon: Heart, label: "Peace of\u00A0Mind" },
 ]
 
 export function WhyProdigy() {
@@ -16,7 +16,7 @@ export function WhyProdigy() {
           <span className="text-accent">Wildfire Protection</span>
         </h2>
 
-        <div className="mt-10 flex flex-wrap justify-center gap-6">
+        <div className="mt-10 grid grid-cols-3 gap-8">
           {pillars.map((pillar) => {
             const Icon = pillar.icon
             return (

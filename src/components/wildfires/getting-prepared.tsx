@@ -69,7 +69,7 @@ export function GettingPrepared() {
       <div className="mx-auto max-w-7xl px-6">
         {/* Header */}
         <div className="mb-14 text-center">
-          <h2 className="font-heading text-3xl font-bold tracking-tight text-foreground md:text-4xl lg:text-5xl">
+          <h2 className="font-heading text-3xl font-bold tracking-tight text-foreground md:text-4xl">
             Your Step-by-Step Wildfire <span className="text-accent">Preparedness</span> Guide
           </h2>
           <p className="mx-auto mt-4 max-w-3xl text-base leading-relaxed text-muted-foreground">
@@ -91,7 +91,7 @@ export function GettingPrepared() {
               className="object-cover"
             />
           </div>
-          <div className="text-center lg:text-left">
+          <div className="text-center">
             <h3 className="font-heading text-2xl font-bold tracking-tight text-foreground">
               Why Every Minute Counts During a Wildfire
             </h3>
@@ -140,7 +140,7 @@ export function GettingPrepared() {
             Get a Free Property Assessment
           </a>
           <Link
-            href="https://quiz.prodigywildfire.com/wildfirereadiness"
+            href="https://website-ten-lilac-49.vercel.app/assessment"
             className="inline-block rounded border-2 border-accent px-8 py-3.5 text-sm font-semibold text-accent transition-colors hover:bg-accent hover:text-white"
           >
             Take the Wildfire Preparedness Quiz

@@ -13,7 +13,7 @@ export function OnTheRise() {
       <div className="absolute inset-0 bg-primary/75" />
 
       <div className="relative z-10 mx-auto max-w-3xl px-6 text-center">
-        <h2 className="font-heading text-3xl font-bold tracking-tight text-primary-foreground md:text-4xl lg:text-5xl">
+        <h2 className="font-heading text-3xl font-bold tracking-tight text-primary-foreground md:text-4xl">
           Wildfires are on the <span className="text-accent">Rise</span>
         </h2>
         <p className="mx-auto mt-6 max-w-2xl text-base leading-relaxed text-primary-foreground/70 md:text-lg">

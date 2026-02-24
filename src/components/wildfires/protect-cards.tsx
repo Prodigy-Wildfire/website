@@ -27,7 +27,7 @@ export function ProtectCards() {
     <section className="bg-background py-20 md:py-28">
       <div className="mx-auto max-w-7xl px-6">
         <div className="mb-14 text-center">
-          <h2 className="font-heading text-3xl font-bold tracking-tight text-foreground md:text-4xl lg:text-5xl">
+          <h2 className="font-heading text-3xl font-bold tracking-tight text-foreground md:text-4xl">
             How Wildfires <span className="text-accent">Destroy</span> Homes and Businesses
           </h2>
           <p className="mx-auto mt-4 max-w-4xl text-base leading-relaxed text-muted-foreground">

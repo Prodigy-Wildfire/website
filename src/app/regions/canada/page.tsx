@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
 import { RegionPageTemplate } from "@/components/regions/region-page-template";
-import { getRegionsByCountry } from "@/lib/regions";
+
 
 export const metadata: Metadata = {
   title: "Wildfire Protection in Canada | Prodigy Wildfire",
@@ -29,10 +29,9 @@ const jsonLd = {
 };
 
 const stats = [
-  { value: "6,551", label: "Wildfires in Canada (2024)" },
+  { value: "5,475", label: "Wildfires in Canada (2023)" },
   { value: "17.3M", label: "Hectares Burned (2023)" },
   { value: "200+", label: "Communities at Risk" },
-  { value: "24/7", label: "Remote Monitoring" },
 ];
 
 const caseStudies = [
@@ -40,7 +39,7 @@ const caseStudies = [
     name: "Banff Gondola",
     description:
       "Protecting one of Canada's most iconic tourism destinations with a custom wildfire sprinkler system engineered for extreme alpine terrain.",
-    href: "/case-studies",
+    href: "/case-studies#banff-gondola",
   },
   {
     name: "Lake Minnewanka",
@@ -52,13 +51,13 @@ const caseStudies = [
     name: "UBC Research Forest",
     description:
       "Partnering with the University of British Columbia to protect research facilities and surrounding forest with wildfire defence systems.",
-    href: "/case-studies",
+    href: "/case-studies#ubc-campus",
   },
   {
     name: "Golden Skybridge",
     description:
       "Engineering wildfire protection for Canada's highest suspension bridge and surrounding tourism infrastructure in the Columbia Valley.",
-    href: "/case-studies",
+    href: "/case-studies#golden-skybridge",
   },
 ];
 
@@ -78,10 +77,9 @@ export default function CanadaRegionPage() {
           description="Serving some of the world's most wildfire-prone landscapes, our Canadian team delivers advanced exterior wildfire sprinkler systems, ember detection, and remote activation technology for homes, businesses, and communities from British Columbia to Ontario."
           detail="Canada's wildfire seasons are growing longer and more severe. In 2023 alone, over 17.3 million hectares burned across the country, displacing tens of thousands and destroying critical infrastructure. Prodigy's wildfire protection systems are custom-engineered for diverse Canadian terrain, from coastal forests to interior grasslands. Our roof sprinkler systems, ember attack protection sensors, and remote activation technology provide permanent, proactive defence for homeowners, businesses, and communities facing escalating wildfire risk."
           stats={stats}
+          statsSource="CIFFC"
+          statsSourceUrl="https://ciffc.net/statistics"
           caseStudies={caseStudies}
-          subRegions={getRegionsByCountry("canada")}
-          subRegionLabel="Province"
-          subRegionBasePath="/regions/canada"
         />
       </main>
       <Footer />

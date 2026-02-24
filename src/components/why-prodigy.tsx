@@ -2,11 +2,11 @@ import Link from "next/link";
 
 const regions = [
   {
-    flag: "🇺🇸",
-    title: "USA",
+    flag: "🇦🇺",
+    title: "Australia",
     description:
-      "Serving homes, businesses, and communities across all 50 states with custom-engineered wildfire sprinkler systems built for America's evolving fire environment.",
-    link: "/regions/usa",
+      "Serving homes, rural properties, and communities across every state and territory with bushfire sprinkler systems engineered for Australia's extreme conditions.",
+    link: "/regions/australia",
   },
   {
     flag: "🇨🇦",
@@ -16,11 +16,11 @@ const regions = [
     link: "/regions/canada",
   },
   {
-    flag: "🇦🇺",
-    title: "Australia",
+    flag: "🇺🇸",
+    title: "USA",
     description:
-      "Serving homes, rural properties, and communities across every state and territory with bushfire sprinkler systems engineered for Australia's extreme conditions.",
-    link: "/regions/australia",
+      "Serving homes, businesses, and communities across all 50 states with custom-engineered wildfire sprinkler systems built for America's evolving fire environment.",
+    link: "/regions/usa",
   },
 ];
 

@@ -71,7 +71,7 @@ export function FaqSection() {
               value={`item-${index}`}
               className="border-b border-border py-1"
             >
-              <AccordionTrigger className="py-5 text-left text-base font-semibold text-foreground hover:no-underline hover:text-primary sm:text-lg [&[data-state=open]]:text-primary">
+              <AccordionTrigger className="py-5 text-center text-base font-semibold text-foreground hover:no-underline hover:text-primary sm:text-lg [&[data-state=open]]:text-primary">
                 {item.question}
               </AccordionTrigger>
               <AccordionContent className="pb-6 text-base leading-relaxed text-muted-foreground">

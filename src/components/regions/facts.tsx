@@ -38,13 +38,13 @@ export function Facts() {
           </h2>
         </div>
 
-        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="mx-auto grid max-w-5xl gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {facts.map((fact) => {
             const Icon = fact.icon
             return (
               <div
                 key={fact.text}
-                className="rounded border border-border bg-card p-5 text-center"
+                className="rounded border border-border bg-card px-6 py-6 text-center"
               >
                 <div className="mx-auto mb-3 flex h-10 w-10 items-center justify-center rounded-full bg-accent/10">
                   <Icon className="h-5 w-5 text-accent" />

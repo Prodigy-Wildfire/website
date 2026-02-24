@@ -19,17 +19,7 @@ export function HowItWorks() {
         </div>
 
         <div className="mt-16 grid items-center gap-12 lg:grid-cols-2">
-          <div className="relative aspect-[4/3] overflow-hidden rounded">
-            <Image
-              src="/images/humidity-bubble.jpg"
-              alt="Humidity bubble protective barrier created by Prodigy sprinkler system"
-              fill
-              sizes="(max-width: 1024px) 100vw, 50vw"
-              className="object-cover"
-            />
-          </div>
-
-          <div className="flex flex-col gap-10 text-center">
+          <div className="flex flex-col gap-10 text-center lg:text-left">
             <div>
               <h3 className="font-heading text-xl font-bold text-foreground">
                 What is a Humidity Bubble?
@@ -63,6 +53,16 @@ export function HowItWorks() {
                 flames reach your property.
               </p>
             </div>
+          </div>
+
+          <div className="relative aspect-[4/3] overflow-hidden rounded">
+            <Image
+              src="/images/humidity-bubble.jpg"
+              alt="Humidity bubble protective barrier created by Prodigy sprinkler system"
+              fill
+              sizes="(max-width: 1024px) 100vw, 50vw"
+              className="object-cover"
+            />
           </div>
         </div>
       </div>

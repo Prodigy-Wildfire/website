@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { DollarSign, Clock, ClipboardCheck, Ruler, Wrench } from "lucide-react";
+import { DollarSign, Clock } from "lucide-react";
 
 const faqs = [
   {
@@ -62,11 +62,8 @@ export function GettingProtected() {
                 key={step.title}
                 className="relative flex flex-col items-center rounded border border-border bg-card p-8 text-center"
               >
-                <div className="mb-4 flex items-center gap-4">
-                  <div className="flex h-10 w-10 items-center justify-center rounded-full bg-accent text-sm font-bold text-accent-foreground">
-                    {i + 1}
-                  </div>
-                  <step.icon className="h-5 w-5 text-accent" />
+                <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-full bg-accent text-sm font-bold text-white">
+                  {i + 1}
                 </div>
                 <h4 className="font-heading text-lg font-semibold text-card-foreground">
                   {step.title}

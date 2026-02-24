@@ -46,98 +46,96 @@ export function MailingListSection() {
 
   return (
     <section className="bg-muted py-12 md:py-16">
-      <div className="mx-auto max-w-6xl px-6">
-        <div className="grid items-center gap-8 lg:grid-cols-2">
-          <div className="text-center lg:text-left">
-            <div className="mb-4 flex justify-center lg:justify-start">
-              <div className="flex h-12 w-12 items-center justify-center rounded-full bg-accent/10">
-                <Mail className="h-6 w-6 text-accent" />
-              </div>
+      <div className="mx-auto max-w-xl px-6">
+        <div className="mb-8 text-center">
+          <div className="mb-4 flex justify-center">
+            <div className="flex h-12 w-12 items-center justify-center rounded-full bg-accent/10">
+              <Mail className="h-6 w-6 text-accent" />
             </div>
-            <h2 className="font-heading text-3xl font-bold tracking-tight text-foreground md:text-4xl">
-              Join Our <span className="text-accent">Mailing List</span>
-            </h2>
-            <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
-              Get wildfire protection insights, seasonal preparedness tips, and
-              product updates delivered to your inbox.
-            </p>
           </div>
+          <h2 className="font-heading text-3xl font-bold tracking-tight text-foreground md:text-4xl">
+            Join Our <span className="text-accent">Mailing List</span>
+          </h2>
+          <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
+            Get wildfire protection insights, seasonal preparedness tips, and
+            product updates delivered to your inbox.
+          </p>
+        </div>
 
-          <form
-            onSubmit={handleSubmit}
-            className="text-left"
-          >
-            <div className="grid gap-4 sm:grid-cols-2">
-              <div>
-                <label
-                  htmlFor="ml-firstName"
-                  className="mb-1.5 block text-sm font-medium text-foreground"
-                >
-                  First Name <span className="text-accent">*</span>
-                </label>
-                <input
-                  id="ml-firstName"
-                  name="firstName"
-                  type="text"
-                  required
-                  value={formData.firstName}
-                  onChange={handleChange}
-                  placeholder="First name"
-                  className={inputClass}
-                />
-              </div>
-              <div>
-                <label
-                  htmlFor="ml-lastName"
-                  className="mb-1.5 block text-sm font-medium text-foreground"
-                >
-                  Last Name <span className="text-accent">*</span>
-                </label>
-                <input
-                  id="ml-lastName"
-                  name="lastName"
-                  type="text"
-                  required
-                  value={formData.lastName}
-                  onChange={handleChange}
-                  placeholder="Last name"
-                  className={inputClass}
-                />
-              </div>
-            </div>
-            <div className="mt-4">
+        <form
+          onSubmit={handleSubmit}
+          className="text-left"
+        >
+          <div className="grid gap-4 sm:grid-cols-2">
+            <div>
               <label
-                htmlFor="ml-email"
+                htmlFor="ml-firstName"
                 className="mb-1.5 block text-sm font-medium text-foreground"
               >
-                Email <span className="text-accent">*</span>
+                First Name <span className="text-accent">*</span>
               </label>
               <input
-                id="ml-email"
-                name="email"
-                type="email"
+                id="ml-firstName"
+                name="firstName"
+                type="text"
                 required
-                value={formData.email}
+                value={formData.firstName}
                 onChange={handleChange}
-                placeholder="you@example.com"
+                placeholder="First name"
                 className={inputClass}
               />
             </div>
-
-            <div className="mt-5 flex items-center gap-4">
-              <button
-                type="submit"
-                className="inline-flex items-center justify-center gap-2 rounded bg-accent px-8 py-3 text-sm font-semibold text-white transition-colors hover:bg-accent/90"
+            <div>
+              <label
+                htmlFor="ml-lastName"
+                className="mb-1.5 block text-sm font-medium text-foreground"
               >
-                <Mail className="h-4 w-4" />
-                Subscribe
-              </button>
-              <p className="text-xs text-muted-foreground">
-                No spam, ever. Unsubscribe anytime.
-              </p>
+                Last Name <span className="text-accent">*</span>
+              </label>
+              <input
+                id="ml-lastName"
+                name="lastName"
+                type="text"
+                required
+                value={formData.lastName}
+                onChange={handleChange}
+                placeholder="Last name"
+                className={inputClass}
+              />
             </div>
-          </form>
-        </div>
+          </div>
+          <div className="mt-4">
+            <label
+              htmlFor="ml-email"
+              className="mb-1.5 block text-sm font-medium text-foreground"
+            >
+              Email <span className="text-accent">*</span>
+            </label>
+            <input
+              id="ml-email"
+              name="email"
+              type="email"
+              required
+              value={formData.email}
+              onChange={handleChange}
+              placeholder="you@example.com"
+              className={inputClass}
+            />
+          </div>
+
+          <div className="mt-5 flex items-center justify-center gap-4">
+            <button
+              type="submit"
+              className="inline-flex items-center justify-center gap-2 rounded bg-accent px-8 py-3.5 text-sm font-semibold text-white transition-colors hover:bg-accent/90"
+            >
+              <Mail className="h-4 w-4" />
+              Subscribe
+            </button>
+            <p className="text-xs text-muted-foreground">
+              No spam, ever. Unsubscribe anytime.
+            </p>
+          </div>
+        </form>
       </div>
     </section>
   )

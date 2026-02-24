@@ -78,7 +78,7 @@ export function Footer() {
               </li>
               <li>
                 <Link
-                  href="https://quiz.prodigywildfire.com/wildfirereadiness"
+                  href="https://website-ten-lilac-49.vercel.app/assessment"
                   className="text-sm text-muted-foreground transition-colors hover:text-foreground"
                 >
                   Readiness Assessment
@@ -97,7 +97,7 @@ export function Footer() {
               personalized wildfire defence assessment.
             </p>
             <Link
-              href="https://quiz.prodigywildfire.com/wildfirereadiness"
+              href="https://website-ten-lilac-49.vercel.app/assessment"
               className="mt-4 inline-block rounded-sm bg-primary px-5 py-2 text-sm font-medium text-primary-foreground transition-opacity hover:opacity-90"
             >
               Get Started

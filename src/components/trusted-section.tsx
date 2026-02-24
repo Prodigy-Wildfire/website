@@ -18,7 +18,7 @@ export function TrustedSection() {
           Wildfire Protection <span className="text-accent">Trusted</span> By:
         </h2>
         <p className="mx-auto mt-4 max-w-2xl text-sm leading-relaxed text-muted-foreground">
-          Organizations across North America and Australia rely on Prodigy Wildfire Solutions to
+          Organisations across North America and Australia rely on Prodigy Wildfire Solutions to
           safeguard their people, assets, and operations from wildfire risk.
         </p>
 

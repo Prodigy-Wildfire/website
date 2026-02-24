@@ -14,8 +14,8 @@ const services = [
   },
   {
     icon: Smartphone,
-    title: "Remote Activation",
-    titleLine2: "and EmberWatch",
+    title: "Global",
+    titleLine2: "Activation",
     stats: [
       { label: "Global Activation", value: "Global", anchor: "#remote-activation" },
       { label: "Fire Tracking & Alerts", value: "Real-Time", anchor: "#ember-watch" },
@@ -50,7 +50,7 @@ export function ServicesCards() {
           {services.map((service) => (
             <div
               key={service.title}
-              className="group flex flex-col rounded border border-border bg-card p-8 text-center transition-all hover:border-accent hover:shadow-lg"
+              className="flex flex-col rounded border border-border bg-card p-8 text-center"
             >
               <div className="mx-auto mb-5 flex h-12 w-12 items-center justify-center rounded bg-accent/10">
                 <service.icon className="h-6 w-6 text-accent" />

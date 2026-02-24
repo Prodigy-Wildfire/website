@@ -45,13 +45,8 @@ const services = [
 
 export function ServiceDetails() {
   return (
-    <section className="bg-muted py-20 md:py-28">
+    <section className="bg-background pb-20 md:pb-28">
       <div className="mx-auto max-w-7xl px-6">
-        <div className="mb-14 text-center">
-          <h2 className="font-heading text-3xl font-bold tracking-tight text-foreground md:text-4xl">
-            How Our Wildfire Sprinkler Systems <span className="text-accent">Work</span>
-          </h2>
-        </div>
         <div className="flex flex-col gap-24">
           {services.map((service) => (
             <div
@@ -73,7 +68,7 @@ export function ServiceDetails() {
               </div>
 
               {/* Content */}
-              <div>
+              <div className="text-center">
                 <h3 className="font-heading text-xl font-bold tracking-wide text-foreground md:text-2xl">
                   {service.title}
                 </h3>
@@ -86,12 +81,12 @@ export function ServiceDetails() {
                   {service.stats.map((stat) => (
                     <span
                       key={stat.label}
-                      className="inline-flex items-center justify-center gap-2 rounded-full border border-accent/30 bg-accent/10 px-4 py-1.5"
+                      className="inline-flex items-center justify-center gap-2 rounded-full border border-accent/30 bg-accent/10 px-4 py-2"
                     >
-                      <span className="font-heading text-sm font-bold text-accent">
+                      <span className="font-heading text-sm font-bold leading-none text-accent">
                         {stat.value}
                       </span>
-                      <span className="text-[10px] text-muted-foreground">
+                      <span className="text-[10px] leading-none text-muted-foreground">
                         {stat.label}
                       </span>
                     </span>

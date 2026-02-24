@@ -5,7 +5,7 @@ export function ClimateSection() {
     <section className="bg-primary py-20 md:py-28">
       <div className="mx-auto max-w-7xl px-6">
         <div className="mb-6 text-center">
-          <h2 className="font-heading text-3xl font-bold tracking-tight text-primary-foreground md:text-4xl lg:text-5xl">
+          <h2 className="font-heading text-3xl font-bold tracking-tight text-primary-foreground md:text-4xl">
             The Impact of Drought, Heat and <span className="text-accent">High Winds</span>
           </h2>
         </div>

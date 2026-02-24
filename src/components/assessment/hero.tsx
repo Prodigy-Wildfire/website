@@ -25,9 +25,7 @@ export function Hero() {
         </p>
         <div className="mt-10">
           <Link
-            href="https://quiz.prodigywildfire.com/wildfirereadiness"
-            target="_blank"
-            rel="noopener noreferrer"
+            href="https://website-ten-lilac-49.vercel.app/assessment"
             className="inline-block rounded bg-accent px-8 py-3.5 text-base font-semibold text-white transition-colors hover:bg-accent/90"
           >
             Protect Your Property Now
