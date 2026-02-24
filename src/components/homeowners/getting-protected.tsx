@@ -18,19 +18,16 @@ const faqs = [
 
 const steps = [
   {
-    icon: ClipboardCheck,
     title: "Home Assessment",
     description:
       "We assess your property to identify ember entry points, defensible space gaps, roof exposure zones, and water supply options. Depending on your location, this can be done on-site with one of our surveyors or remotely using satellite imagery and a guided virtual walkthrough. Either way, you get a detailed protection plan designed specifically for your property.",
   },
   {
-    icon: Ruler,
     title: "Custom Home Design",
     description:
       "We engineer a sprinkler layout specific to your roofline, ridge lines, and property shape. Every system is designed to meet NFPA wildfire protection standards while sitting discreetly along your roofline.",
   },
   {
-    icon: Wrench,
     title: "Residential Installation",
     description:
       "Our team installs discreet copper piping along rooflines and ridges in a single day for most homes, with minimal disruption to your landscaping. You receive full training on system operation, app activation, and seasonal maintenance.",
