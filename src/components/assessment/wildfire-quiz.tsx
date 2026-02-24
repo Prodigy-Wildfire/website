@@ -229,10 +229,9 @@ export function WildfireQuiz() {
           type="button"
           onClick={handlePrev}
           disabled={currentQuestion === 0}
-          className="flex items-center gap-1 rounded-sm border border-border px-4 py-2.5 text-sm text-muted-foreground transition-colors hover:text-foreground disabled:opacity-30 disabled:cursor-not-allowed"
+          className="flex h-10 w-10 items-center justify-center rounded-full bg-primary transition-opacity hover:opacity-80 disabled:opacity-20 disabled:cursor-not-allowed"
         >
-          <ChevronLeft className="h-4 w-4" />
-          Previous
+          <ChevronLeft className="h-5 w-5 text-accent" />
         </button>
         <button
           type="button"
