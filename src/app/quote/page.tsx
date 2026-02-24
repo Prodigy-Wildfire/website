@@ -41,6 +41,8 @@ export default function QuotePage() {
     city: "",
     stateProvince: "",
     country: "",
+    referralSource: "",
+    referralName: "",
     propertyType: "",
     budget: "",
     timeline: "",
@@ -188,7 +190,7 @@ export default function QuotePage() {
                       className={inputClass}
                     />
                   </div>
-                  <div className="sm:col-span-2">
+                  <div>
                     <label
                       htmlFor="country"
                       className="mb-2 block text-sm font-medium text-foreground"
@@ -210,6 +212,57 @@ export default function QuotePage() {
                       <option value="other">Other</option>
                     </select>
                   </div>
+                  <div>
+                    <label
+                      htmlFor="referralSource"
+                      className="mb-2 block text-sm font-medium text-foreground"
+                    >
+                      Where Did You Hear About Us?
+                    </label>
+                    <select
+                      id="referralSource"
+                      name="referralSource"
+                      value={formData.referralSource}
+                      onChange={handleChange}
+                      className={inputClass}
+                    >
+                      <option value="">Select an option</option>
+                      <option value="referral">Referral</option>
+                      <option value="advertisement">Advertisement</option>
+                      <option value="chat">Chat</option>
+                      <option value="cold-call">Cold Call</option>
+                      <option value="demo-day">Demo Day</option>
+                      <option value="door-knocking">Door Knocking</option>
+                      <option value="email-marketing">Email Marketing</option>
+                      <option value="facebook">Facebook</option>
+                      <option value="google">Google</option>
+                      <option value="instagram">Instagram</option>
+                      <option value="sign">Sign</option>
+                      <option value="tiktok">TikTok</option>
+                      <option value="trade-show">Trade Show</option>
+                      <option value="website">Website</option>
+                      <option value="youtube">YouTube</option>
+                    </select>
+                  </div>
+                  {formData.referralSource === "referral" && (
+                    <div className="sm:col-span-2">
+                      <label
+                        htmlFor="referralName"
+                        className="mb-2 block text-sm font-medium text-foreground"
+                      >
+                        Referral Name
+                      </label>
+                      <input
+                        id="referralName"
+                        name="referralName"
+                        type="text"
+                        value={formData.referralName}
+                        onChange={handleChange}
+                        placeholder="Who referred you?"
+                        className={inputClass}
+                      />
+                    </div>
+                  )}
                 </div>
 
                 {/* Expand toggle */}
