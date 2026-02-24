@@ -30,8 +30,8 @@ export function ContactCta() {
         {/* Features */}
         <div className="mb-14 text-center">
         <h2 className="font-heading text-3xl font-bold tracking-tight text-foreground md:text-4xl">
-            A customised approach to{" "}
-            <span className="text-accent">wildfire protection</span>
+            A Customised Approach to{" "}
+            <span className="text-accent">Wildfire Protection</span>
           </h2>
         </div>
 

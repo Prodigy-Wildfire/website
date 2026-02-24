@@ -35,6 +35,8 @@ interface RegionPageTemplateProps {
   subRegionLabel?: string;
   subRegionBasePath?: string;
   beforeCta?: ReactNode;
+  ctaDescription?: string;
+  ctaQuizLabel?: string;
   showContactForm?: boolean;
   contactRegionLabel?: string;
   contactCountry?: string;
@@ -56,6 +58,8 @@ export function RegionPageTemplate({
   subRegionLabel = "Region",
   subRegionBasePath = "/regions",
   beforeCta,
+  ctaDescription,
+  ctaQuizLabel,
   showContactForm = false,
   contactRegionLabel = "Province",
   contactCountry = "Canada",
@@ -206,9 +210,7 @@ export function RegionPageTemplate({
             Protect Your Property in {name}
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-base leading-relaxed text-primary-foreground/70">
-            Get a free wildfire risk assessment and learn how Prodigy can protect
-            your home or business with a custom-engineered wildfire sprinkler
-            system.
+            {ctaDescription || "Get a free wildfire risk assessment and learn how Prodigy can protect your home or business with a custom-engineered wildfire sprinkler system."}
           </p>
           <div className="mt-8 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
             <Link
@@ -221,7 +223,7 @@ export function RegionPageTemplate({
               href="https://website-ten-lilac-49.vercel.app/assessment"
               className="rounded border-2 border-accent px-8 py-3.5 text-sm font-semibold text-accent transition-colors hover:bg-accent hover:text-white"
             >
-              Take the Wildfire Preparedness Quiz
+              {ctaQuizLabel || "Take the Wildfire Preparedness Quiz"}
             </Link>
           </div>
         </div>

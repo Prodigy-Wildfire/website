@@ -3,7 +3,7 @@
 import React from "react"
 import { useState } from "react"
 import { getInstallCount, getSprinklerCount, COUNTRIES } from "@/lib/stats"
-import { Send, CheckCircle, MapPin, Mail, Clock, ChevronDown } from "lucide-react"
+import { Send, CheckCircle, MapPin, Mail, ChevronDown } from "lucide-react"
 
 const industryOptions = [
   "Resorts & Tourism",
@@ -79,11 +79,8 @@ export function CommercialForm() {
       <div className="mx-auto max-w-7xl px-6">
         <div className="grid gap-16 lg:grid-cols-5">
           {/* Sidebar */}
-          <div className="lg:col-span-2">
-            <p className="text-sm font-semibold uppercase tracking-[0.25em] text-primary">
-              Commercial Inquiries
-            </p>
-            <h2 className="mt-3 font-heading text-3xl font-bold text-foreground md:text-4xl">
+          <div className="lg:col-span-2 text-center">
+            <h2 className="font-heading text-3xl font-bold text-foreground md:text-4xl">
               Request a Commercial Assessment
             </h2>
             <p className="mt-4 leading-relaxed text-muted-foreground">
@@ -95,18 +92,11 @@ export function CommercialForm() {
             <div className="mt-10 flex flex-col gap-6">
               <ContactInfoItem
                 icon={<MapPin className="h-5 w-5" />}
-                title="Location"
-                detail="USA, Canada & Australia"
+                title="Canada · USA · Australia"
               />
               <ContactInfoItem
                 icon={<Mail className="h-5 w-5" />}
-                title="Email"
-                detail="sales@prodigywildfire.com"
-              />
-              <ContactInfoItem
-                icon={<Clock className="h-5 w-5" />}
-                title="Hours"
-                detail="7:00 AM - 6:00 PM, 7 Days a Week"
+                title="sales@prodigywildfire.com"
               />
             </div>
 
@@ -299,7 +289,7 @@ export function CommercialForm() {
 
               <button
                 type="submit"
-                className="mt-8 flex w-full items-center justify-center gap-2 rounded-sm bg-primary px-8 py-4 text-sm font-semibold uppercase tracking-wider text-primary-foreground transition-colors hover:bg-primary/90"
+                className="mt-8 flex w-full items-center justify-center gap-2 rounded bg-accent px-8 py-4 text-sm font-semibold text-white transition-colors hover:bg-accent/90"
               >
                 <Send className="h-4 w-4" />
                 Request Your Commercial Proposal
@@ -357,21 +347,16 @@ function FormField({
 function ContactInfoItem({
   icon,
   title,
-  detail,
 }: {
   icon: React.ReactNode
   title: string
-  detail: string
 }) {
   return (
-    <div className="flex items-start gap-4">
-      <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-sm bg-primary/10 text-primary">
+    <div className="flex items-center gap-4 justify-center">
+      <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-accent/10 text-accent">
         {icon}
       </div>
-      <div>
-        <p className="text-sm font-semibold text-foreground">{title}</p>
-        <p className="text-sm text-muted-foreground">{detail}</p>
-      </div>
+      <p className="text-sm font-semibold text-foreground">{title}</p>
     </div>
   )
 }

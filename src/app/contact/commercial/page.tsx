@@ -1,6 +1,5 @@
 import { Header } from "@/components/header"
 import { CommercialForm } from "@/components/contact/commercial-form"
-import { ContactCta } from "@/components/contact/contact-cta"
 import { Footer } from "@/components/footer"
 import Image from "next/image"
 
@@ -39,7 +38,6 @@ export default function CommercialContactPage() {
         </div>
       </section>
       <CommercialForm />
-      <ContactCta />
       <Footer />
     </main>
   )
