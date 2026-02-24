@@ -22,6 +22,8 @@ export function ContactForm() {
     email: "",
     phone: "",
     country: "",
+    referralSource: "",
+    referralName: "",
     service: "",
     propertyType: "",
     message: "",
@@ -131,24 +133,71 @@ export function ContactForm() {
                     placeholder="Your phone number"
                   />
                 </div>
-                <div>
-                  <label htmlFor="country" className="mb-2 block text-sm font-medium text-foreground">
-                    Country
-                  </label>
-                  <select
-                    id="country"
-                    name="country"
-                    value={formData.country}
-                    onChange={handleChange}
-                    className="w-full rounded-sm border border-border bg-background px-4 py-3 text-sm text-foreground transition-colors focus:border-accent focus:outline-none focus:ring-1 focus:ring-accent"
-                  >
-                    <option value="">Select a country</option>
-                    <option value="us">United States</option>
-                    <option value="ca">Canada</option>
-                    <option value="au">Australia</option>
-                    <option value="other">Other</option>
-                  </select>
+                <div className="grid gap-6 sm:grid-cols-2">
+                  <div>
+                    <label htmlFor="country" className="mb-2 block text-sm font-medium text-foreground">
+                      Country
+                    </label>
+                    <select
+                      id="country"
+                      name="country"
+                      value={formData.country}
+                      onChange={handleChange}
+                      className="w-full rounded-sm border border-border bg-background px-4 py-3 text-sm text-foreground transition-colors focus:border-accent focus:outline-none focus:ring-1 focus:ring-accent"
+                    >
+                      <option value="">Select a country</option>
+                      <option value="au">Australia</option>
+                      <option value="ca">Canada</option>
+                      <option value="us">United States</option>
+                      <option value="other">Other</option>
+                    </select>
+                  </div>
+                  <div>
+                    <label htmlFor="referralSource" className="mb-2 block text-sm font-medium text-foreground">
+                      Where Did You Hear About Us?
+                    </label>
+                    <select
+                      id="referralSource"
+                      name="referralSource"
+                      value={formData.referralSource}
+                      onChange={handleChange}
+                      className="w-full rounded-sm border border-border bg-background px-4 py-3 text-sm text-foreground transition-colors focus:border-accent focus:outline-none focus:ring-1 focus:ring-accent"
+                    >
+                      <option value="">Select an option</option>
+                      <option value="referral">Referral</option>
+                      <option value="advertisement">Advertisement</option>
+                      <option value="chat">Chat</option>
+                      <option value="cold-call">Cold Call</option>
+                      <option value="demo-day">Demo Day</option>
+                      <option value="door-knocking">Door Knocking</option>
+                      <option value="email-marketing">Email Marketing</option>
+                      <option value="facebook">Facebook</option>
+                      <option value="google">Google</option>
+                      <option value="instagram">Instagram</option>
+                      <option value="sign">Sign</option>
+                      <option value="tiktok">TikTok</option>
+                      <option value="trade-show">Trade Show</option>
+                      <option value="website">Website</option>
+                      <option value="youtube">YouTube</option>
+                    </select>
+                  </div>
                 </div>
+                {formData.referralSource === "referral" && (
+                  <div>
+                    <label htmlFor="referralName" className="mb-2 block text-sm font-medium text-foreground">
+                      Referral Name
+                    </label>
+                    <input
+                      id="referralName"
+                      name="referralName"
+                      type="text"
+                      value={formData.referralName}
+                      onChange={handleChange}
+                      placeholder="Who referred you?"
+                      className="w-full rounded-sm border border-border bg-background px-4 py-3 text-sm text-foreground transition-colors focus:border-accent focus:outline-none focus:ring-1 focus:ring-accent"
+                    />
+                  </div>
+                )}
               </div>
 
               {/* Optional details toggle */}
