@@ -2,7 +2,6 @@
 
 import React from "react"
 import { useState } from "react"
-import { getInstallCount, getSprinklerCount, COUNTRIES } from "@/lib/stats"
 import { Send, CheckCircle, MapPin, Mail, ChevronDown } from "lucide-react"
 
 const industryOptions = [
@@ -98,12 +97,6 @@ export function CommercialForm() {
                 icon={<Mail className="h-5 w-5" />}
                 title="sales@prodigywildfire.com"
               />
-            </div>
-
-            <div className="mt-12 grid grid-cols-3 gap-4 rounded-sm border border-border bg-background p-6">
-              <StatItem value={`${getInstallCount()}+`} label="Installs" />
-              <StatItem value={`${COUNTRIES}`} label="Countries" />
-              <StatItem value={`${getSprinklerCount()}`} label="Sprinklers" />
             </div>
           </div>
 
@@ -357,15 +350,6 @@ function ContactInfoItem({
         {icon}
       </div>
       <p className="text-sm font-semibold text-foreground">{title}</p>
-    </div>
-  )
-}
-
-function StatItem({ value, label }: { value: string; label: string }) {
-  return (
-    <div className="text-center">
-      <p className="font-heading text-2xl font-bold text-primary">{value}</p>
-      <p className="mt-1 text-xs text-muted-foreground">{label}</p>
     </div>
   )
 }
