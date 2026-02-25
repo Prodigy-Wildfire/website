@@ -5,6 +5,7 @@ import { HomeownersHero } from "@/components/homeowners/homeowners-hero";
 import { RiskSection } from "@/components/homeowners/risk-section";
 import { EmberFacts } from "@/components/homeowners/ember-facts";
 import { WhyProdigyHomeowners } from "@/components/homeowners/why-prodigy-homeowners";
+import { ResidentialInvestmentSection } from "@/components/homeowners/residential-investment-section";
 import { GettingProtected } from "@/components/homeowners/getting-protected";
 import { VideoTestimonials } from "@/components/video-testimonials";
 import { LeadMagnetSection } from "@/components/lead-magnet-section";
@@ -87,6 +88,7 @@ export default function HomeownersPage() {
         <RiskSection />
         <EmberFacts />
         <WhyProdigyHomeowners />
+        <ResidentialInvestmentSection />
         <GettingProtected />
         <LeadMagnetSection />
         <VideoTestimonials />
