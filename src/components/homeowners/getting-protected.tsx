@@ -1,20 +1,4 @@
 import Link from "next/link";
-import { DollarSign, Clock } from "lucide-react";
-
-const faqs = [
-  {
-    icon: DollarSign,
-    title: "How Much Does a Wildfire Protection System Cost?",
-    description:
-      "Residential pricing depends on your property size, roof complexity, number of sprinkler zones required, water supply location, and local installation standards. Systems in the USA, Canada, and Australia are priced to reflect regional materials and labour. We provide a detailed quote after your free home assessment, so you know exactly what to expect.",
-  },
-  {
-    icon: Clock,
-    title: "How Long Does It Last?",
-    description:
-      "Prodigy residential systems are built with Type L copper (316 Stainless steel in Australia) piping and commercial-grade components designed for decades of service. Every part is serviceable and replaceable. Our optional annual maintenance program includes a spring commissioning check, system flush, nozzle inspection, and winterisation in cold climates to keep your system ready year after year.",
-  },
-];
 
 const steps = [
   {
@@ -36,7 +20,6 @@ const steps = [
 
 export function GettingProtected() {
   return (
-    <>
       <section className="bg-muted py-20 md:py-28">
         <div className="mx-auto max-w-7xl px-6">
           <div className="mb-14 text-center">
@@ -88,34 +71,5 @@ export function GettingProtected() {
           </div>
         </div>
       </section>
-
-      <section className="bg-background py-20 md:py-28">
-        <div className="mx-auto max-w-7xl px-6">
-          <div className="mb-14 text-center">
-            <h2 className="font-heading text-3xl font-bold tracking-tight text-foreground md:text-4xl">
-              Common <span className="text-accent">Questions</span>
-            </h2>
-          </div>
-          <div className="grid gap-8 md:grid-cols-2">
-            {faqs.map((faq) => (
-              <div
-                key={faq.title}
-                className="flex flex-col items-center rounded border border-border bg-card p-8 text-center"
-              >
-                <div className="mb-4 flex h-12 w-12 items-center justify-center rounded bg-accent/10">
-                  <faq.icon className="h-6 w-6 text-accent" />
-                </div>
-                <h3 className="font-heading text-xl font-semibold text-card-foreground">
-                  {faq.title}
-                </h3>
-                <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
-                  {faq.description}
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-    </>
   );
 }

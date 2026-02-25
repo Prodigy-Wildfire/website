@@ -31,7 +31,7 @@ export function WildfiresHero() {
             Read the Emergency Plan
           </a>
           <a
-            href="https://website-ten-lilac-49.vercel.app/assessment"
+            href="/assessment"
             className="rounded border-2 border-accent px-8 py-3.5 text-base font-semibold text-accent transition-colors hover:bg-accent hover:text-white"
           >
             Take the Wildfire Assessment

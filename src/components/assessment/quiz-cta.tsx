@@ -13,7 +13,7 @@ export function QuizCta() {
           the most effective way to protect what matters most.
         </p>
         <Link
-          href="https://website-ten-lilac-49.vercel.app/assessment"
+          href="/assessment"
           className="mt-8 inline-block rounded-sm bg-primary px-8 py-3.5 text-sm font-semibold uppercase tracking-wider text-primary-foreground transition-opacity hover:opacity-90"
         >
           Take the Quiz

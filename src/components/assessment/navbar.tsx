@@ -42,7 +42,7 @@ export function Navbar() {
             Why Prodigy
           </Link>
           <Link
-            href="https://website-ten-lilac-49.vercel.app/assessment"
+            href="/assessment"
             className="rounded-sm bg-primary px-5 py-2 text-sm font-medium text-primary-foreground transition-opacity hover:opacity-90"
           >
             Take the Quiz
@@ -86,7 +86,7 @@ export function Navbar() {
               Why Prodigy
             </Link>
             <Link
-              href="https://website-ten-lilac-49.vercel.app/assessment"
+              href="/assessment"
               className="rounded-sm bg-primary px-5 py-2 text-center text-sm font-medium text-primary-foreground transition-opacity hover:opacity-90"
               onClick={() => setMobileOpen(false)}
             >

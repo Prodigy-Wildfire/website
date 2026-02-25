@@ -220,7 +220,7 @@ export function RegionPageTemplate({
               Schedule a Consultation
             </Link>
             <Link
-              href="https://website-ten-lilac-49.vercel.app/assessment"
+              href="/assessment"
               className="rounded border-2 border-accent px-8 py-3.5 text-sm font-semibold text-accent transition-colors hover:bg-accent hover:text-white"
             >
               {ctaQuizLabel || "Take the Wildfire Preparedness Quiz"}
