@@ -151,10 +151,10 @@ export function StatsSection() {
         </div>
         <div className="mt-10 text-center">
           <a
-            href="/contact/commercial"
+            href="/commercial-consultation"
             className="inline-block rounded bg-accent px-8 py-3.5 text-sm font-semibold text-white transition-colors hover:bg-accent/90"
           >
-            Request a Commercial Assessment
+            Request a Commercial Consultation
           </a>
         </div>
       </div>

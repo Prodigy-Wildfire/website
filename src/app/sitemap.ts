@@ -71,7 +71,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.8,
     },
     {
-      url: `${BASE_URL}/contact/commercial`,
+      url: `${BASE_URL}/commercial-consultation`,
       lastModified: new Date(),
       changeFrequency: "monthly",
       priority: 0.7,

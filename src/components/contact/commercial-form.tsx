@@ -80,11 +80,11 @@ export function CommercialForm() {
           {/* Sidebar */}
           <div className="lg:col-span-2 text-center">
             <h2 className="font-heading text-3xl font-bold text-foreground md:text-4xl">
-              Request a Commercial Assessment
+              Request a Commercial Consultation
             </h2>
             <p className="mt-4 leading-relaxed text-muted-foreground">
-              Tell us about your property portfolio and we{"'"}ll provide a
-              detailed commercial proposal including system design, installation
+              Tell us about your property portfolio and our commercial team will
+              schedule a consultation to discuss system design, installation
               timeline, and multi-year maintenance options.
             </p>
 
@@ -285,7 +285,7 @@ export function CommercialForm() {
                 className="mt-8 flex w-full items-center justify-center gap-2 rounded bg-accent px-8 py-4 text-sm font-semibold text-white transition-colors hover:bg-accent/90"
               >
                 <Send className="h-4 w-4" />
-                Request Your Commercial Proposal
+                Request a Commercial Consultation
               </button>
 
               <p className="mt-4 text-center text-xs text-muted-foreground">

@@ -25,10 +25,10 @@ export function HeroSection() {
         </p>
         <div className="mt-10 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
           <Link
-            href="https://website-ten-lilac-49.vercel.app/contact/commercial"
+            href="/commercial-consultation"
             className="rounded bg-accent px-8 py-3.5 text-base font-semibold text-white transition-colors hover:bg-accent/90"
           >
-            Request a Commercial Quote
+            Request a Commercial Consultation
           </Link>
           <Link
             href="/case-studies"

@@ -132,6 +132,11 @@ const nextConfig: NextConfig = {
         destination: "/consultation",
         permanent: true,
       },
+      {
+        source: "/contact/commercial",
+        destination: "/commercial-consultation",
+        permanent: true,
+      },
       // Australian states/territories moved under /regions/australia/
       {
         source: "/regions/new-south-wales",

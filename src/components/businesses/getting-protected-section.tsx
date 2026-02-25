@@ -97,10 +97,10 @@ export function GettingProtectedSection() {
             </div>
             <div className="mt-8 flex flex-col items-center gap-3 sm:flex-row sm:justify-center">
               <a
-                href="/contact/commercial"
+                href="/commercial-consultation"
                 className="inline-block rounded bg-accent px-8 py-3.5 text-center text-sm font-semibold text-white transition-colors hover:bg-accent/90"
               >
-                Request a Commercial Assessment
+                Request a Commercial Consultation
               </a>
               <a
                 href="/systems"
