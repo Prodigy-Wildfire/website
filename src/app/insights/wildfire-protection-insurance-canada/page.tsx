@@ -5,6 +5,7 @@ import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
 import { MailingListSection } from "@/components/mailing-list-section";
 import { BreadcrumbJsonLd } from "@/components/breadcrumb-jsonld";
+import { ArticleAuthor } from "@/components/insights/article-author";
 
 export const metadata: Metadata = {
   title:
@@ -31,9 +32,14 @@ const jsonLd = {
     "https://www.prodigywildfire.com/images/insights/wildfire-protection-insurance-canada.jpg",
   datePublished: "2026-03-05",
   author: {
-    "@type": "Organization",
-    name: "Prodigy Wildfire",
-    url: "https://www.prodigywildfire.com",
+    "@type": "Person",
+    name: "George Harris",
+    jobTitle: "CEO",
+    affiliation: {
+      "@type": "Organization",
+      name: "Prodigy Wildfire Solutions",
+      url: "https://www.prodigywildfire.com",
+    },
   },
   publisher: {
     "@type": "Organization",
@@ -84,6 +90,8 @@ export default function WildfireProtectionInsuranceCanadaArticle() {
             </p>
           </div>
         </section>
+
+        <ArticleAuthor date="5 March 2026" />
 
         {/* Featured Image */}
         <section className="bg-muted">
