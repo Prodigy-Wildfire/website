@@ -308,55 +308,16 @@ function generatePdf(
   import("jspdf").then(({ jsPDF }) => {
     const doc = new jsPDF()
     const pageWidth = doc.internal.pageSize.getWidth()
+    const pageHeight = doc.internal.pageSize.getHeight()
     const margin = 20
     const contentWidth = pageWidth - margin * 2
-    let y = 20
 
-    // Header bar
-    doc.setFillColor(26, 29, 35) // primary color
-    doc.rect(0, 0, pageWidth, 40, "F")
-    doc.setFillColor(180, 150, 12) // accent color
-    doc.rect(0, 40, pageWidth, 3, "F")
-
-    doc.setFont("helvetica", "bold")
-    doc.setFontSize(20)
-    doc.setTextColor(212, 175, 55) // accent gold
-    doc.text("Prodigy Wildfire Solutions", margin, 22)
-    doc.setFontSize(12)
-    doc.setTextColor(200, 200, 200)
-    doc.text(`${t.Fire} Risk Assessment Report`, margin, 33)
-
-    y = 55
-
-    // Customer details
-    doc.setFontSize(14)
-    doc.setTextColor(26, 29, 35)
-    doc.setFont("helvetica", "bold")
-    doc.text("Assessment Summary", margin, y)
-    y += 10
-
-    doc.setFontSize(10)
-    doc.setFont("helvetica", "normal")
-    doc.setTextColor(80, 80, 80)
-
-    const details = [
-      `Name: ${formData.firstName} ${formData.lastName}`,
-      `Email: ${formData.email}`,
-      `Phone: ${formData.phone}`,
-      ...(formData.address ? [`Property: ${formData.address}`] : []),
-      `Country: ${countryLabels[country]}`,
-      ...(answers.region ? [`Region: ${answers.region.option.text}`] : []),
-      `Date: ${new Date().toLocaleDateString("en-GB", { day: "numeric", month: "long", year: "numeric" })}`,
-    ]
-
-    details.forEach((line) => {
-      doc.text(line, margin, y)
-      y += 6
-    })
-
-    y += 6
-
-    // Risk level box
+    // Colors
+    const primary: [number, number, number] = [26, 29, 35]
+    const accent: [number, number, number] = [212, 175, 55]
+    const accentDark: [number, number, number] = [180, 150, 12]
+    const textDark: [number, number, number] = [26, 29, 35]
+    const textMuted: [number, number, number] = [100, 100, 100]
     const riskColors: Record<string, [number, number, number]> = {
       High: [220, 38, 38],
       Moderate: [245, 158, 11],
@@ -364,89 +325,322 @@ function generatePdf(
     }
     const riskColor = riskColors[riskLevel] || [100, 100, 100]
 
-    doc.setFillColor(riskColor[0], riskColor[1], riskColor[2])
-    doc.roundedRect(margin, y, contentWidth, 28, 3, 3, "F")
+    function addFooter() {
+      doc.setFillColor(...primary)
+      doc.rect(0, pageHeight - 18, pageWidth, 18, "F")
+      doc.setFontSize(8)
+      doc.setTextColor(...accent)
+      doc.setFont("helvetica", "bold")
+      doc.text("Prodigy Wildfire Solutions", margin, pageHeight - 8)
+      doc.setFont("helvetica", "normal")
+      doc.setTextColor(180, 180, 180)
+      doc.text("www.prodigywildfire.com  |  sales@prodigywildfire.com", pageWidth - margin, pageHeight - 8, { align: "right" })
+    }
 
+    function checkPageBreak(needed: number, y: number): number {
+      if (y + needed > pageHeight - 30) {
+        addFooter()
+        doc.addPage()
+        addHeader()
+        return 55
+      }
+      return y
+    }
+
+    function addHeader() {
+      doc.setFillColor(...primary)
+      doc.rect(0, 0, pageWidth, 40, "F")
+      doc.setFillColor(...accentDark)
+      doc.rect(0, 40, pageWidth, 3, "F")
+      doc.setFont("helvetica", "bold")
+      doc.setFontSize(18)
+      doc.setTextColor(...accent)
+      doc.text("PRODIGY WILDFIRE SOLUTIONS", margin, 20)
+      doc.setFontSize(10)
+      doc.setTextColor(200, 200, 200)
+      doc.text(`${t.Fire} Risk Assessment Report`, margin, 30)
+      doc.setFontSize(8)
+      doc.text(`Prepared: ${new Date().toLocaleDateString("en-GB", { day: "numeric", month: "long", year: "numeric" })}`, pageWidth - margin, 30, { align: "right" })
+    }
+
+    function sectionHeading(title: string, y: number): number {
+      y = checkPageBreak(20, y)
+      doc.setFillColor(245, 245, 245)
+      doc.rect(margin, y - 5, contentWidth, 12, "F")
+      doc.setFillColor(...accentDark)
+      doc.rect(margin, y - 5, 3, 12, "F")
+      doc.setFont("helvetica", "bold")
+      doc.setFontSize(12)
+      doc.setTextColor(...textDark)
+      doc.text(title, margin + 8, y + 3)
+      return y + 14
+    }
+
+    function wrappedText(text: string, y: number, fontSize = 9, color: [number, number, number] = textMuted): number {
+      doc.setFont("helvetica", "normal")
+      doc.setFontSize(fontSize)
+      doc.setTextColor(...color)
+      const lines = doc.splitTextToSize(text, contentWidth)
+      for (const line of lines) {
+        y = checkPageBreak(6, y)
+        doc.text(line, margin, y)
+        y += 5
+      }
+      return y
+    }
+
+    // ===== PAGE 1: Cover & Summary =====
+    addHeader()
+    let y = 55
+
+    // Prepared for
+    doc.setFont("helvetica", "normal")
+    doc.setFontSize(9)
+    doc.setTextColor(...textMuted)
+    doc.text("PREPARED FOR", margin, y)
+    y += 7
     doc.setFont("helvetica", "bold")
     doc.setFontSize(16)
-    doc.setTextColor(255, 255, 255)
-    doc.text(`${riskLevel} Risk`, margin + 10, y + 12)
+    doc.setTextColor(...textDark)
+    doc.text(`${formData.firstName} ${formData.lastName}`, margin, y)
+    y += 8
+    doc.setFont("helvetica", "normal")
+    doc.setFontSize(10)
+    doc.setTextColor(...textMuted)
+    const contactLines = [
+      formData.email,
+      formData.phone,
+      ...(formData.address ? [formData.address] : []),
+      `${answers.region ? answers.region.option.text + ", " : ""}${countryLabels[country]}`,
+    ]
+    contactLines.forEach((line) => {
+      doc.text(line, margin, y)
+      y += 6
+    })
+    y += 8
 
+    // Risk level banner
+    doc.setFillColor(...riskColor)
+    doc.roundedRect(margin, y, contentWidth, 32, 3, 3, "F")
+    doc.setFont("helvetica", "bold")
+    doc.setFontSize(18)
+    doc.setTextColor(255, 255, 255)
+    doc.text(`${riskLevel} Risk`, margin + 10, y + 14)
     doc.setFont("helvetica", "normal")
     doc.setFontSize(9)
     const descLines = doc.splitTextToSize(riskDescription, contentWidth - 20)
-    doc.text(descLines, margin + 10, y + 20)
+    doc.text(descLines, margin + 10, y + 23)
+    y += 42
 
-    y += 36
+    // Executive summary
+    y = sectionHeading("Executive Summary", y)
 
-    // Key answers
-    doc.setFont("helvetica", "bold")
-    doc.setFontSize(12)
-    doc.setTextColor(26, 29, 35)
-    doc.text("Your Key Responses", margin, y)
-    y += 8
+    const locationAnswer = answers.location?.option.text || "an unspecified location"
+    const regionAnswer = answers.region?.option.text || countryLabels[country]
+    const protectionAnswer = answers.current_protection?.option.text || ""
+    const preparednessAnswer = answers.preparedness?.option.text || ""
+    const evacuatedAnswer = answers.evacuated?.option.text || ""
 
-    doc.setFont("helvetica", "normal")
-    doc.setFontSize(9)
-    doc.setTextColor(80, 80, 80)
-
-    const keyAnswerIds = [
-      { id: "location", label: "Property Location" },
-      { id: "current_protection", label: "Current Protection" },
-      { id: "preparedness", label: "Preparedness Level" },
-      { id: "ownership", label: "Home Ownership" },
-      { id: "timeline", label: "Desired Timeline" },
-      { id: "budget", label: "Budget Alignment" },
-    ]
-
-    keyAnswerIds.forEach((item) => {
-      const answer = answers[item.id]
-      if (answer) {
-        doc.setFont("helvetica", "bold")
-        doc.text(`${item.label}:`, margin, y)
-        doc.setFont("helvetica", "normal")
-        const answerText = doc.splitTextToSize(answer.option.text, contentWidth - 50)
-        doc.text(answerText, margin + 48, y)
-        y += answerText.length > 1 ? 10 : 6
-      }
-    })
-
+    let summaryText = ""
+    if (category === "hot") {
+      summaryText = `This report has been prepared for ${formData.firstName} ${formData.lastName}, whose property is located ${locationAnswer.toLowerCase()} in ${regionAnswer}. Based on the responses provided, your property has been assessed as ${riskLevel} Risk for ${t.fire} exposure. This indicates that your property faces significant ${t.fire} risk factors that warrant immediate attention and proactive protection measures. The combination of your property's proximity to ${t.land}, current protection level, and regional ${t.fire} history places your property in a high-vulnerability category.`
+    } else if (category === "warm") {
+      summaryText = `This report has been prepared for ${formData.firstName} ${formData.lastName}, whose property is located ${locationAnswer.toLowerCase()} in ${regionAnswer}. Based on the responses provided, your property has been assessed as ${riskLevel} Risk for ${t.fire} exposure. While not in the highest risk category, your property has notable vulnerability factors that should be addressed to improve your ${t.fire} resilience and protect your investment.`
+    } else {
+      summaryText = `This report has been prepared for ${formData.firstName} ${formData.lastName}, whose property is located ${locationAnswer.toLowerCase()} in ${regionAnswer}. Based on the responses provided, your property has been assessed as ${riskLevel} Risk for ${t.fire} exposure. While your immediate risk factors are comparatively lower, it is important to remain prepared. ${t.Fires} are unpredictable, and conditions in ${regionAnswer} can change rapidly during ${t.season}.`
+    }
+    y = wrappedText(summaryText, y)
     y += 6
 
-    // Recommendation
+    // ===== Property Risk Profile =====
+    y = sectionHeading("Your Property Risk Profile", y)
+
+    // Location analysis
     doc.setFont("helvetica", "bold")
-    doc.setFontSize(12)
-    doc.setTextColor(26, 29, 35)
-    doc.text("Recommended Next Steps", margin, y)
-    y += 8
+    doc.setFontSize(10)
+    doc.setTextColor(...textDark)
+    y = checkPageBreak(8, y)
+    doc.text("Property Location & Exposure", margin, y)
+    y += 6
 
-    doc.setFont("helvetica", "normal")
-    doc.setFontSize(9)
-    doc.setTextColor(80, 80, 80)
+    let locationAnalysis = ""
+    if (answers.location) {
+      const locScore = answers.location.option.score
+      if (locScore >= 9) {
+        locationAnalysis = `Your property is situated ${locationAnswer.toLowerCase()}, placing it in a high-exposure zone. Properties in direct proximity to ${t.land} are the most vulnerable to ember attack, radiant heat, and direct flame contact during ${t.fire} events. Windborne embers can travel over 20km ahead of a fire front, and properties within 100m of ${t.land} are statistically the most likely to be impacted. Creating and maintaining defensible space around your home is critical, and a professionally installed exterior sprinkler system provides a vital additional layer of protection.`
+      } else if (locScore >= 7) {
+        locationAnalysis = `Your property is located ${locationAnswer.toLowerCase()}, which places it within the ${t.fire} risk zone. While not directly adjacent to dense ${t.land}, properties within 1km remain highly susceptible to ember attack. Embers carried by wind can ignite dry materials on roofs, gutters, decks, and landscaping at significant distances from the fire front. We recommend assessing your property's ember entry points and considering a permanent protection system.`
+      } else if (locScore >= 4) {
+        locationAnalysis = `Your property is in a ${locationAnswer.toLowerCase()}. While suburban properties have some buffer from dense ${t.land}, they are not immune to ${t.fire} risk. During severe ${t.fire} events, ember showers can affect properties several kilometres from the fire front. Maintaining clear gutters, using fire-resistant landscaping, and ensuring you have a ${t.fire} emergency plan are all important steps.`
+      } else {
+        locationAnalysis = `Your property is located in ${locationAnswer.toLowerCase()}, which typically has lower direct ${t.fire} exposure. However, it is worth noting that ${t.fire} conditions are changing rapidly due to climate change, and areas previously considered low-risk are increasingly being impacted. Staying informed about local ${t.fire} conditions and having an emergency plan in place is always recommended.`
+      }
+    }
+    y = wrappedText(locationAnalysis, y)
+    y += 4
 
-    let recommendation = ""
-    if (category === "hot") {
-      recommendation = `Based on your assessment score, your property has significant ${t.fire} risk factors. We strongly recommend booking a free consultation with one of our ${t.fire} protection specialists to discuss a tailored protection system for your property.`
-    } else if (category === "warm") {
-      recommendation = `Your assessment indicates notable ${t.fire} risk factors. We recommend speaking with our team to explore protection options that fit your situation and timeline.`
-    } else {
-      recommendation = `While your immediate risk factors are lower, staying prepared is important. We recommend reviewing our ${t.fire} preparation resources and reaching out when you're ready to take the next step.`
+    // Evacuation history
+    if (answers.evacuated) {
+      y = checkPageBreak(8, y)
+      doc.setFont("helvetica", "bold")
+      doc.setFontSize(10)
+      doc.setTextColor(...textDark)
+      doc.text("Previous Fire Experience", margin, y)
+      y += 6
+
+      let evacAnalysis = ""
+      const evacScore = answers.evacuated.option.score
+      if (evacScore >= 8) {
+        evacAnalysis = `You indicated that you have been directly impacted by ${t.fire} previously (${evacuatedAnswer.toLowerCase()}). This personal experience underscores the very real threat that ${t.fires} pose to properties in your area. Research consistently shows that property owners who have experienced ${t.fire} firsthand are significantly more proactive about implementing protection measures, and that proactive measures dramatically reduce the likelihood of property loss in subsequent events.`
+      } else if (evacScore >= 5) {
+        evacAnalysis = `You indicated that you or someone close to you has had experience with ${t.fire} events. This awareness of the real impact of ${t.fires} is valuable. Understanding the speed at which ${t.fires} can escalate and the importance of early evacuation and property protection measures can significantly influence outcomes during future events.`
+      } else {
+        evacAnalysis = `While you have not been directly impacted by ${t.fire} to date, this does not diminish the importance of being prepared. Many properties lost to ${t.fires} belonged to owners who had never experienced a fire event before. Preparation and proactive protection are your best defence.`
+      }
+      y = wrappedText(evacAnalysis, y)
+      y += 4
     }
 
-    const recLines = doc.splitTextToSize(recommendation, contentWidth)
-    doc.text(recLines, margin, y)
-    y += recLines.length * 5 + 10
+    // Current protection
+    if (answers.current_protection) {
+      y = checkPageBreak(8, y)
+      doc.setFont("helvetica", "bold")
+      doc.setFontSize(10)
+      doc.setTextColor(...textDark)
+      doc.text("Current Protection Measures", margin, y)
+      y += 6
 
-    // Footer
-    doc.setFillColor(26, 29, 35)
-    doc.rect(0, 275, pageWidth, 22, "F")
-    doc.setFontSize(9)
-    doc.setTextColor(212, 175, 55)
+      let protAnalysis = ""
+      const protScore = answers.current_protection.option.score
+      if (protScore >= 7) {
+        protAnalysis = `Your current protection level is: "${protectionAnswer}". This represents a significant gap in your property's ${t.fire} defences. Garden hoses and basic DIY systems are insufficient during a real ${t.fire} event. Water pressure drops dramatically when multiple homes in a neighbourhood are drawing from the same supply, and garden hoses cannot provide the sustained, high-coverage water delivery needed to suppress embers across your entire roof and property perimeter. A professionally engineered exterior sprinkler system delivers full property coverage in under 3 minutes and can be activated remotely, even after you have evacuated.`
+      } else if (protScore >= 5) {
+        protAnalysis = `Your current protection level is: "${protectionAnswer}". While having some protection measures in place is better than none, non-professional systems often have critical gaps in coverage, may not withstand the extreme conditions of a ${t.fire} event, and cannot be activated remotely. A professionally designed system ensures complete coverage of all vulnerable areas, uses durable materials rated for extreme heat, and provides remote activation through the Prodigy Wildfire app.`
+      } else if (protScore >= 2) {
+        protAnalysis = `Your current protection level is: "${protectionAnswer}". Having a professional system in place is excellent. If your system needs upgrading, our team can assess your existing infrastructure and recommend improvements including remote activation capability, ember detection sensors, and expanded coverage zones to ensure your property has the most comprehensive protection available.`
+      } else {
+        protAnalysis = `Your current protection level is: "${protectionAnswer}". Having a comprehensive professional system already installed places your property in the best possible position for ${t.fire} defence. We recommend regular maintenance and system checks to ensure continued peak performance, particularly ahead of each ${t.season}.`
+      }
+      y = wrappedText(protAnalysis, y)
+      y += 4
+    }
+
+    // Preparedness
+    if (answers.preparedness) {
+      y = checkPageBreak(8, y)
+      doc.setFont("helvetica", "bold")
+      doc.setFontSize(10)
+      doc.setTextColor(...textDark)
+      doc.text("Overall Preparedness", margin, y)
+      y += 6
+
+      let prepAnalysis = ""
+      const prepScore = answers.preparedness.option.score
+      if (prepScore >= 7) {
+        prepAnalysis = `You rated your preparedness as: "${preparednessAnswer}". Acknowledging gaps in your preparedness is an important first step. The good news is that there are practical, proven steps you can take to significantly improve your property's resilience. These include creating defensible space (clearing vegetation within 10 metres of your structure), ensuring gutters and roofs are clear of debris, sealing gaps in eaves and vents, and installing a permanent exterior sprinkler system that provides automated, remote-activated protection.`
+      } else if (prepScore >= 4) {
+        prepAnalysis = `You rated your preparedness as: "${preparednessAnswer}". You have clearly taken some steps toward protecting your property, and there is an opportunity to strengthen your defences further. Consider a professional property assessment to identify any remaining vulnerabilities. Even well-prepared properties can benefit from a comprehensive exterior sprinkler system that provides an additional layer of automated protection during ${t.fire} events.`
+      } else {
+        prepAnalysis = `You rated your preparedness as: "${preparednessAnswer}". Being well prepared is an excellent foundation. Continuing to maintain your defensible space, reviewing your emergency plan regularly, and ensuring your protection systems are serviced ahead of each ${t.season} will keep your property in the strongest position possible.`
+      }
+      y = wrappedText(prepAnalysis, y)
+      y += 4
+    }
+
+    // ===== Tailored Recommendations =====
+    y = sectionHeading("Tailored Recommendations", y)
+
+    const recommendations: string[] = []
+
+    if (category === "hot") {
+      recommendations.push(
+        `Schedule a Free Consultation: Given your property's risk profile, we strongly recommend booking a free consultation with one of our ${t.fire} protection specialists. Our team will conduct a detailed assessment of your property, identify all vulnerability points, and design a custom protection system tailored to your specific needs.`,
+        `Install a Professional Exterior Sprinkler System: A Prodigy exterior ${t.fire} sprinkler system is custom-engineered for your property's roofline, terrain, and exposure zones. Our systems use durable copper piping (or stainless steel in Australia), provide full property coverage in under 3 minutes, and can be activated remotely from anywhere in the world via the Prodigy Wildfire app.`,
+        `Create and Maintain Defensible Space: Clear vegetation, debris, and flammable materials within at least 10 metres of your structure. Trim trees so branches are at least 3 metres from your roofline. Keep gutters clear and store firewood well away from buildings.`,
+        `Develop a ${t.Fire} Emergency Plan: Prepare a documented evacuation plan, including routes, meeting points, and a go-bag with essential documents, medications, and supplies. Ensure every member of your household knows the plan.`,
+      )
+    } else if (category === "warm") {
+      recommendations.push(
+        `Explore Your Protection Options: Your assessment indicates that your property would benefit from professional ${t.fire} protection. We recommend scheduling a free consultation to understand the options available for your property and budget.`,
+        `Assess Your Property's Vulnerabilities: Walk your property and identify potential ember entry points including gutters, vents, eaves, decks, and fences. These are the areas where windborne embers are most likely to lodge and ignite.`,
+        `Consider a Phased Approach: If budget is a consideration, our team can design a phased installation plan that addresses the highest-risk areas first, with the option to expand coverage over time.`,
+        `Review Your Emergency Plan: Ensure you have a documented evacuation plan and that your household is prepared for ${t.fire} events. Preparation significantly improves outcomes.`,
+      )
+    } else {
+      recommendations.push(
+        `Stay Informed: Monitor local ${t.fire} conditions and sign up for emergency alerts from your regional fire authority. Conditions can change rapidly.`,
+        `Maintain Your Property: Continue keeping vegetation cleared, gutters clean, and flammable materials stored away from structures. Regular maintenance is your first line of defence.`,
+        `Review Our Resources: Visit prodigywildfire.com for ${t.fire} preparation guides, educational content, and information about our protection systems. Being informed is being prepared.`,
+        `Consider Future Protection: As ${t.fire} conditions evolve, properties that were previously lower-risk may face increased exposure. A professional protection system is a long-term investment in your property's safety and value.`,
+      )
+    }
+
+    recommendations.forEach((rec, i) => {
+      y = checkPageBreak(12, y)
+      doc.setFont("helvetica", "bold")
+      doc.setFontSize(10)
+      doc.setTextColor(...accent)
+      doc.text(`${i + 1}.`, margin, y)
+      const colonIdx = rec.indexOf(":")
+      const heading = rec.substring(0, colonIdx + 1)
+      const body = rec.substring(colonIdx + 1).trim()
+      doc.setTextColor(...textDark)
+      doc.text(heading, margin + 8, y)
+      y += 6
+      y = wrappedText(body, y)
+      y += 4
+    })
+
+    // ===== About Prodigy =====
+    y = sectionHeading("About Prodigy Wildfire Solutions", y)
+
+    const aboutText = `Prodigy Wildfire Solutions is a global leader in ${t.fire} protection, delivering custom-engineered exterior sprinkler systems for homes, businesses, and critical infrastructure across the USA, Canada, and Australia. Our systems are designed by ${t.fire} protection specialists and installed by qualified professionals using the highest quality materials. Every system includes remote activation via the Prodigy Wildfire app, allowing property owners to protect their property from anywhere in the world. From the Banff Gondola in the Canadian Rockies to private residences in California and rural properties in New South Wales, our team has protected some of the most ${t.fire}-exposed properties on the planet.`
+    y = wrappedText(aboutText, y)
+    y += 4
+
+    const ctaText = `To schedule your free consultation and take the next step in protecting your property, visit prodigywildfire.com/consultation or email sales@prodigywildfire.com.`
     doc.setFont("helvetica", "bold")
-    doc.text("Prodigy Wildfire Solutions", margin, 285)
+    doc.setFontSize(9)
+    doc.setTextColor(...accentDark)
+    const ctaLines = doc.splitTextToSize(ctaText, contentWidth)
+    for (const line of ctaLines) {
+      y = checkPageBreak(6, y)
+      doc.text(line, margin, y)
+      y += 5
+    }
+
+    // ===== Disclaimer =====
+    y += 4
+    y = checkPageBreak(20, y)
+    doc.setDrawColor(200, 200, 200)
+    doc.line(margin, y, margin + contentWidth, y)
+    y += 6
+    const disclaimer = `Disclaimer: This report is generated based on self-reported information and is intended for general guidance purposes only. It does not constitute a professional ${t.fire} risk assessment, engineering report, or insurance evaluation. Actual ${t.fire} risk depends on many factors including weather, terrain, vegetation, building materials, and local conditions that cannot be fully captured in a questionnaire. For a comprehensive property assessment, please contact our team directly.`
     doc.setFont("helvetica", "normal")
-    doc.setTextColor(180, 180, 180)
-    doc.text("www.prodigywildfire.com  |  sales@prodigywildfire.com", margin, 291)
+    doc.setFontSize(7)
+    doc.setTextColor(150, 150, 150)
+    const discLines = doc.splitTextToSize(disclaimer, contentWidth)
+    for (const line of discLines) {
+      y = checkPageBreak(5, y)
+      doc.text(line, margin, y)
+      y += 4
+    }
+
+    // Add footer to final page
+    addFooter()
+
+    // Add watermark logo text to each page
+    const totalPages = doc.getNumberOfPages()
+    for (let i = 1; i <= totalPages; i++) {
+      doc.setPage(i)
+      doc.setFont("helvetica", "bold")
+      doc.setFontSize(60)
+      doc.setTextColor(240, 240, 240)
+      doc.text("PRODIGY", pageWidth / 2, pageHeight / 2, {
+        align: "center",
+        angle: 45,
+      })
+    }
 
     doc.save(`${t.Fire}-Risk-Assessment-${formData.lastName}.pdf`)
   })
