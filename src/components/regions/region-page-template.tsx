@@ -76,7 +76,7 @@ export function RegionPageTemplate({
           className="object-cover"
           priority
         />
-        <div className="absolute inset-0 bg-primary/40" />
+        <div className="absolute inset-0 bg-primary/55" />
         <div className="relative z-10 mx-auto max-w-4xl px-6 text-center">
           <h1 className="font-heading text-4xl font-bold leading-tight tracking-tight text-primary-foreground md:text-5xl lg:text-6xl">
             {heroTitle ? (
