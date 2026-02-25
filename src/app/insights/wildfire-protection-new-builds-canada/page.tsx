@@ -4,6 +4,7 @@ import Link from "next/link";
 import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
 import { MailingListSection } from "@/components/mailing-list-section";
+import { BreadcrumbJsonLd } from "@/components/breadcrumb-jsonld";
 
 export const metadata: Metadata = {
   title:
@@ -43,6 +44,7 @@ const jsonLd = {
       url: "https://www.prodigywildfire.com/images/pws-logo-white-text.png",
     },
   },
+  mainEntityOfPage: "https://www.prodigywildfire.com/insights/wildfire-protection-new-builds-canada",
 };
 
 export default function WildfireProtectionNewBuildsCanadaArticle() {
@@ -51,6 +53,12 @@ export default function WildfireProtectionNewBuildsCanadaArticle() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <BreadcrumbJsonLd
+        items={[
+          { name: "Insights", href: "/insights" },
+          { name: "Wildfire Protection for New Developments in Canada: A Builder's Guide" },
+        ]}
       />
       <Header />
       <main>

@@ -3,6 +3,7 @@ import { ContactHero } from "@/components/contact/contact-hero"
 import { ContactForm } from "@/components/contact/contact-form"
 import { ContactCta } from "@/components/contact/contact-cta"
 import { Footer } from "@/components/footer"
+import { BreadcrumbJsonLd } from "@/components/breadcrumb-jsonld"
 
 export const metadata = {
   title: "Contact Prodigy Wildfire | Schedule a Consultation",
@@ -48,6 +49,7 @@ export default function ContactPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
+      <BreadcrumbJsonLd items={[{ name: "Contact", href: "/contact" }]} />
       <Header />
       <ContactHero />
 

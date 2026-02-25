@@ -5,6 +5,7 @@ import { EngineeringSection } from "@/components/about/engineering-section"
 import { TeamSection } from "@/components/about/team-section"
 import { MailingListSection } from "@/components/mailing-list-section"
 import { Footer } from "@/components/footer"
+import { BreadcrumbJsonLd } from "@/components/breadcrumb-jsonld"
 
 export const metadata = {
   title: "About Prodigy Wildfire | The Future of Wildfire Protection",
@@ -70,6 +71,7 @@ export default function Page() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
+      <BreadcrumbJsonLd items={[{ name: "About Us", href: "/about" }]} />
       <Header />
       <HeroSection />
       <MissionSection />

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
+import { BreadcrumbJsonLd } from "@/components/breadcrumb-jsonld";
 import { PartnersHero } from "@/components/partners/partners-hero";
 import { BenefitsGrid } from "@/components/partners/benefits-grid";
 import { PartnerTypes } from "@/components/partners/partner-types";
@@ -38,6 +39,7 @@ export default function PartnersPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
+      <BreadcrumbJsonLd items={[{ name: "Partners", href: "/partners" }]} />
       <Header />
       <main>
         <PartnersHero />

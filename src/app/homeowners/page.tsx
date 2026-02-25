@@ -10,6 +10,7 @@ import { GettingProtected } from "@/components/homeowners/getting-protected";
 import { VideoTestimonials } from "@/components/video-testimonials";
 import { LeadMagnetSection } from "@/components/lead-magnet-section";
 import Link from "next/link";
+import { BreadcrumbJsonLd } from "@/components/breadcrumb-jsonld";
 
 export const metadata: Metadata = {
   title: "Wildfire Sprinkler Systems for Homes | Prodigy Wildfire",
@@ -82,6 +83,7 @@ export default function HomeownersPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
+      <BreadcrumbJsonLd items={[{ name: "Homeowners", href: "/homeowners" }]} />
       <Header />
       <main>
         <HomeownersHero />

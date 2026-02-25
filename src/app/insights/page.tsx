@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
+import { BreadcrumbJsonLd } from "@/components/breadcrumb-jsonld";
 import { MailingListSection } from "@/components/mailing-list-section";
 import Link from "next/link";
 import Image from "next/image";
@@ -163,6 +164,7 @@ export default function InsightsPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
+      <BreadcrumbJsonLd items={[{ name: "Insights", href: "/insights" }]} />
       <Header />
       <main>
         {/* Hero */}

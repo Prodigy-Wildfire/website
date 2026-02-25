@@ -4,6 +4,7 @@ import Link from "next/link";
 import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
 import { MailingListSection } from "@/components/mailing-list-section";
+import { BreadcrumbJsonLd } from "@/components/breadcrumb-jsonld";
 
 export const metadata: Metadata = {
   title:
@@ -43,6 +44,7 @@ const jsonLd = {
       url: "https://www.prodigywildfire.com/images/pws-logo-white-text.png",
     },
   },
+  mainEntityOfPage: "https://www.prodigywildfire.com/insights/bushfire-protection-insurance-australia",
 };
 
 export default function BushfireProtectionInsuranceAustraliaArticle() {
@@ -51,6 +53,12 @@ export default function BushfireProtectionInsuranceAustraliaArticle() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <BreadcrumbJsonLd
+        items={[
+          { name: "Insights", href: "/insights" },
+          { name: "How Bushfire Protection Systems Can Impact Your Home Insurance in Australia" },
+        ]}
       />
       <Header />
       <main>

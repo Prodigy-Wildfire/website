@@ -4,6 +4,7 @@ import Link from "next/link";
 import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
 import { MailingListSection } from "@/components/mailing-list-section";
+import { BreadcrumbJsonLd } from "@/components/breadcrumb-jsonld";
 
 export const metadata: Metadata = {
   title:
@@ -43,6 +44,7 @@ const jsonLd = {
       url: "https://www.prodigywildfire.com/images/pws-logo-white-text.png",
     },
   },
+  mainEntityOfPage: "https://www.prodigywildfire.com/insights/wildfire-protection-commercial-usa",
 };
 
 export default function WildfireProtectionCommercialUsaArticle() {
@@ -51,6 +53,12 @@ export default function WildfireProtectionCommercialUsaArticle() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <BreadcrumbJsonLd
+        items={[
+          { name: "Insights", href: "/insights" },
+          { name: "Protecting Commercial Properties and Multi-Unit Buildings From Wildfire in the US" },
+        ]}
       />
       <Header />
       <main>

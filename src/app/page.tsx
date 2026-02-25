@@ -20,11 +20,36 @@ export const metadata: Metadata = {
 const jsonLd = [
   {
     "@context": "https://schema.org",
+    "@type": "Organization",
+    name: "Prodigy Wildfire Solutions",
+    url: "https://www.prodigywildfire.com",
+    logo: "https://www.prodigywildfire.com/images/pws-logo-white-text.png",
+    description:
+      "Prodigy Wildfire Solutions designs, installs, and maintains permanent exterior wildfire sprinkler systems, ember detection sensors, and remote activation technology for homes, businesses, and communities across the USA, Canada, and Australia.",
+    email: "sales@prodigywildfire.com",
+    foundingLocation: {
+      "@type": "Place",
+      name: "Whistler, British Columbia, Canada",
+    },
+    areaServed: [
+      { "@type": "Country", name: "United States" },
+      { "@type": "Country", name: "Canada" },
+      { "@type": "Country", name: "Australia" },
+    ],
+    contactPoint: {
+      "@type": "ContactPoint",
+      email: "sales@prodigywildfire.com",
+      contactType: "sales",
+      areaServed: ["US", "CA", "AU"],
+      availableLanguage: "English",
+    },
+    sameAs: [],
+  },
+  {
+    "@context": "https://schema.org",
     "@type": "LocalBusiness",
     name: "Prodigy Wildfire Solutions",
     url: "https://www.prodigywildfire.com",
-    description:
-      "Protect your property with Prodigy's engineered wildfire sprinkler systems. Remotely activated, ember-proof protection across USA, Canada & Australia.",
     image: "https://www.prodigywildfire.com/images/pws-logo-white-text.png",
     logo: "https://www.prodigywildfire.com/images/pws-logo-white-text.png",
     email: "sales@prodigywildfire.com",
@@ -45,6 +70,7 @@ const jsonLd = [
       "Ember Detection",
       "Remote Activation Systems",
     ],
+    priceRange: "$15,000 - $1,200,000",
     aggregateRating: {
       "@type": "AggregateRating",
       ratingValue: "5",
@@ -57,11 +83,6 @@ const jsonLd = [
     "@type": "WebSite",
     name: "Prodigy Wildfire Solutions",
     url: "https://www.prodigywildfire.com",
-    potentialAction: {
-      "@type": "SearchAction",
-      target: "https://www.prodigywildfire.com/?q={search_term_string}",
-      "query-input": "required name=search_term_string",
-    },
   },
 ];
 

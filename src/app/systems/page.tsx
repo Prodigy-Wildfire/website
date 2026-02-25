@@ -15,54 +15,66 @@ export const metadata: Metadata = {
     "Exterior wildfire sprinkler systems, remote activation, and ember detection technology. Prodigy delivers end-to-end wildfire defence for properties of all sizes.",
 };
 
-const jsonLd = {
-  "@context": "https://schema.org",
-  "@type": "Service",
-  provider: {
-    "@type": "Organization",
-    name: "Prodigy Wildfire Solutions",
-    url: "https://www.prodigywildfire.com",
-  },
-  serviceType: "Wildfire Protection",
-  areaServed: [
-    { "@type": "Country", name: "United States" },
-    { "@type": "Country", name: "Canada" },
-    { "@type": "Country", name: "Australia" },
-  ],
-  hasOfferCatalog: {
-    "@type": "OfferCatalog",
-    name: "Wildfire Protection Services",
-    itemListElement: [
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    name: "Prodigy Exterior Wildfire Sprinkler System",
+    description:
+      "Custom-engineered permanent roof-mounted wildfire sprinkler systems using type L copper piping (316 stainless steel in Australia). Delivers up to 50 feet of coverage and full property saturation in under 3 minutes.",
+    brand: {
+      "@type": "Brand",
+      name: "Prodigy Wildfire Solutions",
+    },
+    manufacturer: {
+      "@type": "Organization",
+      name: "Prodigy Wildfire Solutions",
+      url: "https://www.prodigywildfire.com",
+    },
+    category: "Wildfire Protection Systems",
+    offers: {
+      "@type": "AggregateOffer",
+      priceCurrency: "USD",
+      lowPrice: "15000",
+      highPrice: "1200000",
+      offerCount: "3",
+      availability: "https://schema.org/InStock",
+      eligibleRegion: [
+        { "@type": "Country", name: "United States" },
+        { "@type": "Country", name: "Canada" },
+        { "@type": "Country", name: "Australia" },
+      ],
+    },
+    hasVariant: [
       {
-        "@type": "Offer",
-        itemOffered: {
-          "@type": "Service",
-          name: "Exterior Wildfire Sprinkler Systems",
-          description:
-            "Custom-engineered permanent roof-mounted sprinkler systems using type L copper (316 Stainless steel in Australia) piping. Delivers up to 50 feet of coverage and full property saturation in under 3 minutes.",
-        },
+        "@type": "Product",
+        name: "Exterior Wildfire Sprinkler System",
+        description:
+          "Permanent roof-mounted copper piping sprinkler system with up to 50 feet of coverage per head and full property saturation in under 3 minutes.",
       },
       {
-        "@type": "Offer",
-        itemOffered: {
-          "@type": "Service",
-          name: "Remote Activation & Ember Watch",
-          description:
-            "App-based remote monitoring and one-tap activation from anywhere in the world. Real-time fire tracking, ember alerts, and programmable activation cycles.",
-        },
+        "@type": "Product",
+        name: "Remote Activation and EmberWatch",
+        description:
+          "App-based remote monitoring and one-tap activation from anywhere in the world. Real-time fire tracking, ember alerts, and programmable activation cycles.",
       },
       {
-        "@type": "Offer",
-        itemOffered: {
-          "@type": "Service",
-          name: "Advanced Ember & Flame Detection",
-          description:
-            "360-degree perimeter scanning sensors with 24/7 automated monitoring. Weather-resistant sensors detect airborne embers and flame activity with instant app alerts.",
-        },
+        "@type": "Product",
+        name: "Advanced Ember and Flame Detection Sensor",
+        description:
+          "360-degree perimeter scanning sensors with 24/7 automated monitoring. Weather-resistant sensors detect airborne embers and flame activity with instant app alerts.",
       },
     ],
   },
-};
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: "https://www.prodigywildfire.com" },
+      { "@type": "ListItem", position: 2, name: "Our Systems" },
+    ],
+  },
+];
 
 export default function SystemPage() {
   return (

@@ -3,6 +3,7 @@ import { HeroSection } from "@/components/faq/hero-section"
 import { VideoFaqSection } from "@/components/faq/video-faq-section"
 import { ContactSection } from "@/components/faq/contact-section"
 import { Footer } from "@/components/footer"
+import { BreadcrumbJsonLd } from "@/components/breadcrumb-jsonld"
 
 export const metadata = {
   title: "Wildfire Protection FAQ | Prodigy Wildfire",
@@ -96,6 +97,7 @@ export default function Page() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
       />
+      <BreadcrumbJsonLd items={[{ name: "FAQ", href: "/faq" }]} />
       <Header />
       <main className="flex-1">
         <HeroSection />

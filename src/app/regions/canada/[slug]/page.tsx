@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
 import { RegionPageTemplate } from "@/components/regions/region-page-template";
+import { BreadcrumbJsonLd } from "@/components/breadcrumb-jsonld";
 import { getRegionBySlug, getRegionsByCountry } from "@/lib/regions";
 
 const canadianSlugs = getRegionsByCountry("canada").map((r) => r.slug);
@@ -58,6 +59,7 @@ export default async function CanadaProvincePage({
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
+      <BreadcrumbJsonLd items={[{ name: "Regions", href: "/regions" }, { name: "Canada", href: "/regions/canada" }, { name: region.name }]} />
       <Header />
       <main>
         <RegionPageTemplate

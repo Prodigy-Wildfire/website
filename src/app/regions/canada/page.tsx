@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
+import { BreadcrumbJsonLd } from "@/components/breadcrumb-jsonld";
 import { RegionPageTemplate } from "@/components/regions/region-page-template";
 
 
@@ -68,6 +69,7 @@ export default function CanadaRegionPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
+      <BreadcrumbJsonLd items={[{ name: "Regions", href: "/regions" }, { name: "Canada", href: "/regions/canada" }]} />
       <Header />
       <main>
         <RegionPageTemplate

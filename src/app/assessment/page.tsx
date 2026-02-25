@@ -1,6 +1,7 @@
 import type { Metadata } from "next"
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
+import { BreadcrumbJsonLd } from "@/components/breadcrumb-jsonld"
 import { WildfireRiskAssessment } from "@/components/assessment/wildfire-risk-assessment"
 
 export const metadata: Metadata = {
@@ -53,6 +54,7 @@ export default function Page() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
+      <BreadcrumbJsonLd items={[{ name: "Wildfire Risk Assessment", href: "/assessment" }]} />
       <Header />
       <main>
         <WildfireRiskAssessment />

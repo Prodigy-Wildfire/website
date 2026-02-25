@@ -8,6 +8,7 @@ import { GettingProtectedSection } from "@/components/businesses/getting-protect
 import { ProcessSection } from "@/components/businesses/process-section"
 import { BusinessCta } from "@/components/businesses/business-cta"
 import { Footer } from "@/components/footer"
+import { BreadcrumbJsonLd } from "@/components/breadcrumb-jsonld"
 
 export const metadata = {
   title: "Commercial Wildfire Protection | Prodigy Wildfire",
@@ -50,6 +51,7 @@ export default function Page() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
+      <BreadcrumbJsonLd items={[{ name: "Businesses", href: "/businesses" }]} />
       <Header />
       <HeroSection />
       <StatsSection />

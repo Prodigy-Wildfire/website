@@ -8,6 +8,7 @@ import { SupportSection } from "@/components/regions/support-section"
 import { CtaBanner } from "@/components/regions/cta-banner"
 import { MailingListSection } from "@/components/mailing-list-section"
 import { Footer } from "@/components/footer"
+import { BreadcrumbJsonLd } from "@/components/breadcrumb-jsonld"
 
 export const metadata = {
   title: "Wildfire Protection by Region | Prodigy Wildfire",
@@ -51,6 +52,7 @@ export default function Page() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
+      <BreadcrumbJsonLd items={[{ name: "Regions", href: "/regions" }]} />
       <Header />
       <Hero />
       <Stats />
