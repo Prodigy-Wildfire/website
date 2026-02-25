@@ -1,0 +1,529 @@
+"use client"
+
+import React from "react"
+import { useState, useEffect } from "react"
+import Image from "next/image"
+import { Header } from "@/components/header"
+import { Footer } from "@/components/footer"
+import { Send, CheckCircle, ChevronDown } from "lucide-react"
+import { captureTrackingData, fireLeadEvents, type TrackingData } from "@/lib/tracking"
+
+const inputClass =
+  "w-full rounded-sm border border-border bg-background px-4 py-3 text-sm text-foreground transition-colors focus:border-accent focus:outline-none focus:ring-1 focus:ring-accent"
+
+const propertyTypes = ["Single Family Home", "Multi-Unit", "Commercial", "Estate / Ranch"]
+
+const budgetRanges = [
+  "$10,000 – $25,000",
+  "$25,000 – $50,000",
+  "$50,000 – $100,000",
+  "$100,000+",
+  "Not sure yet",
+]
+
+const timelines = [
+  "As soon as possible",
+  "Within 1 month",
+  "Within 3 months",
+  "Within 6 months",
+  "Just exploring options",
+]
+
+export default function AvivaConsultationPage() {
+  const [submitted, setSubmitted] = useState(false)
+  const [showDetails, setShowDetails] = useState(false)
+  const [formData, setFormData] = useState({
+    firstName: "",
+    lastName: "",
+    email: "",
+    phone: "",
+    policyNumber: "",
+    address: "",
+    city: "",
+    stateProvince: "",
+    country: "",
+    referralSource: "aviva",
+    referralName: "",
+    propertyType: "",
+    budget: "",
+    timeline: "",
+    message: "",
+  })
+
+  const [trackingData, setTrackingData] = useState<TrackingData>({
+    ref: "", utm_source: "", utm_medium: "", utm_campaign: "", utm_content: "",
+  })
+
+  useEffect(() => {
+    setTrackingData(captureTrackingData())
+  }, [])
+
+  function handleChange(
+    e: React.ChangeEvent<
+      HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
+    >
+  ) {
+    setFormData((prev) => ({ ...prev, [e.target.name]: e.target.value }))
+  }
+
+  function handleSubmit(e: React.FormEvent) {
+    e.preventDefault()
+
+    fireLeadEvents("aviva_consultation_form", trackingData)
+    setSubmitted(true)
+  }
+
+  return (
+    <div className="flex min-h-screen flex-col">
+      <Header />
+      <main className="flex-1">
+        {/* Hero */}
+        <section className="relative flex min-h-screen items-center justify-center overflow-hidden pt-24 md:min-h-[85vh]">
+          <Image
+            src="/images/engineering.png"
+            alt="Wildfire protection engineering"
+            fill
+            className="object-cover"
+            priority
+          />
+          <div className="absolute inset-0 bg-primary/60" />
+          <div className="relative z-10 mx-auto max-w-4xl px-6 text-center">
+            <h1 className="font-heading text-4xl font-bold leading-tight tracking-tight text-primary-foreground md:text-5xl lg:text-6xl">
+              Aviva Customer Consultation
+            </h1>
+            <p className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-primary-foreground/70">
+              As an Aviva insurance customer, you have access to exclusive
+              wildfire protection solutions from Prodigy. Schedule your free
+              consultation below.
+            </p>
+          </div>
+        </section>
+
+        {/* Form */}
+        {submitted ? (
+          <section className="bg-muted py-20 md:py-28">
+            <div className="mx-auto max-w-2xl px-6 text-center">
+              <div className="flex flex-col items-center gap-4">
+                <div className="flex h-16 w-16 items-center justify-center rounded-full bg-accent/10">
+                  <CheckCircle className="h-8 w-8 text-accent" />
+                </div>
+                <h2 className="font-heading text-3xl font-bold text-foreground">
+                  Consultation Request Received
+                </h2>
+                <p className="text-lg text-muted-foreground">
+                  Thank you for reaching out through our Aviva partnership. A
+                  member of our team will be in touch within 24 hours to discuss
+                  your wildfire protection needs.
+                </p>
+              </div>
+            </div>
+          </section>
+        ) : (
+          <section className="bg-muted py-20 md:py-28">
+            <div className="mx-auto max-w-3xl px-6">
+              {/* Partner logo bar */}
+              <div className="mb-8 flex items-center justify-center gap-6 rounded border border-border bg-card p-6">
+                <Image
+                  src="/images/pws-logo.svg"
+                  alt="Prodigy Wildfire Solutions"
+                  width={160}
+                  height={48}
+                  className="h-10 w-auto"
+                />
+                <div className="h-10 w-px bg-border" />
+                <Image
+                  src="/images/aviva-logo.png"
+                  alt="Aviva"
+                  width={160}
+                  height={48}
+                  className="h-10 w-auto"
+                />
+              </div>
+
+              <form
+                onSubmit={handleSubmit}
+                className="rounded border border-border bg-card p-8 md:p-10"
+              >
+                {/* Hidden tracking fields */}
+                <input type="hidden" name="ref" value={trackingData.ref} />
+                <input type="hidden" name="utm_source" value={trackingData.utm_source} />
+                <input type="hidden" name="utm_medium" value={trackingData.utm_medium} />
+                <input type="hidden" name="utm_campaign" value={trackingData.utm_campaign} />
+                <input type="hidden" name="utm_content" value={trackingData.utm_content} />
+                <input type="hidden" name="partner" value="aviva" />
+
+                {/* Contact Details */}
+                <h2 className="font-heading text-lg font-bold text-foreground">
+                  Contact Details
+                </h2>
+                <div className="mt-4 grid gap-5 sm:grid-cols-2">
+                  <div>
+                    <label
+                      htmlFor="firstName"
+                      className="mb-2 block text-sm font-medium text-foreground"
+                    >
+                      First Name <span className="text-accent">*</span>
+                    </label>
+                    <input
+                      id="firstName"
+                      name="firstName"
+                      type="text"
+                      required
+                      value={formData.firstName}
+                      onChange={handleChange}
+                      placeholder="First name"
+                      className={inputClass}
+                    />
+                  </div>
+                  <div>
+                    <label
+                      htmlFor="lastName"
+                      className="mb-2 block text-sm font-medium text-foreground"
+                    >
+                      Last Name <span className="text-accent">*</span>
+                    </label>
+                    <input
+                      id="lastName"
+                      name="lastName"
+                      type="text"
+                      required
+                      value={formData.lastName}
+                      onChange={handleChange}
+                      placeholder="Last name"
+                      className={inputClass}
+                    />
+                  </div>
+                  <div>
+                    <label
+                      htmlFor="email"
+                      className="mb-2 block text-sm font-medium text-foreground"
+                    >
+                      Email <span className="text-accent">*</span>
+                    </label>
+                    <input
+                      id="email"
+                      name="email"
+                      type="email"
+                      required
+                      value={formData.email}
+                      onChange={handleChange}
+                      placeholder="you@example.com"
+                      className={inputClass}
+                    />
+                  </div>
+                  <div>
+                    <label
+                      htmlFor="phone"
+                      className="mb-2 block text-sm font-medium text-foreground"
+                    >
+                      Phone Number <span className="text-accent">*</span>
+                    </label>
+                    <input
+                      id="phone"
+                      name="phone"
+                      type="tel"
+                      required
+                      value={formData.phone}
+                      onChange={handleChange}
+                      placeholder="Your phone number"
+                      className={inputClass}
+                    />
+                  </div>
+                  <div>
+                    <label
+                      htmlFor="policyNumber"
+                      className="mb-2 block text-sm font-medium text-foreground"
+                    >
+                      Aviva Policy Number
+                    </label>
+                    <input
+                      id="policyNumber"
+                      name="policyNumber"
+                      type="text"
+                      value={formData.policyNumber}
+                      onChange={handleChange}
+                      placeholder="Optional"
+                      className={inputClass}
+                    />
+                  </div>
+                  <div>
+                    <label
+                      htmlFor="country"
+                      className="mb-2 block text-sm font-medium text-foreground"
+                    >
+                      Country <span className="text-accent">*</span>
+                    </label>
+                    <select
+                      id="country"
+                      name="country"
+                      required
+                      value={formData.country}
+                      onChange={handleChange}
+                      className={inputClass}
+                    >
+                      <option value="">Select a country</option>
+                      <option value="au">Australia</option>
+                      <option value="ca">Canada</option>
+                      <option value="us">United States</option>
+                      <option value="other">Other</option>
+                    </select>
+                  </div>
+                  <div>
+                    <label
+                      htmlFor="referralSource"
+                      className="mb-2 block text-sm font-medium text-foreground"
+                    >
+                      Where Did You Hear About Us?
+                    </label>
+                    <select
+                      id="referralSource"
+                      name="referralSource"
+                      value={formData.referralSource}
+                      onChange={handleChange}
+                      className={inputClass}
+                    >
+                      <option value="">Select an option</option>
+                      <option value="aviva">Aviva</option>
+                      <option value="referral">Referral</option>
+                      <option value="advertisement">Advertisement</option>
+                      <option value="chat">Chat</option>
+                      <option value="cold-call">Cold Call</option>
+                      <option value="demo-day">Demo Day</option>
+                      <option value="door-knocking">Door Knocking</option>
+                      <option value="email-marketing">Email Marketing</option>
+                      <option value="facebook">Facebook</option>
+                      <option value="google">Google</option>
+                      <option value="instagram">Instagram</option>
+                      <option value="sign">Sign</option>
+                      <option value="tiktok">TikTok</option>
+                      <option value="trade-show">Trade Show</option>
+                      <option value="website">Website</option>
+                      <option value="youtube">YouTube</option>
+                    </select>
+                  </div>
+                  {formData.referralSource === "referral" && (
+                    <div className="sm:col-span-2">
+                      <label
+                        htmlFor="referralName"
+                        className="mb-2 block text-sm font-medium text-foreground"
+                      >
+                        Referral Name
+                      </label>
+                      <input
+                        id="referralName"
+                        name="referralName"
+                        type="text"
+                        value={formData.referralName}
+                        onChange={handleChange}
+                        placeholder="Who referred you?"
+                        className={inputClass}
+                      />
+                    </div>
+                  )}
+                </div>
+
+                {/* Expand toggle */}
+                <div className="mt-8 flex justify-center">
+                  <button
+                    type="button"
+                    onClick={() => setShowDetails(!showDetails)}
+                    className="flex items-center gap-2 text-sm font-medium text-muted-foreground transition-colors hover:text-accent"
+                  >
+                    <span>{showDetails ? "Hide" : "Add"} additional details</span>
+                    <ChevronDown
+                      className={`h-5 w-5 transition-transform duration-300 ${
+                        showDetails ? "rotate-180" : ""
+                      }`}
+                    />
+                  </button>
+                </div>
+
+                {/* Collapsible additional details */}
+                <div
+                  className={`grid overflow-hidden transition-all duration-300 ease-in-out ${
+                    showDetails
+                      ? "mt-8 grid-rows-[1fr] opacity-100"
+                      : "grid-rows-[0fr] opacity-0"
+                  }`}
+                >
+                  <div className="overflow-hidden">
+                    {/* Property Location */}
+                    <h2 className="font-heading text-lg font-bold text-foreground">
+                      Property Location
+                    </h2>
+                    <div className="mt-4 grid gap-5 sm:grid-cols-2">
+                      <div className="sm:col-span-2">
+                        <label
+                          htmlFor="address"
+                          className="mb-2 block text-sm font-medium text-foreground"
+                        >
+                          Address
+                        </label>
+                        <input
+                          id="address"
+                          name="address"
+                          type="text"
+                          value={formData.address}
+                          onChange={handleChange}
+                          placeholder="Street address"
+                          className={inputClass}
+                        />
+                      </div>
+                      <div>
+                        <label
+                          htmlFor="city"
+                          className="mb-2 block text-sm font-medium text-foreground"
+                        >
+                          City
+                        </label>
+                        <input
+                          id="city"
+                          name="city"
+                          type="text"
+                          value={formData.city}
+                          onChange={handleChange}
+                          placeholder="City"
+                          className={inputClass}
+                        />
+                      </div>
+                      <div>
+                        <label
+                          htmlFor="stateProvince"
+                          className="mb-2 block text-sm font-medium text-foreground"
+                        >
+                          State / Province
+                        </label>
+                        <input
+                          id="stateProvince"
+                          name="stateProvince"
+                          type="text"
+                          value={formData.stateProvince}
+                          onChange={handleChange}
+                          placeholder="State or province"
+                          className={inputClass}
+                        />
+                      </div>
+                    </div>
+
+                    {/* Property & Project Details */}
+                    <h2 className="mt-10 font-heading text-lg font-bold text-foreground">
+                      Property & Project Details
+                    </h2>
+                    <div className="mt-4 grid gap-5">
+                      <div>
+                        <label className="mb-2 block text-sm font-medium text-foreground">
+                          Property Type
+                        </label>
+                        <div className="flex flex-wrap gap-3">
+                          {propertyTypes.map((type) => (
+                            <label
+                              key={type}
+                              className={`cursor-pointer rounded-sm border px-4 py-2.5 text-sm transition-colors ${
+                                formData.propertyType === type
+                                  ? "border-accent bg-accent text-white"
+                                  : "border-border text-muted-foreground hover:border-accent/50"
+                              }`}
+                            >
+                              <input
+                                type="radio"
+                                name="propertyType"
+                                value={type}
+                                checked={formData.propertyType === type}
+                                onChange={handleChange}
+                                className="sr-only"
+                              />
+                              {type}
+                            </label>
+                          ))}
+                        </div>
+                      </div>
+                      <div className="grid gap-5 sm:grid-cols-2">
+                        <div>
+                          <label
+                            htmlFor="budget"
+                            className="mb-2 block text-sm font-medium text-foreground"
+                          >
+                            Budget Range
+                          </label>
+                          <select
+                            id="budget"
+                            name="budget"
+                            value={formData.budget}
+                            onChange={handleChange}
+                            className={inputClass}
+                          >
+                            <option value="">Select a range</option>
+                            {budgetRanges.map((range) => (
+                              <option key={range} value={range}>
+                                {range}
+                              </option>
+                            ))}
+                          </select>
+                        </div>
+                        <div>
+                          <label
+                            htmlFor="timeline"
+                            className="mb-2 block text-sm font-medium text-foreground"
+                          >
+                            Timeline
+                          </label>
+                          <select
+                            id="timeline"
+                            name="timeline"
+                            value={formData.timeline}
+                            onChange={handleChange}
+                            className={inputClass}
+                          >
+                            <option value="">Select a timeline</option>
+                            {timelines.map((t) => (
+                              <option key={t} value={t}>
+                                {t}
+                              </option>
+                            ))}
+                          </select>
+                        </div>
+                      </div>
+                      <div>
+                        <label
+                          htmlFor="message"
+                          className="mb-2 block text-sm font-medium text-foreground"
+                        >
+                          Tell Us About Your Property
+                        </label>
+                        <textarea
+                          id="message"
+                          name="message"
+                          rows={4}
+                          value={formData.message}
+                          onChange={handleChange}
+                          placeholder="Describe your property, location, and any specific wildfire concerns..."
+                          className={`${inputClass} resize-none`}
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="mt-8 text-center">
+                  <button
+                    type="submit"
+                    className="inline-flex items-center justify-center gap-2 rounded bg-accent px-8 py-3.5 text-sm font-semibold text-white transition-colors hover:bg-accent/90"
+                  >
+                    <Send className="h-4 w-4" />
+                    Schedule Your Consultation
+                  </button>
+                </div>
+
+                <p className="mt-4 text-center text-xs text-muted-foreground">
+                  By submitting this form, you agree to be contacted by Prodigy
+                  Wildfire Solutions regarding your inquiry.
+                </p>
+              </form>
+            </div>
+          </section>
+        )}
+      </main>
+      <Footer />
+    </div>
+  )
+}

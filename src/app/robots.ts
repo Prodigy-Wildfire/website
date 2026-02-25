@@ -6,7 +6,7 @@ export default function robots(): MetadataRoute.Robots {
       {
         userAgent: "*",
         allow: "/",
-        disallow: ["/go/", "/assessment/quiz"],
+        disallow: ["/go/", "/assessment/quiz", "/consultation/aviva"],
       },
     ],
     sitemap: "https://www.prodigywildfire.com/sitemap.xml",
