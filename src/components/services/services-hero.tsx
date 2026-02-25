@@ -20,7 +20,7 @@ export function ServicesHero() {
         </h1>
         <p className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-primary-foreground/80">
           At Prodigy Wildfire Solutions, we provide permanent exterior wildfire
-          protection systems designed to defend homes, businesses, and critical
+          protection, which is designed to defend homes, businesses, and critical
           infrastructure from ember ignition, radiant heat, and direct flame
           contact.
         </p>
