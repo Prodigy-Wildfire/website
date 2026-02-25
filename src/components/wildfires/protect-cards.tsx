@@ -6,7 +6,7 @@ const mechanisms = [
     icon: Flame,
     title: "Ember Attack",
     description:
-      "Windborne embers are the number one cause of structure loss during wildfires. Embers can travel over 20 kilometres ahead of the fire front, reaching 1,200 degrees, igniting dry material and starting new fires far from the main blaze.",
+      "Ember attack is the process by which windborne burning fragments, carried ahead of a wildfire front, land on or near structures and ignite them. It is the number one cause of structure loss during wildfires, with embers travelling over 20 kilometres ahead of the fire front, reaching 1,200 degrees, and starting new fires far from the main blaze.",
   },
   {
     icon: Sun,

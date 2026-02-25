@@ -35,6 +35,24 @@ const jsonLd = {
     { "@type": "Country", name: "Canada" },
     { "@type": "Country", name: "Australia" },
   ],
+  hasOfferCatalog: {
+    "@type": "OfferCatalog",
+    name: "Residential Wildfire Protection Terms",
+    itemListElement: [
+      {
+        "@type": "DefinedTerm",
+        name: "Humidity Bubble",
+        description:
+          "A humidity bubble is a saturated zone of moisture created around a structure by an exterior wildfire sprinkler system, designed to prevent ember ignition and reduce radiant heat exposure.",
+      },
+      {
+        "@type": "DefinedTerm",
+        name: "Defensible Space",
+        description:
+          "Defensible space is the buffer zone around a structure where vegetation and other combustible materials have been managed to reduce wildfire exposure.",
+      },
+    ],
+  },
   offers: {
     "@type": "Offer",
     availability: "https://schema.org/InStock",

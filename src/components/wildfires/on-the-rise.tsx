@@ -18,12 +18,15 @@ export function OnTheRise() {
         </h2>
         <p className="mx-auto mt-6 max-w-2xl text-base leading-relaxed text-primary-foreground/70 md:text-lg">
           Wildfires are becoming more frequent, more intense, and more
-          destructive across the USA, Canada, and Australia. Longer fire
-          seasons, extreme heat, and drier conditions are accelerating the
-          threat, putting homes, businesses, and critical infrastructure at
-          greater risk than ever before. Proactive wildfire protection  -
-          including exterior wildfire sprinkler systems, ember detection, and remote
-          activation  - is no longer optional.
+          destructive across the USA, Canada, and Australia. The
+          wildland-urban interface (WUI), the zone where developed land meets
+          undeveloped wildland vegetation, is where the majority of wildfire
+          property losses occur, and this zone is expanding rapidly as
+          communities grow into fire-prone landscapes. Longer fire seasons,
+          extreme heat, and drier conditions are accelerating the threat,
+          making proactive wildfire protection including exterior wildfire
+          sprinkler systems, ember detection, and remote activation no longer
+          optional.
         </p>
         <div className="mt-8 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
           <a

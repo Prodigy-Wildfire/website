@@ -39,7 +39,18 @@ const jsonLd = {
   mainEntityOfPage: "https://www.prodigywildfire.com/wildfires",
   about: [
     { "@type": "Thing", name: "Wildfire" },
-    { "@type": "Thing", name: "Ember Attack" },
+    {
+      "@type": "DefinedTerm",
+      name: "Ember Attack",
+      description:
+        "Ember attack is the process by which windborne burning fragments, carried ahead of a wildfire front, land on or near structures and ignite them.",
+    },
+    {
+      "@type": "DefinedTerm",
+      name: "Wildland-Urban Interface (WUI)",
+      description:
+        "The wildland-urban interface (WUI) is the zone where developed land meets undeveloped wildland vegetation, and where the majority of wildfire property losses occur.",
+    },
     { "@type": "Thing", name: "Wildfire Preparedness" },
   ],
 };

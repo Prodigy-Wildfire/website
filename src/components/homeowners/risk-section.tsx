@@ -37,7 +37,7 @@ const vulnerabilities = [
     icon: TreePine,
     title: "Landscaping Within 10 Metres",
     description:
-      "Trees, shrubs, mulch, and garden beds close to the house create fuel that bridges the gap between wildfire and structure. Maintaining defensible space is critical in fire-prone areas across the USA, Canada, and Australia.",
+      "Trees, shrubs, mulch, and garden beds close to the house create fuel that bridges the gap between wildfire and structure. Defensible space is the buffer zone around a structure where vegetation and other combustible materials have been managed to reduce wildfire exposure. Maintaining defensible space is critical in fire-prone areas across the USA, Canada, and Australia.",
   },
   {
     icon: Fuel,

@@ -28,11 +28,12 @@ export function ResidentialInvestmentSection() {
             water supply during a wildfire event.
           </p>
           <p>
-            The Prodigy exterior wildfire sprinkler system protects your home
-            from ember attack by creating a humidity bubble around the entire
-            property. When activated, the system saturates your roof, walls,
-            decking, and surrounding vegetation, making every surface damp and
-            significantly harder to ignite. This moisture barrier prevents
+            A humidity bubble is a saturated zone of moisture created around
+            a structure by an exterior wildfire sprinkler system, designed to
+            prevent ember ignition and reduce radiant heat exposure. The Prodigy
+            system creates this humidity bubble by saturating your roof, walls,
+            decking, and surrounding vegetation when activated, making every
+            surface damp and significantly harder to ignite. This moisture barrier prevents
             airborne embers from landing on or near your structure and catching
             fire, which is the leading cause of home ignition during wildfire
             events across the USA, Canada, and Australia. By maintaining high
