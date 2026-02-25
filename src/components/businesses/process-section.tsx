@@ -24,6 +24,7 @@ const projects = [
     scope: "Multi-building campus deployment protecting research facilities and student housing.",
     image: "/images/ubc-logo.png",
     imageAlt: "UBC campus wildfire protection installation",
+    imageClassName: "object-contain p-10",
     anchor: "ubc-campus",
   },
 ];
@@ -58,7 +59,7 @@ export function ProcessSection() {
                   alt={project.imageAlt}
                   fill
                   sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                  className="object-cover group-hover:scale-105 transition-transform duration-500"
+                  className={`${project.imageClassName || "object-cover"} group-hover:scale-105 transition-transform duration-500`}
                 />
               </div>
               <div className="p-6 text-center">

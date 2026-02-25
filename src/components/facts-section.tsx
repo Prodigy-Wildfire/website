@@ -18,7 +18,7 @@ const projects = [
   },
   {
     image: "/images/ubc-logo.png",
-    imageClassName: "object-contain p-6",
+    imageClassName: "object-contain p-10",
     title: "UBC Campus Facilities",
     location: "British Columbia, Canada",
     result: "Multi-building campus deployment protecting research facilities and student housing.",
