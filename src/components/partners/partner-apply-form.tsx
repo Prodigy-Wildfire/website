@@ -1,7 +1,8 @@
 "use client"
 
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import { CheckCircle, Send } from "lucide-react"
+import { captureTrackingData, fireLeadEvents, type TrackingData } from "@/lib/tracking"
 
 const inputClass =
   "w-full rounded-sm border border-border bg-background px-4 py-3 text-sm text-foreground transition-colors focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary"
@@ -201,6 +202,9 @@ const partnerConfigs: Record<string, PartnerConfig> = {
 export function PartnerApplyForm({ partnerType }: { partnerType: string }) {
   const config = partnerConfigs[partnerType]
   const [submitted, setSubmitted] = useState(false)
+  const [trackingData, setTrackingData] = useState<TrackingData>({
+    ref: "", utm_source: "", utm_medium: "", utm_campaign: "", utm_content: "",
+  })
   const [form, setForm] = useState<Record<string, string>>({
     partnerType: config?.slug || "",
     companyName: "",
@@ -210,6 +214,10 @@ export function PartnerApplyForm({ partnerType }: { partnerType: string }) {
     region: "",
     message: "",
   })
+
+  useEffect(() => {
+    setTrackingData(captureTrackingData())
+  }, [])
 
   if (!config) return null
 
@@ -223,6 +231,7 @@ export function PartnerApplyForm({ partnerType }: { partnerType: string }) {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
+    fireLeadEvents(`partner_apply_${config.slug}_form`, trackingData)
     setSubmitted(true)
   }
 
@@ -261,8 +270,13 @@ export function PartnerApplyForm({ partnerType }: { partnerType: string }) {
           onSubmit={handleSubmit}
           className="rounded border border-border bg-card p-8 md:p-10"
         >
-          {/* Hidden partner type field */}
+          {/* Hidden fields */}
           <input type="hidden" name="partnerType" value={config.slug} />
+          <input type="hidden" name="ref" value={trackingData.ref} />
+          <input type="hidden" name="utm_source" value={trackingData.utm_source} />
+          <input type="hidden" name="utm_medium" value={trackingData.utm_medium} />
+          <input type="hidden" name="utm_campaign" value={trackingData.utm_campaign} />
+          <input type="hidden" name="utm_content" value={trackingData.utm_content} />
 
           {/* Common fields */}
           <p className="mb-4 text-sm font-semibold uppercase tracking-wider text-primary">

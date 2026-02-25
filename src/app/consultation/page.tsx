@@ -6,20 +6,7 @@ import Image from "next/image"
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
 import { Send, CheckCircle, ChevronDown } from "lucide-react"
-
-declare global {
-  interface Window {
-    dataLayer?: Record<string, unknown>[]
-    fbq?: (...args: unknown[]) => void
-    lintrk?: (action: string, data: Record<string, unknown>) => void
-  }
-}
-
-function getUrlParam(key: string): string {
-  if (typeof window === "undefined") return ""
-  const params = new URLSearchParams(window.location.search)
-  return params.get(key) || ""
-}
+import { captureTrackingData, fireLeadEvents, type TrackingData } from "@/lib/tracking"
 
 const inputClass =
   "w-full rounded-sm border border-border bg-background px-4 py-3 text-sm text-foreground transition-colors focus:border-accent focus:outline-none focus:ring-1 focus:ring-accent"
@@ -63,37 +50,12 @@ export default function QuotePage() {
     message: "",
   })
 
-  // Hidden tracking fields
-  const [trackingData, setTrackingData] = useState({
-    ref: "",
-    utm_source: "",
-    utm_medium: "",
-    utm_campaign: "",
-    utm_content: "",
+  const [trackingData, setTrackingData] = useState<TrackingData>({
+    ref: "", utm_source: "", utm_medium: "", utm_campaign: "", utm_content: "",
   })
 
   useEffect(() => {
-    const ref = getUrlParam("ref")
-    const utm_source = getUrlParam("utm_source")
-    const utm_medium = getUrlParam("utm_medium")
-    const utm_campaign = getUrlParam("utm_campaign")
-    const utm_content = getUrlParam("utm_content")
-
-    // Store ref in cookie for persistence across pages
-    if (ref) {
-      document.cookie = `pws_ref=${encodeURIComponent(ref)};path=/;max-age=${60 * 60 * 24 * 30};SameSite=Lax`
-    }
-
-    // Read ref from cookie if not in URL
-    const cookieRef = ref || (document.cookie.match(/pws_ref=([^;]+)/)?.[1] ? decodeURIComponent(document.cookie.match(/pws_ref=([^;]+)/)![1]) : "")
-
-    setTrackingData({
-      ref: cookieRef,
-      utm_source,
-      utm_medium,
-      utm_campaign,
-      utm_content,
-    })
+    setTrackingData(captureTrackingData())
   }, [])
 
   function handleChange(
@@ -107,27 +69,7 @@ export default function QuotePage() {
   function handleSubmit(e: React.FormEvent) {
     e.preventDefault()
 
-    // GA4 / GTM event
-    window.dataLayer?.push({
-      event: "generate_lead",
-      lead_source: "consultation_form",
-      utm_source: trackingData.utm_source,
-      utm_medium: trackingData.utm_medium,
-      utm_campaign: trackingData.utm_campaign,
-      utm_content: trackingData.utm_content,
-      ref: trackingData.ref,
-    })
-
-    // Meta Pixel Lead event
-    if (typeof window.fbq === "function") {
-      window.fbq("track", "Lead", { content_name: "consultation_form" })
-    }
-
-    // LinkedIn conversion
-    if (typeof window.lintrk === "function") {
-      window.lintrk("track", { conversion_id: "consultation_form" })
-    }
-
+    fireLeadEvents("consultation_form", trackingData)
     setSubmitted(true)
   }
 

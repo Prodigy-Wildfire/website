@@ -1,9 +1,9 @@
 "use client"
 
 import React from "react"
-
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import { Send, CheckCircle, MapPin, Mail, ChevronDown } from "lucide-react"
+import { captureTrackingData, fireLeadEvents, type TrackingData } from "@/lib/tracking"
 
 const serviceOptions = [
   "Residential Protection",
@@ -16,6 +16,9 @@ const serviceOptions = [
 export function ContactForm() {
   const [submitted, setSubmitted] = useState(false)
   const [showMore, setShowMore] = useState(false)
+  const [trackingData, setTrackingData] = useState<TrackingData>({
+    ref: "", utm_source: "", utm_medium: "", utm_campaign: "", utm_content: "",
+  })
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
@@ -29,6 +32,10 @@ export function ContactForm() {
     message: "",
   })
 
+  useEffect(() => {
+    setTrackingData(captureTrackingData())
+  }, [])
+
   function handleChange(
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
   ) {
@@ -37,6 +44,7 @@ export function ContactForm() {
 
   function handleSubmit(e: React.FormEvent) {
     e.preventDefault()
+    fireLeadEvents("contact_form", trackingData)
     setSubmitted(true)
   }
 
@@ -94,6 +102,13 @@ export function ContactForm() {
               onSubmit={handleSubmit}
               className="rounded border border-border bg-background p-8 shadow-sm md:p-10"
             >
+              {/* Hidden tracking fields */}
+              <input type="hidden" name="ref" value={trackingData.ref} />
+              <input type="hidden" name="utm_source" value={trackingData.utm_source} />
+              <input type="hidden" name="utm_medium" value={trackingData.utm_medium} />
+              <input type="hidden" name="utm_campaign" value={trackingData.utm_campaign} />
+              <input type="hidden" name="utm_content" value={trackingData.utm_content} />
+
               <div className="grid gap-6">
                 <div className="grid gap-6 sm:grid-cols-2">
                   <FormField

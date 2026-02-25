@@ -1,13 +1,17 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { CheckCircle } from "lucide-react";
+import { captureTrackingData, fireLeadEvents, type TrackingData } from "@/lib/tracking";
 
 const inputClass =
   "w-full rounded-sm border border-border bg-background px-4 py-3 text-sm text-foreground transition-colors focus:border-accent focus:outline-none focus:ring-1 focus:ring-accent";
 
 export function PartnerForm() {
   const [submitted, setSubmitted] = useState(false);
+  const [trackingData, setTrackingData] = useState<TrackingData>({
+    ref: "", utm_source: "", utm_medium: "", utm_campaign: "", utm_content: "",
+  });
   const [form, setForm] = useState({
     firstName: "",
     lastName: "",
@@ -21,6 +25,10 @@ export function PartnerForm() {
     message: "",
   });
 
+  useEffect(() => {
+    setTrackingData(captureTrackingData());
+  }, []);
+
   const handleChange = (
     e: React.ChangeEvent<
       HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement
@@ -31,6 +39,7 @@ export function PartnerForm() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+    fireLeadEvents("partner_form", trackingData);
     setSubmitted(true);
   };
 
@@ -69,6 +78,13 @@ export function PartnerForm() {
           onSubmit={handleSubmit}
           className="rounded border border-border bg-card p-8 md:p-10"
         >
+          {/* Hidden tracking fields */}
+          <input type="hidden" name="ref" value={trackingData.ref} />
+          <input type="hidden" name="utm_source" value={trackingData.utm_source} />
+          <input type="hidden" name="utm_medium" value={trackingData.utm_medium} />
+          <input type="hidden" name="utm_campaign" value={trackingData.utm_campaign} />
+          <input type="hidden" name="utm_content" value={trackingData.utm_content} />
+
           <div className="grid gap-5 md:grid-cols-2">
             <div>
               <label className="mb-1.5 block text-sm font-medium text-foreground">

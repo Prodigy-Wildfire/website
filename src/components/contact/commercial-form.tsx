@@ -1,8 +1,9 @@
 "use client"
 
 import React from "react"
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import { Send, CheckCircle, MapPin, Mail, ChevronDown } from "lucide-react"
+import { captureTrackingData, fireLeadEvents, type TrackingData } from "@/lib/tracking"
 
 const industryOptions = [
   "Resorts & Tourism",
@@ -25,6 +26,9 @@ const timelineOptions = [
 export function CommercialForm() {
   const [submitted, setSubmitted] = useState(false)
   const [showMore, setShowMore] = useState(false)
+  const [trackingData, setTrackingData] = useState<TrackingData>({
+    ref: "", utm_source: "", utm_medium: "", utm_campaign: "", utm_content: "",
+  })
   const [formData, setFormData] = useState({
     contactName: "",
     companyName: "",
@@ -40,6 +44,10 @@ export function CommercialForm() {
     message: "",
   })
 
+  useEffect(() => {
+    setTrackingData(captureTrackingData())
+  }, [])
+
   function handleChange(
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
   ) {
@@ -48,6 +56,7 @@ export function CommercialForm() {
 
   function handleSubmit(e: React.FormEvent) {
     e.preventDefault()
+    fireLeadEvents("commercial_consultation_form", trackingData)
     setSubmitted(true)
   }
 
@@ -106,6 +115,13 @@ export function CommercialForm() {
               onSubmit={handleSubmit}
               className="rounded-sm border border-border bg-background p-8 shadow-sm md:p-10"
             >
+              {/* Hidden tracking fields */}
+              <input type="hidden" name="ref" value={trackingData.ref} />
+              <input type="hidden" name="utm_source" value={trackingData.utm_source} />
+              <input type="hidden" name="utm_medium" value={trackingData.utm_medium} />
+              <input type="hidden" name="utm_campaign" value={trackingData.utm_campaign} />
+              <input type="hidden" name="utm_content" value={trackingData.utm_content} />
+
               <div className="grid gap-6">
                 {/* Contact details */}
                 <div className="grid gap-6 sm:grid-cols-2">
