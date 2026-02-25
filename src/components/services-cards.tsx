@@ -17,7 +17,7 @@ const services = [
     title: "Global",
     titleLine2: "Activation",
     stats: [
-      { label: "Global Activation", value: "Global", anchor: "#remote-activation" },
+      { label: "Activation", value: "Global", anchor: "#remote-activation" },
       { label: "Fire Tracking & Alerts", value: "Real-Time", anchor: "#ember-watch" },
     ],
     description:

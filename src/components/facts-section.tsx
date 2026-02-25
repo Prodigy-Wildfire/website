@@ -4,7 +4,7 @@ import Link from "next/link";
 const projects = [
   {
     image: "/images/banff-gondola-wildfire-protection.png",
-    title: "Banff Gondola Upper Terminal",
+    title: "Banff Gondola",
     location: "Banff, Alberta, Canada",
     result: "34 sprinkler heads installed across the upper and lower terminal buildings at 7,500ft elevation in the Canadian Rockies.",
     href: "/case-studies#banff-gondola",
@@ -52,7 +52,7 @@ export function FactsSection() {
                   className={`${project.imageClassName || "object-cover"} transition-transform duration-500 group-hover:scale-105`}
                 />
               </div>
-              <div className="p-6">
+              <div className="p-6 text-center">
                 <h3 className="font-heading text-base font-bold text-foreground">
                   {project.title}
                 </h3>
