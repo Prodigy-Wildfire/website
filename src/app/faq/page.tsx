@@ -78,6 +78,14 @@ const faqJsonLd = {
         text: "Yes. Prodigy's app-controlled, gas-powered fire pump lets you draw unlimited water from lakes for wildfire protection. Our team will guide you through any required permissions or permits.",
       },
     },
+    {
+      "@type": "Question",
+      name: "What falls under homeowner responsibility?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Prodigy offers a one-year service plan standard with installations, covering winterisation and spring activation. After that, most clients choose our subscription model, which keeps Prodigy responsible for ongoing system maintenance. Alternatively, you can manage winterisation and spring activation yourself.",
+      },
+    },
   ],
 };
 

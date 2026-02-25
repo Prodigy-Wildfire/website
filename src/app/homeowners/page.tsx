@@ -11,7 +11,7 @@ import { LeadMagnetSection } from "@/components/lead-magnet-section";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Home Wildfire Protection Systems | Prodigy Wildfire",
+  title: "Wildfire Sprinkler Systems for Homes | Prodigy Wildfire",
   description:
     "Custom-designed, permanent roof-mounted sprinkler systems that protect your home from ember attack. Remotely activated from anywhere in the world.",
 };

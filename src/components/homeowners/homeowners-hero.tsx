@@ -16,7 +16,7 @@ export function HomeownersHero() {
 
       <div className="relative z-10 mx-auto max-w-4xl px-6 text-center">
         <h1 className="font-heading text-4xl font-bold leading-tight tracking-tight text-primary-foreground md:text-5xl lg:text-6xl">
-          <span className="text-balance">Home Wildfire <span className="text-accent">Protection</span></span>
+          <span className="text-balance">Wildfire Sprinkler Systems for <span className="text-accent">Homes</span></span>
         </h1>
         <p className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-primary-foreground/80">
           Permanent exterior wildfire sprinkler systems custom-designed for your home, providing ember attack protection when you need it most.

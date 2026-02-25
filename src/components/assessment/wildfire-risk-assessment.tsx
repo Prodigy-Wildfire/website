@@ -775,7 +775,7 @@ export function WildfireRiskAssessment() {
                 />
               </div>
               <h1 className="mb-2 font-heading text-2xl font-bold text-accent">
-                Fire Risk Assessment
+                Wildfire Risk Assessment
               </h1>
               <p className="text-sm text-primary-foreground/60">
                 Get your free property risk assessment in 2 minutes
