@@ -78,7 +78,7 @@ export default function QuotePage() {
           <div className="absolute inset-0 bg-primary/60" />
           <div className="relative z-10 mx-auto max-w-4xl px-6 text-center">
             <h1 className="font-heading text-4xl font-bold leading-tight tracking-tight text-primary-foreground md:text-5xl lg:text-6xl">
-              Get Your Free Wildfire Protection Quote
+              Schedule Your Free Consultation
             </h1>
             <p className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-primary-foreground/70">
               Tell us about your property and our team will design a custom
@@ -96,12 +96,12 @@ export default function QuotePage() {
                   <CheckCircle className="h-8 w-8 text-accent" />
                 </div>
                 <h2 className="font-heading text-3xl font-bold text-foreground">
-                  Quote Request Received
+                  Consultation Request Received
                 </h2>
                 <p className="text-lg text-muted-foreground">
                   Thank you for your interest in Prodigy Wildfire Solutions. A
                   member of our team will be in touch within 24 hours to discuss
-                  your wildfire protection needs and provide a custom quote.
+                  your wildfire protection needs.
                 </p>
               </div>
             </div>
@@ -453,7 +453,7 @@ export default function QuotePage() {
                     className="inline-flex items-center justify-center gap-2 rounded bg-accent px-8 py-3.5 text-sm font-semibold text-white transition-colors hover:bg-accent/90"
                   >
                     <Send className="h-4 w-4" />
-                    Get Your Free Quote
+                    Schedule Your Consultation
                   </button>
                 </div>
 

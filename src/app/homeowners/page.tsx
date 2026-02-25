@@ -102,10 +102,10 @@ export default function HomeownersPage() {
             </p>
             <div className="mt-10 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
               <Link
-                href="/quote"
+                href="/consultation"
                 className="rounded bg-accent px-8 py-3.5 text-sm font-semibold text-white transition-colors hover:bg-accent/90"
               >
-                Get Your Free Quote
+                Schedule a Consultation
               </Link>
               <Link
                 href="/assessment"

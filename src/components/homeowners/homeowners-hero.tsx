@@ -24,10 +24,10 @@ export function HomeownersHero() {
         </p>
         <div className="mt-10">
           <Link
-            href="/quote"
+            href="/consultation"
             className="inline-block rounded bg-accent px-8 py-3.5 text-base font-semibold text-white transition-colors hover:bg-accent/90"
           >
-            Protect Your Home Now
+            Schedule a Consultation
           </Link>
         </div>
       </div>

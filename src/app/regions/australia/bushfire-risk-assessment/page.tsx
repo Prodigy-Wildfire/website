@@ -323,7 +323,7 @@ export default function BushfireRiskAssessmentPage() {
                   specialists to discuss your options.
                 </p>
                 <Link
-                  href="/quote"
+                  href="/consultation"
                   className="mb-4 block rounded-lg bg-accent px-8 py-4 text-center text-lg font-bold text-white transition-colors hover:bg-accent/90"
                 >
                   Book Your Free Consultation
@@ -348,7 +348,7 @@ export default function BushfireRiskAssessmentPage() {
                   and whether it&apos;s the right fit for you.
                 </p>
                 <Link
-                  href="/quote"
+                  href="/consultation"
                   className="mb-4 block rounded-lg bg-accent px-8 py-4 text-center text-lg font-bold text-white transition-colors hover:bg-accent/90"
                 >
                   Book Your Free Consultation

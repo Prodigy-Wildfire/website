@@ -208,10 +208,10 @@ export function CaseStudyGrid() {
             Ready to protect what matters most?
           </p>
           <Link
-            href="/quote"
+            href="/consultation"
             className="mt-4 inline-block rounded bg-accent px-8 py-3.5 text-sm font-semibold text-white transition-colors hover:bg-accent/90"
           >
-            Get a Free Assessment
+            Schedule a Consultation
           </Link>
         </div>
       </div>

@@ -5,7 +5,7 @@ import { ContactCta } from "@/components/contact/contact-cta"
 import { Footer } from "@/components/footer"
 
 export const metadata = {
-  title: "Contact Prodigy Wildfire | Get a Quote",
+  title: "Contact Prodigy Wildfire | Schedule a Consultation",
   description:
     "Get in touch with Prodigy Wildfire for a property assessment and custom wildfire protection quote. Serving USA, Canada, and Australia.",
 };

@@ -131,10 +131,10 @@ export function Header() {
             <DesktopDropdown key={dropdown.label} label={dropdown.label} items={dropdown.items} />
           ))}
           <Link
-            href="/quote"
+            href="/consultation"
             className="rounded bg-accent px-5 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-accent/90"
           >
-            Get a Quote
+            Schedule a Consultation
           </Link>
         </nav>
 
@@ -160,11 +160,11 @@ export function Header() {
               />
             ))}
             <Link
-              href="/quote"
+              href="/consultation"
               className="mt-2 rounded bg-accent px-5 py-2.5 text-center text-sm font-semibold text-white transition-colors hover:bg-accent/90"
               onClick={() => setMobileOpen(false)}
             >
-              Get a Quote
+              Schedule a Consultation
             </Link>
           </nav>
         </div>

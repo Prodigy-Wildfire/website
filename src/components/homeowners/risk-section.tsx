@@ -87,10 +87,10 @@ export function RiskSection() {
 
         <div className="mt-12 text-center">
           <Link
-            href="/quote"
+            href="/consultation"
             className="inline-block rounded bg-accent px-8 py-3.5 text-sm font-semibold text-white transition-colors hover:bg-accent/90"
           >
-            Get a Free Home Assessment
+            Schedule a Consultation
           </Link>
         </div>
       </div>

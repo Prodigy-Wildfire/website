@@ -80,10 +80,10 @@ export function GettingProtected() {
               Learn About Our Systems
             </Link>
             <Link
-              href="/quote"
+              href="/consultation"
               className="rounded bg-accent px-8 py-3.5 text-sm font-semibold text-white transition-colors hover:bg-accent/90"
             >
-              Book Your Free Assessment
+              Schedule a Consultation
             </Link>
           </div>
         </div>

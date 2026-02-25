@@ -781,7 +781,7 @@ export function WildfireRiskAssessment() {
                   {t!.fire} protection specialists to discuss your options.
                 </p>
                 <a
-                  href="/quote"
+                  href="/consultation"
                   className="mb-4 block rounded-lg bg-accent py-4 text-center text-lg font-bold text-white transition-colors hover:bg-accent/90"
                 >
                   Book Your Free Consultation
@@ -804,7 +804,7 @@ export function WildfireRiskAssessment() {
                   you.
                 </p>
                 <a
-                  href="/quote"
+                  href="/consultation"
                   className="mb-4 block rounded-lg bg-accent py-4 text-center text-lg font-bold text-white transition-colors hover:bg-accent/90"
                 >
                   Book Your Free Consultation

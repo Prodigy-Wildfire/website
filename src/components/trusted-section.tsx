@@ -38,10 +38,10 @@ export function TrustedSection() {
 
         <div className="mt-10">
           <Link
-            href="/quote"
+            href="/consultation"
             className="inline-block rounded bg-accent px-8 py-3.5 text-sm font-semibold text-white transition-colors hover:bg-accent/90"
           >
-            Get a Quote
+            Schedule a Consultation
           </Link>
         </div>
       </div>

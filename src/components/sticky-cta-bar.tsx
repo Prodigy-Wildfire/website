@@ -35,10 +35,10 @@ export function StickyCtaBar() {
               Take the Assessment
             </Link>
             <Link
-              href="/quote"
+              href="/consultation"
               className="rounded bg-accent px-5 py-2 text-center text-sm font-semibold text-white transition-colors hover:bg-accent/90"
             >
-              Get Protected
+              Schedule a Consultation
             </Link>
             <button
               type="button"

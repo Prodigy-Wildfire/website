@@ -126,6 +126,12 @@ const nextConfig: NextConfig = {
         destination: "/regions/usa/texas",
         permanent: true,
       },
+      // Quote page renamed to Consultation
+      {
+        source: "/quote",
+        destination: "/consultation",
+        permanent: true,
+      },
       // Australian states/territories moved under /regions/australia/
       {
         source: "/regions/new-south-wales",
