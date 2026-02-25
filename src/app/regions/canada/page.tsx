@@ -48,7 +48,7 @@ const caseStudies = [
     href: "/case-studies",
   },
   {
-    name: "UBC Research Forest",
+    name: "University of British Columbia",
     description:
       "Partnering with the University of British Columbia to protect research facilities and surrounding forest with wildfire defence systems.",
     href: "/case-studies#ubc-campus",
