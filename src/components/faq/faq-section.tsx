@@ -21,7 +21,7 @@ const faqItems = [
   },
   {
     question:
-      "Why invest in a system if I already have fire-resistant materials and defensible space?",
+      "Why should I invest in this system?",
     answer:
       "Because wildfire protection works best in layers. Even with a metal roof or cleared vegetation, embers and radiant heat can still ignite your property.\n\nThe Prodigy system provides the final active defence when passive measures aren't enough.",
   },

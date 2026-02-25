@@ -166,8 +166,8 @@ export default function InsightsPage() {
       <Header />
       <main>
         {/* Hero */}
-        <section className="bg-primary pt-32 pb-20 md:pb-28">
-          <div className="mx-auto max-w-7xl px-6 text-center">
+        <section className="relative flex min-h-screen items-center justify-center overflow-hidden bg-primary pt-24 md:min-h-[85vh]">
+          <div className="relative z-10 mx-auto max-w-4xl px-6 text-center">
             <h1 className="font-heading text-4xl font-bold tracking-tight text-primary-foreground md:text-5xl lg:text-6xl">
               Wildfire Protection Insights
             </h1>

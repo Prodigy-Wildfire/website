@@ -30,13 +30,13 @@ export function StickyCtaBar() {
           <div className="flex items-center gap-3 w-full sm:w-auto justify-center sm:justify-end">
             <Link
               href="/assessment"
-              className="rounded border border-accent px-5 py-2 text-sm font-semibold text-accent transition-colors hover:bg-accent hover:text-white"
+              className="rounded border border-accent px-5 py-2 text-center text-sm font-semibold text-accent transition-colors hover:bg-accent hover:text-white"
             >
               Take the Assessment
             </Link>
             <Link
               href="/quote"
-              className="rounded bg-accent px-5 py-2 text-sm font-semibold text-white transition-colors hover:bg-accent/90"
+              className="rounded bg-accent px-5 py-2 text-center text-sm font-semibold text-white transition-colors hover:bg-accent/90"
             >
               Get Protected
             </Link>

@@ -13,7 +13,7 @@ export default function CommercialContactPage() {
   return (
     <main>
       <Header />
-      <section className="relative flex min-h-[60vh] items-center justify-center overflow-hidden">
+      <section className="relative flex min-h-screen items-center justify-center overflow-hidden pt-24 md:min-h-[85vh]">
         <Image
           src="/images/wildfire-sprinklers-commercial.jpeg"
           alt="Commercial wildfire protection system installation"

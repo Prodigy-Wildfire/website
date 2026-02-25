@@ -67,7 +67,7 @@ export default function QuotePage() {
       <Header />
       <main className="flex-1">
         {/* Hero */}
-        <section className="relative bg-primary pt-32 pb-20">
+        <section className="relative flex min-h-screen items-center justify-center overflow-hidden pt-24 md:min-h-[85vh]">
           <Image
             src="/images/engineering.png"
             alt="Wildfire protection engineering"
@@ -76,8 +76,8 @@ export default function QuotePage() {
             priority
           />
           <div className="absolute inset-0 bg-primary/60" />
-          <div className="relative z-10 mx-auto max-w-3xl px-6 text-center">
-            <h1 className="font-heading text-4xl font-bold tracking-tight text-primary-foreground md:text-5xl">
+          <div className="relative z-10 mx-auto max-w-4xl px-6 text-center">
+            <h1 className="font-heading text-4xl font-bold leading-tight tracking-tight text-primary-foreground md:text-5xl lg:text-6xl">
               Get Your Free Wildfire Protection Quote
             </h1>
             <p className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-primary-foreground/70">
