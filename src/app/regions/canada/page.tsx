@@ -42,9 +42,9 @@ const caseStudies = [
     href: "/case-studies#banff-gondola",
   },
   {
-    name: "Lake Minnewanka",
+    name: "Private Residence in Whistler",
     description:
-      "Safeguarding critical lakeside infrastructure in Banff National Park with advanced ember detection and automated sprinkler activation.",
+      "Custom-engineered wildfire sprinkler system protecting a private residence in Whistler, British Columbia, with remote activation and full property coverage.",
     href: "/case-studies",
   },
   {

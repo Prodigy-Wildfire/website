@@ -22,6 +22,7 @@ const regions = [
   },
   {
     name: "Australia",
+    linkLabel: "Bushfire Protection in Australia",
     href: "/regions/australia",
     image: "/images/australia-bushfires-kangaroo.avif",
     description:
@@ -78,7 +79,7 @@ export function Regions() {
                   href={region.href}
                   className="mt-4 inline-block text-sm font-semibold text-accent transition-colors hover:text-accent/80"
                 >
-                  Wildfire Protection in {region.name} &rarr;
+                  {region.linkLabel || `Wildfire Protection in ${region.name}`} &rarr;
                 </Link>
               </div>
             </div>
