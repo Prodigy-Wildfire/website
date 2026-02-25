@@ -2,6 +2,7 @@ import { Header } from "@/components/header"
 import { HeroSection } from "@/components/businesses/hero-section"
 import { StatsSection } from "@/components/businesses/stats-section"
 import { FactsSection } from "@/components/businesses/facts-section"
+import { InvestmentSection } from "@/components/businesses/investment-section"
 import { WhyProdigySection } from "@/components/businesses/why-prodigy-section"
 import { GettingProtectedSection } from "@/components/businesses/getting-protected-section"
 import { ProcessSection } from "@/components/businesses/process-section"
@@ -53,6 +54,7 @@ export default function Page() {
       <HeroSection />
       <StatsSection />
       <FactsSection />
+      <InvestmentSection />
       <WhyProdigySection />
       <GettingProtectedSection />
       <ProcessSection />
