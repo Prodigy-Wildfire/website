@@ -19,6 +19,15 @@ export const metadata: Metadata = {
     "landlord wildfire defence",
     "commercial property fire risk",
   ],
+  alternates: { canonical: "/insights/wildfire-protection-commercial-usa" },
+  openGraph: {
+    type: "article",
+    title: "Protecting Commercial Properties and Multi-Unit Buildings From Wildfire in the US",
+    description:
+      "Commercial landlords, property managers, and multi-unit building owners in fire-prone areas face unique wildfire risks. Learn how engineered sprinkler systems protect assets and ensure business continuity.",
+    images: [{ url: "/images/insights/wildfire-protection-commercial-usa.jpg", width: 1200, height: 630, alt: "Protecting Commercial Properties and Multi-Unit Buildings From Wildfire in the US" }],
+    publishedTime: "2026-03-01",
+  },
 };
 
 const jsonLd = {
@@ -31,6 +40,7 @@ const jsonLd = {
   image:
     "https://www.prodigywildfire.com/images/insights/wildfire-protection-commercial-usa.jpg",
   datePublished: "2026-03-01",
+  dateModified: "2026-03-01",
   author: {
     "@type": "Person",
     name: "George Harris",

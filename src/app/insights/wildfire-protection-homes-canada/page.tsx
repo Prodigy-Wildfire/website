@@ -19,6 +19,15 @@ export const metadata: Metadata = {
     "home wildfire defence Canada",
     "wildfire season Canada",
   ],
+  alternates: { canonical: "/insights/wildfire-protection-homes-canada" },
+  openGraph: {
+    type: "article",
+    title: "Canadian Wildfire Seasons Are Getting Worse. Here's How to Protect Your Home",
+    description:
+      "Canada's wildfire seasons are intensifying year after year. Learn why ember attack is the biggest threat to your home and how permanent sprinkler systems are keeping Canadian properties standing.",
+    images: [{ url: "/images/insights/wildfire-protection-homes-canada.jpg", width: 1200, height: 630, alt: "Canadian Wildfire Seasons Are Getting Worse. Here's How to Protect Your Home" }],
+    publishedTime: "2026-03-03",
+  },
 };
 
 const jsonLd = {
@@ -31,6 +40,7 @@ const jsonLd = {
   image:
     "https://www.prodigywildfire.com/images/insights/wildfire-protection-homes-canada.jpg",
   datePublished: "2026-03-03",
+  dateModified: "2026-03-03",
   author: {
     "@type": "Person",
     name: "George Harris",

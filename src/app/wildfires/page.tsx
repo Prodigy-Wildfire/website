@@ -15,6 +15,12 @@ export const metadata: Metadata = {
   title: "Understanding Wildfires | How They Spread & How to Protect",
   description:
     "Learn how wildfires spread, why ember attack is the #1 cause of property loss, and how modern protection systems can safeguard your property.",
+  alternates: { canonical: "/wildfires" },
+  openGraph: {
+    title: "Understanding Wildfires",
+    description: "Learn how wildfires spread, why ember attack is the #1 cause of property loss, and how modern protection systems can safeguard your property.",
+    images: [{ url: "/images/Wildfire-page-hero.png", width: 1200, height: 630, alt: "Wildfire spreading across landscape" }],
+  },
 };
 
 const jsonLd = {

@@ -9,6 +9,12 @@ export const metadata: Metadata = {
   title: "Wildfire Protection in Canada | Prodigy Wildfire",
   description:
     "Prodigy delivers wildfire sprinkler systems, ember detection, and remote activation for homes and businesses across Canada. From British Columbia to Ontario, protect your property from wildfire.",
+  alternates: { canonical: "/regions/canada" },
+  openGraph: {
+    title: "Wildfire Protection in Canada",
+    description: "Prodigy delivers wildfire sprinkler systems, ember detection, and remote activation for homes and businesses across Canada.",
+    images: [{ url: "/images/jasper-national-park-wildfire.jpg", width: 1200, height: 630, alt: "Canadian wildfire in Jasper National Park" }],
+  },
 };
 
 const jsonLd = {

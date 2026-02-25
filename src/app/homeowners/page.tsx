@@ -16,6 +16,12 @@ export const metadata: Metadata = {
   title: "Wildfire Sprinkler Systems for Homes | Prodigy Wildfire",
   description:
     "Custom-designed, permanent roof-mounted sprinkler systems that protect your home from ember attack. Remotely activated from anywhere in the world.",
+  alternates: { canonical: "/homeowners" },
+  openGraph: {
+    title: "Wildfire Sprinkler Systems for Homes",
+    description: "Custom-designed, permanent roof-mounted sprinkler systems that protect your home from ember attack. Remotely activated from anywhere in the world.",
+    images: [{ url: "/images/homeowners-hero.jpg", width: 1200, height: 630, alt: "Wildfire sprinkler system protecting a home" }],
+  },
 };
 
 const jsonLd = {

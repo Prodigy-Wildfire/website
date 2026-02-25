@@ -19,6 +19,15 @@ export const metadata: Metadata = {
     "Lake Minnewanka fire protection",
     "Golden Skybridge wildfire defence",
   ],
+  alternates: { canonical: "/insights/prodigy-wildfire-installs-canada" },
+  openGraph: {
+    type: "article",
+    title: "From the Banff Gondola to Your Backyard: How Prodigy Is Protecting Canadian Communities From Wildfire",
+    description:
+      "Prodigy Wildfire has installed protection systems for some of Canada's most iconic facilities. Here's why these organizations chose active wildfire defence, and what it means for your property.",
+    images: [{ url: "/images/insights/prodigy-wildfire-installs-canada.jpg", width: 1200, height: 630, alt: "From the Banff Gondola to Your Backyard: How Prodigy Is Protecting Canadian Communities From Wildfire" }],
+    publishedTime: "2026-03-06",
+  },
 };
 
 const jsonLd = {
@@ -31,6 +40,7 @@ const jsonLd = {
   image:
     "https://www.prodigywildfire.com/images/insights/prodigy-wildfire-installs-canada.jpg",
   datePublished: "2026-03-06",
+  dateModified: "2026-03-06",
   author: {
     "@type": "Person",
     name: "George Harris",

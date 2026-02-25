@@ -19,6 +19,15 @@ export const metadata: Metadata = {
     "wildfire defence system",
     "proactive wildfire protection USA",
   ],
+  alternates: { canonical: "/insights/la-wildfire-protection-lessons" },
+  openGraph: {
+    type: "article",
+    title: "What the LA Fires and Rising Wildfire Risk Mean for Homeowners Across the Western US",
+    description:
+      "The 2025 LA fires destroyed over 16,000 structures. But homes with active wildfire protection survived. Here's what every property owner in fire-prone America needs to learn from that.",
+    images: [{ url: "/images/insights/la-wildfire-protection-lessons.jpg", width: 1200, height: 630, alt: "What the LA Fires and Rising Wildfire Risk Mean for Homeowners Across the Western US" }],
+    publishedTime: "2026-03-02",
+  },
 };
 
 const jsonLd = {
@@ -31,6 +40,7 @@ const jsonLd = {
   image:
     "https://www.prodigywildfire.com/images/insights/la-wildfire-protection-lessons.jpg",
   datePublished: "2026-03-02",
+  dateModified: "2026-03-02",
   author: {
     "@type": "Person",
     name: "George Harris",

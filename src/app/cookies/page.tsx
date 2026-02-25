@@ -5,6 +5,7 @@ export const metadata = {
   title: "Cookie Policy | Prodigy Wildfire Solutions",
   description:
     "Cookie policy for Prodigy Wildfire Solutions. Learn how we use cookies and similar technologies on our website.",
+  alternates: { canonical: "/cookies" },
 };
 
 export default function Page() {

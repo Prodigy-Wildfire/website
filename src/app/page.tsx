@@ -15,6 +15,7 @@ export const metadata: Metadata = {
   title: "Prodigy Wildfire | Wildfire Protection Systems for Homes & Businesses",
   description:
     "Protect your property with Prodigy's engineered wildfire sprinkler systems. Remotely activated, ember-proof protection across USA, Canada & Australia.",
+  alternates: { canonical: "/" },
 };
 
 const jsonLd = [

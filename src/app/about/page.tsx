@@ -11,6 +11,12 @@ export const metadata = {
   title: "About Prodigy Wildfire | The Future of Wildfire Protection",
   description:
     "Meet the team redefining wildfire defence across North America and Australia. Engineering excellence meets innovation in every installation.",
+  alternates: { canonical: "/about" },
+  openGraph: {
+    title: "About Prodigy Wildfire",
+    description: "Meet the team redefining wildfire defence across North America and Australia. Engineering excellence meets innovation in every installation.",
+    images: [{ url: "/images/sprinkler-system.jpg", width: 1200, height: 630, alt: "Prodigy Wildfire sprinkler system installation" }],
+  },
 };
 
 const jsonLd = {

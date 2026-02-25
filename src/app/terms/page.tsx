@@ -5,6 +5,7 @@ export const metadata = {
   title: "Terms and Conditions | Prodigy Wildfire Solutions",
   description:
     "Terms and conditions for Prodigy Wildfire Solutions. Read our terms of service before using our website or services.",
+  alternates: { canonical: "/terms" },
 };
 
 export default function Page() {

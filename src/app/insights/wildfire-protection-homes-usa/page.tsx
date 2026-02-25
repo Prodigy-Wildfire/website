@@ -19,6 +19,15 @@ export const metadata: Metadata = {
     "home wildfire defence",
     "WUI fire protection",
   ],
+  alternates: { canonical: "/insights/wildfire-protection-homes-usa" },
+  openGraph: {
+    type: "article",
+    title: "Wildfire Protection for Homeowners: What You Need to Know Before Fire Season",
+    description:
+      "Living in the wildland-urban interface means living with wildfire risk. Learn what every homeowner should know about protecting their property, and why roof-mounted sprinkler systems are the next essential step.",
+    images: [{ url: "/images/insights/wildfire-protection-homes-usa.jpg", width: 1200, height: 630, alt: "Wildfire Protection for Homeowners: What You Need to Know Before Fire Season" }],
+    publishedTime: "2026-02-27",
+  },
 };
 
 const jsonLd = {
@@ -31,6 +40,7 @@ const jsonLd = {
   image:
     "https://www.prodigywildfire.com/images/insights/wildfire-protection-homes-usa.jpg",
   datePublished: "2026-02-27",
+  dateModified: "2026-02-27",
   author: {
     "@type": "Person",
     name: "George Harris",

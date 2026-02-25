@@ -13,6 +13,12 @@ export const metadata: Metadata = {
   title: "The Prodigy System | Prodigy Wildfire Solutions",
   description:
     "Exterior wildfire sprinkler systems, remote activation, and ember detection technology. Prodigy delivers end-to-end wildfire defence for properties of all sizes.",
+  alternates: { canonical: "/systems" },
+  openGraph: {
+    title: "The Prodigy System",
+    description: "Exterior wildfire sprinkler systems, remote activation, and ember detection technology. Prodigy delivers end-to-end wildfire defence for properties of all sizes.",
+    images: [{ url: "/images/services-hero.jpg", width: 1200, height: 630, alt: "Prodigy wildfire sprinkler system" }],
+  },
 };
 
 const jsonLd = [

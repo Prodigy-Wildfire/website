@@ -9,6 +9,12 @@ export const metadata: Metadata = {
   title: "Wildfire Protection in Australia | Prodigy Wildfire",
   description:
     "Prodigy delivers bushfire sprinkler systems, ember detection, and remote activation for homes and properties across Australia. Protect your home from ember attack and radiant heat.",
+  alternates: { canonical: "/regions/australia" },
+  openGraph: {
+    title: "Wildfire Protection in Australia",
+    description: "Prodigy delivers bushfire sprinkler systems, ember detection, and remote activation for homes and properties across Australia.",
+    images: [{ url: "/images/australia-bushfires-kangaroo.avif", width: 1200, height: 630, alt: "Australian bushfire landscape" }],
+  },
 };
 
 const jsonLd = {

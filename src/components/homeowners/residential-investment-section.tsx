@@ -1,10 +1,38 @@
 import Link from "next/link"
+import { DollarSign, Droplets, ShieldCheck, Smartphone } from "lucide-react"
+
+const features = [
+  {
+    icon: DollarSign,
+    title: "Custom-Designed Pricing",
+    description:
+      "Residential systems start at around $15,000 and can range above $100,000 depending on the size of your property, the number of structures, and the water supply infrastructure needed. Every system is designed from a detailed site assessment of your roofline, terrain, vegetation, and exposure to wildfire risk.",
+  },
+  {
+    icon: Droplets,
+    title: "The Humidity Bubble",
+    description:
+      "A humidity bubble is a saturated zone of moisture created around a structure by an exterior wildfire sprinkler system, designed to prevent ember ignition and reduce radiant heat exposure. The Prodigy system creates this humidity bubble by saturating your roof, walls, decking, and surrounding vegetation, making every surface significantly harder to ignite.",
+  },
+  {
+    icon: ShieldCheck,
+    title: "Permanent Protection",
+    description:
+      "A permanently installed Prodigy system eliminates the burden and safety risks of setting up temporary systems every fire season. It is always ready, always in place, and requires no manual setup when fire danger increases.",
+  },
+  {
+    icon: Smartphone,
+    title: "Remote Activation",
+    description:
+      "Our systems feature remote activation through the Prodigy Wildfire app. If you have already been evacuated, you can activate your wildfire sprinkler system from another state or even another country with a single tap on your phone.",
+  },
+]
 
 export function ResidentialInvestmentSection() {
   return (
     <section className="py-20 md:py-28 bg-background">
-      <div className="mx-auto max-w-4xl px-6">
-        <div className="text-center mb-8">
+      <div className="mx-auto max-w-7xl px-6">
+        <div className="text-center mb-14">
           <p className="font-heading text-sm font-semibold tracking-widest uppercase text-accent mb-3">
             Protect Your Home
           </p>
@@ -12,55 +40,39 @@ export function ResidentialInvestmentSection() {
             Residential Wildfire Sprinkler System{" "}
             <span className="text-accent">Cost</span>
           </h2>
-        </div>
-
-        <div className="text-base leading-relaxed text-muted-foreground space-y-5">
-          <p>
-            Residential wildfire sprinkler systems from Prodigy Wildfire
-            Solutions start at around $15,000 and can range up to and above
-            $100,000 depending on the size of your property, the number of
-            structures requiring protection, and the water supply infrastructure
-            needed. Every home is different, and our team designs each system
-            based on a detailed site assessment of your roofline, terrain,
-            vegetation, and exposure to wildfire risk. Where required, we provide
-            pumps and tanks as part of the installation, or we can bore in a
-            dedicated well to ensure your system has a reliable, independent
-            water supply during a wildfire event.
-          </p>
-          <p>
-            A humidity bubble is a saturated zone of moisture created around
-            a structure by an exterior wildfire sprinkler system, designed to
-            prevent ember ignition and reduce radiant heat exposure. The Prodigy
-            system creates this humidity bubble by saturating your roof, walls,
-            decking, and surrounding vegetation when activated, making every
-            surface damp and significantly harder to ignite. This moisture barrier prevents
-            airborne embers from landing on or near your structure and catching
-            fire, which is the leading cause of home ignition during wildfire
-            events across the USA, Canada, and Australia. By maintaining high
-            humidity levels around your home, the system neutralises ember
-            attack, reduces radiant heat exposure, and provides a critical
-            layer of active defence that passive measures alone cannot match.
-          </p>
-          <p>
-            Homeowners in fire-prone areas need a permanent wildfire protection
-            solution because the alternative is simply not sustainable. Setting
-            up and pulling down temporary systems every year during wildfire
-            season is a significant burden, and it introduces real safety risks
-            for homeowners climbing ladders and working on rooftops. A
-            permanently installed Prodigy system eliminates that risk entirely.
-            It is always ready, always in place, and requires no manual setup
-            when fire danger increases. Our systems also feature remote
-            activation through the Prodigy Wildfire app, so if you have already
-            been evacuated, you can activate your wildfire sprinkler system from
-            another state or even another country with a single tap on your
-            phone.
+          <p className="mt-4 max-w-3xl mx-auto text-base leading-relaxed text-muted-foreground">
+            Every home is different. Prodigy designs each system based on your
+            property, delivering permanent wildfire defence with independent
+            water supply, ember suppression, and remote activation.
           </p>
         </div>
 
-        <div className="mt-10 text-center">
+        <div className="grid gap-6 md:grid-cols-2">
+          {features.map((feature) => {
+            const Icon = feature.icon
+            return (
+              <div
+                key={feature.title}
+                className="rounded border border-border bg-card p-8 transition-all hover:shadow-lg"
+              >
+                <div className="mb-5 flex h-14 w-14 items-center justify-center rounded-full bg-accent/10">
+                  <Icon className="h-7 w-7 text-accent" />
+                </div>
+                <h3 className="font-heading text-lg font-bold text-foreground">
+                  {feature.title}
+                </h3>
+                <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
+                  {feature.description}
+                </p>
+              </div>
+            )
+          })}
+        </div>
+
+        <div className="mt-12 text-center">
           <Link
             href="/consultation"
-            className="inline-block rounded bg-accent px-8 py-3.5 text-base font-semibold text-white transition-colors hover:bg-accent/90"
+            className="inline-block rounded bg-accent px-8 py-3.5 text-sm font-semibold text-white transition-colors hover:bg-accent/90"
           >
             Schedule a Consultation
           </Link>

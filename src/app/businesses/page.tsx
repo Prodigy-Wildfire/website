@@ -14,6 +14,12 @@ export const metadata = {
   title: "Commercial Wildfire Protection | Prodigy Wildfire",
   description:
     "Protect your commercial property with engineered wildfire defence systems. Full-service from design through installation and year-round maintenance.",
+  alternates: { canonical: "/businesses" },
+  openGraph: {
+    title: "Commercial Wildfire Protection",
+    description: "Protect your commercial property with engineered wildfire defence systems. Full-service from design through installation and year-round maintenance.",
+    images: [{ url: "/images/hero-poster-businesses.jpg", width: 1200, height: 630, alt: "Commercial wildfire protection system" }],
+  },
 };
 
 const jsonLd = {

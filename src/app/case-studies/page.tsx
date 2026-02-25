@@ -8,6 +8,12 @@ export const metadata: Metadata = {
   title: "Wildfire Protection Case Studies | Real Installations Across USA, Canada & Australia",
   description:
     "See how Prodigy Wildfire Solutions protects homes, resorts, and critical infrastructure with custom exterior sprinkler systems. Real case studies from installations across the USA, Canada, and Australia.",
+  alternates: { canonical: "/case-studies" },
+  openGraph: {
+    title: "Wildfire Protection Case Studies",
+    description: "See how Prodigy Wildfire Solutions protects homes, resorts, and critical infrastructure with custom exterior sprinkler systems.",
+    images: [{ url: "/images/services-hero.jpg", width: 1200, height: 630, alt: "Prodigy Wildfire case study installation" }],
+  },
 };
 
 const jsonLd = [

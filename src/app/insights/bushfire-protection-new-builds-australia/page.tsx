@@ -19,6 +19,15 @@ export const metadata: Metadata = {
     "developer wildfire protection",
     "building in bushfire zones",
   ],
+  alternates: { canonical: "/insights/bushfire-protection-new-builds-australia" },
+  openGraph: {
+    type: "article",
+    title: "Bushfire Protection for New Builds: What Australian Developers Need to Know",
+    description:
+      "Building in a bushfire-prone area? Learn why integrating wildfire protection systems into new developments is becoming essential for compliance, insurance, and buyer confidence in Australia.",
+    images: [{ url: "/images/insights/bushfire-protection-new-builds-australia.jpg", width: 1200, height: 630, alt: "Bushfire Protection for New Builds: What Australian Developers Need to Know" }],
+    publishedTime: "2026-02-24",
+  },
 };
 
 const jsonLd = {
@@ -31,6 +40,7 @@ const jsonLd = {
   image:
     "https://www.prodigywildfire.com/images/insights/bushfire-protection-new-builds-australia.jpg",
   datePublished: "2026-02-24",
+  dateModified: "2026-02-24",
   author: {
     "@type": "Person",
     name: "George Harris",

@@ -19,6 +19,15 @@ export const metadata: Metadata = {
     "fire resilient construction",
     "developer wildfire defence",
   ],
+  alternates: { canonical: "/insights/wildfire-protection-new-construction-usa" },
+  openGraph: {
+    type: "article",
+    title: "Wildfire-Resilient Construction: Why US Developers Are Building With Fire Protection In Mind",
+    description:
+      "Developing property in fire-prone areas of the western US? Learn why integrating wildfire sprinkler systems at the build stage is becoming a competitive advantage for developers and builders.",
+    images: [{ url: "/images/insights/wildfire-protection-new-construction-usa.jpg", width: 1200, height: 630, alt: "Wildfire-Resilient Construction: Why US Developers Are Building With Fire Protection In Mind" }],
+    publishedTime: "2026-02-28",
+  },
 };
 
 const jsonLd = {
@@ -31,6 +40,7 @@ const jsonLd = {
   image:
     "https://www.prodigywildfire.com/images/insights/wildfire-protection-new-construction-usa.jpg",
   datePublished: "2026-02-28",
+  dateModified: "2026-02-28",
   author: {
     "@type": "Person",
     name: "George Harris",

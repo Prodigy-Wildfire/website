@@ -11,6 +11,7 @@ export const metadata: Metadata = {
   title: "Partner With Prodigy | Wildfire Protection Installer & Reseller Program",
   description:
     "Join Prodigy Wildfire's partner program for builders, insurance companies, HOAs, and certified installers. Offer exterior wildfire sprinkler systems to your clients across the USA, Canada, and Australia.",
+  alternates: { canonical: "/partners" },
 };
 
 const jsonLd = {

@@ -9,6 +9,12 @@ export const metadata: Metadata = {
   title: "Wildfire Protection in the USA | Prodigy Wildfire",
   description:
     "Prodigy delivers wildfire sprinkler systems, ember detection, and remote activation for homes and businesses across the USA. From California to Colorado, protect your property from wildfire.",
+  alternates: { canonical: "/regions/usa" },
+  openGraph: {
+    title: "Wildfire Protection in the USA",
+    description: "Prodigy delivers wildfire sprinkler systems, ember detection, and remote activation for homes and businesses across the USA.",
+    images: [{ url: "/images/usa-wildfire-home-under-threat.jpg", width: 1200, height: 630, alt: "American home under wildfire threat" }],
+  },
 };
 
 const jsonLd = {

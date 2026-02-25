@@ -24,6 +24,7 @@ export async function generateMetadata({
   return {
     title: region.metaTitle,
     description: region.metaDescription,
+    alternates: { canonical: `/regions/australia/${slug}` },
   };
 }
 

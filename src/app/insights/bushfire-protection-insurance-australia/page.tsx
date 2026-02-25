@@ -19,6 +19,15 @@ export const metadata: Metadata = {
     "bushfire risk mitigation insurance",
     "home insurance bushfire zone",
   ],
+  alternates: { canonical: "/insights/bushfire-protection-insurance-australia" },
+  openGraph: {
+    type: "article",
+    title: "How Bushfire Protection Systems Can Impact Your Home Insurance in Australia",
+    description:
+      "Struggling with rising insurance premiums or reduced coverage in bushfire-prone areas? Learn how engineered wildfire protection systems are changing the conversation with insurers.",
+    images: [{ url: "/images/insights/bushfire-protection-insurance-australia.jpg", width: 1200, height: 630, alt: "How Bushfire Protection Systems Can Impact Your Home Insurance in Australia" }],
+    publishedTime: "2026-02-26",
+  },
 };
 
 const jsonLd = {
@@ -31,6 +40,7 @@ const jsonLd = {
   image:
     "https://www.prodigywildfire.com/images/insights/bushfire-protection-insurance-australia.jpg",
   datePublished: "2026-02-26",
+  dateModified: "2026-02-26",
   author: {
     "@type": "Person",
     name: "George Harris",

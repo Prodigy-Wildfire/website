@@ -19,6 +19,15 @@ export const metadata: Metadata = {
     "building in wildfire zones Canada",
     "FireSmart construction",
   ],
+  alternates: { canonical: "/insights/wildfire-protection-new-builds-canada" },
+  openGraph: {
+    type: "article",
+    title: "Wildfire Protection for New Developments in Canada: A Builder's Guide",
+    description:
+      "Building in fire-prone areas of Canada? Learn why forward-thinking developers are integrating wildfire sprinkler systems at the construction stage, and how it's becoming a competitive advantage.",
+    images: [{ url: "/images/insights/wildfire-protection-new-builds-canada.jpg", width: 1200, height: 630, alt: "Wildfire Protection for New Developments in Canada: A Builder's Guide" }],
+    publishedTime: "2026-03-04",
+  },
 };
 
 const jsonLd = {
@@ -31,6 +40,7 @@ const jsonLd = {
   image:
     "https://www.prodigywildfire.com/images/insights/wildfire-protection-new-builds-canada.jpg",
   datePublished: "2026-03-04",
+  dateModified: "2026-03-04",
   author: {
     "@type": "Person",
     name: "George Harris",
