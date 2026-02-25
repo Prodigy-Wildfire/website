@@ -10,7 +10,7 @@ import { SystemCta } from "@/components/services/system-cta"
 import { MailingListSection } from "@/components/mailing-list-section";
 
 export const metadata: Metadata = {
-  title: "The Prodigy System | Prodigy Wildfire Solutions",
+  title: "Exterior Wildfire Sprinkler Systems | Prodigy Wildfire Solutions",
   description:
     "Exterior wildfire sprinkler systems, remote activation, and ember detection technology. Prodigy delivers end-to-end wildfire defence for properties of all sizes.",
   alternates: { canonical: "/systems" },

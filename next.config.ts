@@ -143,6 +143,12 @@ const nextConfig: NextConfig = {
         destination: "/commercial-consultation",
         permanent: true,
       },
+      // Truncated insights slug fix
+      {
+        source: "/insights/wildfire-protection-insurance-cana",
+        destination: "/insights/wildfire-protection-insurance-canada",
+        permanent: true,
+      },
       // Australian states/territories moved under /regions/australia/
       {
         source: "/regions/new-south-wales",

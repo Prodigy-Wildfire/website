@@ -28,7 +28,7 @@ const posts = [
       "Canadian homeowners in fire-prone areas are facing rising premiums and shrinking coverage. Learn how engineered wildfire protection systems are helping property owners take control of their risk profile.",
     image: "/images/insights/wildfire-protection-insurance-canada.jpg",
     date: "5 March 2026",
-    slug: "/insights/wildfire-protection-insurance-cana",
+    slug: "/insights/wildfire-protection-insurance-canada",
   },
   {
     title: "Building for the Fire Seasons Ahead: Why Canadian Developers Are Making Wildfire Protection Standard",
