@@ -21,6 +21,11 @@ export const metadata: Metadata = {
     description: "Learn how wildfires spread, why ember attack is the #1 cause of property loss, and how modern protection systems can safeguard your property.",
     images: [{ url: "/images/Wildfire-page-hero.png", width: 1200, height: 630, alt: "Wildfire spreading across landscape" }],
   },
+  twitter: {
+    card: "summary_large_image",
+    title: "Understanding Wildfires",
+    description: "Learn how wildfires spread, why ember attack is the #1 cause of property loss, and how modern protection systems can safeguard your property.",
+  },
 };
 
 const jsonLd = {

@@ -10,6 +10,17 @@ export const metadata = {
   description:
     "Answers to common questions about wildfire sprinkler systems, installation, costs, maintenance, and how Prodigy protects your property.",
   alternates: { canonical: "/faq" },
+  openGraph: {
+    title: "Wildfire Protection FAQ | Prodigy Wildfire",
+    description:
+      "Answers to common questions about wildfire sprinkler systems, installation, costs, maintenance, and how Prodigy protects your property.",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Wildfire Protection FAQ | Prodigy Wildfire",
+    description:
+      "Answers to common questions about wildfire sprinkler systems, installation, costs, maintenance, and how Prodigy protects your property.",
+  },
 };
 
 const faqJsonLd = {

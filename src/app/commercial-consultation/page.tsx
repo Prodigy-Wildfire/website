@@ -7,6 +7,17 @@ export const metadata = {
   title: "Commercial Consultation | Prodigy Wildfire Solutions",
   description:
     "Request a commercial wildfire protection consultation for your business, resort, campus, or critical infrastructure. Custom proposals for properties across the USA, Canada, and Australia.",
+  openGraph: {
+    title: "Commercial Consultation | Prodigy Wildfire Solutions",
+    description:
+      "Request a commercial wildfire protection consultation for your business, resort, campus, or critical infrastructure. Custom proposals for properties across the USA, Canada, and Australia.",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Commercial Consultation | Prodigy Wildfire Solutions",
+    description:
+      "Request a commercial wildfire protection consultation for your business, resort, campus, or critical infrastructure. Custom proposals for properties across the USA, Canada, and Australia.",
+  },
 }
 
 export default function CommercialContactPage() {

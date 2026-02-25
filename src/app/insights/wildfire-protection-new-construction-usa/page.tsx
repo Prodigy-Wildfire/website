@@ -28,6 +28,12 @@ export const metadata: Metadata = {
     images: [{ url: "/images/insights/wildfire-protection-new-construction-usa.jpg", width: 1200, height: 630, alt: "Wildfire-Resilient Construction: Why US Developers Are Building With Fire Protection In Mind" }],
     publishedTime: "2026-02-28",
   },
+  twitter: {
+    card: "summary_large_image",
+    title: "Wildfire-Resilient Construction: Why US Developers Are Building With Fire Protection In Mind",
+    description:
+      "Developing property in fire-prone areas of the western US? Learn why integrating wildfire sprinkler systems at the build stage is becoming a competitive advantage for developers and builders.",
+  },
 };
 
 const jsonLd = {

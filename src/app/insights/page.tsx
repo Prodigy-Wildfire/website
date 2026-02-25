@@ -11,6 +11,17 @@ export const metadata: Metadata = {
   description:
     "Stay informed with the latest wildfire protection insights, fire safety tips, and expert advice from Prodigy Wildfire Solutions. Covering wildfire preparedness for homes and businesses across the USA, Canada, and Australia.",
   alternates: { canonical: "/insights" },
+  openGraph: {
+    title: "Wildfire Protection Insights | News, Tips & Expert Advice",
+    description:
+      "Stay informed with the latest wildfire protection insights, fire safety tips, and expert advice from Prodigy Wildfire Solutions. Covering wildfire preparedness for homes and businesses across the USA, Canada, and Australia.",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Wildfire Protection Insights | News, Tips & Expert Advice",
+    description:
+      "Stay informed with the latest wildfire protection insights, fire safety tips, and expert advice from Prodigy Wildfire Solutions. Covering wildfire preparedness for homes and businesses across the USA, Canada, and Australia.",
+  },
 };
 
 const posts = [

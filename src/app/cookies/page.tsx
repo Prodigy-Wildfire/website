@@ -6,6 +6,17 @@ export const metadata = {
   description:
     "Cookie policy for Prodigy Wildfire Solutions. Learn how we use cookies and similar technologies on our website.",
   alternates: { canonical: "/cookies" },
+  openGraph: {
+    title: "Cookie Policy | Prodigy Wildfire Solutions",
+    description:
+      "Cookie policy for Prodigy Wildfire Solutions. Learn how we use cookies and similar technologies on our website.",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Cookie Policy | Prodigy Wildfire Solutions",
+    description:
+      "Cookie policy for Prodigy Wildfire Solutions. Learn how we use cookies and similar technologies on our website.",
+  },
 };
 
 export default function Page() {

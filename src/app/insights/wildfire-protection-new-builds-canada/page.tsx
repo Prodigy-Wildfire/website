@@ -28,6 +28,12 @@ export const metadata: Metadata = {
     images: [{ url: "/images/insights/wildfire-protection-new-builds-canada.jpg", width: 1200, height: 630, alt: "Wildfire Protection for New Developments in Canada: A Builder's Guide" }],
     publishedTime: "2026-03-04",
   },
+  twitter: {
+    card: "summary_large_image",
+    title: "Wildfire Protection for New Developments in Canada: A Builder's Guide",
+    description:
+      "Building in fire-prone areas of Canada? Learn why forward-thinking developers are integrating wildfire sprinkler systems at the construction stage, and how it's becoming a competitive advantage.",
+  },
 };
 
 const jsonLd = {

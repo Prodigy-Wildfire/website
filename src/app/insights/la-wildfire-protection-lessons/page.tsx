@@ -28,6 +28,12 @@ export const metadata: Metadata = {
     images: [{ url: "/images/insights/la-wildfire-protection-lessons.jpg", width: 1200, height: 630, alt: "What the LA Fires and Rising Wildfire Risk Mean for Homeowners Across the Western US" }],
     publishedTime: "2026-03-02",
   },
+  twitter: {
+    card: "summary_large_image",
+    title: "What the LA Fires and Rising Wildfire Risk Mean for Homeowners Across the Western US",
+    description:
+      "The 2025 LA fires destroyed over 16,000 structures. But homes with active wildfire protection survived. Here's what every property owner in fire-prone America needs to learn from that.",
+  },
 };
 
 const jsonLd = {

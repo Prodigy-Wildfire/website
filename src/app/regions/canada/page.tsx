@@ -15,6 +15,11 @@ export const metadata: Metadata = {
     description: "Prodigy delivers wildfire sprinkler systems, ember detection, and remote activation for homes and businesses across Canada.",
     images: [{ url: "/images/jasper-national-park-wildfire.jpg", width: 1200, height: 630, alt: "Canadian wildfire in Jasper National Park" }],
   },
+  twitter: {
+    card: "summary_large_image",
+    title: "Wildfire Protection in Canada",
+    description: "Prodigy delivers wildfire sprinkler systems, ember detection, and remote activation for homes and businesses across Canada.",
+  },
 };
 
 const jsonLd = {

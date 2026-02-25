@@ -20,6 +20,11 @@ export const metadata = {
     description: "Prodigy provides wildfire protection across high-risk regions in Canada, the USA, and Australia. Find coverage in your area.",
     images: [{ url: "/images/wildfire-ember-attack-cayetano-gil.avif", width: 1200, height: 630, alt: "Wildfire ember attack" }],
   },
+  twitter: {
+    card: "summary_large_image",
+    title: "Wildfire Protection by Region",
+    description: "Prodigy provides wildfire protection across high-risk regions in Canada, the USA, and Australia. Find coverage in your area.",
+  },
 };
 
 const jsonLd = {

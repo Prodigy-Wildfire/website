@@ -10,6 +10,17 @@ export const metadata = {
   description:
     "Get in touch with Prodigy Wildfire for a property assessment and custom wildfire protection quote. Serving USA, Canada, and Australia.",
   alternates: { canonical: "/contact" },
+  openGraph: {
+    title: "Contact Prodigy Wildfire | Schedule a Consultation",
+    description:
+      "Get in touch with Prodigy Wildfire for a property assessment and custom wildfire protection quote. Serving USA, Canada, and Australia.",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Contact Prodigy Wildfire | Schedule a Consultation",
+    description:
+      "Get in touch with Prodigy Wildfire for a property assessment and custom wildfire protection quote. Serving USA, Canada, and Australia.",
+  },
 };
 
 const jsonLd = {

@@ -15,6 +15,11 @@ export const metadata: Metadata = {
     description: "Prodigy delivers bushfire sprinkler systems, ember detection, and remote activation for homes and properties across Australia.",
     images: [{ url: "/images/australia-bushfires-kangaroo.avif", width: 1200, height: 630, alt: "Australian bushfire landscape" }],
   },
+  twitter: {
+    card: "summary_large_image",
+    title: "Wildfire Protection in Australia",
+    description: "Prodigy delivers bushfire sprinkler systems, ember detection, and remote activation for homes and properties across Australia.",
+  },
 };
 
 const jsonLd = {

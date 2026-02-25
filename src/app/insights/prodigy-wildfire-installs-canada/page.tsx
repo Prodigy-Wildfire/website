@@ -28,6 +28,12 @@ export const metadata: Metadata = {
     images: [{ url: "/images/insights/prodigy-wildfire-installs-canada.jpg", width: 1200, height: 630, alt: "From the Banff Gondola to Your Backyard: How Prodigy Is Protecting Canadian Communities From Wildfire" }],
     publishedTime: "2026-03-06",
   },
+  twitter: {
+    card: "summary_large_image",
+    title: "From the Banff Gondola to Your Backyard: How Prodigy Is Protecting Canadian Communities From Wildfire",
+    description:
+      "Prodigy Wildfire has installed protection systems for some of Canada's most iconic facilities. Here's why these organizations chose active wildfire defence, and what it means for your property.",
+  },
 };
 
 const jsonLd = {

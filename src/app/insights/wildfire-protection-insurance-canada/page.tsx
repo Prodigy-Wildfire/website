@@ -28,6 +28,12 @@ export const metadata: Metadata = {
     images: [{ url: "/images/insights/wildfire-protection-insurance-canada.jpg", width: 1200, height: 630, alt: "Wildfire, Insurance, and the Growing Protection Gap in Canada" }],
     publishedTime: "2026-03-05",
   },
+  twitter: {
+    card: "summary_large_image",
+    title: "Wildfire, Insurance, and the Growing Protection Gap in Canada",
+    description:
+      "Canadian homeowners in fire-prone areas are facing rising premiums and shrinking coverage. Learn how engineered wildfire protection systems are helping property owners take control of their risk profile.",
+  },
 };
 
 const jsonLd = {

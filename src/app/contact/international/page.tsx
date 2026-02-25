@@ -8,6 +8,17 @@ export const metadata: Metadata = {
   title: "International Inquiry | Wildfire Protection Beyond USA, Canada & Australia",
   description:
     "Interested in Prodigy wildfire protection outside of the USA, Canada, or Australia? Register your interest and we'll explore what's possible in your region.",
+  openGraph: {
+    title: "International Inquiry | Wildfire Protection Beyond USA, Canada & Australia",
+    description:
+      "Interested in Prodigy wildfire protection outside of the USA, Canada, or Australia? Register your interest and we'll explore what's possible in your region.",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "International Inquiry | Wildfire Protection Beyond USA, Canada & Australia",
+    description:
+      "Interested in Prodigy wildfire protection outside of the USA, Canada, or Australia? Register your interest and we'll explore what's possible in your region.",
+  },
 }
 
 export default function InternationalContactPage() {

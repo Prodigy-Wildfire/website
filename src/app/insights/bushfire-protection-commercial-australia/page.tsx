@@ -28,6 +28,12 @@ export const metadata: Metadata = {
     images: [{ url: "/images/insights/bushfire-protection-commercial-australia.jpg", width: 1200, height: 630, alt: "Wildfire Protection for Hotels, Resorts & Commercial Properties in Australia" }],
     publishedTime: "2026-02-25",
   },
+  twitter: {
+    card: "summary_large_image",
+    title: "Wildfire Protection for Hotels, Resorts & Commercial Properties in Australia",
+    description:
+      "Hotels, resorts, and commercial buildings in bushfire-prone areas face unique risks. Learn how purpose-built wildfire suppression systems protect assets, guests, and business continuity.",
+  },
 };
 
 const jsonLd = {

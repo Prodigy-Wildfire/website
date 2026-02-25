@@ -6,6 +6,17 @@ export const metadata = {
   description:
     "Terms and conditions for Prodigy Wildfire Solutions. Read our terms of service before using our website or services.",
   alternates: { canonical: "/terms" },
+  openGraph: {
+    title: "Terms and Conditions | Prodigy Wildfire Solutions",
+    description:
+      "Terms and conditions for Prodigy Wildfire Solutions. Read our terms of service before using our website or services.",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Terms and Conditions | Prodigy Wildfire Solutions",
+    description:
+      "Terms and conditions for Prodigy Wildfire Solutions. Read our terms of service before using our website or services.",
+  },
 };
 
 export default function Page() {

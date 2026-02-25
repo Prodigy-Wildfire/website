@@ -19,6 +19,11 @@ export const metadata: Metadata = {
     description: "Exterior wildfire sprinkler systems, remote activation, and ember detection technology. Prodigy delivers end-to-end wildfire defence for properties of all sizes.",
     images: [{ url: "/images/services-hero.jpg", width: 1200, height: 630, alt: "Prodigy wildfire sprinkler system" }],
   },
+  twitter: {
+    card: "summary_large_image",
+    title: "The Prodigy System",
+    description: "Exterior wildfire sprinkler systems, remote activation, and ember detection technology. Prodigy delivers end-to-end wildfire defence for properties of all sizes.",
+  },
 };
 
 const jsonLd = [

@@ -28,6 +28,12 @@ export const metadata: Metadata = {
     images: [{ url: "/images/insights/wildfire-protection-commercial-usa.jpg", width: 1200, height: 630, alt: "Protecting Commercial Properties and Multi-Unit Buildings From Wildfire in the US" }],
     publishedTime: "2026-03-01",
   },
+  twitter: {
+    card: "summary_large_image",
+    title: "Protecting Commercial Properties and Multi-Unit Buildings From Wildfire in the US",
+    description:
+      "Commercial landlords, property managers, and multi-unit building owners in fire-prone areas face unique wildfire risks. Learn how engineered sprinkler systems protect assets and ensure business continuity.",
+  },
 };
 
 const jsonLd = {

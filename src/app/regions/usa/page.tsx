@@ -15,6 +15,11 @@ export const metadata: Metadata = {
     description: "Prodigy delivers wildfire sprinkler systems, ember detection, and remote activation for homes and businesses across the USA.",
     images: [{ url: "/images/usa-wildfire-home-under-threat.jpg", width: 1200, height: 630, alt: "American home under wildfire threat" }],
   },
+  twitter: {
+    card: "summary_large_image",
+    title: "Wildfire Protection in the USA",
+    description: "Prodigy delivers wildfire sprinkler systems, ember detection, and remote activation for homes and businesses across the USA.",
+  },
 };
 
 const jsonLd = {

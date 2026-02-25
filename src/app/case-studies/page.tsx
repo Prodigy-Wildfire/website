@@ -14,6 +14,11 @@ export const metadata: Metadata = {
     description: "See how Prodigy Wildfire Solutions protects homes, resorts, and critical infrastructure with custom exterior sprinkler systems.",
     images: [{ url: "/images/services-hero.jpg", width: 1200, height: 630, alt: "Prodigy Wildfire case study installation" }],
   },
+  twitter: {
+    card: "summary_large_image",
+    title: "Wildfire Protection Case Studies",
+    description: "See how Prodigy Wildfire Solutions protects homes, resorts, and critical infrastructure with custom exterior sprinkler systems.",
+  },
 };
 
 const jsonLd = [

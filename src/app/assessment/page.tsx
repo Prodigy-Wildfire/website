@@ -21,6 +21,17 @@ export const metadata: Metadata = {
     "home wildfire assessment",
     "free wildfire assessment",
   ],
+  openGraph: {
+    title: "Free Wildfire Risk Assessment | How Prepared Is Your Property?",
+    description:
+      "Take our free 2-minute wildfire risk assessment to discover your property's vulnerability to wildfire, bushfire, and ember attack. Get a personalised risk score and protection recommendations for properties in the USA, Canada, and Australia.",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Free Wildfire Risk Assessment | How Prepared Is Your Property?",
+    description:
+      "Take our free 2-minute wildfire risk assessment to discover your property's vulnerability to wildfire, bushfire, and ember attack. Get a personalised risk score and protection recommendations for properties in the USA, Canada, and Australia.",
+  },
 }
 
 const jsonLd = {

@@ -25,6 +25,15 @@ export async function generateMetadata({
     title: region.metaTitle,
     description: region.metaDescription,
     alternates: { canonical: `/regions/usa/${slug}` },
+    openGraph: {
+      title: region.metaTitle,
+      description: region.metaDescription,
+    },
+    twitter: {
+      card: "summary_large_image" as const,
+      title: region.metaTitle,
+      description: region.metaDescription,
+    },
   };
 }
 

@@ -54,9 +54,9 @@ export function InvestmentSection() {
             return (
               <div
                 key={feature.title}
-                className="rounded border border-border bg-card p-8 transition-all hover:shadow-lg"
+                className="rounded border border-border bg-card p-8 text-center transition-all hover:shadow-lg"
               >
-                <div className="mb-5 flex h-14 w-14 items-center justify-center rounded-full bg-accent/10">
+                <div className="mx-auto mb-5 flex h-14 w-14 items-center justify-center rounded-full bg-accent/10">
                   <Icon className="h-7 w-7 text-accent" />
                 </div>
                 <h3 className="font-heading text-lg font-bold text-foreground">

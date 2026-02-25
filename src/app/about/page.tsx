@@ -17,6 +17,11 @@ export const metadata = {
     description: "Meet the team redefining wildfire defence across North America and Australia. Engineering excellence meets innovation in every installation.",
     images: [{ url: "/images/sprinkler-system.jpg", width: 1200, height: 630, alt: "Prodigy Wildfire sprinkler system installation" }],
   },
+  twitter: {
+    card: "summary_large_image",
+    title: "About Prodigy Wildfire",
+    description: "Meet the team redefining wildfire defence across North America and Australia. Engineering excellence meets innovation in every installation.",
+  },
 };
 
 const jsonLd = {

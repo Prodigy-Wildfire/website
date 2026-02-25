@@ -16,6 +16,17 @@ export const metadata: Metadata = {
   description:
     "Protect your property with Prodigy's engineered wildfire sprinkler systems. Remotely activated, ember-proof protection across USA, Canada & Australia.",
   alternates: { canonical: "/" },
+  openGraph: {
+    title: "Prodigy Wildfire | Wildfire Protection Systems for Homes & Businesses",
+    description:
+      "Protect your property with Prodigy's engineered wildfire sprinkler systems. Remotely activated, ember-proof protection across USA, Canada & Australia.",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Prodigy Wildfire | Wildfire Protection Systems for Homes & Businesses",
+    description:
+      "Protect your property with Prodigy's engineered wildfire sprinkler systems. Remotely activated, ember-proof protection across USA, Canada & Australia.",
+  },
 };
 
 const jsonLd = [

@@ -28,6 +28,12 @@ export const metadata: Metadata = {
     images: [{ url: "/images/insights/wildfire-protection-homes-usa.jpg", width: 1200, height: 630, alt: "Wildfire Protection for Homeowners: What You Need to Know Before Fire Season" }],
     publishedTime: "2026-02-27",
   },
+  twitter: {
+    card: "summary_large_image",
+    title: "Wildfire Protection for Homeowners: What You Need to Know Before Fire Season",
+    description:
+      "Living in the wildland-urban interface means living with wildfire risk. Learn what every homeowner should know about protecting their property, and why roof-mounted sprinkler systems are the next essential step.",
+  },
 };
 
 const jsonLd = {

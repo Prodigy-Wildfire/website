@@ -28,6 +28,12 @@ export const metadata: Metadata = {
     images: [{ url: "/images/insights/bushfire-protection-homes-australia.jpg", width: 1200, height: 630, alt: "Is Your Home Ready for Bushfire Season? A Practical Guide to Protecting Your Property" }],
     publishedTime: "2026-02-23",
   },
+  twitter: {
+    card: "summary_large_image",
+    title: "Is Your Home Ready for Bushfire Season? A Practical Guide to Protecting Your Property",
+    description:
+      "Bushfire season is getting longer and more unpredictable. Learn what Australian homeowners can do right now to protect their property, and why permanent sprinkler systems are changing the game.",
+  },
 };
 
 const jsonLd = {
