@@ -101,7 +101,7 @@ function VideoFaqCard({
           <source src={faq.videoSrc} type="video/mp4" />
         </video>
       </div>
-      <div className="p-6">
+      <div className="p-6 text-center">
         <h3 className="font-heading text-base font-semibold text-card-foreground">
           {faq.question}
         </h3>
