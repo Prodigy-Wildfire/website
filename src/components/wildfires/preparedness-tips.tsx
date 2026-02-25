@@ -17,7 +17,7 @@ const tips = [
     icon: MapPinned,
     title: "Have a Plan",
     description:
-      "Develop and rehearse an evacuation plan with your family or team, including multiple escape routes and safe meeting points. Knowing exactly what to do ahead of time minimizes confusion and keeps everyone safe.",
+      "Develop and rehearse an evacuation plan with your family or team, including multiple escape routes and safe meeting points. Knowing exactly what to do ahead of time minimises confusion and keeps everyone safe.",
   },
 ];
 
