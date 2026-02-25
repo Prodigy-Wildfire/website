@@ -126,6 +126,12 @@ const nextConfig: NextConfig = {
         destination: "/regions/usa/texas",
         permanent: true,
       },
+      // /system → /systems (canonical URL)
+      {
+        source: "/system",
+        destination: "/systems",
+        permanent: true,
+      },
       // Quote page renamed to Consultation
       {
         source: "/quote",

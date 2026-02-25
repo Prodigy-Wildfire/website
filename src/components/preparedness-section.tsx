@@ -14,7 +14,7 @@ const cards = [
     title: "Getting Protected",
     description:
       "Explore how Prodigy systems work, what installation involves, and how to get started with a free assessment.",
-    href: "/system",
+    href: "/systems",
   },
 ];
 
