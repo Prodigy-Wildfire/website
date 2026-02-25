@@ -16,7 +16,7 @@ export function InvestmentSection() {
 
         <div className="text-base leading-relaxed text-muted-foreground space-y-5">
           <p>
-            A commercial wildfire sprinkler system is not just an expense — it is
+            A commercial wildfire sprinkler system is not just an expense, it is
             a strategic investment in the longevity, resilience, and continuity
             of your business. Wildfire events can cause catastrophic damage to
             commercial properties, resulting in months of operational downtime,
@@ -24,13 +24,12 @@ export function InvestmentSection() {
             cover the cost of rebuilding. An engineered exterior wildfire
             protection system from Prodigy Wildfire Solutions safeguards your
             physical assets, protects your employees and customers, and ensures
-            your business can recover faster — or avoid damage entirely.
+            your business can recover faster or avoid damage entirely.
           </p>
           <p>
-            Typical commercial wildfire protection projects start at{" "}
-            <strong className="text-foreground">$25,000</strong> for smaller
-            single-structure installations and can range up to{" "}
-            <strong className="text-foreground">$1.2 million</strong> or more
+            Typical commercial wildfire protection projects start at
+            $25,000 for smaller single-structure installations and can range
+            up to $1.2 million or more
             for large-scale, multi-building campuses, critical infrastructure
             facilities, and high-complexity sites. The final cost depends on
             factors including the number of structures requiring protection,
@@ -45,7 +44,7 @@ export function InvestmentSection() {
             in a wildfire-prone area, Prodigy Wildfire Solutions provides a
             comprehensive site assessment, custom system design, and a detailed
             proposal tailored to your property and budget. Our team will walk
-            you through every aspect of the system — from design and
+            you through every aspect of the system, from design and
             installation through to ongoing maintenance and emergency
             activation protocols.
           </p>
