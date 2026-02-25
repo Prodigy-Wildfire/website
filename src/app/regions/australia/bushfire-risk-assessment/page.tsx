@@ -299,7 +299,7 @@ export default function BushfireRiskAssessmentPage() {
             <div
               className={`mb-6 rounded-xl border-l-4 bg-muted p-6 ${risk.borderClassName}`}
             >
-              <div className="mb-4 flex items-center gap-4">
+              <div className="mb-4 flex items-center justify-center gap-4">
                 <span
                   className={`rounded-full px-4 py-1.5 text-sm font-semibold text-white ${risk.className}`}
                 >
@@ -313,7 +313,7 @@ export default function BushfireRiskAssessmentPage() {
 
             {category === "hot" && (
               <div>
-                <h2 className="mb-4 font-heading text-xl font-bold text-foreground">
+                <h2 className="mb-4 text-center font-heading text-xl font-bold text-foreground">
                   Let&apos;s Protect Your Property
                 </h2>
                 <p className="mb-6 leading-relaxed text-muted-foreground">
@@ -339,7 +339,7 @@ export default function BushfireRiskAssessmentPage() {
 
             {category === "warm" && (
               <div>
-                <h2 className="mb-4 font-heading text-xl font-bold text-foreground">
+                <h2 className="mb-4 text-center font-heading text-xl font-bold text-foreground">
                   Take the Next Step
                 </h2>
                 <p className="mb-6 leading-relaxed text-muted-foreground">
@@ -370,7 +370,7 @@ export default function BushfireRiskAssessmentPage() {
 
             {category === "cool" && (
               <div>
-                <h2 className="mb-4 font-heading text-xl font-bold text-foreground">
+                <h2 className="mb-4 text-center font-heading text-xl font-bold text-foreground">
                   Thanks for Completing Your Assessment
                 </h2>
                 <p className="mb-6 leading-relaxed text-muted-foreground">

@@ -567,51 +567,119 @@ export function WildfireRiskAssessment() {
   // Country Selection
   if (!country) {
     return (
-      <div className="flex items-start justify-center bg-primary px-5 py-16 pt-28">
-        <div className="w-full max-w-[600px] overflow-hidden rounded-2xl bg-white shadow-2xl">
-          <div className="border-b-4 border-accent bg-primary p-8 text-center">
-            <div className="mx-auto mb-5">
-              <Image
-                src="/images/pws-logo-white-text.png"
-                alt="Prodigy Wildfire Solutions"
-                width={200}
-                height={57}
-                className="mx-auto h-14 w-auto"
-              />
+      <>
+        <div className="flex items-start justify-center bg-primary px-5 py-16 pt-28">
+          <div className="w-full max-w-[600px] overflow-hidden rounded-2xl bg-white shadow-2xl">
+            <div className="border-b-4 border-accent bg-primary p-8 text-center">
+              <div className="mx-auto mb-5">
+                <Image
+                  src="/images/pws-logo-white-text.png"
+                  alt="Prodigy Wildfire Solutions"
+                  width={200}
+                  height={57}
+                  className="mx-auto h-14 w-auto"
+                />
+              </div>
+              <h1 className="mb-2 font-heading text-2xl font-bold text-accent">
+                Fire Risk Assessment
+              </h1>
+              <p className="text-sm text-primary-foreground/60">
+                Get your free property risk assessment in 2 minutes
+              </p>
             </div>
-            <h1 className="mb-2 font-heading text-2xl font-bold text-accent">
-              Fire Risk Assessment
-            </h1>
-            <p className="text-sm text-primary-foreground/60">
-              Get your free property risk assessment in 2 minutes
-            </p>
-          </div>
 
-          <div className="p-8">
-            <h2 className="mb-6 text-xl font-semibold text-foreground">
-              Which country is your property located in?
-            </h2>
+            <div className="p-8">
+              <h2 className="mb-6 text-center text-xl font-semibold text-foreground">
+                Which country is your property located in?
+              </h2>
 
-            <div className="flex flex-col gap-3">
-              {(["australia", "usa", "canada"] as const).map((key) => (
-                <button
-                  key={key}
-                  onClick={() => handleCountrySelect(key)}
-                  className="w-full rounded-lg border-2 border-border bg-muted px-5 py-4 text-left text-lg font-medium text-foreground transition-all hover:border-accent hover:bg-accent/5"
-                >
-                  {countryLabels[key]}
-                </button>
-              ))}
+              <div className="flex flex-col gap-3">
+                {(["australia", "usa", "canada"] as const).map((key) => (
+                  <button
+                    key={key}
+                    onClick={() => handleCountrySelect(key)}
+                    className="w-full rounded-lg border-2 border-border bg-muted px-5 py-4 text-left text-lg font-medium text-foreground transition-all hover:border-accent hover:bg-accent/5"
+                  >
+                    {countryLabels[key]}
+                  </button>
+                ))}
+              </div>
             </div>
-          </div>
 
-          <div className="border-t border-border bg-muted px-8 py-4">
-            <p className="text-center text-xs text-muted-foreground">
-              This helps us tailor the assessment to your region.
-            </p>
+            <div className="border-t border-border bg-muted px-8 py-4">
+              <p className="text-center text-xs text-muted-foreground">
+                This helps us tailor the assessment to your region.
+              </p>
+            </div>
           </div>
         </div>
-      </div>
+
+        {/* SEO Introduction */}
+        <section className="bg-background py-20 md:py-28">
+          <div className="mx-auto max-w-3xl px-6 text-center">
+            <h2 className="font-heading text-3xl font-bold tracking-tight text-foreground md:text-4xl">
+              What Is a <span className="text-accent">Wildfire Risk Assessment</span>?
+            </h2>
+            <p className="mt-6 text-base leading-relaxed text-muted-foreground">
+              A wildfire risk assessment evaluates your property{"'"}s vulnerability to wildfire, bushfire, and ember attack based on your location, surrounding vegetation, building materials, existing protection measures, and regional fire history. Whether you{"'"}re in the USA, Canada, or Australia, understanding your risk level is the critical first step toward protecting your home, business, or community.
+            </p>
+            <p className="mt-4 text-base leading-relaxed text-muted-foreground">
+              Our free 2-minute assessment analyses key risk factors specific to your region, including proximity to wildland areas, local fire season severity, and your current level of preparedness. At the end, you{"'"}ll receive a personalised risk rating along with actionable recommendations tailored to your property.
+            </p>
+          </div>
+        </section>
+
+        <section className="bg-muted py-20 md:py-28">
+          <div className="mx-auto max-w-4xl px-6">
+            <h2 className="text-center font-heading text-3xl font-bold tracking-tight text-foreground md:text-4xl">
+              What You{"'"}ll <span className="text-accent">Learn</span>
+            </h2>
+            <div className="mt-12 grid gap-8 sm:grid-cols-2">
+              <div className="rounded border border-border bg-card p-6 text-center">
+                <h3 className="font-heading text-lg font-bold text-card-foreground">Your Property{"'"}s Risk Level</h3>
+                <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
+                  Receive a clear risk rating based on your property{"'"}s location, terrain, vegetation, and structural exposure to wildfire and ember attack.
+                </p>
+              </div>
+              <div className="rounded border border-border bg-card p-6 text-center">
+                <h3 className="font-heading text-lg font-bold text-card-foreground">Region-Specific Insights</h3>
+                <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
+                  Our assessment is tailored to wildfire conditions in the USA, bushfire seasons in Australia, and fire-prone regions across Canada, so your results reflect real local risk.
+                </p>
+              </div>
+              <div className="rounded border border-border bg-card p-6 text-center">
+                <h3 className="font-heading text-lg font-bold text-card-foreground">Personalised Recommendations</h3>
+                <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
+                  Based on your answers, we{"'"}ll provide tailored next steps, from improving defensible space to installing a professional exterior wildfire sprinkler system.
+                </p>
+              </div>
+              <div className="rounded border border-border bg-card p-6 text-center">
+                <h3 className="font-heading text-lg font-bold text-card-foreground">A Downloadable Report</h3>
+                <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
+                  At the end of your assessment, download a PDF summary of your risk score and recommendations to share with your family, insurer, or local fire authority.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section className="bg-background py-20 md:py-28">
+          <div className="mx-auto max-w-3xl px-6 text-center">
+            <h2 className="font-heading text-3xl font-bold tracking-tight text-foreground md:text-4xl">
+              Why Wildfire Preparedness <span className="text-accent">Matters</span>
+            </h2>
+            <p className="mt-6 text-base leading-relaxed text-muted-foreground">
+              Wildfires and bushfires are increasing in frequency, intensity, and unpredictability. In 2023, Canada experienced its worst wildfire season on record with over 17 million hectares burned. The 2025 Los Angeles fires destroyed entire neighbourhoods in hours. Across Australia, bushfire seasons are starting earlier and lasting longer each year.
+            </p>
+            <p className="mt-4 text-base leading-relaxed text-muted-foreground">
+              Up to 90% of homes lost during wildfire events are ignited by windborne embers, not direct flame contact. This means that even properties kilometres from the fire front are at risk. Understanding your vulnerability and taking proactive steps, such as installing an exterior wildfire sprinkler system, maintaining defensible space, and having an evacuation plan, can be the difference between saving and losing your property.
+            </p>
+            <p className="mt-4 text-base leading-relaxed text-muted-foreground">
+              This assessment is designed by Prodigy Wildfire Solutions, a global leader in wildfire and bushfire protection systems. We protect homes, businesses, and critical infrastructure across the USA, Canada, and Australia with custom-engineered exterior sprinkler systems, ember detection technology, and remote activation through the Prodigy Wildfire app.
+            </p>
+          </div>
+        </section>
+      </>
     )
   }
 
@@ -751,7 +819,7 @@ export function WildfireRiskAssessment() {
 
           <div className="p-8">
             <div className={`mb-6 rounded-xl border-l-4 ${risk.borderColor} bg-muted p-6`}>
-              <div className="mb-3">
+              <div className="mb-3 text-center">
                 <span className={`inline-block rounded-full ${risk.color} px-4 py-1.5 text-sm font-semibold text-white`}>
                   {risk.level} Risk
                 </span>
@@ -772,7 +840,7 @@ export function WildfireRiskAssessment() {
 
             {category === "hot" && (
               <div>
-                <h2 className="mb-3 text-xl font-bold text-foreground">
+                <h2 className="mb-3 text-center text-xl font-bold text-foreground">
                   Let&apos;s Protect Your Property
                 </h2>
                 <p className="mb-6 text-base leading-relaxed text-muted-foreground">
@@ -797,7 +865,7 @@ export function WildfireRiskAssessment() {
 
             {category === "warm" && (
               <div>
-                <h2 className="mb-3 text-xl font-bold text-foreground">Take the Next Step</h2>
+                <h2 className="mb-3 text-center text-xl font-bold text-foreground">Take the Next Step</h2>
                 <p className="mb-6 text-base leading-relaxed text-muted-foreground">
                   You&apos;re clearly thinking seriously about protecting your property. We&apos;d
                   love to chat about how our systems work and whether it&apos;s the right fit for
@@ -826,7 +894,7 @@ export function WildfireRiskAssessment() {
 
             {category === "cool" && (
               <div>
-                <h2 className="mb-3 text-xl font-bold text-foreground">
+                <h2 className="mb-3 text-center text-xl font-bold text-foreground">
                   Thanks for Completing Your Assessment
                 </h2>
                 <p className="mb-6 text-base leading-relaxed text-muted-foreground">
@@ -887,7 +955,7 @@ export function WildfireRiskAssessment() {
         </div>
 
         <div className="p-8">
-          <h2 className="mb-2 text-xl font-semibold leading-snug text-foreground">
+          <h2 className="mb-2 text-center text-xl font-semibold leading-snug text-foreground">
             {currentQ.question}
           </h2>
 
